@@ -1,3 +1,25 @@
+ 
+ /* NAVBAR STYLES ****************************************************/
+
+/* ROW IMPORTANT ****************************************************/
+.row{
+  margin-left: 60px;
+  display:flex;
+  justify-content: space-between;
+  margin-right: 60px;
+  margin-top: 20px;
+}
+/* ROW IMPORTANT ****************************************************/
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  /***************************************************** NAVBAR STYLES *************************************************/
 .navbar{
   display: flex;
@@ -119,6 +141,42 @@
 }
 
 
+ /***************************************************** CONTACT STYLES *************************************************/
+
+.contact-Page{
+  background: linear-gradient(180deg,
+  rgba(194, 168, 120, 0.9) 0%,    
+  rgba(194, 168, 120, 0.3) 100%  
+);
+
+margin-left: 500px;
+margin-right: 500px;
+}
+
+.contact-Info h1, .mailing-List h1{
+  font-family: 'poppins', sans-serif;
+  font-size: 40px;
+  padding-bottom: 50px;
+  
+}
+
+
+
+ .row2{
+  margin-left: 60px;
+  display:flex;
+  justify-content: center;
+  margin-right: 60px;
+  margin-top: 20px;
+}
+
+.contact-Info{
+  flex:50%
+}
+
+.mailing-List{
+  flex:50%
+}
 
 
 
@@ -127,6 +185,53 @@
 
 
 
+
+
+
+
+
+
+ .email-contact, .phone-contact, .pin-contact {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /***************************************************** FOOTER STYLES *************************************************/
 
 
 
