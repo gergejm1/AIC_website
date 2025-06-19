@@ -37,7 +37,29 @@ const swiper = new Swiper('.swiper', {
 
 });
 
-
+const verticalSwiper = new Swiper(".swiper-vertical", {
+  direction: "vertical", // Enable vertical sliding
+  slidesPerView: 2,
+  spaceBetween: 10,
+  mousewheel: true, // Enable mouse wheel control
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  crossFade: true, // Enable crossfade effect
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    draggable: true,
+  },
+  effect: "coverflow",
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 70,
+    modifier: 1,
+    slideShadows: false,
+  },
+});
 
 var acc = document.getElementsByClassName("accordion");
 var i;
