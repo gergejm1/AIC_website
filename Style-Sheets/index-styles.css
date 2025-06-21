@@ -440,6 +440,7 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+ 
   
 }
 
@@ -449,6 +450,16 @@ html, body {
   font-weight: 900;
   text-align: center;
 }
+
+.programs-section h2{
+  font-family: 'open sans', sans-serif;
+  font-size: 24px;
+  text-align: left;
+  margin-top: 20px;
+  color: #a08a61;
+  width: 25%;
+}
+
 
 .programs-section p {
   font-family: 'open sans', sans-serif;
@@ -469,21 +480,21 @@ html, body {
 }
 
 .card{
-    background: linear-gradient(180deg,
+  background: linear-gradient(180deg,
     rgba(194, 168, 120, 0.9) 0%,    
-    rgba(194, 168, 120, 0.3) 100%  
+    rgba(194, 168, 120, 0.2) 100%   
   );
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   padding: 20px;
-  margin-bottom: 20px;
-  width: 200px;
+  margin-bottom: 60px;
+  width: 220px;
   text-align: center;
   font-family: 'open sans', sans-serif;
   
   position: relative;
   overflow: hidden;
-  height: 260px;
+  height: 270px;
 }
 
 
@@ -537,59 +548,64 @@ html, body {
   transition: color 0.3s ease;
 }
 /***************************************************** SERVICES STYLES *************************************************/
-.services-section{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 700px;
-  
-}
+
 .services-section h1 {
   font-family: 'open sans', sans-serif;
   font-weight: 900;
+  text-align: center;
 }
 
 
-.sections{
+.grid-container{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  font-family: 'poppins', sans-serif;
+  line-height: 1.6;
+  height: 400px;
+  justify-content:center;
+  align-items: stretch;
+  gap: 20px;
+  width: 55%;
+  margin: 0 auto;
+  justify-items: stretch;
+  
+}
+
+.grid-item1, .grid-item2, .grid-item3, .grid-item4 {
   display: flex;
   flex-direction: column;
-  font-family: 'open sans', sans-serif;
-  font-size: 18px;
-  width: 70%;
- 
+  justify-content: space-between; 
+  padding: 40px;
+  background-image: linear-gradient(180deg, rgba(194, 168, 120, 0.9) 0%, rgba(194, 168, 120, 0.3) 100%);
+  border-radius: 10px;
+  height: 100%;       
   align-items: center;
-}
-
-#sections-1{
-  background-color: #8d7b58;
-  padding: 50px;
-  align-self: flex-start;
-}
-
-#sections-2{
-  background-color: #C2A878;
-  padding: 50px;
-  align-self: center;
-}
-
-#sections-3{
-  background-color: #8d7b58;
-  padding: 50px;
-  align-self: flex-end;
-}
-
-#sections-4{
-  background-color: #C2A878;
-  padding: 50px;
-  align-self: flex-start;
+  text-align:  center;
 }
 
 
+.grid-item1:hover, .grid-item2:hover, .grid-item3:hover, .grid-item4:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
 
 
+.service-icon {
+  width: 50px;
+  height: 50px;
+  
+  opacity: 0.8;
+  
+}
 
+.grid-item2{
+  margin-top: 20px;
+}
 
-
+.grid-item3{
+  margin-top: 20px;
+}
 
 /***************************************************** BANQUET STYLES *************************************************/
 
@@ -598,7 +614,7 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
+  margin-top: 60px;
 }
 
 .banquet-section h1 {

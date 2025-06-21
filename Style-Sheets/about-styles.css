@@ -336,6 +336,8 @@ body
   max-width: 800px;
   object-fit: cover;
   border-radius: 10px;
+  margin-left: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .ShuajbGerguri {
@@ -350,6 +352,17 @@ body
   );
 }
 
+.Leadership{
+      margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(270deg,
+    rgba(194, 168, 120, 0.9) 0%,    
+    rgba(194, 168, 120, 0.2) 100%   
+  );
+}
 
 
 

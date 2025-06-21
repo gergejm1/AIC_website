@@ -56,23 +56,45 @@
         
 <div class="Events-overview">
      <h1>Prayer Events</h1>
-                <div class="Eid-Al-Adha">
-                    <div class="stack">
-                        <img src="images/Eid-Al-Adha.jpg" class="Eid-Al-Adha-img">
-                    </div>
-                    <div class="stack-text">
-                        <h1>Juumah Prayer</h1>
-                        <p>19775 Harper Ave, Harper Woods, MI 48225. <br>
-                        Doors open at 5pm, Program starts at 6pm. <br>
-                        $30 per adult / $10 per child (under 12). Reservations are recommended. <br>
-                        Buy Tickets here or call <b>313-588-1628.</b> <br>
-                        Deadlines for reservations are 2 days before the event.</p>
-                        <p>NOTE: To reserve a full table, you must make reservations of <b>8-10 people.</b></p>
-                    </div>
-                    <div class="ticket-btn">
-                        <button class="eventtkt-btn">Buy Tickets</button>
-                    </div>
-                </div>
+<div class="Eid-Al-Adha">
+  <div class="stack">
+    <img src="images/Eid-Al-Adha.jpg" class="Eid-Al-Adha-img">
+  </div>
+
+  <div class="stack-text">
+    <h1>Jumu'ah Prayer</h1>
+    <p>19775 Harper Ave, Harper Woods, MI 48225. <br>
+    Doors open at 5pm, Program starts at 6pm. <br>
+    $30 per adult / $10 per child (under 12). Reservations are recommended. <br>
+    Buy Tickets here or call <b>313-588-1628</b>. <br>
+    Deadlines for reservations are 2 days before the event.</p>
+    <p>NOTE: To reserve a full table, you must make reservations of <b>8–10 people</b>.</p>
+  </div>
+
+  <div class="ticket-btn">
+    <noscript>
+      <a href="https://www.eventbrite.com/e/albania-independence-day-tickets-1425429099809" target="_blank" rel="noopener noreferrer">
+        Buy Tickets on Eventbrite
+      </a>
+    </noscript>
+    <button id="eventbrite-widget-modal-trigger-1425429099809" type="button" class="eventtkt-btn">Buy Tickets</button>
+  </div>
+</div>
+
+<!-- Load Eventbrite Widget Script ONCE per page -->
+<script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+<script type="text/javascript">
+  window.EBWidgets.createWidget({
+    widgetType: 'checkout',
+    eventId: '1425429099809',
+    modal: true,
+    modalTriggerElementId: 'eventbrite-widget-modal-trigger-1425429099809',
+    onOrderComplete: function() {
+      console.log('Order complete!');
+    }
+  });
+</script>
+
 
             
             

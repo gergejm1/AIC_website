@@ -316,13 +316,6 @@ html, body {
 
 /**************************** 5PILLARS *****************************************************/
 
-
-
-
-
-
-
-
 .Five-pillars h1{
   font-size: 36px;
   font-weight: bold;
@@ -343,7 +336,6 @@ html, body {
   height: 650px;
   margin-left: 60px;
   margin-right: 60px;
-  
 }
 
 .grid-item1{
@@ -437,13 +429,8 @@ html, body {
 }
 
 
-
-
-
-
-
 .grid-container2{
-  border: #000 solid 1px;
+  
   display:grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(1, 1fr);
@@ -453,7 +440,7 @@ html, body {
   font-family: 'poppins', sans-serif;
   line-height: 1.6;
   width: auto;
-  height: 450px;
+  height: 350px;
   margin-left: 60px;
   margin-right: 60px;
   
@@ -503,41 +490,41 @@ html, body {
 /**************************** QUESTIONS *****************************************************/
 
 .accordion {
-  background-color: #eee;
-  color: #444;
+  background: linear-gradient(270deg,
+    rgba(194, 168, 120, 0.9) 0%,
+    rgba(194, 168, 120, 0.2) 100%);
+  color: #000;
   cursor: pointer;
   padding: 18px;
   width: 100%;
   text-align: left;
   border: none;
   outline: none;
-  transition: 0.4s;
-}
-
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .accordion:hover {
-  background-color: #ccc;
-}
-
-/* Style the accordion panel. Note: hidden by default */
-.panel {
-  padding: 0 18px;
-  background-color: white;
-  display: none;
-  overflow: hidden;
+  font-size: 16px;
+  transition: background 0.4s;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
 }
 
 .accordion:after {
-  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  content: '\02795'; /* plus sign */
   font-size: 13px;
-  color: #777;
   float: right;
   margin-left: 5px;
 }
 
-.active:after {
-  content: "\2796"; /* Unicode character for "minus" sign (-) */
+.accordion.active:after {
+  content: "\2796"; /* minus sign */
 }
+
+.panel {
+  background: white;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s ease;
+  padding: 0 18px;
+}
+
 
 
 

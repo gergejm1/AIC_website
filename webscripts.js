@@ -61,24 +61,23 @@ const verticalSwiper = new Swiper(".swiper-vertical", {
   },
 });
 
-var acc = document.getElementsByClassName("accordion");
-var i;
+const acc = document.getElementsByClassName("accordion");
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    /* Toggle between adding and removing the "active" class,
-    to highlight the button that controls the panel */
+for (let i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function () {
     this.classList.toggle("active");
+    const panel = this.nextElementSibling;
 
-    /* Toggle between hiding and showing the active panel */
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
     } else {
-      panel.style.display = "block";
+      // This makes sure it opens to the right size
+      panel.style.maxHeight = panel.scrollHeight + "px";
     }
   });
 }
+
+
 
 
 const eidDates = {
