@@ -290,15 +290,32 @@ body
     margin-bottom: 20px;
     position: relative;
     overflow: hidden;
+    padding-left: 30px;
+   
 }
 
+.Paragraphing{
+  font-size: 18px;
+  font-family: 'Poppins', 'sans-serif';
+  width: 70%;
+}
+.teacher-img{
+  padding-top: 10px;
+  width: 90%;
+  height: auto;
+  margin-bottom: 40px;
+}
 .Quran-class:hover .circle-accent{
-    width: 140px;
-    height: 140px;
+    width: 170px;
+    height: 170px;
 }
 
 .Quran-class:hover {
-    box-shadow: 0 4px 20px rgba(194, 168, 120, 0.15);
+    box-shadow: 0 4px 20px rgba(253, 165, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+    transform: scale(1.02);
+    transition: all 0.3s ease-in-out;
+
 }
 
 .right-align-wrapper {
@@ -307,6 +324,13 @@ body
 }
 
 .fiqh-class {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align text to the right */
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+  padding-right: 30px;
           background: linear-gradient(270deg,
     rgba(194, 168, 120, 0.9) 0%,    
     rgba(194, 168, 120, 0.3) 100%  
@@ -339,13 +363,23 @@ body
   right: -60px;
   width: 120px;
   height: 120px;
-  background-color: #000607;
+  background-color: #C2A878;
   border-radius: 50%;
   z-index: 0;
   transition: width 0.4s ease, height 0.4s ease;
 }
 
-
+.circle-accent2 {
+  position: absolute;
+  top: -60px;
+  left: -60px;
+  width: 120px;
+  height: 120px;
+  background-color: #C2A878;
+  border-radius: 50%;
+  z-index: 0;
+  transition: width 0.4s ease, height 0.4s ease;
+}
 
 /* FOOTER *****************************************************/
 
