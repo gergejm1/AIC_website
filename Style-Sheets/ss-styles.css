@@ -285,23 +285,24 @@ body
   );
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 60%;
     align-items: flex-start;
     margin-bottom: 20px;
     position: relative;
     overflow: hidden;
     padding-left: 30px;
+    height: 800px;
    
 }
 
 .Paragraphing{
   font-size: 18px;
   font-family: 'Poppins', 'sans-serif';
-  width: 70%;
+  width: 60%;
 }
 .teacher-img{
   padding-top: 10px;
-  width: 90%;
+  width: 70%;
   height: auto;
   margin-bottom: 40px;
 }
@@ -335,11 +336,11 @@ body
     rgba(194, 168, 120, 0.9) 0%,    
     rgba(194, 168, 120, 0.3) 100%  
   );
-  width: 40%;               
+  width: 60%;               
   padding: 20px;
   text-align: right;
   box-sizing: border-box;
-  
+  height: 800px;
   
 }
 
@@ -352,11 +353,17 @@ body
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 20px;
-    width: 40%;
+    width: 60%;
     position: relative;
     overflow: hidden;
+    height: 800px;
 }
 
+.alb-img{
+  width: 70%;
+  height: auto;
+  margin-bottom: 40px;
+}
 .circle-accent {
   position: absolute;
   top: -60px;

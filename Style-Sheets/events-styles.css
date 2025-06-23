@@ -258,15 +258,30 @@ body
 
 .Eid-Al-Adha , .Eid-Al-Fitr, .Albania-Independence, .Kosovo-Independence, .Weekly-Ramadan-Iftars, .Guest-Speakers {
     display: flex;
-    
-   
     background: linear-gradient(360deg,
     rgba(194, 168, 120, 0.9) 0%,    
     rgba(194, 168, 120, 0.2) 100%   
   );
 
-  min-width: 1325px;;
+  max-width: 1325px;
   justify-content: space-between;
+}
+
+
+.Albania-Independence{
+  padding-left: 25px;
+}
+
+.Kosovo-Independence{
+  padding-left: 25px;
+}
+
+.Weekly-Ramadan-Iftars{
+  margin: auto;
+}
+
+.Guest-Speakers{
+  padding-left: 25px;
 }
 
 .Eid-Al-Adha:hover , .Eid-Al-Fitr:hover, .Albania-Independence:hover, .Kosovo-Independence:hover, .Weekly-Ramadan-Iftars:hover, .Guest-Speakers:hover{
@@ -294,13 +309,18 @@ body
 
 
 
-.stack-text , .stack-text2, .stack-text3, .stack-text4, .stack-text5, .stack-text6, .stack-text7{
+.stack-text {
   display: flex;
   flex-direction: column;
   margin-left: 20px;
  
 }
 
+.stack-text2{
+    display: flex;
+  flex-direction: column;
+  margin-right: 180px;
+}
 
 .stack-text p, .stack-text2 p, .stack-text3 p, .stack-text4 p, .stack-text5 p, .stack-text6 p, .stack-text7 p{
   
@@ -313,13 +333,18 @@ body
   
 }
 
-.ticket-btn, .ticket-btn2, .ticket-btn3, .ticket-btn4, .ticket-btn5, .ticket-btn6, .ticket-btn7{
+.ticket-btn{
  display: flex;
-
-
 justify-content: flex-end;
 align-items: center;
 
+}
+
+.ticket-btn2{
+ display: flex;
+justify-content: flex-end;
+align-items: center;
+visibility: hidden;
 }
 
 .eventtkt-btn, .eventtkt-btn2, .eventtkt-btn3{
