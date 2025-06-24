@@ -244,6 +244,7 @@ body
 
 
 
+/* SERVICES *****************************************************/
 
 
 
@@ -256,141 +257,6 @@ body
 
 
 
-
-
-
-/* Sunday School *****************************************************/
-
-.programs-section h1{
-    font-family: 'poppins', sans-serif;
-    font-size: 40px;
-    padding-bottom: 50px;
-    text-align: center;
-}
-
-.description {
-    font-family: 'poppins', sans-serif;
-    font-size: 18px;
-    color: #533805;
-    text-align: center;
-    margin-bottom: 20px;
-    display: flex;
-}
-
-.Quran-class {
-    
-            background: linear-gradient(90deg,
-    rgba(194, 168, 120, 0.9) 0%,    
-    rgba(194, 168, 120, 0.3) 100%  
-  );
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    align-items: flex-start;
-    margin-bottom: 20px;
-    position: relative;
-    overflow: hidden;
-    padding-left: 20px;
-    height: 300px;
-   
-}
-
-.Paragraphing{
-  font-size: 18px;
-  font-family: 'Poppins', 'sans-serif';
-  width: 90%;
-  display: flex;
-  flex-direction: row;
-  
-}
-.teacher-img{
-  padding-top: 10px;
-  width: 70%;
-  height: 200px;
-  margin-bottom: 40px;
-}
-.Quran-class:hover .circle-accent{
-    width: 150px;
-    height: 150px;
-}
-
-.Quran-class:hover {
-    box-shadow: 0 4px 20px rgba(253, 165, 0, 0.2);
-    transition: box-shadow 0.3s ease;
-    transform: scale(1.02);
-    transition: all 0.3s ease-in-out;
-
-}
-
-.right-align-wrapper {
-  display: flex;
-  justify-content: flex-end; 
-}
-
-.fiqh-class {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end; 
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 20px;
-  
-          background: linear-gradient(270deg,
-    rgba(194, 168, 120, 0.9) 0%,    
-    rgba(194, 168, 120, 0.3) 100%  
-  );
-  width: 49%;               
-  
-  text-align: right;
-  box-sizing: border-box;
-  height: 300px;
-  
-}
-
-.albanian-class {
-            background: linear-gradient(90deg,
-    rgba(194, 168, 120, 0.9) 0%,    
-    rgba(194, 168, 120, 0.3) 100%  
-  );
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 20px;
-    width: 50%;
-    position: relative;
-    overflow: hidden;
-    height: 300px;
-    padding-left: 20px;
-}
-
-.alb-img{
-  width: 70%;
-  height: auto;
-  margin-bottom: 40px;
-}
-.circle-accent {
-  position: absolute;
-  top: -60px;
-  right: -60px;
-  width: 120px;
-  height: 120px;
-  background-color: #C2A878;
-  border-radius: 50%;
-  z-index: 0;
-  transition: width 0.4s ease, height 0.4s ease;
-}
-
-.circle-accent2 {
-  position: absolute;
-  top: -60px;
-  left: -60px;
-  width: 120px;
-  height: 120px;
-  background-color: #C2A878;
-  border-radius: 50%;
-  z-index: 0;
-  transition: width 0.4s ease, height 0.4s ease;
-}
 
 /* FOOTER *****************************************************/
 
