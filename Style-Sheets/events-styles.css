@@ -10,15 +10,12 @@
 }
 /* ROW IMPORTANT ****************************************************/
 
-
 html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-
-body
 
 .navbar{
   display: flex;
@@ -53,14 +50,10 @@ body
   align-items: center;
 }
 
-
 .navbar ul li{
   display: inline;
   padding: 15px;
-  
   color: black;
- 
-  
 }
 
 .navbar ul li a{
@@ -75,7 +68,6 @@ body
 
 .navbar ul li a:hover{
   color: #C2A878;
-  
 }
 
 .donate-btn {
@@ -96,7 +88,6 @@ body
     padding-bottom: 10px;
     color: white;
     cursor: pointer;
-
 }
 
 .donate-btn:hover {
@@ -110,6 +101,7 @@ body
     color: white;
     transition: 0.3s;
 }
+
 .heart-icon {
     width: 20px;
     height: 20px;
@@ -130,7 +122,6 @@ body
   position: relative;
 }
 
-
 .logo img{
   width: 150px;
   height: auto;
@@ -139,15 +130,6 @@ body
   padding-top: 0px;
   justify-content: flex-start;
 }
-
-
-
-
-
-
-
-
-
 
 /* MAINPAGE *****************************************************/
 .mainpage{
@@ -173,7 +155,6 @@ body
         opacity: 0.7;
         transform: scale(1.1);
     }
-
     100% {
         opacity: 1;
         transform: scale(1);
@@ -181,14 +162,12 @@ body
 }
 
 .slideimg {
-  
   width: 100%;
   height: 100%;
   transform: translateY(-30%);
   object-fit: cover;
   position: relative;
 }
-
 
 .mainpage::after{
   content: '';
@@ -209,7 +188,6 @@ body
   font-weight: bold;
   z-index: 2;
   position: relative;
-
 }
 
 .mainpage h2{
@@ -253,20 +231,63 @@ body
     margin-top: 20px;
     margin-bottom: 20px;
     justify-items: center;
-    
 }
 
-.Eid-Al-Adha , .Eid-Al-Fitr, .Albania-Independence, .Kosovo-Independence, .Weekly-Ramadan-Iftars, .Guest-Speakers {
+.Events-overview h1 {
+    font-family: 'poppins', sans-serif;
+    font-size: 36px;
+    color: #533805;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.Eid-Al-Adha, .Eid-Al-Fitr, .Albania-Independence, .Kosovo-Independence, .Weekly-Ramadan-Iftars, .Guest-Speakers {
     display: flex;
     background: linear-gradient(360deg,
-    rgba(194, 168, 120, 0.9) 0%,    
-    rgba(194, 168, 120, 0.2) 100%   
-  );
-
-  max-width: 1325px;
-  justify-content: space-between;
+        rgba(194, 168, 120, 0.9) 0%,    
+        rgba(194, 168, 120, 0.2) 100%   
+    );
+    max-width: 1325px;
+    justify-content: space-between;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
 }
 
+/* Prayer Events Specific Styling */
+.prayer-event {
+    border-left: 5px solid #28a745;
+}
+
+.prayer-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 150px;
+    padding: 20px;
+}
+
+.prayer-time {
+    background: rgba(40, 167, 69, 0.1);
+    border: 2px solid #28a745;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    font-family: 'poppins', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #28a745;
+}
+
+.prayer-time span {
+    font-size: 14px;
+    font-weight: normal;
+    color: #666;
+    display: block;
+    margin-top: 5px;
+}
 
 .Albania-Independence{
   padding-left: 25px;
@@ -284,86 +305,82 @@ body
   padding-left: 25px;
 }
 
-.Eid-Al-Adha:hover , .Eid-Al-Fitr:hover, .Albania-Independence:hover, .Kosovo-Independence:hover, .Weekly-Ramadan-Iftars:hover, .Guest-Speakers:hover{
+.Eid-Al-Adha:hover, .Eid-Al-Fitr:hover, .Albania-Independence:hover, .Kosovo-Independence:hover, .Weekly-Ramadan-Iftars:hover, .Guest-Speakers:hover{
   transform: scale(1.02);
   transition: all 0.7s ease-in-out;
-  
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
-.stack img , .stack2 img, .stack3 img, .stack4 img, .stack5 img, .stack6 img, .stack7 img{
-  border-radius: 40% ;
+.stack img, .stack2 img, .stack3 img, .stack4 img, .stack5 img, .stack6 img, .stack7 img{
+  border-radius: 40%;
   width: 320px;
   height: 220px;
   object-fit: cover;
- 
-  
 }
-
 
 .stack, .stack2, .stack3, .stack4, .stack5, .stack6, .stack7{
     display: flex;
-  padding: 30px;
-  
+    padding: 30px;
 }
-
-
-
 
 .stack-text {
   display: flex;
   flex-direction: column;
   margin-left: 20px;
- 
 }
 
 .stack-text2{
     display: flex;
-  flex-direction: column;
-  margin-right: 180px;
+    flex-direction: column;
+    margin-right: 180px;
 }
 
 .stack-text p, .stack-text2 p, .stack-text3 p, .stack-text4 p, .stack-text5 p, .stack-text6 p, .stack-text7 p{
-  
-
   font-size: 16px;
   font-family: 'poppins', sans-serif;
   line-height: 1.6;
   font-weight: 700;
   margin-bottom: 10px;
-  
+}
+
+.stack-text h1, .stack-text2 h1 {
+    font-family: 'poppins', sans-serif;
+    color: #533805;
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-weight: 600;
 }
 
 .ticket-btn{
  display: flex;
 justify-content: flex-end;
 align-items: center;
-
 }
 
 .ticket-btn2{
  display: flex;
 justify-content: flex-end;
 align-items: center;
-visibility: hidden;
 }
 
 .eventtkt-btn, .eventtkt-btn2, .eventtkt-btn3{
-    
     margin-right: 10px;
     background-color: white;
     border: #000000 solid 2px;
     border-radius: 50%;
     height: 100px;
     width: 100px;
-    color:#C2A878 ;
+    color:#C2A878;
     font-weight: 700;
     cursor: pointer;
-  
+    font-family: 'poppins', sans-serif;
+    transition: all 0.3s ease;
 }
 
-.eventtkt-btn:hover, .eventtkt-btn2:hover, .eventtkt-btn3:hover, .eventtkt-btn4:hover, .eventtkt-btn5:hover, .eventtkt-btn6:hover, .eventtkt-btn7:hover{
+.eventtkt-btn:hover, .eventtkt-btn2:hover, .eventtkt-btn3:hover{
   background-color: #C2A878;
   color: white;
+  transform: scale(1.05);
   transition: all 0.5s ease-in-out;
 }
 
@@ -372,13 +389,11 @@ visibility: hidden;
    object-fit: cover;
 }
 
-
-
+/* Swiper Styles */
 .swiper-vertical {
   height: 65vh; 
   overflow: hidden;
   position: relative;
-  
 }
 
 .swiper-wrapper {
@@ -411,32 +426,6 @@ visibility: hidden;
   background-color: #8d7b58;
 }
 
-
-
-
-
-/* PRAYER EVENTS *****************************************************/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* FOOTER *****************************************************/
 
 .support-section {
@@ -445,7 +434,7 @@ visibility: hidden;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-        background: linear-gradient(90deg,
+  background: linear-gradient(90deg,
     rgba(194, 168, 120, 0.9) 0%,    
     rgba(194, 168, 120, 0.3) 100%  
   );
@@ -457,7 +446,6 @@ visibility: hidden;
   flex-direction: column;
   align-items: flex-start;
   width: 20%;
-  
 }
 
 .logo-img {
@@ -473,18 +461,15 @@ visibility: hidden;
   padding-right: 40px;
   color: black;
   font-family: 'poppins', sans-serif;
-  
   margin-top: 0;
 }
 
 .facebook-img{
   width: 40px;
   height: 40px;
-
   margin-top: 0;
   margin-bottom: 50px;
 }
-
 
 .social-media:hover{
   transform: scale(1.1);
@@ -519,7 +504,6 @@ visibility: hidden;
   color: black;
   font-weight: 500;
 }
-
 
 .socials {
   color: black;
@@ -571,21 +555,17 @@ visibility: hidden;
   background-color: rgba(194, 168, 120, 0.8);
   transition: background-color 0.3s ease;
 } 
+
 .newsletter button:active {
   background-color: rgba(194, 168, 120, 0.6);
   transition: background-color 0.3s ease;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-family: 'poppins', sans-serif;
+  font-size: 14px;
+}

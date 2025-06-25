@@ -222,6 +222,7 @@ html, body {
 
 /* BANQUET HALL SECTIONS *****************************************************/
 .banquet-intro,
+.disclaimer-section,
 .features-section,
 .gallery-section,
 .pricing-section,
@@ -234,6 +235,7 @@ html, body {
 }
 
 .banquet-intro h2,
+.disclaimer-section h2,
 .features-section h2,
 .gallery-section h2,
 .pricing-section h2,
@@ -251,6 +253,155 @@ html, body {
   max-width: 900px;
   margin: 0 auto;
   line-height: 1.8;
+}
+
+/* Disclaimer Section */
+.disclaimer-section {
+  background: linear-gradient(135deg, rgba(194, 168, 120, 0.1) 0%, rgba(194, 168, 120, 0.05) 100%);
+  border-top: 3px solid #C2A878;
+  border-bottom: 3px solid #C2A878;
+}
+
+.disclaimer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.disclaimer-main p {
+  font-size: 18px;
+  color: #533805;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin: 30px 0;
+}
+
+.we-provide,
+.you-arrange {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+}
+
+.we-provide {
+  border-left: 5px solid #28a745;
+}
+
+.you-arrange {
+  border-left: 5px solid #dc3545;
+}
+
+.we-provide h3 {
+  color: #28a745;
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.you-arrange h3 {
+  color: #dc3545;
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.disclaimer-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.disclaimer-content li {
+  padding: 8px 0;
+  font-size: 16px;
+  color: #444;
+  position: relative;
+  padding-left: 20px;
+}
+
+.we-provide li::before {
+  content: "✓";
+  color: #28a745;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.you-arrange li::before {
+  content: "✗";
+  color: #dc3545;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.recommended-planner {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+  border-left: 5px solid #C2A878;
+  margin: 30px 0;
+  text-align: center;
+}
+
+.recommended-planner h3 {
+  color: #533805;
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.recommended-planner p {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.planner-link {
+  display: inline-block;
+  background: linear-gradient(135deg, #C2A878 0%, rgba(194, 168, 120, 0.8) 100%);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 10px 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.planner-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(194, 168, 120, 0.3);
+  text-decoration: none;
+  color: white;
+}
+
+.planner-note {
+  font-size: 14px;
+  color: #666;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.reminder {
+  background: rgba(194, 168, 120, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 4px solid #C2A878;
+  font-size: 16px;
+  color: #533805;
+  text-align: center;
+  margin-top: 30px;
 }
 
 /* Features Section */
@@ -344,9 +495,6 @@ html, body {
   object-fit: cover;
   border-radius: 10px;
 }
-
-
-
 
 /* Pricing Section */
 .pricing-grid {
@@ -577,17 +725,28 @@ html, body {
     grid-template-columns: 1fr;
   }
   
-  .gallery-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
   
   .rental-form-section,
   .banquet-intro,
+  .disclaimer-section,
   .features-section,
   .gallery-section,
   .pricing-section,
   .guidelines-section {
     padding: 40px 20px;
+  }
+  
+  .container {
+    padding: 1rem;
+    width: 100%;
+  }
+  
+  .swiper {
+    width: 100%;
   }
   
   .mainpage h1 {
@@ -604,6 +763,7 @@ html, body {
     flex-direction: column;
     gap: 5px;
     text-align: center;
+    font-size: 13px;
   }
   
   .navbar {
@@ -615,16 +775,51 @@ html, body {
   .navbar ul {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 5px;
   }
   
   .navbar ul li {
-    padding: 8px;
+    padding: 5px;
+  }
+  
+  .navbar ul li a {
+    font-size: 16px;
+    padding-left: 10px;
   }
   
   .donate-btn {
     margin-left: 0;
     margin-top: 10px;
+    font-size: 16px;
+    padding: 8px 15px;
+  }
+  
+  .logo img {
+    width: 120px;
+  }
+  
+  .support-section .row {
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+    gap: 30px;
+  }
+  
+  .support-text,
+  .contact-info,
+  .socials,
+  .newsletter {
+    width: 100%;
+  }
+  
+  .logo-img {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+  
+  .newsletter input[type="email"] {
+    width: calc(100% - 20px);
   }
 }
 
