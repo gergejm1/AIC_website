@@ -254,12 +254,10 @@ html, body {
   flex: 35%;
   padding: 30px;
   font-family: 'poppins', sans-serif;
-  background: linear-gradient(90deg,
-    rgba(194, 168, 120, 0.9) 0%,    
-    rgba(194, 168, 120, 0.2) 100%   
-  );
+  background-color: white;
   border-radius: 15px;
   margin-right: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 
 .column1 h1{
@@ -275,6 +273,11 @@ html, body {
   overflow: hidden;
 }
 
+.prayer-times-container iframe{
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+}
 .column2{
   flex: 65%;
   padding: 30px;
@@ -347,7 +350,10 @@ html, body {
 .column11{
   flex: 70%;
   font-family: 'poppins', sans-serif;
-  background: white;
+    background: linear-gradient(90deg,
+    rgba(194, 168, 120, 0.9) 0%,    
+    rgba(194, 168, 120, 0.3) 100%  
+  );
   border-radius: 15px;
   padding: 30px;
   margin-right: 20px;
@@ -451,7 +457,7 @@ html, body {
 
 .programs-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
   gap: 30px;
   max-width: 1400px;
   margin: 0 auto;
@@ -485,8 +491,8 @@ html, body {
 }
 
 .program-icon {
-  width: 80px;
-  height: 80px;
+  width: 180px;
+  height: 180px;
   margin: 20px auto;
   opacity: 0.8;
 }
@@ -498,7 +504,6 @@ html, body {
   left: 50%;
   transform: translate(-50%, -50%);
   transition: all 0.3s ease;
-  background: rgba(255, 255, 255, 0.95);
   padding: 20px;
   border-radius: 10px;
   width: 80%;
@@ -512,7 +517,7 @@ html, body {
 }
 
 .program-link {
-  color: #C2A878;
+  color: black;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
@@ -523,8 +528,9 @@ html, body {
 }
 
 .program-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 30px rgba(194, 168, 120, 0.3);
+  box-shadow: 0 15px 40px rgba(194, 168, 120, 0.6);
+  
+
 }
 
 .program-card:hover .program-icon,
@@ -534,6 +540,7 @@ html, body {
 
 .program-card:hover .card-text {
   opacity: 1;
+ 
 }
 
 /***************************************************** SERVICES STYLES *************************************************/
@@ -576,11 +583,12 @@ html, body {
   font-family: 'poppins', sans-serif;
   transition: all 0.3s ease;
   box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+
 }
 
 .service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(194, 168, 120, 0.3);
+  transform: translateY(-50px);
+  box-shadow: 0 10px 30px rgba(194, 168, 120, 0.6);
 }
 
 .service-icon {
@@ -633,7 +641,7 @@ html, body {
 
 .banquet-gallery {
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -647,11 +655,12 @@ html, body {
   border-radius: 15px;
   padding: 30px;
   margin-right: 20px;
+  max-height: 600px;
 }
 
 .banquet-swiper {
   width: 100%;
-  height: 400px;
+  height: 600px;
   border-radius: 15px;
   overflow: hidden;
 }
@@ -686,6 +695,7 @@ html, body {
   );
   border-radius: 15px;
   padding: 30px;
+  max-height: 600px;
 }
 
 .column222 h2 {
@@ -735,6 +745,18 @@ html, body {
   background-color: #C2A878;
 }
 
+.swiper-button-prev:hover::after,
+.swiper-button-next:hover::after {
+  background-color: rgba(194, 168, 120, 0.4);
+  transition: background-color 0.3s ease;
+}
+
+.swiper-button-prev:active::after,
+.swiper-button-next:active::after {
+  background-color: rgba(194, 168, 120, 0.6);
+  background-color: rgba(194, 168, 120, 1);
+  transition: background-color 0.3s ease;
+}
 /***************************************************** FOOTER SECTION STYLES *************************************************/
 
 .support-section {
@@ -985,8 +1007,10 @@ footer {
     padding: 20px;
   }
 
-  .calendar-container iframe {
-    height: 400px;
+  .iframe{
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
   }
 
   .events-btn {

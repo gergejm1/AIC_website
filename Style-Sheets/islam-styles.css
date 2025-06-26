@@ -346,9 +346,9 @@ html, body {
 }
 
 .grid-item1:hover, .grid-item2:hover, .grid-item3:hover, .grid-item4:hover, .grid-item5:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(194, 168, 120, 0.3);
-  cursor: pointer;
+  
+  box-shadow: 0 8px 25px rgba(194, 168, 120, 0.6);
+  ;
 }
 
 /**************************** SIX ARTICLES OF FAITH *****************************************************/
@@ -369,7 +369,7 @@ html, body {
 
 .grid-container2{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   gap: 20px;
   padding: 20px;
   margin: 0 auto;
@@ -410,9 +410,8 @@ html, body {
 }
 
 .grid-item11:hover, .grid-item22:hover, .grid-item33:hover, .grid-item44:hover, .grid-item55:hover, .grid-item66:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(194, 168, 120, 0.3);
-  cursor: pointer;
+  
+  box-shadow: 0 8px 25px rgba(194, 168, 120, 0.6);
 }
 
 /**************************** QUESTIONS *****************************************************/

@@ -108,32 +108,32 @@
             <h1 data-aos="fade-up">Six Articles of Faith</h1>
              <div class="grid-container2">
                 <div class="grid-item11" data-aos="fade-up" data-aos-delay="100">
-                    <div class="faith-icon">🕌</div>
+                    <div class="faith-icon"></div>
                     <h2>Belief in Allah</h2>
                     <p>The belief in the one, unique, all-powerful, and merciful Creator of everything. Allah is the Arabic word for God.</p>
                 </div>
                 <div class="grid-item22" data-aos="fade-up" data-aos-delay="200">
-                    <div class="faith-icon">👼</div>
+                    <div class="faith-icon"></div>
                     <h2>Belief in Angels</h2>
                     <p>Belief in unseen beings created by Allah who carry out His commands without free will. Angels serve Allah and deliver His messages.</p>
                 </div>
                 <div class="grid-item33" data-aos="fade-up" data-aos-delay="300">
-                    <div class="faith-icon">📖</div>
+                    <div class="faith-icon"></div>
                     <h2>Belief in Divine Books</h2>
                     <p>Belief in the revealed scriptures such as the Quran, Torah, Psalms, and Gospel, with the Quran being the final revelation.</p>
                 </div>
                 <div class="grid-item44" data-aos="fade-up" data-aos-delay="400">
-                    <div class="faith-icon">👥</div>
+                    <div class="faith-icon"></div>
                     <h2>Belief in Prophets</h2>
                     <p>Belief in the messengers chosen by Allah to guide humanity, including Adam, Moses, Jesus, and Muhammad ﷺ as the final prophet.</p>
                 </div>
                 <div class="grid-item55" data-aos="fade-up" data-aos-delay="500">
-                    <div class="faith-icon">⚖️</div>
+                    <div class="faith-icon"></div>
                     <h2>Belief in the Last Day</h2>
                     <p>Belief in a final day when every soul will be held accountable and judged by Allah for their deeds in this life.</p>
                 </div>
                 <div class="grid-item66" data-aos="fade-up" data-aos-delay="600">
-                    <div class="faith-icon">🎯</div>
+                    <div class="faith-icon"></div>
                     <h2>Belief in Qadr</h2>
                     <p>Belief that all things occur by the will and knowledge of Allah, who is just and wise. This includes divine predestination.</p>
                 </div>
@@ -198,12 +198,7 @@
                     <a href="mailto:albislamct@aol.com" class="learn-btn">Email Us</a>
                 </div>
                 
-                <div class="learn-option">
-                    <div class="learn-icon">📚</div>
-                    <h3>Educational Resources</h3>
-                    <p>Access books, articles, and online resources to deepen your understanding of Islamic beliefs and practices.</p>
-                    <a href="sundayschool.html" class="learn-btn">Our Programs</a>
-                </div>
+
             </div>
         </div>
 
@@ -265,16 +260,15 @@
                 once: true,
             });
 
-            // Show the first slide
-            document.querySelector('.mySlides').style.display = 'block';
-
-            // Accordion functionality
+         // Wait for the DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add click event listeners to all accordion buttons
             document.querySelectorAll('.accordion').forEach(button => {
-                button.addEventListener('click', () => {
-                    const panel = button.nextElementSibling;
-                    const isOpen = button.classList.contains('active');
+                button.addEventListener('click', function() {
+                    const panel = this.nextElementSibling;
+                    const isOpen = this.classList.contains('active');
                     
-                    // Close all panels
+                    // Close all panels first
                     document.querySelectorAll('.accordion').forEach(acc => {
                         acc.classList.remove('active');
                         acc.nextElementSibling.style.maxHeight = null;
@@ -282,11 +276,15 @@
                     
                     // Open clicked panel if it wasn't already open
                     if (!isOpen) {
-                        button.classList.add('active');
+                        this.classList.add('active');
                         panel.style.maxHeight = panel.scrollHeight + "px";
                     }
                 });
             });
+        });
+
+
+
         </script>
     </body>
 </html>
