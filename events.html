@@ -3,10 +3,6 @@
     <head>
         <title>Albanian Islamic Center - Events</title>
         <link rel="stylesheet" href="Style-Sheets/events-styles.css">
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-        />
     </head>
 
     <body>
@@ -50,193 +46,225 @@
                 <h2 class="banner-subtext">Explore our celebrations, community dinners, national events, and more.</h2>
             </div>
         </div>
-     
-        <!-- Prayer Events Section -->
-        <div class="Events-overview">
-            <h1>Prayer Events</h1>
-            
-            <!-- Jumu'ah Prayer -->
-            <div class="Eid-Al-Adha prayer-event">
-                <div class="stack">
-                    <img src="images/Eid-Al-Adha.jpg" class="Eid-Al-Adha-img">
-                </div>
-                <div class="stack-text">
-                    <h1>Jumu'ah Prayer</h1>
-                    <p>Every Friday at 19775 Harper Ave, Harper Woods, MI 48225.<br>
-                    Prayer starts at <b>1:45 PM</b>.<br>
-                    Khutba is delivered in two parts: first half in Albanian, second half in English.<br>
-                    All community members welcome to join for weekly congregational prayer.</p>
-                    <p><b>Note:</b> Please arrive a few minutes early. Parking available on-site.</p>
-                </div>
-                <div class="prayer-info">
-                    <div class="prayer-time">1:45 PM<br><span>Fridays</span></div>
-                </div>
+
+        <!-- New Events Section -->
+        <div class="events-container">
+            <h1 class="section-title">Our Community Events</h1>
+            <p class="section-subtitle">Join us for prayer, celebration, and community gatherings throughout the year</p>
+
+            <!-- Tab Navigation -->
+            <div class="event-tabs">
+                <button class="tab-button active" onclick="showTab('prayers')">Prayer Events</button>
+                <button class="tab-button" onclick="showTab('dinners')">Community Dinners</button>
             </div>
 
-            <!-- Eid Prayer -->
-            <div class="Eid-Al-Fitr prayer-event">
-                <div class="stack">
-                    <img src="images/Eid-Al-Fitr.jpg" class="Eid-Al-Fitr-img">
-                </div>
-                <div class="stack-text">
-                    <h1>Eid Prayer</h1>
-                    <p>Celebrated twice yearly (Eid Al-Fitr & Eid Al-Adha) at 19775 Harper Ave.<br>
-                    Prayer begins at <b>9:00 AM</b>, followed by khutba in Albanian, then English.<br>
-                    After the service, enjoy traditional sweets brought by community members.<br>
-                    A wonderful time to connect and celebrate with the community.</p>
-                    <p><b>Note:</b> Bring your family and stay for community fellowship after prayers.</p>
-                </div>
-                <div class="prayer-info">
-                    <div class="prayer-time">9:00 AM<br><span>Eid Days</span></div>
-                </div>
-            </div>
-
-            <!-- Taraweeh Prayer -->
-            <div class="Albania-Independence prayer-event">
-                <div class="stack3">
-                    <img src="images/Abania-Independence.jpg" class="Albania-Independence-img">
-                </div>
-                <div class="stack-text">
-                    <h1>Taraweeh Prayer</h1>
-                    <p>Special night prayers during the month of Ramadan.<br>
-                    Begins at <b>Isha prayer time</b> - refer to our prayer time calendar on the home page.<br>
-                    These optional but highly recommended prayers help deepen spiritual connection during Ramadan.<br>
-                    Join us for this beautiful nightly community worship.</p>
-                    <p><b>Note:</b> Check our home page prayer calendar for exact Isha times throughout Ramadan.</p>
-                </div>
-                <div class="prayer-info">
-                    <div class="prayer-time">Isha Time<br><span>Ramadan</span></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Dinner Events Section -->
-        <div class="Events-overview">
-            <h1>Dinner Events</h1>
-            <div class="swiper-vertical">
-                <div class="swiper-wrapper">
-                    <!-- Eid Al-Adha -->
-                    <div class="swiper-slide">
-                        <div class="Eid-Al-Adha">
-                            <div class="stack">
-                                <img src="images/Eid-Al-Adha.jpg" class="Eid-Al-Adha-img">
+            <!-- Prayer Events Tab -->
+            <div id="prayers" class="tab-content active">
+                <div class="events-grid">
+                    <!-- Jumu'ah Prayer Card -->
+                    <div class="event-card">
+                        <img src="images/Eid-Al-Adha.jpg" class="event-image">
+                        <span class="event-badge">Weekly</span>
+                        <div class="event-content">
+                            <h3 class="event-title">Jumu'ah Prayer</h3>
+                            <div class="event-time">
+                                <span>⏰</span>
+                                <span>Every Friday at 1:45 PM</span>
                             </div>
-                            <div class="stack-text">
-                                <h1>Eid Al-Adha Dinner</h1>
-                                <p>19775 Harper Ave, Harper Woods, MI 48225.<br>
-                                Doors open at 5pm, Program starts at 6pm.<br>
-                                $30 per adult / $10 per child (under 12). Reservations are recommended.<br>
-                                Buy Tickets here or call <b>313-884-6676</b>.<br>
-                                Deadlines for reservations are 2 days before the event.</p>
-                                <p>NOTE: To reserve a full table, you must make reservations of <b>8-10 people</b>.</p>
+                            <div class="event-details">
+                                Join us for weekly congregational prayer at 19775 Harper Ave, Harper Woods, MI 48225.
                             </div>
-                            <div class="ticket-btn">
-                                <button class="eventtkt-btn">Buy Tickets</button>
+                            <div class="event-highlight">
+                                <strong>Khutba:</strong> First half in Albanian, second half in English<br>
+                                <strong>Note:</strong> Please arrive early. Parking available on-site.
                             </div>
+                            <button class="event-button">Learn More</button>
                         </div>
                     </div>
 
-                    <!-- Eid Al-Fitr -->
-                    <div class="swiper-slide">
-                        <div class="Eid-Al-Fitr">
-                            <div class="stack">
-                                <img src="images/Eid-Al-Fitr.jpg" class="Eid-Al-Fitr-img">
+                    <!-- Eid Prayer Card -->
+                    <div class="event-card">
+                        <img src="images/Eid-Al-Fitr.jpg" class="event-image">
+                        <span class="event-badge">Special</span>
+                        <div class="event-content">
+                            <h3 class="event-title">Eid Prayers</h3>
+                            <div class="event-time">
+                                <span>⏰</span>
+                                <span>Eid Days at 9:00 AM</span>
                             </div>
-                            <div class="stack-text">
-                                <h1>Eid Al-Fitr Dinner</h1>
-                                <p>19775 Harper Ave, Harper Woods, MI 48225.<br>
-                                Doors open at 5pm, Program starts at 6pm.<br>
-                                $30 per adult / $10 per child (under 12). Reservations are recommended.<br>
-                                Buy Tickets here or call <b>313-884-6676</b>.<br>
-                                Deadlines for reservations are 2 days before the event.</p>
-                                <p>NOTE: To reserve a full table, you must make reservations of <b>8-10 people</b>.</p>
+                            <div class="event-details">
+                                Celebrate Eid Al-Fitr & Eid Al-Adha with our community. Prayer followed by khutba and traditional sweets.
                             </div>
-                            <div class="ticket-btn">
-                                <button class="eventtkt-btn">Buy Tickets</button>
+                            <div class="event-highlight">
+                                <strong>Program:</strong> Prayer → Khutba (Albanian/English) → Community Fellowship<br>
+                                <strong>Bring:</strong> Your family for this blessed celebration!
                             </div>
+                            <button class="event-button">Learn More</button>
+                        </div>
+                    </div>
+
+                    <!-- Taraweeh Prayer Card -->
+                    <div class="event-card">
+                        <img src="images/Abania-Independence.jpg" class="event-image">
+                        <span class="event-badge">Ramadan</span>
+                        <div class="event-content">
+                            <h3 class="event-title">Taraweeh Prayer</h3>
+                            <div class="event-time">
+                                <span>⏰</span>
+                                <span>Nightly during Ramadan</span>
+                            </div>
+                            <div class="event-details">
+                                Special night prayers throughout the blessed month of Ramadan. Join us for this spiritual journey.
+                            </div>
+                            <div class="event-highlight">
+                                <strong>Time:</strong> After Isha prayer<br>
+                                <strong>Note:</strong> Check our prayer calendar for exact Isha times
+                            </div>
+                            <button class="event-button">View Prayer Times</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dinner Events Tab -->
+            <div id="dinners" class="tab-content">
+                <div class="events-grid">
+                    <!-- Eid Al-Adha Dinner -->
+                    <div class="event-card">
+                        <img src="images/Eid-Al-Adha.jpg" class="event-image">
+                        <span class="event-badge dinner">Dinner Event</span>
+                        <div class="event-content">
+                            <h3 class="event-title">Eid Al-Adha Dinner</h3>
+                            <div class="event-time dinner-time">
+                                <span>🎉</span>
+                                <span>Doors: 5PM | Program: 6PM</span>
+                            </div>
+                            <div class="event-details">
+                                Celebrate Eid Al-Adha with a special community dinner featuring speeches, guest speakers, nasheed performances by Sunday school children, Quran recitations, and delicious dinner.
+                            </div>
+                            <div class="event-highlight">
+                                <strong>Tickets:</strong> $30 Adults | $10 Children (under 12)<br>
+                                <strong>Table Reservations:</strong> 8-10 people required<br>
+                                <strong>RSVP Deadline:</strong> 2 days before event
+                            </div>
+                            <button class="event-button">Buy Tickets</button>
+                        </div>
+                    </div>
+
+                    <!-- Eid Al-Fitr Dinner -->
+                    <div class="event-card">
+                        <img src="images/Eid-Al-Fitr.jpg" class="event-image">
+                        <span class="event-badge dinner">Dinner Event</span>
+                        <div class="event-content">
+                            <h3 class="event-title">Eid Al-Fitr Dinner</h3>
+                            <div class="event-time dinner-time">
+                                <span>🎉</span>
+                                <span>Doors: 5PM | Program: 6PM</span>
+                            </div>
+                            <div class="event-details">
+                                Join us for our annual Eid Al-Fitr celebration dinner with inspiring speeches, potential guest speakers, beautiful nasheed performances, Quran recitations by our students, and community fellowship.
+                            </div>
+                            <div class="event-highlight">
+                                <strong>Tickets:</strong> $30 Adults | $10 Children (under 12)<br>
+                                <strong>Call:</strong> 313-884-6676 for reservations<br>
+                                <strong>RSVP Deadline:</strong> 2 days before event
+                            </div>
+                            <button class="event-button">Buy Tickets</button>
                         </div>
                     </div>
 
                     <!-- Albania Independence Day -->
-                    <div class="swiper-slide">
-                        <div class="Albania-Independence">
-                            <div class="stack3">
-                                <img src="images/Abania-Independence.jpg" class="Albania-Independence-img">
+                    <div class="event-card">
+                        <img src="images/Abania-Independence.jpg" class="event-image">
+                        <span class="event-badge dinner">Cultural Event</span>
+                        <div class="event-content">
+                            <h3 class="event-title">Albania Independence Day</h3>
+                            <div class="event-time dinner-time">
+                                <span>🇦🇱</span>
+                                <span>Doors: 5PM | Program: 6PM</span>
                             </div>
-                            <div class="stack-text">
-                                <h1>Albania Independence Day</h1>
-                                <p>19775 Harper Ave, Harper Woods, MI 48225.<br>
-                                Doors open at 5pm, Program starts at 6pm.<br>
-                                This event celebrates Albanian heritage with a dinner and community gathering.<br>
-                                Call <b>313-884-6676</b> for more info or to RSVP.</p>
-                                <p>NOTE: Ticket prices and program details will be announced closer to the event.</p>
+                            <div class="event-details">
+                                Celebrate Albanian heritage and independence with traditional dinner, cultural programs, and community gathering.
                             </div>
-                            <div class="ticket-btn">
-                                <button class="eventtkt-btn">Buy Tickets</button>
+                            <div class="event-highlight">
+                                <strong>Program:</strong> Cultural performances and dinner<br>
+                                <strong>Info:</strong> Call 313-884-6676<br>
+                                <strong>Details:</strong> Announced closer to event date
                             </div>
+                            <!-- Eventbrite Widget for Albania Independence Day -->
+                            <noscript><a href="https://www.eventbrite.com/e/albania-independence-day-tickets-1425429099809" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a></noscript>
+                            <button id="eventbrite-widget-modal-trigger-1425429099809" type="button">Buy Tickets</button>
                         </div>
                     </div>
 
                     <!-- Kosovo Independence Day -->
-                    <div class="swiper-slide">
-                        <div class="Kosovo-Independence">
-                            <div class="stack3">
-                                <img src="images/Kosovo-Independence.jpg" class="Kosovo-Independence-img">
+                    <div class="event-card">
+                        <img src="images/Kosovo-Independence.jpg" class="event-image">
+                        <span class="event-badge dinner">Cultural Event</span>
+                        <div class="event-content">
+                            <h3 class="event-title">Kosovo Independence Day</h3>
+                            <div class="event-time dinner-time">
+                                <span>🇽🇰</span>
+                                <span>Doors: 6PM | Program: 7PM</span>
                             </div>
-                            <div class="stack-text">
-                                <h1>Kosovo Independence Day</h1>
-                                <p>19775 Harper Ave, Harper Woods, MI 48225.<br>
-                                Doors open at 6pm, Program starts at 7pm.<br>
-                                Celebrate Kosovo's independence with community, culture, and food.<br>
-                                Call <b>313-884-6676</b> for tickets or to RSVP.</p>
-                                <p>NOTE: Ticket prices and program details will be updated in advance of the event.</p>
+                            <div class="event-details">
+                                Honor Kosovo's independence with an evening of culture, community, and traditional cuisine.
                             </div>
-                            <div class="ticket-btn">
-                                <button class="eventtkt-btn">Buy Tickets</button>
+                            <div class="event-highlight">
+                                <strong>Program:</strong> Cultural celebration and dinner<br>
+                                <strong>RSVP:</strong> Call 313-884-6676<br>
+                                <strong>Updates:</strong> Follow our Facebook page
                             </div>
+                            <!-- Eventbrite Widget for Kosovo Independence Day -->
+                            <noscript><a href="https://www.eventbrite.com/e/kosovo-independence-day-tickets-1439726032319" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a></noscript>
+                            <button id="eventbrite-widget-modal-trigger-1439726032319" type="button">Buy Tickets</button>
                         </div>
                     </div>
 
                     <!-- Weekly Ramadan Iftars -->
-                    <div class="swiper-slide">
-                        <div class="Weekly-Ramadan-Iftars">
-                            <div class="stack">
-                                <img src="images/Iftar.jpg" class="Weekly-Ramadan-Iftars-img">
+                    <div class="event-card">
+                        <img src="images/Iftar.jpg" class="event-image">
+                        <span class="event-badge dinner">Ramadan Special</span>
+                        <div class="event-content">
+                            <h3 class="event-title">Weekly Ramadan Iftars</h3>
+                            <div class="event-time dinner-time">
+                                <span>🌙</span>
+                                <span>Every Sunday in Ramadan</span>
                             </div>
-                            <div class="stack-text2">
-                                <h1>Weekly Ramadan Iftars</h1>
-                                <p>Every Sunday during Ramadan at 19775 Harper Ave.<br>
-                                Doors open at 7pm, Iftar at Maghrib time.<br>
-                                Open to the community — no ticket required.<br>
-                                Sponsored meals, lectures, and taraweeh to follow.<br>
-                                For questions or to sponsor a dinner, call <b>313-884-6676</b>.</p>
+                            <div class="event-details">
+                                Free community iftars every Sunday during Ramadan. Open to all - no tickets required!
                             </div>
-                            <div class="ticket-btn2">
-                                <button class="eventtkt-btn">Learn More</button>
+                            <div class="event-highlight">
+                                <strong>Program:</strong> Iftar at Maghrib → Lecture → Taraweeh<br>
+                                <strong>Sponsorship:</strong> Call 313-884-6676<br>
+                                <strong>Cost:</strong> FREE - All welcome!
                             </div>
+                            <button class="event-button">Learn More</button>
                         </div>
                     </div>
 
                     <!-- Guest Speakers -->
-                    <div class="swiper-slide">
-                        <div class="Guest-Speakers">
-                            <div class="stack">
-                                <img src="images/president.jpg" class="Guest-Speakers-img">
+                    <div class="event-card">
+                        <img src="images/president.jpg" class="event-image">
+                        <span class="event-badge dinner">Special Guests</span>
+                        <div class="event-content">
+                            <h3 class="event-title">Special Guests & Speakers</h3>
+                            <div class="event-time dinner-time">
+                                <span>🎤</span>
+                                <span>Throughout the Year</span>
                             </div>
-                            <div class="stack-text">
-                                <h1>Special Guests & Speakers</h1>
-                                <p>Throughout the year, we host scholars, imams, and prominent figures<br> from the Albanian and Muslim world. 
-                                Past guests include presidents,<br> prime ministers, politicians, academics, and religious leaders from<br> Albania and Kosovo. 
-                                Follow us on Facebook or join our mailing list to stay informed.</p>
+                            <div class="event-details">
+                                We host distinguished scholars, imams, and prominent figures from the Albanian and Muslim world, including presidents, prime ministers, and religious leaders.
                             </div>
-                            <div class="ticket-btn2">
-                                <button class="eventtkt-btn">Learn More</button>
+                            <div class="event-highlight">
+                                <strong>Past Guests:</strong> Leaders from Albania & Kosovo<br>
+                                <strong>Stay Updated:</strong> Follow our Facebook page<br>
+                                <strong>Info:</strong> Join our mailing list
                             </div>
+                            <button class="event-button">Learn More</button>
                         </div>
                     </div>
                 </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-scrollbar"></div>
             </div>
         </div>
 
@@ -289,26 +317,55 @@
             Icons made from www.flaticon.com</p>
         </footer>
 
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script src="webscripts.js"></script>
-        <script>
+        <!-- Eventbrite Scripts -->
+        <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+        <script type="text/javascript">
             // Show the first slide
             document.querySelector('.mySlides').style.display = 'block';
-            
-            // Initialize Swiper
-            const swiper = new Swiper('.swiper-vertical', {
-                direction: 'vertical',
-                slidesPerView: 1,
-                spaceBetween: 30,
-                mousewheel: true,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                scrollbar: {
-                    el: '.swiper-scrollbar',
-                    draggable: true,
-                },
+
+            // Tab functionality
+            function showTab(tabName) {
+                // Hide all tab contents
+                const tabContents = document.querySelectorAll('.tab-content');
+                tabContents.forEach(tab => {
+                    tab.classList.remove('active');
+                });
+
+                // Remove active class from all buttons
+                const tabButtons = document.querySelectorAll('.tab-button');
+                tabButtons.forEach(button => {
+                    button.classList.remove('active');
+                });
+
+                // Show selected tab
+                document.getElementById(tabName).classList.add('active');
+
+                // Add active class to clicked button
+                event.target.classList.add('active');
+            }
+
+            // Albania Independence Day Eventbrite Widget
+            var albaniaCallback = function() {
+                console.log('Albania Independence Day ticket order complete!');
+            };
+            window.EBWidgets.createWidget({
+                widgetType: 'checkout',
+                eventId: '1425429099809',
+                modal: true,
+                modalTriggerElementId: 'eventbrite-widget-modal-trigger-1425429099809',
+                onOrderComplete: albaniaCallback
+            });
+
+            // Kosovo Independence Day Eventbrite Widget
+            var kosovoCallback = function() {
+                console.log('Kosovo Independence Day ticket order complete!');
+            };
+            window.EBWidgets.createWidget({
+                widgetType: 'checkout',
+                eventId: '1439726032319',
+                modal: true,
+                modalTriggerElementId: 'eventbrite-widget-modal-trigger-1439726032319',
+                onOrderComplete: kosovoCallback
             });
         </script>
     </body>
