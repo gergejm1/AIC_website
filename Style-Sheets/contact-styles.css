@@ -126,8 +126,7 @@ html, body {
 /* HERO SECTION *****************************************************/
 
 .hero-section {
-  background: linear-gradient(135deg, rgba(194, 168, 120, 0.9) 0%, rgba(194, 168, 120, 0.7) 100%),
-              url('images/mosque-bg.jpg') center/cover;
+  background-color: #C2A878;
   padding: 80px 20px;
   text-align: center;
   color: white;

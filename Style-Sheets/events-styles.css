@@ -322,6 +322,7 @@ html, body {
     height: 250px;
     object-fit: cover;
     position: relative;
+    
 }
 
 .event-badge {
@@ -401,6 +402,7 @@ html, body {
     cursor: pointer;
     transition: all 0.3s ease;
     width: 100%;
+   
 }
 
 .event-button:hover {

@@ -240,6 +240,27 @@ body
   padding: 0 20px;
 }
 
+
+.section-title {
+  font-family: 'poppins', sans-serif;
+  font-size: 36px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 60px;
+  font-weight: 600;
+}
+
+.section-subtitle {
+  font-family: 'poppins', sans-serif;
+  font-size: 24px;
+  color: #C2A878;
+  text-align: center;
+  margin-top: -40px;
+  margin-bottom: 60px;
+  font-weight: 500;
+}
+
+
 /* MEMBERSHIP OVERVIEW */
 .membership-overview {
   padding: 80px 0;
@@ -264,13 +285,13 @@ body
   margin: 0 auto;
 }
 
-/* BENEFITS SECTION */
-.benefits-section {
+/* MEMBERSHIP SECTION - Simplified */
+.membership-section {
   padding: 80px 0;
-  background-color: white;
+  background-color: #f8f9fa;
 }
 
-.benefits-section h2 {
+.section-title {
   font-family: 'poppins', sans-serif;
   font-size: 36px;
   color: #333;
@@ -279,24 +300,29 @@ body
   font-weight: 600;
 }
 
-.benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 40px;
-  margin-top: 40px;
+.membership-content {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.benefit-card {
-  background: white;
-  padding: 40px 30px;
-  border-radius: 15px;
+/* Benefits cards */
+.benefits-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.benefit-item {
   text-align: center;
+  padding: 40px 25px;
+  background: white;
+  border-radius: 15px;
   box-shadow: 0 10px 30px rgba(194, 168, 120, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
   border: 2px solid transparent;
 }
 
-.benefit-card:hover {
+.benefit-item:hover {
   transform: translateY(-10px);
   box-shadow: 0 20px 40px rgba(194, 168, 120, 0.2);
   border-color: #C2A878;
@@ -319,7 +345,7 @@ body
   filter: brightness(0) invert(1);
 }
 
-.benefit-card h3 {
+.benefit-item h3 {
   font-family: 'poppins', sans-serif;
   font-size: 22px;
   color: #333;
@@ -327,142 +353,44 @@ body
   font-weight: 600;
 }
 
-.benefit-card p {
+.benefit-item p {
   font-family: 'poppins', sans-serif;
   font-size: 16px;
   color: #666;
   line-height: 1.6;
 }
 
-/* MEMBERSHIP PLANS */
-.membership-plans {
-  padding: 80px 0;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .benefits-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.membership-plans h2 {
-  font-family: 'poppins', sans-serif;
-  font-size: 36px;
-  color: #333;
-  text-align: center;
-  margin-bottom: 60px;
-  font-weight: 600;
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 28px;
+  }
+  
+  .benefits-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .benefit-item {
+    padding: 30px 20px;
+  }
 }
 
-.plans-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 40px;
-  max-width: 900px;
-  margin: 0 auto;
+@media (max-width: 480px) {
+  .membership-section {
+    padding: 60px 0;
+  }
+  
+  .section-title {
+    margin-bottom: 40px;
+  }
 }
-
-.plan-card {
-  background: white;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 15px 35px rgba(194, 168, 120, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 2px solid transparent;
-}
-
-.plan-card.featured {
-  border-color: #C2A878;
-  transform: scale(1.05);
-}
-
-.plan-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 25px 50px rgba(194, 168, 120, 0.2);
-}
-
-.plan-card.featured:hover {
-  transform: scale(1.05) translateY(-10px);
-}
-
-.plan-header {
-  background: linear-gradient(135deg, #C2A878, rgba(194, 168, 120, 0.9));
-  padding: 40px 30px;
-  text-align: center;
-  color: white;
-}
-
-.plan-header h3 {
-  font-family: 'poppins', sans-serif;
-  font-size: 28px;
-  margin-bottom: 20px;
-  font-weight: 600;
-}
-
-.price {
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
-  gap: 10px;
-}
-
-.price .amount {
-  font-size: 48px;
-  font-weight: bold;
-  font-family: 'poppins', sans-serif;
-}
-
-.price .period {
-  font-size: 16px;
-  opacity: 0.9;
-}
-
-.plan-features {
-  padding: 40px 30px;
-}
-
-.plan-features ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.plan-features li {
-  font-family: 'poppins', sans-serif;
-  font-size: 16px;
-  color: #666;
-  padding: 12px 0;
-  border-bottom: 1px solid #eee;
-  position: relative;
-  padding-left: 30px;
-}
-
-.plan-features li:before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: #C2A878;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.plan-features li:last-child {
-  border-bottom: none;
-}
-
-.join-btn {
-  width: 100%;
-  padding: 15px;
-  background: linear-gradient(135deg, #C2A878, rgba(194, 168, 120, 0.9));
-  color: white;
-  border: none;
-  border-radius: 0 0 20px 20px;
-  font-family: 'poppins', sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.join-btn:hover {
-  background: linear-gradient(135deg, rgba(194, 168, 120, 0.9), #C2A878);
-}
-
 /* MEMBERSHIP FORM */
 .membership-form-section {
   padding: 80px 0;
@@ -847,4 +775,13 @@ body
 .newsletter button:active {
   background-color: rgba(194, 168, 120, 0.6);
   transition: background-color 0.3s ease;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-family: 'poppins', sans-serif;
+  font-size: 14px;
 }
