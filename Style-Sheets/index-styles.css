@@ -679,7 +679,7 @@ html, body {
   border-radius: 15px;
   padding: 30px;
   margin-right: 20px;
-  max-height: 600px;
+  max-height: 800px;
 }
 
 .banquet-swiper {
@@ -719,7 +719,7 @@ html, body {
   );
   border-radius: 15px;
   padding: 30px;
-  max-height: 600px;
+  min-height: 600px;
 }
 
 .column222 h2 {
@@ -924,7 +924,7 @@ footer {
   font-size: 14px;
 }
 
-/* MOBILE RESPONSIVE STYLES *****************************************************/
+/* COMPLETE MOBILE RESPONSIVE STYLES */
 
 @media (max-width: 768px) {
   /* General Mobile Fixes */
@@ -1169,22 +1169,6 @@ footer {
     margin: 15px auto;
   }
 
-  /* Mobile: Show text by default, no hover effect */
-  @media (hover: none) {
-    .program-card .program-icon,
-    .program-card h3 {
-      display: none;
-    }
-
-    .card-text {
-      opacity: 1;
-      position: static;
-      transform: none;
-      width: 100%;
-      padding: 0;
-    }
-  }
-
   /* Services Section Mobile */
   .services-section {
     padding: 30px 15px;
@@ -1226,67 +1210,147 @@ footer {
     margin-bottom: 10px;
   }
 
-  /* Banquet Section Mobile */
-  .banquet-section {
-    padding: 30px 15px;
-  }
+   /* BANQUET SECTION MOBILE - FIXED */
+    .banquet-section {
+        padding: 30px 15px;
+        overflow: hidden; /* Keep this to contain any potential inner overflow */
+    }
 
-  .banquet-section h1 {
-    font-size: 26px;
-    margin-bottom: 20px;
-  }
+    .banquet-section h1 {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
 
-  .column111, .column222 {
-    flex: 100%;
-    margin-right: 0;
-    margin-bottom: 20px;
-    padding: 20px;
-    max-height: none;
-  }
+    /* Override the general row behavior specifically for banquet */
+    .banquet-section .row {
+        flex-direction: column !important; /* Ensure columns stack */
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: 0 !important;
+        width: 100% !important; /* Ensure the row takes full width */
+        max-width: 100% !important; /* Prevent it from exceeding full width */
+        display: flex; /* Re-apply flex to the row itself */
+        gap: 20px; /* Add some space between the stacked columns */
+    }
 
-  .banquet-swiper {
-    height: 300px;
-  }
+    /* Fix both columns to take full width */
+    .column111, .column222 {
+        flex: 100% !important; /* Each column takes full width */
+        width: 100% !important; /* Explicitly set width to 100% */
+        max-width: 100% !important; /* Ensure it doesn't exceed 100% */
+        margin-right: 0 !important; /* Remove right margin when stacked */
+        margin-bottom: 20px !important; /* Add space between stacked columns */
+        padding: 20px !important; /* Adjust padding for mobile */
+        max-height: none !important; /* Allow height to be determined by content */
+        min-height: auto !important; /* Allow height to be determined by content */
+        height: auto !important; /* Allow height to be determined by content */
+        box-sizing: border-box !important; /* Ensure padding is included in width */
+    }
 
-  /* Swiper buttons mobile */
-  .swiper-button-prev,
-  .swiper-button-next {
-    transform: scale(0.7);
-  }
+    /* Banquet gallery container */
+    .banquet-gallery {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important; /* Center the gallery if it has a max-width */
+        height: auto !important; /* Allow height to be determined by content */
+        padding: 0 !important;
+    }
 
-  .swiper-button-prev::after,
-  .swiper-button-next::after {
-    padding: 10px;
-    font-size: 14px;
-  }
+    /* Swiper container */
+    .banquet-swiper {
+        height: 250px !important; /* Adjust this value as needed for your images */
+        width: 100% !important;
+        max-width: 100% !important;
+        border-radius: 15px;
+        overflow: hidden;
+        margin: 0 !important;
+    }
 
-  .column222 h2 {
-    font-size: 22px;
-    margin-bottom: 15px;
-  }
+    /* Swiper wrapper */
+    .banquet-swiper .swiper-wrapper {
+        width: 100% !important;
+        height: 100% !important;
+    }
 
-  .column222 p {
-    font-size: 14px;
-    margin-bottom: 15px;
-  }
+    /* Swiper slides */
+    .banquet-swiper .swiper-slide {
+        width: 100% !important;
+        height: 100% !important;
+    }
 
-  .banquethall-btn {
-    font-size: 14px;
-    padding: 10px 20px;
-    width: 100%;
-    text-align: center;
-  }
+    .banquet-swiper .swiper-slide img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover; /* Ensures images cover the slide area */
+        display: block; /* Remove any extra space below image */
+    }
+
+    /* Navigation buttons */
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: 35px !important;
+        height: 35px !important;
+        margin-top: -17.5px !important; /* Center vertically */
+    }
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+        font-size: 12px !important;
+        font-weight: bold;
+        padding: 8px !important;
+    }
+
+    /* Pagination */
+    .swiper-pagination {
+        bottom: 10px !important;
+    }
+
+    .swiper-pagination-bullet {
+        width: 8px !important;
+        height: 8px !important;
+        margin: 0 4px !important;
+    }
+
+    /* Text content */
+    .column222 h2 {
+        font-size: 22px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .column222 p {
+        font-size: 14px;
+        margin-bottom: 15px;
+        line-height: 1.6;
+        text-align: left;
+        word-wrap: break-word; /* Ensure long words don't overflow */
+    }
+
+    .banquethall-btn {
+        font-size: 14px;
+        padding: 12px 24px;
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        display: block; /* Make the button take full width */
+        margin-top: 20px;
+        box-sizing: border-box;
+    }
 
   /* Footer Mobile */
   .support-section {
     margin-top: 30px;
     padding: 30px 15px;
+    overflow: hidden; /* Prevent overflow */
   }
 
+  /* Footer row - ensure it doesn't overflow */
   .support-section .row {
     flex-direction: column;
     margin: 0;
     gap: 30px;
+    width: 100%;
+    max-width: 100%;
   }
   
   .support-text,
@@ -1294,8 +1358,11 @@ footer {
   .socials,
   .newsletter {
     width: 100%;
+    max-width: 100%;
     text-align: center;
     align-items: center;
+    padding: 0 10px; /* Add padding to prevent edge touching */
+    box-sizing: border-box;
   }
 
   .support-text p {
@@ -1305,6 +1372,7 @@ footer {
   
   .contact-info {
     display: block;
+    width: 100%;
   }
 
   .contact-info h2 {
@@ -1374,6 +1442,22 @@ footer {
   }
 }
 
+/* Mobile: Show text by default, no hover effect for program cards */
+@media (max-width: 768px) and (hover: none) {
+  .program-card .program-icon,
+  .program-card h3 {
+    display: none;
+  }
+
+  .card-text {
+    opacity: 1;
+    position: static;
+    transform: none;
+    width: 100%;
+    padding: 0;
+  }
+}
+
 /* Small Mobile Devices (max-width: 480px) */
 @media (max-width: 480px) {
   .mainpage h1 {
@@ -1401,7 +1485,11 @@ footer {
   }
 
   .banquet-swiper {
-    height: 250px;
+    height: 250px !important;
+  }
+  
+  .column111, .column222 {
+    padding: 15px !important;
   }
 }
 
@@ -1531,11 +1619,6 @@ footer {
   }
 }
 
-/* Dark Mode Support (optional) */
-@media (prefers-color-scheme: dark) {
-  /* Add dark mode styles here if needed */
-}
-
 /* Print Styles */
 @media print {
   .navbar,
@@ -1566,3 +1649,4 @@ footer {
     page-break-inside: avoid;
   }
 }
+
