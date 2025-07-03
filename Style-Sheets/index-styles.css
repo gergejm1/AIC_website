@@ -5,7 +5,6 @@ html, body {
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  
 }
 
 body{
@@ -167,7 +166,6 @@ body{
   align-items: center;
 }
 
-
 .navbar ul li{
   display: inline;
   padding: 15px;
@@ -193,8 +191,6 @@ body{
     align-items: center;
     gap: 5px;
     text-decoration: none;
-    
-    
     background-color: #C2A878;
     padding: 10px 18px;
     font-size: 18px;
@@ -217,14 +213,14 @@ body{
     color: white;
 }
 
+.donate-form {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    margin-left: 50px; 
+    align-items: center; 
+}
 
-       .donate-form {
-            display: inline-flex;
-            margin: 0;
-            padding: 0;
-            margin-left: 50px; 
-            align-items: center; 
-        }
 .heart-icon {
     width: 20px;
     height: 20px;
@@ -255,6 +251,24 @@ body{
   cursor: pointer;
 }
 
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    background: none;
+    border: none;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 3px 0;
+    transition: 0.3s;
+    display: block;
+}
 
 /***************************************************** WELCOME STYLES *************************************************/
 
@@ -298,6 +312,7 @@ body{
   border: none;
   border-radius: 10px;
 }
+
 .column2{
   flex: 65%;
   padding: 30px;
@@ -549,8 +564,6 @@ body{
 
 .program-card:hover {
   box-shadow: 0 15px 40px rgba(194, 168, 120, 0.6);
-  
-
 }
 
 .program-card:hover .program-icon,
@@ -560,7 +573,6 @@ body{
 
 .program-card:hover .card-text {
   opacity: 1;
- 
 }
 
 /***************************************************** SERVICES STYLES *************************************************/
@@ -603,7 +615,6 @@ body{
   font-family: 'poppins', sans-serif;
   transition: all 0.3s ease;
   box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-
 }
 
 .service-card:hover {
@@ -777,6 +788,7 @@ body{
   background-color: rgba(194, 168, 120, 1);
   transition: background-color 0.3s ease;
 }
+
 /***************************************************** FOOTER SECTION STYLES *************************************************/
 
 .support-section {
@@ -920,730 +932,605 @@ footer {
   font-size: 14px;
 }
 
-/* COMPLETE MOBILE RESPONSIVE STYLES */
+/***************************************************** MOBILE RESPONSIVE STYLES *************************************************/
 
-@media (max-width: 768px) {
-  /* General Mobile Fixes */
-  body {
-    font-size: 16px;
-  }
-
-  /* Contact Top Mobile */
-  .contacttop {
-    padding: 8px 10px;
-    flex-direction: column;
-    gap: 5px;
-    text-align: center;
-    font-size: 12px;
-  }
-  
-  /* Navbar Mobile - Complete overhaul */
-  .navbar {
-    flex-direction: row;
-    justify-content: space-between;
-    height: 60px;
-    padding: 10px 15px;
-    position: sticky;
-    width: 100%;
-    top: 0;
-  }
-  
-  .logo {
-    order: 1;
-    z-index: 1002;
-  }
-  
-  .logo img {
-    width: 100px;
-    margin-right: 0;
-  }
-
-  /* Menu Toggle Button */
-  .menu-toggle {
-    display: block;
-    order: 3;
-  }
-
-  /* Navigation Menu */
-  .navbar ul {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 80%;
-    max-width: 300px;
-    height: 100vh;
-    background-color: rgba(255, 255, 255, 0.98);
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 80px 20px 20px;
-    transition: right 0.3s ease;
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-    overflow-y: auto;
-  }
-
-  .navbar ul.active {
-    right: 0;
-  }
-  
-  .navbar ul li {
-    width: 100%;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(194, 168, 120, 0.2);
-  }
-  
-  .navbar ul li a {
-    font-size: 16px;
-    padding-left: 0;
-    display: block;
-    width: 100%;
-  }
-  
-  .donate-btn {
-    order: 2;
-    margin-left: 0;
-    margin-top: 0;
-    font-size: 14px;
-    padding: 8px 12px;
-  }
-
-  .heart-icon {
-    width: 16px;
-    height: 16px;
-  }
-
-  /* Adjust main content for fixed navbar */
-  .mainpage {
-    margin-top: 60px;
-    height: calc(100vh - 60px);
-  }
-
-  .slideshow-container {
-    height: calc(100vh - 60px);
-  }
-
-  /* Hero Section Mobile */
-  .mainpage h1 {
-    font-size: 28px;
-    padding: 0 20px;
-  }
-  
-  .mainpage h2 {
-    font-size: 16px;
-    padding: 0 20px;
-  }
-
-  .membership-btn {
-    font-size: 14px;
-    padding: 10px 20px;
-    margin-top: 20px;
-  }
-
-  /* Welcome Section Mobile */
-  .welcome-section {
-    padding: 30px 15px;
-  }
-
-  .row {
-    flex-direction: column;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-  }
-
-  .column1, .column2 {
-    flex: 100%;
-    margin-right: 0;
-    margin-bottom: 20px;
-    padding: 20px;
-  }
-
-  .column1 h1, .column2 h1 {
-    font-size: 22px;
-    margin-bottom: 15px;
-  }
-
-  .column2 p {
-    font-size: 14px;
-    margin-bottom: 15px;
-  }
-
-  .bullet-img {
-    width: 18px;
-    height: 18px;
-    margin-bottom: 3px;
-  }
-
-/* Welcome Section Mobile - continued */
-  .learn-more-btn {
-    font-size: 14px;
-    padding: 10px 20px;
-    width: 100%;
-    text-align: center;
-  }
-
-  /* Prayer Times Container */
-  .prayer-times-container iframe {
-    height: 400px;
-  }
-
-  /* Events Section Mobile */
-  .events-section {
-    padding: 30px 15px;
-  }
-
-  .events-section h1 {
-    font-size: 26px;
-    margin-bottom: 20px;
-  }
-
-  .column11, .column22 {
-    flex: 100%;
-    margin-right: 0;
-    margin-bottom: 20px;
-    padding: 20px;
-  }
-
-  .column11 h2, .column22 h2 {
-    font-size: 20px;
-    margin-bottom: 15px;
-  }
-
-  .calendar-container iframe {
-    height: 400px;
-  }
-
-  /* Facebook widget responsive */
-  .fb-page-container {
-    max-width: 100%;
-    overflow-x: auto;
-  }
-
-  .events-btn {
-    font-size: 14px;
-    padding: 10px 20px;
-  }
-
-  /* Programs Section Mobile */
-  .programs-section {
-    padding: 30px 15px;
-  }
-
-  .programs-section h1 {
-    font-size: 26px;
-    margin-bottom: 15px;
-  }
-
-  .programs-intro {
-    margin-bottom: 25px;
-  }
-
-  .programs-intro h2 {
-    font-size: 16px;
-    padding: 0 10px;
-    line-height: 1.5;
-  }
-
-  .programs-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 10px;
-  }
-
-  .program-card {
-    min-height: 200px;
-    padding: 20px;
-  }
-
-  .program-card h3 {
-    font-size: 18px;
-    margin-bottom: 15px;
-  }
-
-  .program-icon {
-    width: 120px;
-    height: 120px;
-    margin: 15px auto;
-  }
-
-  /* Services Section Mobile */
-  .services-section {
-    padding: 30px 15px;
-  }
-
-  .services-section h1 {
-    font-size: 26px;
-    margin-bottom: 20px;
-  }
-
-  .services-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 10px;
-  }
-
-  .service-card {
-    min-height: auto;
-    padding: 20px;
-  }
-
-  .service-card:hover {
-    transform: translateY(-5px);
-  }
-
-  .service-icon {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
-  }
-
-  .service-card h2 {
-    font-size: 18px;
-    margin-bottom: 8px;
-  }
-
-  .service-card p {
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
-
-   /* BANQUET SECTION MOBILE - FIXED */
-    .banquet-section {
-        padding: 30px 15px;
-        overflow: hidden; /* Keep this to contain any potential inner overflow */
+@media screen and (max-width: 1024px) {
+    .contacttop {
+        padding-left: 50px;
+        padding-right: 50px;
+        font-size: 14px;
     }
+    
+    .navbar ul li a {
+        font-size: 16px;
+        padding-left: 15px;
+    }
+    
+    .donate-form {
+        margin-left: 30px;
+    }
+    
+    .programs-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 25px;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+}
 
-    .banquet-section h1 {
-        font-size: 26px;
+@media screen and (max-width: 768px) {
+    .contacttop {
+        padding: 10px 20px;
+        font-size: 12px;
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 20px;
+        align-items: flex-start;
+    }
+    
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 15px;
+        background-color: rgba(255, 255, 255, 0.98);
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .navbar ul.show {
+        display: flex;
+    }
+    
+    .navbar ul li {
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        border-bottom: 1px solid rgba(194, 168, 120, 0.2);
+    }
+    
+    .navbar ul li:last-child {
+        border-bottom: none;
+    }
+    
+    .menu-toggle {
+        display: flex;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+    
+    .donate-form {
+        margin-left: 0;
+        margin-top: 15px;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .logo img {
+        width: 100px;
+    }
+    
+    .mainpage {
+        height: 60vh;
+    }
+    
+    .slideshow-container {
+        height: 60vh;
+    }
+    
+    .mainpage h1 {
+        font-size: 36px;
+        padding: 0 15px;
+    }
+    
+    .mainpage h2 {
+        font-size: 20px;
+        padding: 0 15px;
+    }
+    
+    .membership-btn {
+        padding: 12px 25px;
+        font-size: 16px;
+        margin-top: 30px;
+    }
+    
+    .row {
+        flex-direction: column;
+        margin-left: 20px;
+        margin-right: 20px;
+        gap: 20px;
+    }
+    
+    .column1, .column2, .column11, .column22, .column111, .column222 {
+        margin-right: 0;
         margin-bottom: 20px;
     }
-
-    /* Override the general row behavior specifically for banquet */
-    .banquet-section .row {
-        flex-direction: column !important; /* Ensure columns stack */
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        margin-top: 0 !important;
-        width: 100% !important; /* Ensure the row takes full width */
-        max-width: 100% !important; /* Prevent it from exceeding full width */
-        display: flex; /* Re-apply flex to the row itself */
-        gap: 20px; /* Add some space between the stacked columns */
+    
+    .prayer-times-container iframe {
+        height: 400px;
     }
-
-    /* Fix both columns to take full width */
-    .column111, .column222 {
-        flex: 100% !important; /* Each column takes full width */
-        width: 100% !important; /* Explicitly set width to 100% */
-        max-width: 100% !important; /* Ensure it doesn't exceed 100% */
-        margin-right: 0 !important; /* Remove right margin when stacked */
-        margin-bottom: 20px !important; /* Add space between stacked columns */
-        padding: 20px !important; /* Adjust padding for mobile */
-        max-height: none !important; /* Allow height to be determined by content */
-        min-height: auto !important; /* Allow height to be determined by content */
-        height: auto !important; /* Allow height to be determined by content */
-        box-sizing: border-box !important; /* Ensure padding is included in width */
+    
+    .calendar-container iframe {
+        height: 350px;
     }
-
-    /* Banquet gallery container */
-    .banquet-gallery {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 auto !important; /* Center the gallery if it has a max-width */
-        height: auto !important; /* Allow height to be determined by content */
-        padding: 0 !important;
+    
+    .programs-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 15px;
     }
-
-    /* Swiper container */
+    
+    .program-card {
+        min-height: 250px;
+        padding: 25px;
+    }
+    
+    .program-icon {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 15px;
+    }
+    
+.service-card {
+        min-height: 200px;
+        padding: 25px;
+    }
+    
+    .service-card:hover {
+        transform: translateY(-20px);
+    }
+    
     .banquet-swiper {
-        height: 250px !important; /* Adjust this value as needed for your images */
-        width: 100% !important;
-        max-width: 100% !important;
-        border-radius: 15px;
-        overflow: hidden;
-        margin: 0 !important;
+        height: 400px;
     }
-
-    /* Swiper wrapper */
-    .banquet-swiper .swiper-wrapper {
-        width: 100% !important;
-        height: 100% !important;
+    
+    .support-section {
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 20px;
     }
-
-    /* Swiper slides */
-    .banquet-swiper .swiper-slide {
-        width: 100% !important;
-        height: 100% !important;
+    
+    .support-text, .contact-info, .socials, .newsletter {
+        width: 100%;
+        text-align: center;
+        align-items: center;
     }
-
-    .banquet-swiper .swiper-slide img {
-        width: 100% !important;
-        height: 100% !important;
-        object-fit: cover; /* Ensures images cover the slide area */
-        display: block; /* Remove any extra space below image */
+    
+    .logo-img {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto 20px auto;
     }
-
-    /* Navigation buttons */
-    .swiper-button-prev,
-    .swiper-button-next {
-        width: 35px !important;
-        height: 35px !important;
-        margin-top: -17.5px !important; /* Center vertically */
-    }
-
-    .swiper-button-prev::after,
-    .swiper-button-next::after {
-        font-size: 12px !important;
-        font-weight: bold;
-        padding: 8px !important;
-    }
-
-    /* Pagination */
-    .swiper-pagination {
-        bottom: 10px !important;
-    }
-
-    .swiper-pagination-bullet {
-        width: 8px !important;
-        height: 8px !important;
-        margin: 0 4px !important;
-    }
-
-    /* Text content */
-    .column222 h2 {
-        font-size: 22px;
-        margin-bottom: 15px;
+    
+    .support-text p {
+        padding-right: 0;
         text-align: center;
     }
+    
+    .contact-info h2 {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .events-section h1, .programs-section h1, .services-section h1, .banquet-section h1 {
+        font-size: 28px;
+    }
+    
+    .column1 h1, .column2 h1, .column11 h2, .column22 h2, .column222 h2 {
+        font-size: 22px;
+    }
+}
 
+@media screen and (max-width: 480px) {
+    .contacttop {
+        font-size: 11px;
+        padding: 8px 15px;
+    }
+    
+    .navbar {
+        padding: 8px 15px;
+    }
+    
+    .logo img {
+        width: 80px;
+    }
+    
+    .mainpage {
+        height: 50vh;
+    }
+    
+    .slideshow-container {
+        height: 50vh;
+    }
+    
+    .mainpage h1 {
+        font-size: 28px;
+        padding: 0 10px;
+    }
+    
+    .mainpage h2 {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+    
+    .membership-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+        margin-top: 25px;
+    }
+    
+    .row {
+        margin-left: 15px;
+        margin-right: 15px;
+        gap: 15px;
+    }
+    
+    .column1, .column2, .column11, .column22, .column111, .column222 {
+        padding: 20px;
+    }
+    
+    .prayer-times-container iframe {
+        height: 350px;
+    }
+    
+    .calendar-container iframe {
+        height: 300px;
+    }
+    
+    .programs-grid {
+        padding: 10px;
+        gap: 15px;
+    }
+    
+    .program-card {
+        min-height: 220px;
+        padding: 20px;
+    }
+    
+    .program-card h3 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    
+    .program-icon {
+        width: 100px;
+        height: 100px;
+        margin: 15px auto;
+    }
+    
+    .card-text p {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+    
+    .services-grid {
+        padding: 10px;
+        gap: 15px;
+    }
+    
+    .service-card {
+        min-height: 180px;
+        padding: 20px;
+    }
+    
+    .service-card h2 {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+    
+    .service-card p {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+    
+    .service-icon {
+        width: 45px;
+        height: 45px;
+        margin-bottom: 10px;
+    }
+    
+    .banquet-swiper {
+        height: 300px;
+    }
+    
+    .column222 h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
     .column222 p {
         font-size: 14px;
         margin-bottom: 15px;
-        line-height: 1.6;
-        text-align: left;
-        word-wrap: break-word; /* Ensure long words don't overflow */
+        line-height: 1.5;
     }
-
-    .banquethall-btn {
+    
+    .support-section {
+        padding: 25px 15px;
+        gap: 25px;
+    }
+    
+    .logo-img {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto 15px auto;
+    }
+    
+    .support-text p {
+        font-size: 16px;
+    }
+    
+    .contact-info h2, .socials h2, .newsletter h2 {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+    
+    .contact-info h3 {
+        font-size: 15px;
+        margin: 8px 0 4px 0;
+    }
+    
+    .contact-info p, .socials p, .newsletter p {
         font-size: 14px;
-        padding: 12px 24px;
-        width: 100%;
-        max-width: 100%;
-        text-align: center;
-        display: block; /* Make the button take full width */
-        margin-top: 20px;
-        box-sizing: border-box;
+        margin-bottom: 8px;
     }
-
-  /* Footer Mobile */
-  .support-section {
-    margin-top: 30px;
-    padding: 30px 15px;
-    overflow: hidden; /* Prevent overflow */
-  }
-
-  /* Footer row - ensure it doesn't overflow */
-  .support-section .row {
-    flex-direction: column;
-    margin: 0;
-    gap: 30px;
-    width: 100%;
-    max-width: 100%;
-  }
-  
-  .support-text,
-  .contact-info,
-  .socials,
-  .newsletter {
-    width: 100%;
-    max-width: 100%;
-    text-align: center;
-    align-items: center;
-    padding: 0 10px; /* Add padding to prevent edge touching */
-    box-sizing: border-box;
-  }
-
-  .support-text p {
-    padding-right: 0;
-    font-size: 14px;
-  }
-  
-  .contact-info {
-    display: block;
-    width: 100%;
-  }
-
-  .contact-info h2 {
-    width: 100%;
-    align-items: center;
-    font-size: 22px;
-    margin-bottom: 15px;
-  }
-
-  .contact-info h3 {
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 5px;
-  }
-
-  .contact-info p {
-    font-size: 14px;
-    margin-bottom: 15px;
-  }
-
-  .socials h2 {
-    font-size: 22px;
-    margin-bottom: 15px;
-  }
-
-  .socials p {
-    font-size: 14px;
-  }
-
-  .newsletter h2 {
-    font-size: 22px;
-    margin-bottom: 15px;
-  }
-
-  .newsletter p {
-    font-size: 14px;
-  }
-  
-  .logo-img {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto -50px auto;
-  }
-
-  .facebook-img {
-    width: 35px;
-    height: 35px;
-    margin-bottom: 20px;
-  }
-  
-  .newsletter input[type="email"] {
-    width: 100%;
-    max-width: 300px;
-    font-size: 14px;
-  }
-
-  .newsletter button {
-    font-size: 14px;
-    padding: 10px 20px;
-  }
-
-  footer {
-    font-size: 12px;
-    padding: 15px;
-  }
+    
+    .email-icon, .phone-icon, .pin-icon {
+        width: 16px;
+        height: 16px;
+        margin-right: 6px;
+    }
+    
+    .facebook-img {
+        width: 32px;
+        height: 32px;
+        margin-top: 8px;
+        margin-bottom: 0;
+    }
+    
+    .newsletter input[type="email"] {
+        padding: 8px;
+        font-size: 14px;
+        margin-top: 8px;
+    }
+    
+    .newsletter button {
+        padding: 8px 16px;
+        font-size: 14px;
+        margin-top: 12px;
+    }
+    
+    .events-section h1, .programs-section h1, .services-section h1, .banquet-section h1 {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+    
+    .column1 h1, .column2 h1, .column11 h2, .column22 h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .programs-intro h2 {
+        font-size: 16px;
+        padding: 0 15px;
+        line-height: 1.4;
+    }
+    
+    .learn-more-btn, .events-btn, .banquethall-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    .bullet-img {
+        width: 18px;
+        height: 18px;
+        margin-bottom: 3px;
+        margin-right: 6px;
+    }
+    
+    .column2 p {
+        font-size: 14px;
+        margin-bottom: 15px;
+        line-height: 1.5;
+    }
 }
 
-/* Mobile: Show text by default, no hover effect for program cards */
-@media (max-width: 768px) and (hover: none) {
-  .program-card .program-icon,
-  .program-card h3 {
-    display: none;
-  }
-
-  .card-text {
-    opacity: 1;
-    position: static;
-    transform: none;
-    width: 100%;
-    padding: 0;
-  }
+@media screen and (max-width: 320px) {
+    .contacttop {
+        font-size: 10px;
+        padding: 6px 10px;
+    }
+    
+    .logo img {
+        width: 70px;
+    }
+    
+    .mainpage h1 {
+        font-size: 24px;
+    }
+    
+    .mainpage h2 {
+        font-size: 14px;
+    }
+    
+    .membership-btn {
+        padding: 8px 16px;
+        font-size: 13px;
+        margin-top: 20px;
+    }
+    
+    .row {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    .column1, .column2, .column11, .column22, .column111, .column222 {
+        padding: 15px;
+    }
+    
+    .prayer-times-container iframe {
+        height: 300px;
+    }
+    
+    .calendar-container iframe {
+        height: 250px;
+    }
+    
+    .program-card {
+        min-height: 200px;
+        padding: 15px;
+    }
+    
+    .program-card h3 {
+        font-size: 16px;
+    }
+    
+    .program-icon {
+        width: 80px;
+        height: 80px;
+        margin: 10px auto;
+    }
+    
+    .service-card {
+        min-height: 160px;
+        padding: 15px;
+    }
+    
+    .service-card h2 {
+        font-size: 16px;
+    }
+    
+    .service-card p {
+        font-size: 12px;
+    }
+    
+    .service-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .banquet-swiper {
+        height: 250px;
+    }
+    
+    .support-section {
+        padding: 20px 10px;
+        gap: 20px;
+    }
+    
+    .logo-img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .support-text p {
+        font-size: 14px;
+    }
+    
+    .contact-info h2, .socials h2, .newsletter h2 {
+        font-size: 18px;
+    }
+    
+    .events-section h1, .programs-section h1, .services-section h1, .banquet-section h1 {
+        font-size: 22px;
+    }
+    
+    .column1 h1, .column2 h1, .column11 h2, .column22 h2, .column222 h2 {
+        font-size: 18px;
+    }
 }
 
-/* Small Mobile Devices (max-width: 480px) */
-@media (max-width: 480px) {
-  .mainpage h1 {
-    font-size: 24px;
-  }
+/* Additional Mobile-Specific Improvements */
 
-  .mainpage h2 {
-    font-size: 14px;
-  }
-
-  .column1 h1, .column2 h1 {
-    font-size: 20px;
-  }
-
-  .programs-section h1,
-  .services-section h1,
-  .events-section h1,
-  .banquet-section h1 {
-    font-size: 24px;
-  }
-
-  .program-icon {
-    width: 100px;
-    height: 100px;
-  }
-
-  .banquet-swiper {
-    height: 250px !important;
-  }
-  
-  .column111, .column222 {
-    padding: 15px !important;
-  }
+@media screen and (max-width: 768px) {
+    /* Touch-friendly button sizes */
+    .learn-more-btn, .events-btn, .banquethall-btn, .membership-btn, .donate-btn {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Improved touch targets for navigation */
+    .navbar ul li a {
+        padding: 15px 20px;
+        display: block;
+        width: 100%;
+    }
+    
+    /* Better spacing for mobile cards */
+    .program-card, .service-card {
+        margin-bottom: 15px;
+    }
+    
+    /* Mobile-optimized hover effects */
+    .program-card:hover .card-text {
+        opacity: 1;
+    }
+    
+    .program-card:hover .program-icon,
+    .program-card:hover h3 {
+        opacity: 0.3;
+    }
+    
+    /* Simplified animations for mobile */
+    .service-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    /* Mobile-friendly iframe responsiveness */
+    .prayer-times-container iframe,
+    .calendar-container iframe {
+        max-width: 100%;
+        border-radius: 8px;
+    }
+    
+    /* Improved mobile typography */
+    body {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    
+    /* Mobile menu animation */
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
 }
 
-/* TABLET RESPONSIVE STYLES *****************************************************/
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  /* Contact Top */
-  .contacttop {
-    padding-left: 40px;
-    padding-right: 40px;
-    font-size: 14px;
-  }
-
-  /* Navbar Tablet */
-  .navbar {
-    height: auto;
-    padding: 10px 15px;
-  }
-
-  .navbar ul {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .navbar ul li {
-    padding: 8px;
-  }
-
-  .navbar ul li a {
-    font-size: 16px;
-    padding-left: 15px;
-  }
-
-  .logo img {
-    width: 120px;
-  }
-
-  .donate-btn {
-    margin-left: 20px;
-    font-size: 16px;
-  }
-
-  /* Main Content */
-  .row {
-    margin-left: 30px;
-    margin-right: 30px;
-  }
-
-  .mainpage h1 {
-    font-size: 48px;
-  }
-
-  .mainpage h2 {
-    font-size: 24px;
-  }
-
-  /* Programs and Services Grid */
-  .programs-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-  }
-
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-  }
-
-  /* Column adjustments */
-  .column1, .column2,
-  .column11, .column22,
-  .column111, .column222 {
-    padding: 25px;
-  }
-
-  /* Banquet Section */
-  .banquet-swiper {
-    height: 500px;
-  }
-
-  /* Footer */
-  .support-section .row {
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .support-text,
-  .contact-info,
-  .socials,
-  .newsletter {
-    width: 45%;
-    margin-bottom: 30px;
-  }
-
-  .logo-img {
-    width: 250px;
-    height: 250px;
-  }
+/* Landscape orientation adjustments for mobile */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    .mainpage {
+        height: 70vh;
+    }
+    
+    .slideshow-container {
+        height: 70vh;
+    }
+    
+    .mainpage h1 {
+        font-size: 32px;
+    }
+    
+    .mainpage h2 {
+        font-size: 18px;
+    }
 }
-
-/* Large Desktop Adjustments */
-@media (min-width: 1600px) {
-  .contacttop {
-    padding-left: 300px;
-    padding-right: 300px;
-  }
-
-  .row {
-    margin-left: 100px;
-    margin-right: 100px;
-  }
-
-  .mainpage h1 {
-    font-size: 72px;
-  }
-
-  .mainpage h2 {
-    font-size: 36px;
-  }
-}
-
-/* Accessibility and Performance Improvements */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-}
-
-/* Print Styles */
-@media print {
-  .navbar,
-  .contacttop,
-  .donate-btn,
-  .membership-btn,
-  .learn-more-btn,
-  .events-btn,
-  .banquethall-btn,
-  .newsletter,
-  footer {
-    display: none;
-  }
-
-  .mainpage {
-    height: auto;
-  }
-
-  .row {
-    display: block;
-  }
-
-  .column1, .column2,
-  .column11, .column22,
-  .column111, .column222 {
-    width: 100%;
-    margin: 0 0 20px 0;
-    page-break-inside: avoid;
-  }
-}
-

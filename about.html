@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Albanian Islamic Center - About Us</title>
         <link rel="stylesheet" href="Style-Sheets/about-styles.css">
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -19,7 +21,14 @@
             <a href="#" class="logo">
                 <img src="images/Logo.png">
             </a>
-            <ul>
+            
+            <button class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="islam.html">What is Islam?</a></li>
@@ -30,10 +39,14 @@
                 <li><a href="membership.html">Join Us</a></li>
                 <li><a href="contactus.html">Contact Us</a></li>
             </ul>
-            <a href="#" class="donate-btn">
-                <img src="images/donation.png" class="heart-icon">
-                Donate
-            </a> 
+            
+            <form action="https://www.paypal.com/donate" method="post" target="_blank" class="donate-form">
+                <input type="hidden" name="hosted_button_id" value="LMWW6JLZ9N57L" />
+                <button type="submit" class="donate-btn" title="PayPal - The safer, easier way to pay online!">
+                    <img src="images/donation.png" class="heart-icon" alt="Heart icon">
+                    Donate
+                </button>
+            </form>
         </nav>
 
         <div class="mainpage">
@@ -168,7 +181,7 @@
         <div class="ShuajbGerguri">
             <div class="row">
                 <div class="columna1" data-aos="fade-right">
-                     <img src="images/ImamShuajb.jpg" alt="Imam Shuajb Gerguri" class="column-img">
+                     <img src="images/sheikj.jpg" alt="Imam Shuajb Gerguri" class="columnb-img">
                 </div>
                 <div class="columna2" data-aos="fade-left">
                     <h1>Imam Shuajb Gerguri</h1>
@@ -205,9 +218,6 @@
                     <p>The Center's approach to leadership emphasizes consultation (shura), transparency, and service to 
                         Allah and the community. Regular board meetings ensure that decisions reflect the needs and values 
                         of our diverse congregation while staying true to Islamic principles and Albanian heritage.</p>
-                </div>
-                <div class="columna22" data-aos="fade-left">
-                    <img src="images/Leadership.jpg" alt="Albanian Islamic Center Leadership" class="column-img">
                 </div>
             </div>
         </div>
@@ -265,9 +275,47 @@
         <script src="webscripts.js"></script>
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
+            // Initialize AOS
             AOS.init({
                 duration: 1000,
                 once: true,
+            });
+
+            // Mobile menu toggle functionality
+            const menuToggle = document.getElementById('menu-toggle');
+            const navMenu = document.getElementById('nav-menu');
+
+            menuToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('show');
+                menuToggle.classList.toggle('active');
+            });
+
+            // Close menu when clicking on a link (mobile)
+            const navLinks = document.querySelectorAll('#nav-menu a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('show');
+                    menuToggle.classList.remove('active');
+                });
+            });
+
+            // Close menu when clicking outside (mobile)
+            document.addEventListener('click', function(event) {
+                const isClickInsideNav = navMenu.contains(event.target);
+                const isClickOnToggle = menuToggle.contains(event.target);
+                
+                if (!isClickInsideNav && !isClickOnToggle && navMenu.classList.contains('show')) {
+                    navMenu.classList.remove('show');
+                    menuToggle.classList.remove('active');
+                }
+            });
+
+            // Handle window resize for mobile menu
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) {
+                    navMenu.classList.remove('show');
+                    menuToggle.classList.remove('active');
+                }
             });
 
             // Show the first slide
