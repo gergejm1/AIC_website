@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Albanian Islamic Center - Services</title>
         <link rel="stylesheet" href="Style-Sheets/service-styles.css">
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -19,7 +21,14 @@
             <a href="#" class="logo">
                 <img src="images/Logo.png">
             </a>
-            <ul>
+            
+            <button class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="islam.html">What is Islam?</a></li>
@@ -30,6 +39,7 @@
                 <li><a href="membership.html">Join Us</a></li>
                 <li><a href="contactus.html">Contact Us</a></li>
             </ul>
+            
             <form action="https://www.paypal.com/donate" method="post" target="_blank" class="donate-form">
                 <input type="hidden" name="hosted_button_id" value="LMWW6JLZ9N57L" />
                 <button type="submit" class="donate-btn" title="PayPal - The safer, easier way to pay online!">
@@ -61,7 +71,6 @@
                 <div class="services-grid">
                     <!-- Marriage Services -->
                     <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-
                         <div class="service-content">
                             <h2>Marriage Services (Nikkah)</h2>
                             <p>We provide complete Islamic marriage services including pre-marital counseling, Nikkah ceremonies, and marriage documentation. Our qualified imams conduct ceremonies in accordance with Islamic principles and Michigan state requirements.</p>
@@ -100,7 +109,6 @@
 
                     <!-- Funeral Services -->
                     <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-
                         <div class="service-content">
                             <h2>Funeral Services</h2>
                             <p>Our community provides comprehensive funeral services including Janazah prayers, burial arrangements, and family support during difficult times. We guide families through Islamic funeral rites with compassion and care.</p>
@@ -140,7 +148,6 @@
 
                     <!-- Zakat Services -->
                     <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-
                         <div class="service-content">
                             <h2>Zakat & Charity Services</h2>
                             <p>We facilitate the collection and distribution of Zakat, Sadaqah, and other charitable donations to help community members in need. Our transparent system ensures your contributions reach those who need them most.</p>
@@ -181,7 +188,6 @@
 
                     <!-- Gym Rental Services -->
                     <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-
                         <div class="service-content">
                             <h2>Gym & Facility Rental</h2>
                             <p>Rent our basketball/volleyball court and other facility spaces for sports events, community gatherings, and private functions. Our modern gym provides an excellent venue for various activities.</p>
@@ -223,7 +229,6 @@
 
                     <!-- Religious Counseling -->
                     <div class="service-card" data-aos="fade-up" data-aos-delay="500">
-
                         <div class="service-content">
                             <h2>Religious Counseling</h2>
                             <p>Our experienced imam provides spiritual guidance, religious consultation, and counseling services for individuals and families facing various life challenges from an Islamic perspective.</p>
@@ -264,7 +269,6 @@
 
                     <!-- Community Events -->
                     <div class="service-card" data-aos="fade-up" data-aos-delay="600">
-
                         <div class="service-content">
                             <h2>Community Event Planning</h2>
                             <p>We assist in organizing and hosting community events, religious celebrations, and cultural programs that bring our community together and strengthen our bonds of brotherhood and sisterhood.</p>
@@ -308,7 +312,7 @@
                 <!-- Service Request Information -->
                 <div class="service-request-info" data-aos="fade-up">
                     <h2>How to Request Services</h2>
-                    <div class="request-steps">
+                  <div class="request-steps">
                         <div class="step">
                             <div class="step-number">1</div>
                             <div class="step-content">
@@ -398,11 +402,48 @@
                 once: true,
             });
 
+            // Mobile menu toggle functionality
+            const menuToggle = document.getElementById('menu-toggle');
+            const navMenu = document.getElementById('nav-menu');
+
+            menuToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('show');
+                menuToggle.classList.toggle('active');
+            });
+
+            // Close menu when clicking on a link (mobile)
+            const navLinks = document.querySelectorAll('#nav-menu a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('show');
+                    menuToggle.classList.remove('active');
+                });
+            });
+
+            // Close menu when clicking outside (mobile)
+            document.addEventListener('click', function(event) {
+                const isClickInsideNav = navMenu.contains(event.target);
+                const isClickOnToggle = menuToggle.contains(event.target);
+                
+                if (!isClickInsideNav && !isClickOnToggle && navMenu.classList.contains('show')) {
+                    navMenu.classList.remove('show');
+                    menuToggle.classList.remove('active');
+                }
+            });
+
             // Show the main slide
             document.addEventListener('DOMContentLoaded', function() {
                 const slide = document.querySelector('.mySlides');
                 if (slide) {
                     slide.style.display = 'block';
+                }
+            });
+
+            // Handle window resize for mobile menu
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) {
+                    navMenu.classList.remove('show');
+                    menuToggle.classList.remove('active');
                 }
             });
         </script>

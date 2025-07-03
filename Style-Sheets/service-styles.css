@@ -7,6 +7,10 @@ html, body {
   scroll-behavior: smooth;
 }
 
+body{
+  overflow-x: hidden;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -71,8 +75,6 @@ html, body {
     align-items: center;
     gap: 5px;
     text-decoration: none;
-    color: #000;
-    margin-left: 50px;
     background-color: #C2A878;
     padding: 10px 18px;
     font-size: 18px;
@@ -82,6 +84,7 @@ html, body {
     color: white;
     cursor: pointer;
     transition: all 0.3s ease;
+    border: none;
 }
 
 .donate-btn:hover {
@@ -92,6 +95,14 @@ html, body {
 .donate-btn:active {
     background-color: rgba(194, 168, 120, 0.6);
     color: white;
+}
+
+.donate-form {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    margin-left: 50px; 
+    align-items: center; 
 }
 
 .heart-icon {
@@ -121,6 +132,25 @@ html, body {
   object-fit: contain;
   padding-top: 0px;
   justify-content: flex-start;
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    background: none;
+    border: none;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 3px 0;
+    transition: 0.3s;
+    display: block;
 }
 
 /* MAINPAGE *****************************************************/
@@ -696,308 +726,1006 @@ footer {
 
 /* MOBILE RESPONSIVE STYLES *****************************************************/
 
-@media (max-width: 768px) {
-  /* Navbar Mobile */
-  .contacttop {
-    padding-left: 20px;
-    padding-right: 20px;
-    flex-direction: column;
-    gap: 5px;
-    text-align: center;
-    font-size: 13px;
-  }
-  
-  .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-  }
-  
-  .navbar ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5px;
-  }
-  
-  .navbar ul li {
-    padding: 5px;
-  }
-  
-  .navbar ul li a {
-    font-size: 16px;
-    padding-left: 10px;
-  }
-  
-  .donate-btn {
-    margin-left: 0;
-    margin-top: 10px;
-    font-size: 16px;
-    padding: 8px 15px;
-  }
-  
-  .logo img {
-    width: 120px;
-  }
+@media screen and (max-width: 1024px) {
+    .contacttop {
+        padding-left: 50px;
+        padding-right: 50px;
+        font-size: 14px;
+    }
+    
+    .navbar ul li a {
+        font-size: 16px;
+        padding-left: 15px;
+    }
+    
+    .donate-form {
+        margin-left: 30px;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+    
+    .service-card {
+        padding: 35px;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .service-request-info {
+        padding: 40px 30px;
+    }
+    
+    .request-steps {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
 
-  /* Hero Section Mobile */
-  .mainpage h1 {
-    font-size: 32px;
-  }
-  
-  .mainpage h2 {
-    font-size: 18px;
-  }
+@media screen and (max-width: 768px) {
+    .contacttop {
+        padding: 10px 20px;
+        font-size: 12px;
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 20px;
+        align-items: flex-start;
+    }
+    
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 15px;
+        background-color: rgba(255, 255, 255, 0.98);
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .navbar ul.show {
+        display: flex;
+    }
+    
+    .navbar ul li {
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        border-bottom: 1px solid rgba(194, 168, 120, 0.2);
+    }
+    
+    .navbar ul li:last-child {
+        border-bottom: none;
+    }
+    
+    .navbar ul li a {
+        padding: 15px 20px;
+        display: block;
+        width: 100%;
+    }
+    
+    .menu-toggle {
+        display: flex;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+    
+    .donate-form {
+        margin-left: 0;
+        margin-top: 15px;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .donate-btn {
+        min-height: 44px;
+        min-width: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .logo img {
+        width: 100px;
+    }
+    
+    .mainpage {
+        height: 60vh;
+    }
+    
+    .slideshow-container {
+        height: 60vh;
+    }
+    
+    .mainpage h1 {
+        font-size: 36px;
+        padding: 0 15px;
+    }
+    
+    .mainpage h2 {
+        font-size: 20px;
+        padding: 0 15px;
+    }
+    
+    .text-overlay {
+        width: 90%;
+        top: 50%;
+    }
+    
+    .services-section {
+        padding: 50px 0;
+    }
+    
+    .services-intro h1 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    
+    .services-intro p {
+        font-size: 16px;
+        padding: 0 20px;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-bottom: 60px;
+    }
+    
+    .service-card {
+        padding: 30px 20px;
+        margin: 0 10px;
+    }
+    
+    .service-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .service-content h2 {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+    
+    .service-content > p {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .service-details {
+        padding: 20px 15px;
+        margin: 20px 0;
+    }
+    
+    .service-details h3 {
+        font-size: 16px;
+        margin-bottom: 12px;
+        text-align: center;
+    }
+    
+    .service-details li {
+        font-size: 13px;
+        margin-bottom: 6px;
+    }
+    
+    .service-info {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+    
+    .info-label,
+    .info-value {
+        font-size: 13px;
+    }
+    
+    .service-button {
+        font-size: 15px;
+        padding: 12px 25px;
+        margin-top: 20px;
+        min-height: 44px;
+    }
+    
+    .service-request-info {
+        padding: 30px 20px;
+        margin: 30px 10px 0;
+    }
+    
+    .service-request-info h2 {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    
+    .request-steps {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+    
+    .step {
+        padding: 25px 20px;
+    }
+    
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    
+    .step-content h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    
+    .step-content p {
+        font-size: 14px;
+    }
+    
+    .emergency-contact {
+        padding: 25px 20px;
+    }
+    
+    .emergency-contact h3 {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+    
+    .emergency-contact p {
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .emergency-button {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+    
+    .row {
+        flex-direction: column;
+        margin-left: 20px;
+        margin-right: 20px;
+        gap: 30px;
+    }
+    
+    .support-section {
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 20px;
+    }
+    
+    .support-text, .contact-info, .socials, .newsletter {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .logo-img {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto 20px auto;
+    }
+    
+    .support-text p {
+        padding-right: 0;
+        text-align: center;
+    }
+    
+    .contact-info h2 {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+}
 
-  .text-overlay {
-    width: 90%;
-    padding: 0 20px;
-  }
-
-  /* Services Section Mobile */
-  .services-section {
-    padding: 50px 0;
-  }
-
-  .services-intro h1 {
-    font-size: 28px;
-    margin-bottom: 15px;
-  }
-
-  .services-intro p {
-    font-size: 16px;
-    padding: 0 20px;
-  }
-
-  /* Services Grid Mobile */
-  .services-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-    margin-bottom: 60px;
-  }
-
-  /* Service Cards Mobile */
-  .service-card {
-    padding: 30px 20px;
-    margin: 0 10px;
-  }
-
-  .service-icon {
-    width: 60px;
-    height: 60px;
-  }
-
-  .service-content h2 {
-    font-size: 20px;
-    margin-bottom: 12px;
-  }
-
-  .service-content > p {
-    font-size: 15px;
-    margin-bottom: 20px;
-  }
-
-  .service-details {
-    padding: 20px 15px;
-    margin: 20px 0;
-  }
-
-  .service-details h3 {
-    font-size: 16px;
-    margin-bottom: 12px;
-    text-align: center;
-  }
-
-  .service-details li {
-    font-size: 13px;
-    margin-bottom: 6px;
-  }
-
-  .service-info {
-    flex-direction: column;
-    text-align: center;
-    gap: 5px;
-  }
-
-  .info-label,
-  .info-value {
-    font-size: 13px;
-  }
-
-  .service-button {
-    font-size: 15px;
-    padding: 12px 25px;
-    margin-top: 20px;
-  }
-
-  /* Service Request Info Mobile */
-  .service-request-info {
-    padding: 30px 20px;
-    margin: 30px 10px 0;
-  }
-
-  .service-request-info h2 {
-    font-size: 24px;
-    margin-bottom: 30px;
-  }
-
-  .request-steps {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    margin-bottom: 40px;
-  }
-
+@media screen and (max-width: 480px) {
+    .contacttop {
+        font-size: 11px;
+        padding: 8px 15px;
+    }
+    
+    .navbar {
+        padding: 8px 15px;
+    }
+    
+    .logo img {
+        width: 80px;
+    }
+    
+    .mainpage {
+        height: 50vh;
+    }
+    
+    .slideshow-container {
+        height: 50vh;
+    }
+    
+    .mainpage h1 {
+        font-size: 28px;
+        padding: 0 10px;
+    }
+    
+    .mainpage h2 {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+    
+    .services-section {
+        padding: 40px 0;
+    }
+    
+    .services-intro h1 {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+    
+    .services-intro p {
+        font-size: 14px;
+        padding: 0 15px;
+    }
+    
+    .services-grid {
+        gap: 25px;
+        margin-bottom: 50px;
+    }
+    
+    .service-card {
+        padding: 25px 15px;
+        margin: 0 5px;
+    }
+    
+    .service-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .service-content h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    
+    .service-content > p {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+    
+    .service-details {
+        padding: 15px 12px;
+        margin: 15px 0;
+    }
+    
+    .service-details h3 {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    
+    .service-details li {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+    
+    .info-label,
+    .info-value {
+        font-size: 12px;
+    }
+    
+    .service-button {
+        font-size: 14px;
+        padding: 10px 20px;
+        margin-top: 15px;
+    }
+    
+    .service-request-info {
+        padding: 25px 15px;
+        margin: 25px 5px 0;
+    }
+    
+    .service-request-info h2 {
+        font-size: 22px;
+        margin-bottom: 25px;
+    }
+    
+    .request-steps {
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+    
   .step {
-    padding: 25px 20px;
-  }
-
-  .step-number {
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
-    margin-bottom: 15px;
-  }
-
-  .step-content h3 {
-    font-size: 18px;
-    margin-bottom: 12px;
-  }
-
-  .step-content p {
-    font-size: 14px;
-  }
-
-  .emergency-contact {
-    padding: 25px 20px;
-  }
-
-  .emergency-contact h3 {
-    font-size: 20px;
-    margin-bottom: 12px;
-  }
-
-  .emergency-contact p {
-    font-size: 15px;
-    margin-bottom: 15px;
-  }
-
-  .emergency-button {
-    font-size: 16px;
-    padding: 12px 25px;
-  }
-
-  /* Footer Mobile */
-  .row {
-    flex-direction: column;
-    margin-left: 20px;
-    margin-right: 20px;
-    gap: 30px;
-  }
-  
-  .support-text,
-  .contact-info,
-  .socials,
-  .newsletter {
-    width: 100%;
-    text-align: center;
-    align-items: center;
-  }
-  
-  .contact-info h2 {
-    width: 100%;
-    text-align: center;
-  }
-  
-  .logo-img {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto;
-  }
-  
-  .newsletter input[type="email"] {
-    width: calc(100% - 20px);
-    max-width: 300px;
-  }
+        padding: 20px 15px;
+    }
+    
+    .step-number {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+    
+    .step-content h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    .step-content p {
+        font-size: 13px;
+    }
+    
+    .emergency-contact {
+        padding: 20px 15px;
+    }
+    
+    .emergency-contact h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    
+    .emergency-contact p {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+    
+    .emergency-button {
+        font-size: 15px;
+        padding: 10px 20px;
+    }
+    
+    .row {
+        margin-left: 15px;
+        margin-right: 15px;
+        gap: 25px;
+    }
+    
+    .support-section {
+        padding: 25px 15px;
+        gap: 25px;
+    }
+    
+    .logo-img {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto 15px auto;
+    }
+    
+    .support-text p {
+        font-size: 16px;
+    }
+    
+    .contact-info h2, .socials h2, .newsletter h2 {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+    
+    .contact-info h3 {
+        font-size: 15px;
+        margin: 8px 0 4px 0;
+    }
+    
+    .contact-info p, .socials p, .newsletter p {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+    
+    .email-icon, .phone-icon, .pin-icon {
+        width: 16px;
+        height: 16px;
+        margin-right: 6px;
+    }
+    
+    .facebook-img {
+        width: 32px;
+        height: 32px;
+        margin-top: 8px;
+        margin-bottom: 0;
+    }
+    
+    .newsletter input[type="email"] {
+        padding: 8px;
+        font-size: 14px;
+        margin-top: 8px;
+    }
+    
+    .newsletter button {
+        padding: 8px 16px;
+        font-size: 14px;
+        margin-top: 12px;
+    }
 }
 
-/* TABLET RESPONSIVE STYLES *****************************************************/
-
-@media (max-width: 1024px) and (min-width: 769px) {
-  .services-section {
-    padding: 60px 0;
-  }
-
-  .services-grid {
-    grid-template-columns: 1fr;
-    gap: 35px;
-  }
-
-  .service-card {
-    padding: 35px;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-  .service-request-info {
-    padding: 40px 30px;
-  }
-
-  .request-steps {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
-
-  .row {
-    margin-left: 40px;
-    margin-right: 40px;
-  }
+@media screen and (max-width: 320px) {
+    .contacttop {
+        font-size: 10px;
+        padding: 6px 10px;
+    }
+    
+    .logo img {
+        width: 70px;
+    }
+    
+    .mainpage {
+        height: 45vh;
+    }
+    
+    .slideshow-container {
+        height: 45vh;
+    }
+    
+    .mainpage h1 {
+        font-size: 24px;
+    }
+    
+    .mainpage h2 {
+        font-size: 14px;
+    }
+    
+    .services-section {
+        padding: 30px 0;
+    }
+    
+    .services-intro h1 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+    
+    .services-intro p {
+        font-size: 13px;
+        padding: 0 10px;
+    }
+    
+    .services-grid {
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+    
+    .service-card {
+        padding: 20px 12px;
+        margin: 0 3px;
+    }
+    
+    .service-icon {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .service-content h2 {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+    
+    .service-content > p {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+    
+    .service-details {
+        padding: 12px 10px;
+        margin: 12px 0;
+    }
+    
+    .service-details h3 {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+    
+    .service-details li {
+        font-size: 11px;
+        margin-bottom: 4px;
+    }
+    
+    .info-label,
+    .info-value {
+        font-size: 11px;
+    }
+    
+    .service-button {
+        font-size: 13px;
+        padding: 8px 16px;
+        margin-top: 12px;
+    }
+    
+    .service-request-info {
+        padding: 20px 10px;
+        margin: 20px 3px 0;
+    }
+    
+    .service-request-info h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .request-steps {
+        gap: 12px;
+        margin-bottom: 25px;
+    }
+    
+    .step {
+        padding: 15px 10px;
+    }
+    
+    .step-number {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    
+    .step-content h3 {
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+    
+    .step-content p {
+        font-size: 12px;
+    }
+    
+    .emergency-contact {
+        padding: 15px 10px;
+    }
+    
+    .emergency-contact h3 {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+    
+    .emergency-contact p {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+    
+    .emergency-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+    
+    .row {
+        margin-left: 10px;
+        margin-right: 10px;
+        gap: 20px;
+    }
+    
+    .support-section {
+        padding: 20px 10px;
+        gap: 20px;
+    }
+    
+    .logo-img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .support-text p {
+        font-size: 14px;
+    }
+    
+    .contact-info h2, .socials h2, .newsletter h2 {
+        font-size: 18px;
+    }
+    
+    .contact-info h3 {
+        font-size: 14px;
+    }
+    
+    .contact-info p, .socials p, .newsletter p {
+        font-size: 13px;
+    }
+    
+    .email-icon, .phone-icon, .pin-icon {
+        width: 14px;
+        height: 14px;
+        margin-right: 5px;
+    }
+    
+    .facebook-img {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .newsletter input[type="email"] {
+        padding: 6px;
+        font-size: 13px;
+    }
+    
+    .newsletter button {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
 }
 
-/* LARGE SCREEN OPTIMIZATIONS *****************************************************/
+/* Additional Mobile-Specific Improvements */
 
-@media (min-width: 1200px) {
-  .services-section {
-    padding: 100px 0;
-  }
-
-  .services-grid {
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-    gap: 50px;
-  }
-
-  .service-card {
-    padding: 50px;
-  }
-
-  .service-request-info {
-    padding: 60px;
-  }
+@media screen and (max-width: 768px) {
+    /* Touch-friendly button sizes */
+    .service-button,
+    .emergency-button {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Improved touch targets for navigation */
+    .navbar ul li a {
+        padding: 15px 20px;
+        display: block;
+        width: 100%;
+    }
+    
+    /* Better spacing for mobile cards */
+    .service-card {
+        margin-bottom: 15px;
+    }
+    
+    /* Simplified animations for mobile */
+    .service-card:hover {
+        transform: translateY(-2px);
+    }
+    
+    .step:hover {
+        transform: translateY(-2px);
+    }
+    
+    /* Improved mobile typography */
+    body {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    
+    /* Mobile menu animation */
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    /* Improved mobile content readability */
+    .service-content > p,
+    .service-details li,
+    .step-content p,
+    .emergency-contact p {
+        text-align: left;
+        word-wrap: break-word;
+    }
+    
+    /* Mobile-optimized service cards */
+    .service-card {
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(194, 168, 120, 0.1);
+    }
+    
+    /* Better mobile form styling */
+    .newsletter input[type="email"]:focus {
+        outline: 2px solid #C2A878;
+        outline-offset: 1px;
+    }
+    
+    /* Improved mobile button states */
+    .service-button:active,
+    .emergency-button:active,
+    .newsletter button:active {
+        transform: translateY(1px);
+    }
+    
+    /* Mobile-friendly service info layout */
+    .service-info {
+        padding: 6px 0;
+        border-bottom: 1px solid rgba(194, 168, 120, 0.15);
+    }
+    
+    /* Better mobile spacing for service details */
+    .service-details {
+        margin: 20px 0;
+    }
+    
+    /* Mobile-optimized step cards */
+    .step {
+        border-radius: 12px;
+        box-shadow: 0 3px 12px rgba(194, 168, 120, 0.1);
+    }
+    
+    /* Emergency contact mobile styling */
+    .emergency-contact {
+        border-radius: 12px;
+        border-left: 4px solid #dc3545;
+    }
 }
 
-/* PRINT STYLES *****************************************************/
+/* Landscape orientation adjustments for mobile */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    .mainpage {
+        height: 70vh;
+    }
+    
+    .slideshow-container {
+        height: 70vh;
+    }
+    
+    .mainpage h1 {
+        font-size: 32px;
+    }
+    
+    .mainpage h2 {
+        font-size: 18px;
+    }
+    
+    .text-overlay {
+        top: 45%;
+    }
+}
 
+/* High DPI / Retina display optimizations */
+@media screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2),
+       screen and (max-width: 768px) and (min-resolution: 192dpi) {
+    .service-icon {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: optimize-contrast;
+    }
+}
+
+/* Accessibility improvements for mobile */
+@media screen and (max-width: 768px) {
+    /* Ensure sufficient contrast and readability */
+    .service-content > p,
+    .service-details li,
+    .step-content p {
+        color: #333;
+        font-weight: 400;
+    }
+    
+    /* Improve focus states for mobile */
+    .service-button:focus,
+    .emergency-button:focus,
+    .navbar ul li a:focus {
+        outline: 2px solid #C2A878;
+        outline-offset: 2px;
+    }
+    
+    /* Better mobile service card accessibility */
+    .service-card {
+        border: 1px solid rgba(194, 168, 120, 0.2);
+    }
+    
+    /* Improved mobile step accessibility */
+    .step {
+        border: 1px solid rgba(194, 168, 120, 0.1);
+    }
+}
+
+/* Very small screens optimization */
+@media screen and (max-width: 280px) {
+    .contacttop {
+        font-size: 9px;
+        padding: 4px 8px;
+    }
+    
+    .logo img {
+        width: 60px;
+    }
+    
+    .mainpage h1 {
+        font-size: 20px;
+    }
+    
+    .mainpage h2 {
+        font-size: 12px;
+    }
+    
+    .services-intro h1 {
+        font-size: 20px;
+    }
+    
+    .service-card {
+        padding: 15px 8px;
+        margin: 0 2px;
+    }
+    
+    .service-content h2 {
+        font-size: 15px;
+    }
+    
+    .service-content > p {
+        font-size: 12px;
+    }
+    
+    .service-details {
+        padding: 10px 8px;
+    }
+    
+    .service-details h3 {
+        font-size: 13px;
+    }
+    
+    .service-details li {
+        font-size: 10px;
+    }
+    
+    .service-button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+    
+    .service-request-info {
+        padding: 15px 8px;
+    }
+    
+    .service-request-info h2 {
+        font-size: 18px;
+    }
+    
+    .step {
+        padding: 12px 8px;
+    }
+    
+    .step-number {
+        width: 25px;
+        height: 25px;
+        font-size: 12px;
+    }
+    
+    .step-content h3 {
+        font-size: 14px;
+    }
+    
+    .step-content p {
+        font-size: 11px;
+    }
+    
+    .emergency-contact {
+        padding: 12px 8px;
+    }
+    
+    .emergency-contact h3 {
+        font-size: 15px;
+    }
+    
+    .emergency-contact p {
+        font-size: 12px;
+    }
+    
+    .emergency-button {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+}
+
+/* Print styles for mobile */
 @media print {
-  .navbar,
-  .support-section,
-  footer {
-    display: none;
-  }
-
-  .mainpage {
-    height: auto;
-    background: none;
-  }
-
-  .mainpage::after {
-    display: none;
-  }
-
-  .service-card {
-    break-inside: avoid;
-    margin-bottom: 20px;
-    box-shadow: none;
-    border: 1px solid #ddd;
-  }
-
-  .service-button {
-    display: none;
-  }
+    .navbar,
+    .support-section,
+    footer,
+    .menu-toggle {
+        display: none;
+    }
+    
+    .mainpage {
+        height: auto;
+        background: none;
+    }
+    
+    .mainpage::after {
+        display: none;
+    }
+    
+    .service-card {
+        break-inside: avoid;
+        margin-bottom: 20px;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+    
+    .service-button,
+    .emergency-button {
+        display: none;
+    }
+    
+    .service-request-info {
+        break-inside: avoid;
+    }
 }
