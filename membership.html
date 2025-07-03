@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Albanian Islamic Center</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Albanian Islamic Center - Join Our Community</title>
         <link rel="stylesheet" href="Style-Sheets/JoinUs-styles.css">
         <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
         />
-
     </head>
 
     <body>
         <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v22.0"></script>
-        <div class = "contacttop">
-        <p>19775 Harper Avenue, Harper Woods, MI 48225</p>
-        <p>(313)-884-6676&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;albislamct@aol.com</p>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v22.0"></script>
+        
+        <div class="contacttop">
+            <p>19775 Harper Avenue, Harper Woods, MI 48225</p>
+            <p>(313)-884-6676&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;albislamct@aol.com</p>
         </div>
 
-
-        <nav class = "navbar">
-            <a href="#"class = "logo">
-                <img src = "images/Logo.png">
+        <nav class="navbar">
+            <a href="#" class="logo">
+                <img src="images/Logo.png">
             </a>
-            <ul>
+            
+            <button class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="islam.html">What is Islam?</a></li>
@@ -34,6 +42,7 @@
                 <li><a href="membership.html">Join Us</a></li>
                 <li><a href="contactus.html">Contact Us</a></li>
             </ul>
+            
             <form action="https://www.paypal.com/donate" method="post" target="_blank" class="donate-form">
                 <input type="hidden" name="hosted_button_id" value="LMWW6JLZ9N57L" />
                 <button type="submit" class="donate-btn" title="PayPal - The safer, easier way to pay online!">
@@ -43,17 +52,15 @@
             </form>
         </nav>
 
-
-        <div class = "mainpage">
-            <div class = "slideshow-container">
-                <div class = "mySlides fade">
-                    <img src = "images/join-us.jpg" class = "slideimg" width="100%">
+        <div class="mainpage">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="images/join-us.jpg" class="slideimg" width="100%">
                 </div>
-
             </div>
-            <div class = "text-overlay">
-            <h1 class="banner-text">Join Our Community</h1>
-            <h2 class="banner-subtext">Become a member of the Albanian Islamic Center and be part of our growing family.</h2>
+            <div class="text-overlay">
+                <h1 class="banner-text">Join Our Community</h1>
+                <h2 class="banner-subtext">Become a member of the Albanian Islamic Center and be part of our growing family.</h2>
             </div>
         </div>
 
@@ -70,56 +77,50 @@
             </div>
         </div>
 
-
-
-
-
-
-<!-- MEMBERSHIP SECTION -->
-<div class="membership-section">
-    <div class="container">
-        <h2 class="section-title">Membership Benefits</h2>
-        <p class="section-subtitle">$250 per family per year</p>
-        
-        <div class="membership-content">
-            <!-- Benefits Cards -->
-            <div class="benefits-cards">
-                <div class="benefit-item">
-                    <div class="benefit-icon">
-                        <img src="images/email.png" alt="Letters">
-                    </div>
-                    <h3>Event Notifications</h3>
-                    <p>Personal letters and early notifications about all events</p>
-                </div>
+        <!-- MEMBERSHIP SECTION -->
+        <div class="membership-section">
+            <div class="container">
+                <h2 class="section-title">Membership Benefits</h2>
+                <p class="section-subtitle">$250 per family per year</p>
                 
-                <div class="benefit-item">
-                    <div class="benefit-icon">
-                        <img src="images/pin.png" alt="Calendar">
+                <div class="membership-content">
+                    <!-- Benefits Cards -->
+                    <div class="benefits-cards">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <img src="images/email.png" alt="Letters">
+                            </div>
+                            <h3>Event Notifications</h3>
+                            <p>Personal letters and early notifications about all events</p>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <img src="images/pin.png" alt="Calendar">
+                            </div>
+                            <h3>Annual Calendar</h3>
+                            <p>Beautiful printed calendar with Islamic dates and prayer times</p>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <img src="images/donation.png" alt="Discounts">
+                            </div>
+                            <h3>Event Discounts</h3>
+                            <p>Special member discounts on dinners and programs</p>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <img src="images/donation.png" alt="Community Support">
+                            </div>
+                            <h3>Support Our Growth</h3>
+                            <p>Your membership helps fund community expansions and future mosque improvements</p>
+                        </div>
                     </div>
-                    <h3>Annual Calendar</h3>
-                    <p>Beautiful printed calendar with Islamic dates and prayer times</p>
-                </div>
-                
-                <div class="benefit-item">
-                    <div class="benefit-icon">
-                        <img src="images/donation.png" alt="Discounts">
-                    </div>
-                    <h3>Event Discounts</h3>
-                    <p>Special member discounts on dinners and programs</p>
-                </div>
-                
-                <div class="benefit-item">
-                    <div class="benefit-icon">
-                        <img src="images/donation.png" alt="Community Support">
-                    </div>
-                    <h3>Support Our Growth</h3>
-                    <p>Your membership helps fund community expansions and future mosque improvements</p>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-
 
         <!-- MEMBERSHIP FORM SECTION -->
         <div class="membership-form-section">
@@ -170,10 +171,6 @@
                         </div>
                     </div>
                     
-
-                    
-
-                    
                     <div class="form-group">
                         <label for="message">Additional Comments</label>
                         <textarea id="message" name="message" rows="4" placeholder="Any additional information or questions..."></textarea>
@@ -192,54 +189,103 @@
             </div>
         </div>
 
-      
-        <div class = "support-section" >
-            <div class = "row">
-                <div class = "support-text">
-                    <img src = "images/Logo.png" alt="Albanian Islamic Center Logo" class="logo-img">
+        <!-- Footer -->
+        <div class="support-section">
+            <div class="row">
+                <div class="support-text">
+                    <img src="images/Logo.png" alt="Albanian Islamic Center Logo" class="logo-img">
                     <p>Welcome to the Albanian Islamic Center, a place of worship, learning, and community rooted in 
                         rich Balkan heritage and Islamic tradition. We strive to foster a welcoming and inclusive 
                         space for every member of the Muslim community.</p>
-                    <a href = "https://www.facebook.com/Albanianislamiccenter/?ref=embed_page#" class = "social-media" target = "_blank"> <img src = "images/facebook.png" class = "facebook-img"></a>
+                    <a href="https://www.facebook.com/Albanianislamiccenter/?ref=embed_page#" class="social-media" target="_blank"> 
+                        <img src="images/facebook.png" class="facebook-img">
+                    </a>
                 </div>
-                <div class = "contact-info">
+                <div class="contact-info">
                     <h2>Contact</h2>
-                    <h3><img src = "images/email.png" class = "email-icon">Email Address</h3>
+                    <h3><img src="images/email.png" class="email-icon">Email Address</h3>
                     <p>albislamct@aol.com</p>
-                    <h3><img src = "images/phone-call.png" class = "phone-icon">Phone Number</h3>
+                    <h3><img src="images/phone-call.png" class="phone-icon">Phone Number</h3>
                     <p>(313)-884-6676</p>
-                    <h3><img src = "images/pin.png" class = "pin-icon">Location</h3>
+                    <h3><img src="images/pin.png" class="pin-icon">Location</h3>
                     <p>19775 Harper Avenue, Harper Woods, MI 48225</p>
                 </div>
-                <div class = "socials">
+                <div class="socials">
                     <h2>Social Media</h2>
                     <p>Follow us on Facebook for the latest announcements and updates about events and programs at 
                         the Albanian Islamic Center.  
                     </p>
-                    <a href="https://www.facebook.com/Albanianislamiccenter/" class = "social-media" target="_blank">
+                    <a href="https://www.facebook.com/Albanianislamiccenter/" class="social-media" target="_blank">
                         <img src="images/facebook.png" alt="Facebook" class="facebook-img">
                     </a>
                 </div>
-                <div class = "newsletter">
+                <div class="newsletter">
                     <h2>Newsletter</h2>
                     <p>Subscribe to our newsletter to receive updates on events, programs, and community news directly 
                         to your inbox. Stay connected with the Albanian Islamic Center.</p>
-                        <form action="https://aol.us13.list-manage.com/subscribe/post?u=096bcfd7c98cb079bfb26df4f&amp;id=36db6b2f2f" method="post"  novalidate>
-                            <input type="email" name="EMAIL" id="email" placeholder="Enter your email" required>
-                            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                    <form action="https://aol.us13.list-manage.com/subscribe/post?u=096bcfd7c98cb079bfb26df4f&amp;id=36db6b2f2f" method="post" novalidate>
+                        <input type="email" name="EMAIL" id="email" placeholder="Enter your email" required>
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
                             <input type="text" name="b_096bcfd7c98cb079bfb26df4f_36db6b2f2f" tabindex="-1" value="">
-                            </div>
-                            <button type="submit">Subscribe</button>
-                        </form>
+                        </div>
+                        <button type="submit">Subscribe</button>
+                    </form>
                 </div>
             </div>
         </div>
 
         <footer> 
-            <p> @ 2025 aicod.org. All Rights Reserved.<br>
+            <p>© 2025 aicod.org. All Rights Reserved.<br>
             Icons made from www.flaticon.com</p>
         </footer>
+
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="webscripts.js"></script>
+        <script>
+            // Mobile menu toggle functionality
+            const menuToggle = document.getElementById('menu-toggle');
+            const navMenu = document.getElementById('nav-menu');
+
+            menuToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('show');
+                menuToggle.classList.toggle('active');
+            });
+
+            // Close menu when clicking on a link (mobile)
+            const navLinks = document.querySelectorAll('#nav-menu a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('show');
+                    menuToggle.classList.remove('active');
+                });
+            });
+
+            // Close menu when clicking outside (mobile)
+            document.addEventListener('click', function(event) {
+                const isClickInsideNav = navMenu.contains(event.target);
+                const isClickOnToggle = menuToggle.contains(event.target);
+                
+                if (!isClickInsideNav && !isClickOnToggle && navMenu.classList.contains('show')) {
+                    navMenu.classList.remove('show');
+                    menuToggle.classList.remove('active');
+                }
+            });
+
+            // Show the first slide
+            document.addEventListener('DOMContentLoaded', function() {
+                const slide = document.querySelector('.mySlides');
+                if (slide) {
+                    slide.style.display = 'block';
+                }
+            });
+
+            // Handle window resize for mobile menu
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) {
+                    navMenu.classList.remove('show');
+                    menuToggle.classList.remove('active');
+                }
+            });
+        </script>
     </body>
 </html>
