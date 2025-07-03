@@ -1,4 +1,14 @@
-/* GENERAL STYLES ****************************************************/
+/* NAVBAR STYLES ****************************************************/
+
+/* ROW IMPORTANT ****************************************************/
+.row{
+  margin-left: 60px;
+  display:flex;
+  justify-content: space-between;
+  margin-right: 60px;
+  margin-top: 20px;
+}
+/* ROW IMPORTANT ****************************************************/
 
 html, body {
   margin: 0;
@@ -7,11 +17,13 @@ html, body {
   scroll-behavior: smooth;
 }
 
+body{
+  overflow-x: hidden;
+}
+
 * {
   box-sizing: border-box;
 }
-
-/* NAVBAR STYLES ****************************************************/
 
 .navbar{
   display: flex;
@@ -71,8 +83,6 @@ html, body {
     align-items: center;
     gap: 5px;
     text-decoration: none;
-    color: #000;
-    margin-left: 50px;
     background-color: #C2A878;
     padding: 10px 18px;
     font-size: 18px;
@@ -82,16 +92,27 @@ html, body {
     color: white;
     cursor: pointer;
     transition: all 0.3s ease;
+    border: none;
 }
 
 .donate-btn:hover {
     background-color: rgba(194, 168, 120, 0.8);
     color: white;
+    transition: 0.3s;
 }
 
 .donate-btn:active {
     background-color: rgba(194, 168, 120, 0.6);
     color: white;
+    transition: 0.3s;
+}
+
+.donate-form {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    margin-left: 50px; 
+    align-items: center; 
 }
 
 .heart-icon {
@@ -121,6 +142,25 @@ html, body {
   object-fit: contain;
   padding-top: 0px;
   justify-content: flex-start;
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    background: none;
+    border: none;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 3px 0;
+    transition: 0.3s;
+    display: block;
 }
 
 /* HERO SECTION *****************************************************/
@@ -422,28 +462,6 @@ html, body {
   min-height: 120px;
 }
 
-/* CHECKBOX GROUP *****************************************************/
-
-.checkbox-group {
-  flex-direction: row;
-  align-items: center;
-  gap: 12px;
-}
-
-.checkbox-label {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  font-family: 'poppins', sans-serif;
-  font-size: 14px;
-  color: #666;
-}
-
-.checkbox-label input[type="checkbox"] {
-  margin-right: 10px;
-  transform: scale(1.2);
-}
-
 /* SUBMIT BUTTON *****************************************************/
 
 .submit-btn {
@@ -483,17 +501,8 @@ html, body {
   font-size: 36px;
   text-align: center;
   color: #533805;
-  margin-bottom: 20px;
-  font-weight: 600;
-}
-
-.map-section > p {
-  font-family: 'poppins', sans-serif;
-  font-size: 18px;
-  text-align: center;
-  color: #666;
   margin-bottom: 40px;
-  line-height: 1.6;
+  font-weight: 600;
 }
 
 .map-container {
@@ -508,116 +517,11 @@ html, body {
   border: none;
 }
 
-/* DIRECTIONS INFO *****************************************************/
-
-.directions-info {
-  margin-top: 40px;
-}
-
-.directions-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-}
-
-.direction-item {
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(194, 168, 120, 0.1);
-  transition: all 0.3s ease;
-}
-
-.direction-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(194, 168, 120, 0.15);
-}
-
-.direction-item h3 {
-  font-family: 'poppins', sans-serif;
-  font-size: 20px;
-  color: #533805;
-  margin-bottom: 15px;
-  font-weight: 600;
-}
-
-.direction-item p {
-  font-family: 'poppins', sans-serif;
-  font-size: 15px;
-  color: #666;
-  line-height: 1.6;
-  margin: 0;
-}
-
-/* FAQ SECTION *****************************************************/
-
-.faq-section {
-  padding: 80px 0;
-  background: white;
-}
-
-.faq-section h2 {
-  font-family: 'poppins', sans-serif;
-  font-size: 36px;
-  text-align: center;
-  color: #533805;
-  margin-bottom: 50px;
-  font-weight: 600;
-}
-
-.faq-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 30px;
-}
-
-.faq-item {
-  background: linear-gradient(135deg, rgba(194, 168, 120, 0.1) 0%, rgba(194, 168, 120, 0.05) 100%);
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(194, 168, 120, 0.1);
-  transition: all 0.3s ease;
-}
-
-.faq-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(194, 168, 120, 0.15);
-}
-
-.faq-item h3 {
-  font-family: 'poppins', sans-serif;
-  font-size: 18px;
-  color: #533805;
-  margin-bottom: 15px;
-  font-weight: 600;
-}
-
-.faq-item p {
-  font-family: 'poppins', sans-serif;
-  font-size: 15px;
-  color: #666;
-  line-height: 1.6;
-  margin: 0;
-}
-
-/* ROW LAYOUT *****************************************************/
-
-.row{
-  margin-left: 60px;
-  display:flex;
-  justify-content: space-between;
-  margin-right: 60px;
-  margin-top: 20px;
-}
-
 /* FOOTER *****************************************************/
 
 .support-section {
-  margin-top: 60px;
-  padding: 40px 20px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  margin-top: 40px;
+  padding: 30px 20px;
   background: linear-gradient(90deg,
     rgba(194, 168, 120, 0.9) 0%,    
     rgba(194, 168, 120, 0.3) 100%  
@@ -625,94 +529,78 @@ html, body {
   width: 100%;
 }
 
+.support-section .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin: 0;
+}
+
 .support-text {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  width: 20%;
+  align-items: center;
+  text-align: center;
 }
 
 .logo-img {
-  width: 300px;
-  height: 300px;
-  margin-bottom: -90px;
-  margin-top: -100px;
-  margin-left: -35px;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 10px;
 }
 
 .support-text p {
-  font-size: 18px;
-  padding-right: 40px;
+  font-size: 16px;
   color: black;
   font-family: 'poppins', sans-serif;
   margin-top: 0;
+  text-align: center;
 }
 
-.facebook-img {
-  width: 40px;
-  height: 40px;
-  margin-top: 0;
-  margin-bottom: 50px;
+.facebook-img{
+  width: 35px;
+  height: 35px;
+  margin-top: 10px;
 }
 
-.social-media:hover {
+.social-media:hover{
   transform: scale(1.1);
   transition: transform 0.3s ease;
 }
 
-.social-media:active {
+.social-media:active{
   transform: scale(0.9);
   transition: transform 0.3s ease;
 }
 
-.contact-info h2 {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 20%;
+.contact-info, .socials, .newsletter {
   font-family: 'poppins', sans-serif;
   color: black;
-  font-size: 27px;
 }
 
-.contact-info h3 {
-  font-family: 'poppins', sans-serif;
-  color: black;
+.contact-info h2, .socials h2, .newsletter h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.contact-info h3{
   font-size: 16px;
   color: #533805;
   font-weight: 600;
+  margin: 10px 0 5px 0;
 }
 
-.contact-info p {
-  font-family: 'poppins', sans-serif;
-  color: black;
+.contact-info p, .socials p, .newsletter p {
+  font-size: 15px;
   font-weight: 500;
-}
-
-.socials {
-  color: black;
-  font-family: 'poppins', sans-serif;
-  width: 20%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  font-size: 18px;
+  margin-bottom: 10px;
 }
 
 .email-icon, .phone-icon, .pin-icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-}
-
-.newsletter {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 20%;
-  font-family: 'poppins', sans-serif;
-  color: black;
-  font-size: 18px;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  vertical-align: middle;
 }
 
 .newsletter input[type="email"] {
@@ -732,7 +620,7 @@ html, body {
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  margin-top: 20px;
+  margin-top: 15px;
   transition: all 0.3s ease;
 }
 
@@ -751,323 +639,6 @@ footer {
   padding: 20px;
   font-family: 'poppins', sans-serif;
   font-size: 14px;
-}
-
-/* MOBILE RESPONSIVE STYLES *****************************************************/
-
-@media (max-width: 768px) {
-  /* Navbar Mobile */
-  .contacttop {
-    padding-left: 20px;
-    padding-right: 20px;
-    flex-direction: column;
-    gap: 5px;
-    text-align: center;
-    font-size: 13px;
-  }
-  
-  .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-  }
-  
-  .navbar ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5px;
-  }
-  
-  .navbar ul li {
-    padding: 5px;
-  }
-  
-  .navbar ul li a {
-    font-size: 16px;
-    padding-left: 10px;
-  }
-  
-  .donate-btn {
-    margin-left: 0;
-    margin-top: 10px;
-    font-size: 16px;
-    padding: 8px 15px;
-  }
-  
-  .logo img {
-    width: 120px;
-  }
-
-  /* Hero Section Mobile */
-  .hero-section {
-    padding: 60px 20px;
-  }
-
-  .hero-content h1 {
-    font-size: 32px;
-    margin-bottom: 15px;
-  }
-  
-  .hero-content p {
-    font-size: 16px;
-  }
-
-  /* Contact Main Section Mobile */
-  .contact-main-section {
-    padding: 50px 0;
-  }
-
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .contact-info-card,
-  .contact-form-card {
-    padding: 30px 20px;
-  }
-
-  .contact-info-card h2,
-  .contact-form-card h2 {
-    font-size: 26px;
-    margin-bottom: 25px;
-    text-align: center;
-  }
-
-  .form-description {
-    text-align: center;
-    font-size: 15px;
-  }
-
-  /* Contact Items Mobile */
-  .contact-item {
-    flex-direction: column;
-    text-align: center;
-    padding: 20px 15px;
-  }
-
-  .contact-icon {
-    margin: 0 0 15px 0;
-    align-self: center;
-  }
-
-  .contact-details h3 {
-    font-size: 16px;
-    margin-bottom: 5px;
-  }
-
-  .contact-details p {
-    font-size: 15px;
-  }
-
-  /* Office Hours Mobile */
-  .office-hours,
-  .social-section {
-    padding: 20px 15px;
-  }
-
-  .hour-item {
-    flex-direction: column;
-    text-align: center;
-    gap: 5px;
-  }
-
-  /* Form Mobile */
-  .form-row {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
-    font-size: 16px; /* Prevents zoom on iOS */
-  }
-
-  .submit-btn {
-    font-size: 16px;
-    padding: 12px 25px;
-  }
-
-  .checkbox-group {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-
-  /* Map Section Mobile */
-  .map-section {
-    padding: 50px 0;
-  }
-
-  .map-section h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
-  }
-
-  .map-section > p {
-    font-size: 16px;
-    margin-bottom: 30px;
-    padding: 0 20px;
-  }
-
-  .map-container {
-    margin: 0 20px 40px;
-  }
-
-  .directions-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 0 20px;
-  }
-
-  .direction-item {
-    padding: 25px 20px;
-  }
-
-  .direction-item h3 {
-    font-size: 18px;
-    text-align: center;
-  }
-
-  .direction-item p {
-    font-size: 14px;
-    text-align: center;
-  }
-
-  /* FAQ Section Mobile */
-  .faq-section {
-    padding: 50px 20px;
-  }
-
-  .faq-section h2 {
-    font-size: 28px;
-    margin-bottom: 30px;
-  }
-
-  .faq-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .faq-item {
-    padding: 25px 20px;
-  }
-
-  .faq-item h3 {
-    font-size: 16px;
-    text-align: center;
-    margin-bottom: 12px;
-  }
-
-  .faq-item p {
-    font-size: 14px;
-    text-align: center;
-  }
-
-  /* Footer Mobile */
-  .row {
-    flex-direction: column;
-    margin-left: 20px;
-    margin-right: 20px;
-    gap: 30px;
-  }
-  
-  .support-text,
-  .contact-info,
-  .socials,
-  .newsletter {
-    width: 100%;
-    text-align: center;
-    align-items: center;
-  }
-  
-  .contact-info h2 {
-    width: 100%;
-    text-align: center;
-  }
-  
-  .logo-img {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto;
-  }
-  
-  .newsletter input[type="email"] {
-    width: calc(100% - 20px);
-    max-width: 300px;
-  }
-}
-
-/* TABLET RESPONSIVE STYLES *****************************************************/
-
-@media (max-width: 1024px) and (min-width: 769px) {
-  .hero-content h1 {
-    font-size: 40px;
-  }
-
-  .contact-main-section {
-    padding: 60px 0;
-  }
-
-  .contact-grid {
-    gap: 40px;
-  }
-
-  .contact-info-card,
-  .contact-form-card {
-    padding: 35px;
-  }
-
-  .map-section {
-    padding: 60px 0;
-  }
-
-  .faq-section {
-    padding: 60px 30px;
-  }
-
-  .faq-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
-
-  .directions-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
-
-  .row {
-    margin-left: 40px;
-    margin-right: 40px;
-  }
-}
-
-/* LARGE SCREEN OPTIMIZATIONS *****************************************************/
-
-@media (min-width: 1200px) {
-  .hero-section {
-    padding: 100px 20px;
-  }
-
-  .contact-main-section {
-    padding: 100px 0;
-  }
-
-  .contact-grid {
-    gap: 80px;
-  }
-
-  .contact-info-card,
-  .contact-form-card {
-    padding: 50px;
-  }
-
-  .map-section {
-    padding: 100px 0;
-  }
-
-  .faq-section {
-    padding: 100px 0;
-  }
 }
 
 /* FORM VALIDATION STYLES *****************************************************/
@@ -1114,4 +685,802 @@ footer {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+/* MOBILE RESPONSIVE STYLES *****************************************************/
+
+@media screen and (max-width: 1024px) {
+    .contacttop {
+        padding-left: 50px;
+        padding-right: 50px;
+        font-size: 14px;
+    }
+    
+    .navbar ul li a {
+        font-size: 16px;
+        padding-left: 15px;
+    }
+    
+    .donate-form {
+        margin-left: 30px;
+    }
+    
+    .contact-grid {
+        gap: 40px;
+    }
+    
+    .contact-info-card,
+    .contact-form-card {
+        padding: 35px;
+    }
+    
+    .hero-content h1 {
+        font-size: 40px;
+    }
+    
+    .hero-content p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contacttop {
+        padding: 10px 20px;
+        font-size: 12px;
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 20px;
+        align-items: flex-start;
+    }
+    
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 15px;
+        background-color: rgba(255, 255, 255, 0.98);
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .navbar ul.show {
+        display: flex;
+    }
+    
+    .navbar ul li {
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        border-bottom: 1px solid rgba(194, 168, 120, 0.2);
+    }
+    
+    .navbar ul li:last-child {
+        border-bottom: none;
+    }
+    
+    .menu-toggle {
+        display: flex;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+    
+    .donate-form {
+        margin-left: 0;
+        margin-top: 15px;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .logo img {
+        width: 100px;
+    }
+
+    /* Hero Section Mobile */
+    .hero-section {
+        padding: 60px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+    
+    .hero-content p {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    /* Contact Main Section Mobile */
+    .contact-main-section {
+        padding: 50px 0;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contact-info-card,
+    .contact-form-card {
+        padding: 30px 20px;
+        margin: 0 15px;
+    }
+
+    .contact-info-card h2,
+    .contact-form-card h2 {
+        font-size: 26px;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .form-description {
+        text-align: center;
+        font-size: 15px;
+    }
+
+    /* Contact Items Mobile */
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 15px;
+    }
+
+    .contact-icon {
+        margin: 0 0 15px 0;
+        align-self: center;
+    }
+
+    .contact-details h3 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .contact-details p {
+        font-size: 15px;
+    }
+
+    /* Office Hours Mobile */
+    .office-hours,
+    .social-section {
+        padding: 20px 15px;
+    }
+
+    .office-hours h3,
+    .social-section h3 {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .hour-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+        padding: 10px 0;
+    }
+
+    .social-section p {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .social-link {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        font-size: 14px;
+    }
+
+    /* Form Mobile */
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+
+    .submit-btn {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+
+    /* Map Section Mobile */
+    .map-section {
+        padding: 50px 0;
+    }
+
+    .map-section h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .map-container {
+        margin: 0 20px 40px;
+    }
+
+    .map-container iframe {
+        height: 300px;
+    }
+
+    /* Footer Mobile */
+    .support-section {
+        padding: 30px 20px;
+    }
+    
+    .support-section .row {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin: 0;
+    }
+    
+    .support-text,
+    .contact-info,
+    .socials,
+    .newsletter {
+        text-align: center;
+    }
+    
+    .logo-img {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 15px;
+    }
+    
+    .support-text p {
+        font-size: 14px;
+    }
+    
+    .contact-info h2, .socials h2, .newsletter h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .contact-info h3 {
+        font-size: 15px;
+    }
+    
+    .contact-info p, .socials p, .newsletter p {
+        font-size: 14px;
+    }
+    
+    .email-icon, .phone-icon, .pin-icon {
+        width: 16px;
+        height: 16px;
+        margin-right: 6px;
+    }
+    
+    .facebook-img {
+        width: 32px;
+        height: 32px;
+        margin-top: 8px;
+    }
+    
+    .newsletter input[type="email"] {
+        padding: 8px;
+        font-size: 14px;
+    }
+    
+    .newsletter button {
+        padding: 8px 16px;
+        font-size: 14px;
+        margin-top: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contacttop {
+        font-size: 11px;
+        padding: 8px 15px;
+    }
+    
+    .navbar {
+        padding: 8px 15px;
+    }
+    
+    .logo img {
+        width: 80px;
+    }
+    
+    .hero-section {
+        padding: 50px 15px;
+    }
+    
+    .hero-content h1 {
+        font-size: 28px;
+        padding: 0 10px;
+    }
+    
+    .hero-content p {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+    
+    .contact-main-section {
+        padding: 40px 0;
+    }
+    
+    .contact-info-card,
+    .contact-form-card {
+        padding: 25px 15px;
+        margin: 0 10px;
+    }
+    
+    .contact-info-card h2,
+    .contact-form-card h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .form-description {
+        font-size: 14px;
+    }
+    
+    .contact-item {
+        padding: 15px 10px;
+    }
+    
+    .contact-details h3 {
+        font-size: 15px;
+    }
+    
+    .contact-details p {
+        font-size: 14px;
+    }
+    
+    .office-hours,
+    .social-section {
+        padding: 15px 10px;
+    }
+    
+    .office-hours h3,
+    .social-section h3 {
+        font-size: 16px;
+    }
+    
+    .social-section p {
+        font-size: 13px;
+    }
+    
+    .social-link {
+        font-size: 13px;
+        padding: 10px 15px;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px 12px;
+        font-size: 15px;
+    }
+    
+    .submit-btn {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+    
+    .map-section {
+        padding: 40px 0;
+    }
+    
+    .map-section h2 {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+    
+    .map-container {
+        margin: 0 15px 30px;
+    }
+    
+    .map-container iframe {
+        height: 250px;
+    }
+    
+    .support-section {
+        padding: 25px 15px;
+    }
+    
+    .support-section .row {
+        gap: 20px;
+    }
+    
+    .logo-img {
+        width: 130px;
+        height: 130px;
+    }
+    
+    .support-text p {
+        font-size: 13px;
+    }
+    
+    .contact-info h2, .socials h2, .newsletter h2 {
+        font-size: 18px;
+    }
+    
+    .contact-info h3 {
+        font-size: 14px;
+    }
+    
+    .contact-info p, .socials p, .newsletter p {
+        font-size: 13px;
+    }
+    
+    .email-icon, .phone-icon, .pin-icon {
+        width: 14px;
+        height: 14px;
+        margin-right: 5px;
+    }
+    
+    .facebook-img {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .newsletter input[type="email"] {
+        padding: 6px;
+        font-size: 13px;
+    }
+    
+    .newsletter button {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .contacttop {
+        font-size: 10px;
+        padding: 6px 10px;
+    }
+    
+    .logo img {
+        width: 70px;
+    }
+    
+    .hero-section {
+        padding: 40px 10px;
+    }
+    
+    .hero-content h1 {
+        font-size: 24px;
+    }
+    
+    .hero-content p {
+        font-size: 13px;
+    }
+    
+    .contact-main-section {
+        padding: 30px 0;
+    }
+    
+    .contact-info-card,
+    .contact-form-card {
+        padding: 20px 10px;
+        margin: 0 5px;
+    }
+    
+    .contact-info-card h2,
+    .contact-form-card h2 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+    
+    .form-description {
+        font-size: 13px;
+    }
+    
+    .contact-item {
+        padding: 12px 8px;
+    }
+    
+    .contact-details h3 {
+        font-size: 14px;
+    }
+    
+    .contact-details p {
+        font-size: 13px;
+    }
+    
+    .office-hours,
+    .social-section {
+        padding: 12px 8px;
+    }
+    
+    .office-hours h3,
+    .social-section h3 {
+        font-size: 15px;
+    }
+    
+    .social-section p {
+        font-size: 12px;
+    }
+    
+    .social-link {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+    
+    .submit-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    
+    .map-section {
+        padding: 30px 0;
+    }
+    
+    .map-section h2 {
+        font-size: 22px;
+    }
+    
+    .map-container {
+        margin: 0 10px 25px;
+    }
+    
+    .map-container iframe {
+        height: 200px;
+    }
+    
+    .support-section {
+        padding: 20px 10px;
+    }
+    
+    .support-section .row {
+        gap: 15px;
+    }
+    
+    .logo-img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .support-text p {
+        font-size: 12px;
+    }
+    
+    .contact-info h2, .socials h2, .newsletter h2 {
+        font-size: 16px;
+    }
+    
+    .contact-info h3 {
+        font-size: 13px;
+    }
+    
+    .contact-info p, .socials p, .newsletter p {
+        font-size: 12px;
+    }
+    
+    .email-icon, .phone-icon, .pin-icon {
+        width: 12px;
+        height: 12px;
+        margin-right: 4px;
+    }
+    
+    .facebook-img {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .newsletter input[type="email"] {
+        padding: 5px;
+        font-size: 12px;
+    }
+    
+    .newsletter button {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+}
+
+/* Additional Mobile-Specific Improvements */
+
+@media screen and (max-width: 768px) {
+    /* Mobile menu animation */
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    /* Touch-friendly elements */
+    .donate-btn, .submit-btn, .social-link {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    .navbar ul li a {
+        padding: 15px 20px;
+        display: block;
+        width: 100%;
+    }
+    
+    /* Improved mobile typography */
+    body {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    
+    /* Better spacing for mobile cards */
+    .contact-info-card,
+    .contact-form-card {
+        margin-bottom: 15px;
+    }
+    
+    .contact-item {
+        margin-bottom: 20px;
+    }
+    
+    .office-hours,
+    .social-section {
+        margin-bottom: 15px;
+    }
+    
+    /* Mobile-optimized hover effects (simplified for touch) */
+    .contact-item:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 20px rgba(194, 168, 120, 0.12);
+    }
+    
+    /* Form improvements for mobile */
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    .form-group label {
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+}
+
+/* Landscape orientation adjustments for mobile */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    .hero-section {
+        padding: 40px 20px;
+    }
+    
+    .hero-content h1 {
+        font-size: 28px;
+    }
+    
+    .hero-content p {
+        font-size: 15px;
+    }
+    
+    .contact-main-section {
+        padding: 40px 0;
+    }
+    
+    .contact-info-card,
+    .contact-form-card {
+        padding: 25px 20px;
+    }
+    
+    .map-section {
+        padding: 40px 0;
+    }
+    
+    .map-container iframe {
+        height: 250px;
+    }
+}
+
+/* Very small screens optimization */
+@media screen and (max-width: 280px) {
+    .contacttop {
+        font-size: 9px;
+        padding: 4px 8px;
+    }
+    
+    .logo img {
+        width: 60px;
+    }
+    
+    .hero-content h1 {
+        font-size: 20px;
+    }
+    
+    .hero-content p {
+        font-size: 12px;
+    }
+    
+    .contact-info-card,
+    .contact-form-card {
+        padding: 15px 8px;
+        margin: 0 3px;
+    }
+    
+    .contact-info-card h2,
+    .contact-form-card h2 {
+        font-size: 20px;
+    }
+    
+    .form-description {
+        font-size: 12px;
+    }
+    
+    .contact-item {
+        padding: 10px 6px;
+    }
+    
+    .office-hours,
+    .social-section {
+        padding: 10px 6px;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 6px 8px;
+        font-size: 13px;
+    }
+    
+    .submit-btn {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+    
+    .map-container iframe {
+        height: 200px;
+    }
+}
+
+/* High resolution mobile displays */
+@media screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+    .logo img {
+        image-rendering: -webkit-optimize-contrast;
+    }
+    
+    .logo-img {
+        image-rendering: -webkit-optimize-contrast;
+    }
+    
+    .contact-icon,
+    .email-icon,
+    .phone-icon,
+    .pin-icon {
+        image-rendering: -webkit-optimize-contrast;
+    }
+}
+
+/* Focus states for accessibility */
+@media screen and (max-width: 768px) {
+    .submit-btn:focus,
+    .social-link:focus {
+        outline: 2px solid #C2A878;
+        outline-offset: 2px;
+    }
+    
+    .navbar ul li a:focus {
+        outline: 2px solid #C2A878;
+        outline-offset: 2px;
+        background-color: rgba(194, 168, 120, 0.1);
+    }
+    
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        outline: 2px solid #C2A878;
+        outline-offset: 2px;
+    }
 }
