@@ -1,4 +1,19 @@
-/* NAVBAR STYLES ****************************************************/
+/* GENERAL STYLES ****************************************************/
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
 
 /* ROW IMPORTANT ****************************************************/
 .row{
@@ -8,14 +23,8 @@
   margin-right: 60px;
   margin-top: 20px;
 }
-/* ROW IMPORTANT ****************************************************/
 
-html, body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
+/* NAVBAR STYLES ****************************************************/
 
 .navbar{
   display: flex;
@@ -75,31 +84,34 @@ html, body {
     align-items: center;
     gap: 5px;
     text-decoration: none;
-    color: #000;
-    margin-left: 50px;
     background-color: #C2A878;
-    padding-left: 10px;
-    padding-right: 18px;
+    padding: 10px 18px;
     font-size: 18px;
     font-family: 'poppins', sans-serif;
     font-weight: 600;
     border-radius: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
     color: white;
     cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
 }
 
 .donate-btn:hover {
     background-color: rgba(194, 168, 120, 0.8);
     color: white;
-    transition: 0.3s;
 }
 
 .donate-btn:active {
     background-color: rgba(194, 168, 120, 0.6);
     color: white;
-    transition: 0.3s;
+}
+
+.donate-form {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    margin-left: 50px; 
+    align-items: center; 
 }
 
 .heart-icon {
@@ -129,6 +141,25 @@ html, body {
   object-fit: contain;
   padding-top: 0px;
   justify-content: flex-start;
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    background: none;
+    border: none;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 3px 0;
+    transition: 0.3s;
+    display: block;
 }
 
 /* MAINPAGE *****************************************************/
@@ -443,29 +474,22 @@ html, body {
 
 /* Gallery Section */
 
- .container{
+.container{
   padding: 2rem;
   width: 1200px;
   margin-left: -100px;
   margin-right: -100px;
- }
-
-
+}
 
 .column111{
   display: flex;
   font-family: 'open sans', sans-serif;
-  
-
   justify-content: center;
-  
 }
+
 .swiper {
   width: 90%;
-
 }
-
-
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
@@ -473,7 +497,6 @@ html, body {
   background-color: rgba(194, 168, 120, 0.3);
   border-radius: 20px;
   padding: 10px;
-
 }
 
 .swiper-button-prev:hover::after,
@@ -487,7 +510,6 @@ html, body {
   background-color: rgba(194, 168, 120, 0.4);
   transition: background-color 0.3s ease;
 }
-
 
 .swiper-slide img {
   width: 100%;
@@ -713,116 +735,6 @@ html, body {
   text-decoration: underline;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .form-row {
-    grid-template-columns: 1fr;
-  }
-  
-  .features-grid,
-  .pricing-grid,
-  .guidelines-content {
-    grid-template-columns: 1fr;
-  }
-  
-  .services-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  
-  .rental-form-section,
-  .banquet-intro,
-  .disclaimer-section,
-  .features-section,
-  .gallery-section,
-  .pricing-section,
-  .guidelines-section {
-    padding: 40px 20px;
-  }
-  
-  .container {
-    padding: 1rem;
-    width: 100%;
-  }
-  
-  .swiper {
-    width: 100%;
-  }
-  
-  .mainpage h1 {
-    font-size: 40px;
-  }
-  
-  .mainpage h2 {
-    font-size: 20px;
-  }
-  
-  .contacttop {
-    padding-left: 20px;
-    padding-right: 20px;
-    flex-direction: column;
-    gap: 5px;
-    text-align: center;
-    font-size: 13px;
-  }
-  
-  .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-  }
-  
-  .navbar ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5px;
-  }
-  
-  .navbar ul li {
-    padding: 5px;
-  }
-  
-  .navbar ul li a {
-    font-size: 16px;
-    padding-left: 10px;
-  }
-  
-  .donate-btn {
-    margin-left: 0;
-    margin-top: 10px;
-    font-size: 16px;
-    padding: 8px 15px;
-  }
-  
-  .logo img {
-    width: 120px;
-  }
-  
-  .support-section .row {
-    flex-direction: column;
-    margin-left: 20px;
-    margin-right: 20px;
-    gap: 30px;
-  }
-  
-  .support-text,
-  .contact-info,
-  .socials,
-  .newsletter {
-    width: 100%;
-  }
-  
-  .logo-img {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto;
-  }
-  
-  .newsletter input[type="email"] {
-    width: calc(100% - 20px);
-  }
-}
-
 /* FOOTER *****************************************************/
 
 .support-section {
@@ -946,16 +858,15 @@ html, body {
   cursor: pointer;
   font-size: 16px;
   margin-top: 20px;
+  transition: all 0.3s ease;
 }
 
 .newsletter button:hover {
   background-color: rgba(194, 168, 120, 0.8);
-  transition: background-color 0.3s ease;
 } 
 
 .newsletter button:active {
   background-color: rgba(194, 168, 120, 0.6);
-  transition: background-color 0.3s ease;
 }
 
 footer {
@@ -965,4 +876,1086 @@ footer {
   padding: 20px;
   font-family: 'poppins', sans-serif;
   font-size: 14px;
+}
+
+/* MOBILE RESPONSIVE STYLES *****************************************************/
+
+@media screen and (max-width: 1024px) {
+    .contacttop {
+        padding-left: 50px;
+        padding-right: 50px;
+        font-size: 14px;
+    }
+    
+    .navbar ul li a {
+        font-size: 16px;
+        padding-left: 15px;
+    }
+    
+    .donate-form {
+        margin-left: 30px;
+    }
+    
+    .features-grid,
+    .pricing-grid,
+    .guidelines-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .container {
+        padding: 1rem;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .swiper {
+        width: 100%;
+    }
+    
+    .banquet-intro,
+    .disclaimer-section,
+    .features-section,
+    .gallery-section,
+    .pricing-section,
+    .guidelines-section,
+    .rental-form-section {
+        padding: 50px 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contacttop {
+        padding: 10px 20px;
+        font-size: 12px;
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 20px;
+        align-items: flex-start;
+    }
+    
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 15px;
+        background-color: rgba(255, 255, 255, 0.98);
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .navbar ul.show {
+        display: flex;
+    }
+    
+    .navbar ul li {
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        border-bottom: 1px solid rgba(194, 168, 120, 0.2);
+    }
+    
+    .navbar ul li:last-child {
+        border-bottom: none;
+    }
+    
+    .navbar ul li a {
+        padding: 15px 20px;
+        display: block;
+        width: 100%;
+    }
+    
+    .menu-toggle {
+        display: flex;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+    
+    .donate-form {
+        margin-left: 0;
+        margin-top: 15px;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .donate-btn {
+        min-height: 44px;
+        min-width: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .logo img {
+        width: 100px;
+    }
+    
+    .mainpage {
+        height: 35vh;
+    }
+    
+    .slideshow-container {
+        height: 60vh;
+    }
+    
+    .mainpage h1 {
+        font-size: 36px;
+        padding: 0 15px;
+    }
+    
+    .mainpage h2 {
+        font-size: 20px;
+        padding: 0 15px;
+    }
+    
+    .text-overlay {
+        width: 90%;
+        top: 50%;
+    }
+    
+    .banquet-intro,
+    .disclaimer-section,
+    .features-section,
+    .gallery-section,
+    .pricing-section,
+    .guidelines-section,
+    .rental-form-section {
+        padding: 40px 20px;
+    }
+    
+    .banquet-intro h2,
+    .disclaimer-section h2,
+    .features-section h2,
+    .gallery-section h2,
+    .pricing-section h2,
+    .guidelines-section h2,
+    .rental-form-section h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+    
+    .banquet-intro p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    
+    .disclaimer-main p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .we-provide,
+    .you-arrange {
+        padding: 20px;
+    }
+    
+    .we-provide h3,
+    .you-arrange h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    
+    .disclaimer-content li {
+        font-size: 14px;
+        padding: 6px 0;
+    }
+    
+    .recommended-planner {
+        padding: 20px;
+        margin: 20px 0;
+    }
+    
+    .recommended-planner h3 {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+    
+    .recommended-planner p {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+    
+    .planner-link {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+    
+    .planner-note {
+        font-size: 13px;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .feature-item {
+        padding: 25px 20px;
+    }
+    
+    .feature-item h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    
+    .feature-item p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+   .container {
+        padding: 1rem;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .swiper {
+        width: 100%;
+    }
+    
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .pricing-card {
+        padding: 30px 20px;
+        margin: 0 10px;
+    }
+    
+    .pricing-card.featured {
+        transform: none;
+    }
+    
+    .pricing-card h3 {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+    
+    .price {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+    
+    .pricing-card li {
+        font-size: 14px;
+        padding: 6px 0;
+    }
+    
+    .pricing-note {
+        font-size: 16px;
+        margin-top: 30px;
+        padding: 15px;
+    }
+    
+    .guidelines-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .guideline-item {
+        padding: 20px 15px;
+    }
+    
+    .guideline-item h3 {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+    
+    .guideline-item p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .rental-form-section input,
+    .rental-form-section select,
+    .rental-form-section textarea {
+        padding: 12px;
+        font-size: 16px;
+    }
+    
+    .rental-form-section button {
+        padding: 14px 25px;
+        font-size: 16px;
+        min-height: 44px;
+    }
+    
+    .checkbox-section label {
+        font-size: 14px;
+    }
+    
+    .row {
+        flex-direction: column;
+        margin-left: 20px;
+        margin-right: 20px;
+        gap: 30px;
+    }
+    
+    .support-section {
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 20px;
+    }
+    
+    .support-text, .contact-info, .socials, .newsletter {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .logo-img {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto 20px auto;
+    }
+    
+    .support-text p {
+        padding-right: 0;
+        text-align: center;
+    }
+    
+    .contact-info h2 {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .newsletter input[type="email"] {
+        width: calc(100% - 20px);
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contacttop {
+        font-size: 11px;
+        padding: 8px 15px;
+    }
+    
+    .navbar {
+        padding: 8px 15px;
+    }
+    
+    .logo img {
+        width: 80px;
+    }
+    
+    .mainpage {
+        height: 28vh;
+    }
+    
+    .slideshow-container {
+        height: 50vh;
+    }
+    
+    .mainpage h1 {
+        font-size: 28px;
+        padding: 0 10px;
+    }
+    
+    .mainpage h2 {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+    
+    .banquet-intro,
+    .disclaimer-section,
+    .features-section,
+    .gallery-section,
+    .pricing-section,
+    .guidelines-section,
+    .rental-form-section {
+        padding: 30px 15px;
+    }
+    
+    .banquet-intro h2,
+    .disclaimer-section h2,
+    .features-section h2,
+    .gallery-section h2,
+    .pricing-section h2,
+    .guidelines-section h2,
+    .rental-form-section h2 {
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+    
+    .banquet-intro p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    .disclaimer-main p {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+    
+    .services-grid {
+        gap: 15px;
+    }
+    
+    .we-provide,
+    .you-arrange {
+        padding: 15px;
+    }
+    
+    .we-provide h3,
+    .you-arrange h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    .disclaimer-content li {
+        font-size: 13px;
+        padding: 5px 0;
+    }
+    
+    .recommended-planner {
+        padding: 15px;
+        margin: 15px 0;
+    }
+    
+    .recommended-planner h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    
+    .recommended-planner p {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+    
+    .planner-link {
+        font-size: 15px;
+        padding: 8px 16px;
+    }
+    
+    .planner-note {
+        font-size: 12px;
+    }
+    
+    .features-grid {
+        gap: 15px;
+    }
+    
+    .feature-item {
+        padding: 20px 15px;
+    }
+    
+    .feature-item h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    .feature-item p {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+    
+    .container {
+        padding: 0.5rem;
+    }
+    
+    .pricing-grid {
+        gap: 15px;
+    }
+    
+    .pricing-card {
+        padding: 25px 15px;
+        margin: 0 5px;
+    }
+    
+    .pricing-card h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    
+    .price {
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+    
+    .pricing-card li {
+        font-size: 13px;
+        padding: 5px 0;
+    }
+    
+    .pricing-note {
+        font-size: 14px;
+        margin-top: 25px;
+        padding: 12px;
+    }
+    
+    .guidelines-content {
+        gap: 15px;
+    }
+    
+    .guideline-item {
+        padding: 15px 12px;
+    }
+    
+    .guideline-item h3 {
+        font-size: 15px;
+        margin-bottom: 6px;
+    }
+    
+    .guideline-item p {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+    
+    .form-row {
+        gap: 12px;
+    }
+    
+    .rental-form-section input,
+    .rental-form-section select,
+    .rental-form-section textarea {
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    .rental-form-section button {
+        padding: 12px 20px;
+        font-size: 15px;
+    }
+    
+    .checkbox-section label {
+        font-size: 13px;
+    }
+    
+    .row {
+        margin-left: 15px;
+        margin-right: 15px;
+        gap: 25px;
+    }
+    
+    .support-section {
+        padding: 25px 15px;
+        gap: 25px;
+    }
+    
+    .logo-img {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto 15px auto;
+    }
+    
+    .support-text p {
+        font-size: 16px;
+    }
+    
+    .contact-info h2, .socials h2, .newsletter h2 {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+    
+    .contact-info h3 {
+        font-size: 15px;
+        margin: 8px 0 4px 0;
+    }
+    
+    .contact-info p, .socials p, .newsletter p {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+    
+    .email-icon, .phone-icon, .pin-icon {
+        width: 16px;
+        height: 16px;
+        margin-right: 6px;
+    }
+    
+    .facebook-img {
+        width: 32px;
+        height: 32px;
+        margin-top: 8px;
+        margin-bottom: 0;
+    }
+    
+    .newsletter input[type="email"] {
+        padding: 8px;
+        font-size: 14px;
+        margin-top: 8px;
+    }
+    
+    .newsletter button {
+        padding: 8px 16px;
+        font-size: 14px;
+        margin-top: 12px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .contacttop {
+        font-size: 10px;
+        padding: 6px 10px;
+    }
+    
+    .logo img {
+        width: 70px;
+    }
+    
+    .mainpage {
+        height: 45vh;
+    }
+    
+    .slideshow-container {
+        height: 45vh;
+    }
+    
+    .mainpage h1 {
+        font-size: 24px;
+    }
+    
+    .mainpage h2 {
+        font-size: 14px;
+    }
+    
+    .banquet-intro,
+    .disclaimer-section,
+    .features-section,
+    .gallery-section,
+    .pricing-section,
+    .guidelines-section,
+    .rental-form-section {
+        padding: 25px 10px;
+    }
+    
+    .banquet-intro h2,
+    .disclaimer-section h2,
+    .features-section h2,
+    .gallery-section h2,
+    .pricing-section h2,
+    .guidelines-section h2,
+    .rental-form-section h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .banquet-intro p {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+    
+    .disclaimer-main p {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+    
+    .services-grid {
+        gap: 12px;
+    }
+    
+    .we-provide,
+    .you-arrange {
+        padding: 12px;
+    }
+    
+    .we-provide h3,
+    .you-arrange h3 {
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+    
+    .disclaimer-content li {
+        font-size: 12px;
+        padding: 4px 0;
+    }
+    
+    .recommended-planner {
+        padding: 12px;
+        margin: 12px 0;
+    }
+    
+    .recommended-planner h3 {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+    
+    .recommended-planner p {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+    
+    .planner-link {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+    
+    .planner-note {
+        font-size: 11px;
+    }
+    
+    .features-grid {
+        gap: 12px;
+    }
+    
+    .feature-item {
+        padding: 15px 10px;
+    }
+    
+    .feature-item h3 {
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+    
+    .feature-item p {
+        font-size: 12px;
+        line-height: 1.3;
+    }
+    
+    .container {
+        padding: 0.25rem;
+    }
+    
+    .pricing-grid {
+        gap: 12px;
+    }
+    
+    .pricing-card {
+        padding: 20px 10px;
+        margin: 0 2px;
+    }
+    
+    .pricing-card h3 {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+    
+    .price {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .pricing-card li {
+        font-size: 12px;
+        padding: 4px 0;
+    }
+    
+    .pricing-note {
+        font-size: 13px;
+        margin-top: 20px;
+        padding: 10px;
+    }
+    
+    .guidelines-content {
+        gap: 12px;
+    }
+    
+    .guideline-item {
+        padding: 12px 8px;
+    }
+    
+    .guideline-item h3 {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    
+    .guideline-item p {
+        font-size: 12px;
+        line-height: 1.3;
+    }
+    
+    .form-row {
+        gap: 10px;
+    }
+    
+    .rental-form-section input,
+    .rental-form-section select,
+    .rental-form-section textarea {
+        padding: 8px;
+        font-size: 13px;
+    }
+    
+    .rental-form-section button {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+    
+    .checkbox-section label {
+        font-size: 12px;
+    }
+    
+    .row {
+        margin-left: 10px;
+        margin-right: 10px;
+        gap: 20px;
+    }
+    
+    .support-section {
+        padding: 20px 10px;
+        gap: 20px;
+    }
+    
+    .logo-img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .support-text p {
+        font-size: 14px;
+    }
+    
+    .contact-info h2, .socials h2, .newsletter h2 {
+        font-size: 18px;
+    }
+    
+    .contact-info h3 {
+        font-size: 14px;
+    }
+    
+    .contact-info p, .socials p, .newsletter p {
+        font-size: 13px;
+    }
+    
+    .email-icon, .phone-icon, .pin-icon {
+        width: 14px;
+        height: 14px;
+        margin-right: 5px;
+    }
+    
+    .facebook-img {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .newsletter input[type="email"] {
+        padding: 6px;
+        font-size: 13px;
+    }
+    
+    .newsletter button {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+}
+
+/* Additional Mobile-Specific Improvements */
+
+@media screen and (max-width: 768px) {
+    /* Touch-friendly button sizes */
+    .planner-link,
+    .rental-form-section button {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Improved touch targets for navigation */
+    .navbar ul li a {
+        padding: 15px 20px;
+        display: block;
+        width: 100%;
+    }
+    
+    /* Better spacing for mobile cards */
+    .feature-item,
+    .pricing-card,
+    .guideline-item {
+        margin-bottom: 15px;
+    }
+    
+    /* Simplified animations for mobile */
+    .feature-item:hover,
+    .pricing-card:hover {
+        transform: translateY(-2px);
+    }
+    
+    /* Improved mobile typography */
+    body {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    
+    /* Mobile menu animation */
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    /* Improved mobile content readability */
+    .banquet-intro p,
+    .disclaimer-main p,
+    .feature-item p,
+    .guideline-item p {
+        text-align: left;
+        word-wrap: break-word;
+    }
+    
+    /* Mobile-optimized images */
+    .swiper-slide img {
+        border-radius: 8px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    }
+    
+    /* Better mobile form styling */
+    .rental-form-section input:focus,
+    .rental-form-section select:focus,
+    .rental-form-section textarea:focus {
+        outline: 2px solid #C2A878;
+        outline-offset: 1px;
+    }
+    
+    /* Improved mobile button states */
+    .planner-link:active,
+    .rental-form-section button:active,
+    .newsletter button:active {
+        transform: translateY(1px);
+    }
+    
+    /* Mobile-friendly card styling */
+    .feature-item,
+    .pricing-card,
+    .guideline-item {
+        border-radius: 12px;
+        box-shadow: 0 3px 12px rgba(194, 168, 120, 0.1);
+    }
+    
+    /* Mobile-optimized gallery */
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: 44px;
+        height: 44px;
+    }
+    
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+        font-size: 16px;
+        padding: 8px;
+    }
+}
+
+/* Landscape orientation adjustments for mobile */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    .mainpage {
+        height: 70vh;
+    }
+    
+    .slideshow-container {
+        height: 70vh;
+    }
+    
+    .mainpage h1 {
+        font-size: 32px;
+    }
+    
+    .mainpage h2 {
+        font-size: 18px;
+    }
+    
+    .text-overlay {
+        top: 45%;
+    }
+}
+
+/* High DPI / Retina display optimizations */
+@media screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2),
+       screen and (max-width: 768px) and (min-resolution: 192dpi) {
+    .swiper-slide img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: optimize-contrast;
+    }
+}
+
+/* Accessibility improvements for mobile */
+@media screen and (max-width: 768px) {
+    /* Ensure sufficient contrast and readability */
+    .banquet-intro p,
+    .disclaimer-main p,
+    .feature-item p,
+    .guideline-item p {
+        color: #333;
+        font-weight: 400;
+    }
+    
+    /* Improve focus states for mobile */
+    .planner-link:focus,
+    .rental-form-section button:focus,
+    .navbar ul li a:focus {
+        outline: 2px solid #C2A878;
+        outline-offset: 2px;
+    }
+    
+    /* Better mobile card accessibility */
+    .feature-item,
+    .pricing-card,
+    .guideline-item {
+        border: 1px solid rgba(194, 168, 120, 0.1);
+    }
+}
+
+/* Very small screens optimization */
+@media screen and (max-width: 280px) {
+    .contacttop {
+        font-size: 9px;
+        padding: 4px 8px;
+    }
+    
+    .logo img {
+        width: 60px;
+    }
+    
+    .mainpage h1 {
+        font-size: 20px;
+    }
+    
+    .mainpage h2 {
+        font-size: 12px;
+    }
+    
+    .banquet-intro h2,
+    .disclaimer-section h2,
+    .features-section h2,
+    .gallery-section h2,
+    .pricing-section h2,
+    .guidelines-section h2,
+    .rental-form-section h2 {
+        font-size: 18px;
+    }
+    
+    .feature-item,
+    .pricing-card,
+    .guideline-item {
+        padding: 12px 8px;
+    }
+    
+    .rental-form-section input,
+    .rental-form-section select,
+    .rental-form-section textarea {
+        padding: 6px;
+        font-size: 12px;
+    }
+    
+    .rental-form-section button {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
 }

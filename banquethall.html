@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Albanian Islamic Center - Banquet Hall</title>
         <link rel="stylesheet" href="Style-Sheets/banquet-styles.css">
         <link
@@ -22,7 +24,14 @@
             <a href="#" class="logo">
                 <img src="images/Logo.png">
             </a>
-            <ul>
+            
+            <button class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="islam.html">What is Islam?</a></li>
@@ -33,6 +42,7 @@
                 <li><a href="membership.html">Join Us</a></li>
                 <li><a href="contactus.html">Contact Us</a></li>
             </ul>
+            
             <form action="https://www.paypal.com/donate" method="post" target="_blank" class="donate-form">
                 <input type="hidden" name="hosted_button_id" value="LMWW6JLZ9N57L" />
                 <button type="submit" class="donate-btn" title="PayPal - The safer, easier way to pay online!">
@@ -109,8 +119,6 @@
                         </a>
                         <p class="planner-note">A trusted event planner experienced with Islamic traditions and halal requirements.</p>
                     </div>
-                    
-                    
                 </div>
             </div>
         </section>
@@ -338,8 +346,50 @@
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="webscripts.js"></script>
         <script>
+            // Mobile menu toggle functionality
+            const menuToggle = document.getElementById('menu-toggle');
+            const navMenu = document.getElementById('nav-menu');
+
+            menuToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('show');
+                menuToggle.classList.toggle('active');
+            });
+
+            // Close menu when clicking on a link (mobile)
+            const navLinks = document.querySelectorAll('#nav-menu a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('show');
+                    menuToggle.classList.remove('active');
+                });
+            });
+
+            // Close menu when clicking outside (mobile)
+            document.addEventListener('click', function(event) {
+                const isClickInsideNav = navMenu.contains(event.target);
+                const isClickOnToggle = menuToggle.contains(event.target);
+                
+                if (!isClickInsideNav && !isClickOnToggle && navMenu.classList.contains('show')) {
+                    navMenu.classList.remove('show');
+                    menuToggle.classList.remove('active');
+                }
+            });
+
             // Show the first slide
-            document.querySelector('.mySlides').style.display = 'block';
+            document.addEventListener('DOMContentLoaded', function() {
+                const slide = document.querySelector('.mySlides');
+                if (slide) {
+                    slide.style.display = 'block';
+                }
+            });
+
+            // Handle window resize for mobile menu
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) {
+                    navMenu.classList.remove('show');
+                    menuToggle.classList.remove('active');
+                }
+            });
         </script>
     </body>
 </html>
