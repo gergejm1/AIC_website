@@ -91,19 +91,15 @@ body{
     align-items: center;
     gap: 5px;
     text-decoration: none;
-    color: #000;
-    margin-left: 50px;
     background-color: #C2A878;
-    padding-left: 10px;
-    padding-right: 18px;
+    padding: 10px 18px;
     font-size: 18px;
     font-family: 'poppins', sans-serif;
     font-weight: 600;
     border-radius: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
     color: white;
     cursor: pointer;
+    transition: all 0.3s ease;
     border: none;
 }
 

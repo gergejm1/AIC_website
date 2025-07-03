@@ -7,6 +7,14 @@ html, body {
   scroll-behavior: smooth;
 }
 
+body{
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 /* NAVBAR STYLES ****************************************************/
 
 .navbar{
@@ -67,8 +75,6 @@ html, body {
     align-items: center;
     gap: 5px;
     text-decoration: none;
-    color: #000;
-    margin-left: 50px;
     background-color: #C2A878;
     padding: 10px 18px;
     font-size: 18px;
@@ -78,6 +84,7 @@ html, body {
     color: white;
     cursor: pointer;
     transition: all 0.3s ease;
+    border: none;
 }
 
 .donate-btn:hover {
@@ -89,6 +96,15 @@ html, body {
     background-color: rgba(194, 168, 120, 0.6);
     color: white;
 }
+
+.donate-form {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    margin-left: 50px; 
+    align-items: center; 
+}
+
 
 .heart-icon {
     width: 20px;
@@ -117,6 +133,25 @@ html, body {
   object-fit: contain;
   padding-top: 0px;
   justify-content: flex-start;
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    background: none;
+    border: none;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 3px 0;
+    transition: 0.3s;
+    display: block;
 }
 
 /* MAINPAGE *****************************************************/
@@ -733,334 +768,889 @@ footer {
 
 /* MOBILE RESPONSIVE STYLES *****************************************************/
 
-@media (max-width: 768px) {
-  /* Navbar Mobile */
-  .contacttop {
-    padding-left: 20px;
-    padding-right: 20px;
-    flex-direction: column;
-    gap: 5px;
-    text-align: center;
-    font-size: 13px;
-  }
-  
-  .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-  }
-  
-  .navbar ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5px;
-  }
-  
-  .navbar ul li {
-    padding: 5px;
-  }
-  
-  .navbar ul li a {
-    font-size: 16px;
-    padding-left: 10px;
-  }
-  
-  .donate-btn {
-    margin-left: 0;
-    margin-top: 10px;
-    font-size: 16px;
-    padding: 8px 15px;
-  }
-  
-  .logo img {
-    width: 120px;
-  }
+@media screen and (max-width: 1024px) {
+    .contacttop {
+        padding-left: 50px;
+        padding-right: 50px;
+        font-size: 14px;
+    }
+    
+    .navbar ul li a {
+        font-size: 16px;
+        padding-left: 15px;
+    }
+    
 
-  /* Hero Section Mobile */
-  .mainpage h1 {
-    font-size: 32px;
-  }
-  
-  .mainpage h2 {
-    font-size: 18px;
-  }
+    
+      .donate-form {
+        margin-left: 30px;
+    }
 
-  .text-overlay {
-    width: 90%;
-    padding: 0 20px;
-  }
-
-  /* Programs Section Mobile */
-  .programs-section {
-    padding: 40px 15px;
-  }
-
-  .programs-section h1 {
-    font-size: 28px;
-    margin-bottom: 30px;
-  }
-
-  .description-content {
-    flex-direction: column;
-    text-align: center;
-    padding: 30px 20px;
-    gap: 20px;
-  }
-
-  .program-img {
-    width: 100%;
-    max-width: 300px;
-    height: 200px;
-  }
-
-  .description-text p {
-    font-size: 16px;
-  }
-
-  /* Program Cards Mobile */
-  .program-card {
-    margin-bottom: 30px;
-    padding: 25px 20px;
-  }
-
-  .program-content h2 {
-    font-size: 22px;
-    margin-bottom: 15px;
-    text-align: center;
-  }
-
-  .program-details {
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-  }
-
-  .right-align .program-details {
-    flex-direction: column;
-  }
-
-  .right-align {
-    text-align: center;
-  }
-
-  .program-text p {
-    font-size: 15px;
-  }
-
-  .teacher-img, .aqeedah-img, .alb-img, .culture-img {
-    width: 100%;
-    max-width: 300px;
-    height: 180px;
-    margin: 0 auto;
-  }
-
-  .circle-accent {
-    top: -40px;
-    right: -40px;
-    width: 80px;
-    height: 80px;
-  }
-
-  .circle-accent2 {
-    top: -40px;
-    left: -40px;
-    width: 80px;
-    height: 80px;
-  }
-
-  .program-card:hover .circle-accent,
-  .program-card:hover .circle-accent2 {
-    width: 100px;
-    height: 100px;
-  }
-
-  /* Gym Section Mobile */
-  .gym-section {
-    padding: 40px 15px;
-  }
-
-  .gym-section h1 {
-    font-size: 28px;
-  }
-
-  .gym-content {
-    flex-direction: column;
-    text-align: center;
-    padding: 30px 20px;
-    gap: 25px;
-  }
-
-  .gym-text h2 {
-    font-size: 24px;
-  }
-
-  .gym-text p {
-    font-size: 15px;
-  }
-
-  .facility-details h3 {
-    font-size: 18px;
-  }
-
-  .gym-img {
-    width: 100%;
-    max-width: 400px;
-    height: 250px;
-    margin: 0 auto;
-  }
-
-  /* Registration Section Mobile */
-  .registration-section {
-    padding: 40px 15px;
-  }
-
-  .registration-content {
-    padding: 30px 20px;
-  }
-
-  .registration-content h2 {
-    font-size: 28px;
-    margin-bottom: 30px;
-  }
-
-  .registration-details {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .registration-info h3,
-  .registration-requirements h3 {
-    font-size: 20px;
-    text-align: center;
-  }
-
-  .registration-info p,
-  .registration-requirements p {
-    font-size: 15px;
-    text-align: center;
-  }
-
-  .registration-info li,
-  .registration-requirements li {
-    font-size: 14px;
-    text-align: left;
-  }
-
-  .contact-btn {
-    font-size: 16px;
-    padding: 12px 25px;
-  }
-
-  /* Footer Mobile */
-  .row {
-    flex-direction: column;
-    margin-left: 20px;
-    margin-right: 20px;
-    gap: 30px;
-  }
-  
-  .support-text,
-  .contact-info,
-  .socials,
-  .newsletter {
-    width: 100%;
-    text-align: center;
-    align-items: center;
-  }
-  
-  .contact-info h2 {
-    width: 100%;
-    text-align: center;
-  }
-  
-  .logo-img {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto;
-  }
-  
-  .newsletter input[type="email"] {
-    width: calc(100% - 20px);
-    max-width: 300px;
-  }
+    .programs-section {
+        width: 100%;
+        padding: 60px 40px;
+    }
+    
+    .program-card {
+        width: 100%;
+        padding: 30px;
+    }
+    
+    .gym-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .gym-img {
+        width: 100%;
+        height: 250px;
+    }
+    
+    .registration-details {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
 }
 
-/* TABLET RESPONSIVE STYLES *****************************************************/
+@media screen and (max-width: 768px) {
+    .contacttop {
+        padding: 10px 20px;
+        font-size: 12px;
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 20px;
+        align-items: flex-start;
+    }
+    
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 15px;
+        background-color: rgba(255, 255, 255, 0.98);
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .navbar ul.show {
+        display: flex;
+    }
+    
+    .navbar ul li {
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        border-bottom: 1px solid rgba(194, 168, 120, 0.2);
+    }
+    
+    .navbar ul li:last-child {
+        border-bottom: none;
+    }
+    
+    .navbar ul li a {
+        padding: 15px 20px;
+        display: block;
+        width: 100%;
+    }
+    
+    .menu-toggle {
+        display: flex;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+    
+    .donate-btn {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    .donate-form {
+        margin-left: 0;
+        margin-top: 15px;
+        width: 100%;
+        justify-content: center;
+    }
 
-@media (max-width: 1024px) and (min-width: 769px) {
-  .programs-section {
-    padding: 50px 30px;
-  }
-
-  .description-content {
-    padding: 35px;
-    gap: 25px;
-  }
-
-  .program-img {
-    width: 250px;
-    height: 180px;
-  }
-
-  .program-card {
-    padding: 35px 30px;
-  }
-
-  .program-details {
-    gap: 25px;
-  }
-
-  .teacher-img, .aqeedah-img, .alb-img, .culture-img {
-    width: 220px;
-    height: 160px;
-  }
-
-  .gym-content {
-    gap: 30px;
-    padding: 35px;
-  }
-
-  .gym-img {
-    width: 350px;
-    height: 260px;
-  }
-
-  .registration-content {
-    padding: 35px;
-  }
-
-  .registration-details {
-    gap: 35px;
-  }
-
-  .row {
-    margin-left: 40px;
-    margin-right: 40px;
-  }
+    .logo img {
+        width: 100px;
+    }
+    
+    .mainpage {
+        height: 60vh;
+    }
+    
+    .slideshow-container {
+        height: 60vh;
+    }
+    
+    .mainpage h1 {
+        font-size: 36px;
+        padding: 0 15px;
+    }
+    
+    .mainpage h2 {
+        font-size: 20px;
+        padding: 0 15px;
+    }
+    
+    .text-overlay {
+        width: 90%;
+        top: 50%;
+    }
+    
+    .programs-section {
+        padding: 40px 20px;
+    }
+    
+    .programs-section h1 {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+    
+    .description-content {
+        flex-direction: column;
+        gap: 20px;
+        padding: 25px;
+    }
+    
+    .program-img {
+        width: 100%;
+        height: 200px;
+    }
+    
+    .description-text p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    
+    .program-card {
+        padding: 25px;
+        margin-bottom: 25px;
+    }
+    
+    .program-content h2 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+    
+    .program-details {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .right-align .program-details {
+        flex-direction: column;
+    }
+    
+    .teacher-img, .aqeedah-img, .alb-img, .culture-img {
+        width: 100%;
+        height: 200px;
+    }
+    
+    .program-text p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    .gym-section {
+        padding: 40px 20px;
+    }
+    
+    .gym-section h1 {
+        font-size: 28px;
+    }
+    
+    .gym-content {
+        flex-direction: column;
+        gap: 20px;
+        padding: 25px;
+    }
+    
+    .gym-text h2 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+    
+    .gym-text p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+    
+    .facility-details h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    
+    .facility-details li {
+        font-size: 13px;
+        margin-bottom: 6px;
+    }
+    
+    .gym-img {
+        width: 100%;
+        height: 250px;
+    }
+    
+    .registration-section {
+        padding: 40px 20px;
+    }
+    
+    .registration-content {
+        padding: 25px;
+    }
+    
+    .registration-content h2 {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+    
+    .registration-details {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .registration-info h3,
+    .registration-requirements h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .registration-info p,
+    .registration-requirements p {
+        font-size: 14px;
+        margin-bottom: 15px;
+        line-height: 1.5;
+    }
+    
+    .registration-info li,
+    .registration-requirements li {
+        font-size: 13px;
+        margin-bottom: 8px;
+        line-height: 1.4;
+    }
+    
+    .contact-btn {
+        padding: 12px 25px;
+        font-size: 16px;
+        min-height: 44px;
+    }
+    
+    .row {
+        flex-direction: column;
+        margin-left: 20px;
+        margin-right: 20px;
+        gap: 20px;
+    }
+    
+    .support-section {
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 20px;
+    }
+    
+    .support-text, .contact-info, .socials, .newsletter {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .logo-img {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto 20px auto;
+    }
+    
+    .support-text p {
+        padding-right: 0;
+        text-align: center;
+    }
+    
+    .contact-info h2 {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
 }
 
-/* LARGE SCREEN OPTIMIZATIONS *****************************************************/
+@media screen and (max-width: 480px) {
+    .contacttop {
+        font-size: 11px;
+        padding: 8px 15px;
+    }
+    
+    .navbar {
+        padding: 8px 15px;
+    }
+    
+    .logo img {
+        width: 80px;
+    }
+    
+    .mainpage {
+        height: 50vh;
+    }
+    
+    .slideshow-container {
+        height: 50vh;
+    }
+    
+    .mainpage h1 {
+        font-size: 28px;
+        padding: 0 10px;
+    }
+    
+    .mainpage h2 {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+    
+    .programs-section {
+        padding: 30px 15px;
+    }
+    
+    .programs-section h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .description-content {
+        padding: 20px;
+        gap: 15px;
+    }
+    
+    .program-img {
+        height: 150px;
+    }
+    
+    .description-text p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+    
+    .program-card {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .program-content h2 {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+    
+    .program-details {
+        gap: 15px;
+    }
+    
+    .teacher-img, .aqeedah-img, .alb-img, .culture-img {
+        height: 150px;
+    }
+    
+    .program-text p {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+    
+    .gym-section {
+        padding: 30px 15px;
+    }
+    
+    .gym-section h1 {
+        font-size: 24px;
+    }
+    
+    .gym-content {
+        padding: 20px;
+        gap: 15px;
+    }
+    
+    .gym-text h2 {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+    
+    .gym-text p {
+        font-size: 13px;
+        line-height: 1.4;
+        margin-bottom: 12px;
+    }
+    
+    .facility-details h3 {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+    
+    .facility-details li {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+    
+    .gym-img {
+        height: 200px;
+    }
+    
+    .registration-section {
+        padding: 30px 15px;
+    }
+    
+    .registration-content {
+        padding: 20px;
+    }
+    
+    .registration-content h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    
+    .registration-details {
+        gap: 20px;
+    }
+    
+    .registration-info h3,
+    .registration-requirements h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    
+    .registration-info p,
+    .registration-requirements p {
+        font-size: 13px;
+        margin-bottom: 12px;
+        line-height: 1.4;
+    }
+    
+    .registration-info li,
+    .registration-requirements li {
+        font-size: 12px;
+        margin-bottom: 6px;
+        line-height: 1.3;
+    }
+    
+    .contact-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+        min-height: 44px;
+    }
+    
+    .row {
+        margin-left: 15px;
+        margin-right: 15px;
+        gap: 15px;
+    }
+    
+    .support-section {
+        padding: 25px 15px;
+        gap: 25px;
+    }
+    
+    .logo-img {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto 15px auto;
+    }
+    
+    .support-text p {
+        font-size: 16px;
+    }
+    
+    .contact-info h2, .socials h2, .newsletter h2 {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+    
+    .contact-info h3 {
+        font-size: 15px;
+        margin: 8px 0 4px 0;
+    }
+    
+    .contact-info p, .socials p, .newsletter p {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+    
+    .email-icon, .phone-icon, .pin-icon {
+        width: 16px;
+        height: 16px;
+        margin-right: 6px;
+    }
+    
+    .facebook-img {
+        width: 32px;
+        height: 32px;
+        margin-top: 8px;
+        margin-bottom: 0;
+    }
+    
+    .newsletter input[type="email"] {
+        padding: 8px;
+        font-size: 14px;
+        margin-top: 8px;
+    }
+    
+    .newsletter button {
+        padding: 8px 16px;
+        font-size: 14px;
+        margin-top: 12px;
+    }
+}
 
-@media (min-width: 1200px) {
-  .programs-section {
-    padding: 80px 40px;
-  }
+@media screen and (max-width: 320px) {
+    .contacttop {
+        font-size: 10px;
+        padding: 6px 10px;
+    }
+    
+    .logo img {
+        width: 70px;
+    }
+    
+    .mainpage {
+        height: 45vh;
+    }
+    
+    .slideshow-container {
+        height: 45vh;
+    }
+    
+    .mainpage h1 {
+        font-size: 24px;
+    }
+    
+    .mainpage h2 {
+        font-size: 14px;
+    }
+    
+    .programs-section {
+        padding: 25px 10px;
+    }
+    
+    .programs-section h1 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+    
+    .description-content {
+        padding: 15px;
+        gap: 12px;
+    }
+    
+    .program-img {
+        height: 120px;
+    }
+    
+    .description-text p {
+        font-size: 13px;
+        line-height: 1.3;
+    }
+    
+    .program-card {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .program-content h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    
+    .program-details {
+        gap: 12px;
+    }
+    
+    .teacher-img, .aqeedah-img, .alb-img, .culture-img {
+        height: 120px;
+    }
+    
+    .program-text p {
+        font-size: 12px;
+        line-height: 1.3;
+    }
+    
+    .gym-section {
+        padding: 25px 10px;
+    }
+    
+    .gym-section h1 {
+        font-size: 22px;
+    }
+    
+    .gym-content {
+        padding: 15px;
+        gap: 12px;
+    }
+    
+    .gym-text h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    
+    .gym-text p {
+        font-size: 12px;
+        line-height: 1.3;
+        margin-bottom: 10px;
+    }
+    
+    .facility-details h3 {
+        font-size: 15px;
+        margin-bottom: 6px;
+    }
+    
+    .facility-details li {
+        font-size: 11px;
+        margin-bottom: 4px;
+    }
+    
+    .gym-img {
+        height: 150px;
+    }
+    
+    .registration-section {
+        padding: 25px 10px;
+    }
+    
+    .registration-content {
+        padding: 15px;
+    }
+    
+    .registration-content h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .registration-details {
+        gap: 15px;
+    }
+    
+    .registration-info h3,
+    .registration-requirements h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    .registration-info p,
+    .registration-requirements p {
+        font-size: 12px;
+        margin-bottom: 10px;
+        line-height: 1.3;
+    }
+    
+    .registration-info li,
+    .registration-requirements li {
+        font-size: 11px;
+        margin-bottom: 5px;
+        line-height: 1.2;
+    }
+    
+    .contact-btn {
+        padding: 8px 16px;
+        font-size: 13px;
+        min-height: 44px;
+    }
+    
+    .row {
+        margin-left: 10px;
+        margin-right: 10px;
+        gap: 12px;
+    }
+    
+    .support-section {
+        padding: 20px 10px;
+        gap: 20px;
+    }
+    
+    .logo-img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .support-text p {
+        font-size: 14px;
+    }
+    
+    .contact-info h2, .socials h2, .newsletter h2 {
+        font-size: 18px;
+    }
+    
+    .contact-info h3 {
+        font-size: 14px;
+    }
+    
+    .contact-info p, .socials p, .newsletter p {
+        font-size: 13px;
+    }
+    
+    .email-icon, .phone-icon, .pin-icon {
+        width: 14px;
+        height: 14px;
+        margin-right: 5px;
+    }
+    
+    .facebook-img {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .newsletter input[type="email"] {
+        padding: 6px;
+        font-size: 13px;
+    }
+    
+    .newsletter button {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+}
 
-  .description-content {
-    padding: 50px;
-    gap: 40px;
-  }
+/* Additional Mobile-Specific Improvements */
 
-  .program-card {
-    padding: 50px 40px;
-  }
+@media screen and (max-width: 768px) {
+    /* Touch-friendly button sizes */
+    .contact-btn {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Improved touch targets for navigation */
+    .navbar ul li a {
+        padding: 15px 20px;
+        display: block;
+        width: 100%;
+    }
+    
+    /* Better spacing for mobile cards */
+    .program-card {
+        margin-bottom: 15px;
+    }
+    
+    /* Simplified animations for mobile */
+    .program-card:hover {
+        transform: translateY(-2px);
+    }
+    
+    /* Improved mobile typography */
+    body {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    
+    /* Mobile menu animation */
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    /* Mobile-friendly card hover effects */
+    .program-card:hover .circle-accent,
+    .program-card:hover .circle-accent2 {
+        width: 130px;
+        height: 130px;
+        opacity: 0.6;
+    }
+    
+    /* Improved mobile content readability */
+    .description-text p,
+    .program-text p,
+    .gym-text p,
+    .registration-info p,
+    .registration-requirements p {
+        text-align: left;
+        word-wrap: break-word;
+    }
+    
+    /* Mobile-optimized images */
+    .program-img,
+    .teacher-img, 
+    .aqeedah-img, 
+    .alb-img, 
+    .culture-img,
+    .gym-img {
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    }
+    
+    /* Mobile-friendly spacing */
+    .circle-accent,
+    .circle-accent2 {
+        display: none;
+    }
+}
 
-  .gym-content {
-    padding: 50px;
-    gap: 50px;
-  }
+/* Landscape orientation adjustments for mobile */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    .mainpage {
+        height: 70vh;
+    }
+    
+    .slideshow-container {
+        height: 70vh;
+    }
+    
+    .mainpage h1 {
+        font-size: 32px;
+    }
+    
+    .mainpage h2 {
+        font-size: 18px;
+    }
+    
+    .text-overlay {
+        top: 45%;
+    }
+}
 
-  .registration-content {
-    padding: 50px;
-  }
+/* High DPI / Retina display optimizations */
+@media screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2),
+       screen and (max-width: 768px) and (min-resolution: 192dpi) {
+    .program-img,
+    .teacher-img, 
+    .aqeedah-img, 
+    .alb-img, 
+    .culture-img,
+    .gym-img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: optimize-contrast;
+    }
+}
+
+/* Accessibility improvements for mobile */
+@media screen and (max-width: 768px) {
+    /* Ensure sufficient contrast and readability */
+    .program-text p,
+    .gym-text p,
+    .description-text p {
+        color: #333;
+        font-weight: 400;
+    }
+    
+    /* Improve focus states for mobile */
+    .contact-btn:focus,
+    .navbar ul li a:focus {
+        outline: 2px solid #C2A878;
+        outline-offset: 2px;
+    }
+    
+    /* Better mobile form styling */
+    .newsletter input[type="email"]:focus {
+        outline: 2px solid #C2A878;
+        outline-offset: 1px;
+    }
+    
+    /* Improved mobile button states */
+    .contact-btn:active,
+    .newsletter button:active {
+        transform: translateY(1px);
+    }
 }
