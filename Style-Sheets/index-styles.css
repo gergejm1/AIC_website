@@ -998,7 +998,7 @@ footer {
     .navbar ul li {
         width: 100%;
         text-align: center;
-        padding: 15px;
+        
         border-bottom: 1px solid rgba(194, 168, 120, 0.2);
         font-size: 8px;
     }
@@ -1475,12 +1475,7 @@ footer {
         min-width: 44px;
     }
     
-    /* Improved touch targets for navigation */
-    .navbar ul li a {
-        padding: 15px 20px;
-        display: block;
-        width: 100%;
-    }
+
     
     /* Better spacing for mobile cards */
     .program-card, .service-card {
