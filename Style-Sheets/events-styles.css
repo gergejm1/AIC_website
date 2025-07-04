@@ -509,11 +509,14 @@ button[id^="eventbrite-widget-modal-trigger"]:hover {
     transform: scale(1.02);
 }
 
-/* FOOTER *****************************************************/
+/**************************** FOOTER *****************************************************/
 
 .support-section {
-  margin-top: 40px;
-  padding: 30px 20px;
+  margin-top: 60px;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   background: linear-gradient(90deg,
     rgba(194, 168, 120, 0.9) 0%,    
     rgba(194, 168, 120, 0.3) 100%  
@@ -521,38 +524,34 @@ button[id^="eventbrite-widget-modal-trigger"]:hover {
   width: 100%;
 }
 
-.support-section .row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  margin: 0;
-}
-
 .support-text {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  width: 20%;
 }
 
 .logo-img {
-  width: 200px;
-  height: 200px;
-  margin-bottom: 10px;
+  width: 300px;
+  height: 300px;
+  margin-bottom: -90px;
+  margin-top: -100px;
+  margin-left: -35px;
 }
 
 .support-text p {
-  font-size: 16px;
+  font-size: 18px;
+  padding-right: 40px;
   color: black;
   font-family: 'poppins', sans-serif;
   margin-top: 0;
-  text-align: center;
 }
 
 .facebook-img{
-  width: 35px;
-  height: 35px;
-  margin-top: 10px;
+  width: 40px;
+  height: 40px;
+  margin-top: 0;
+  margin-bottom: 50px;
 }
 
 .social-media:hover{
@@ -565,34 +564,64 @@ button[id^="eventbrite-widget-modal-trigger"]:hover {
   transition: transform 0.3s ease;
 }
 
-.contact-info, .socials, .newsletter {
-  font-family: 'poppins', sans-serif;
+.contact-info {
   color: black;
+  font-family: 'poppins', sans-serif;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 18px;
 }
 
-.contact-info h2, .socials h2, .newsletter h2 {
-  font-size: 22px;
-  margin-bottom: 15px;
+.contact-info h2{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  font-family: 'poppins', sans-serif;
+  color: black;
+  font-size: 27px;
 }
 
 .contact-info h3{
+  font-family: 'poppins', sans-serif;
+  color: black;
   font-size: 16px;
   color: #533805;
   font-weight: 600;
-  margin: 10px 0 5px 0;
 }
 
-.contact-info p, .socials p, .newsletter p {
-  font-size: 15px;
+.contact-info p{
+  font-family: 'poppins', sans-serif;
+  color: black;
   font-weight: 500;
-  margin-bottom: 10px;
+}
+
+.socials {
+  color: black;
+  font-family: 'poppins', sans-serif;
+  width:20%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 18px;
 }
 
 .email-icon, .phone-icon, .pin-icon {
-  width: 18px;
-  height: 18px;
-  margin-right: 8px;
-  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 20%;
+  font-family: 'poppins', sans-serif;
+  color: black;
+  font-size: 18px;
 }
 
 .newsletter input[type="email"] {
@@ -612,16 +641,17 @@ button[id^="eventbrite-widget-modal-trigger"]:hover {
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  margin-top: 15px;
-  transition: all 0.3s ease;
+  margin-top: 20px;
 }
 
 .newsletter button:hover {
   background-color: rgba(194, 168, 120, 0.8);
+  transition: background-color 0.3s ease;
 } 
 
 .newsletter button:active {
   background-color: rgba(194, 168, 120, 0.6);
+  transition: background-color 0.3s ease;
 }
 
 footer {
@@ -668,6 +698,15 @@ footer {
         flex-direction: column;
         gap: 5px;
     }
+    
+
+        .row {
+        flex-direction: column;
+        margin-left: 20px;
+        margin-right: 20px;
+        gap: 20px;
+    }
+    
     
     .navbar {
         flex-direction: column;
@@ -835,64 +874,34 @@ footer {
         font-size: 30px;
     }
     
+    /* FIXED MOBILE FOOTER STYLES */
     .support-section {
+        flex-direction: column;
+        gap: 30px;
         padding: 30px 20px;
     }
     
-    .support-section .row {
-        grid-template-columns: 1fr;
-        gap: 25px;
-        margin: 0;
+    .support-text, .contact-info, .socials, .newsletter {
+        width: 100%;
+        text-align: center;
+        align-items: center;
     }
     
     .logo-img {
-        width: 150px;
-        height: 150px;
-        margin-bottom: 15px;
+        width: 200px;
+        height: 200px;
+        margin: 0 auto 20px auto;
     }
     
     .support-text p {
-        font-size: 14px;
-    }
-    
-    .contact-info h2, .socials h2, .newsletter h2 {
-        font-size: 20px;
+        padding-right: 0;
         text-align: center;
     }
     
-    .contact-info, .socials, .newsletter {
+    .contact-info h2 {
+        width: 100%;
         text-align: center;
-    }
-    
-    .contact-info h3 {
-        font-size: 15px;
-    }
-    
-    .contact-info p, .socials p, .newsletter p {
-        font-size: 14px;
-    }
-    
-    .email-icon, .phone-icon, .pin-icon {
-        width: 16px;
-        height: 16px;
-        margin-right: 6px;
-    }
-    
-    .facebook-img {
-        width: 32px;
-        height: 32px;
-        margin-top: 8px;
-    }
-    
-    .newsletter input[type="email"] {
-        padding: 8px;
-        font-size: 14px;
-    }
-    
-    .newsletter button {
-        padding: 8px 16px;
-        font-size: 14px;
-        margin-top: 12px;
+        align-items: center;
     }
 }
 
@@ -1020,22 +1029,26 @@ footer {
     .logo-img {
         width: 150px;
         height: 150px;
+        margin: 0 auto 15px auto;
     }
     
     .support-text p {
-        font-size: 14px;
+        font-size: 16px;
     }
     
     .contact-info h2, .socials h2, .newsletter h2 {
         font-size: 20px;
+        margin-bottom: 12px;
     }
     
     .contact-info h3 {
         font-size: 15px;
+        margin: 8px 0 4px 0;
     }
     
     .contact-info p, .socials p, .newsletter p {
         font-size: 14px;
+        margin-bottom: 8px;
     }
     
     .email-icon, .phone-icon, .pin-icon {
@@ -1054,12 +1067,13 @@ footer {
     .newsletter input[type="email"] {
         padding: 8px;
         font-size: 14px;
+        margin-top: 8px;
     }
     
     .newsletter button {
         padding: 8px 16px;
         font-size: 14px;
-        margin-top: 15px;
+        margin-top: 12px;
     }
 }
 
@@ -1138,6 +1152,10 @@ footer {
     .logo-img {
         width: 120px;
         height: 120px;
+    }
+    
+    .support-text p {
+        font-size: 14px;
     }
     
     .contact-info h2, .socials h2, .newsletter h2 {
@@ -1345,3 +1363,4 @@ footer {
         background-color: rgba(194, 168, 120, 0.1);
     }
 }
+

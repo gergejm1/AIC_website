@@ -520,8 +520,11 @@ body{
 /* FOOTER *****************************************************/
 
 .support-section {
-  margin-top: 40px;
-  padding: 30px 20px;
+  margin-top: 60px;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   background: linear-gradient(90deg,
     rgba(194, 168, 120, 0.9) 0%,    
     rgba(194, 168, 120, 0.3) 100%  
@@ -529,38 +532,34 @@ body{
   width: 100%;
 }
 
-.support-section .row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  margin: 0;
-}
-
 .support-text {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  width: 20%;
 }
 
 .logo-img {
-  width: 200px;
-  height: 200px;
-  margin-bottom: 10px;
+  width: 300px;
+  height: 300px;
+  margin-bottom: -90px;
+  margin-top: -100px;
+  margin-left: -35px;
 }
 
 .support-text p {
-  font-size: 16px;
+  font-size: 18px;
+  padding-right: 40px;
   color: black;
   font-family: 'poppins', sans-serif;
   margin-top: 0;
-  text-align: center;
 }
 
 .facebook-img{
-  width: 35px;
-  height: 35px;
-  margin-top: 10px;
+  width: 40px;
+  height: 40px;
+  margin-top: 0;
+  margin-bottom: 50px;
 }
 
 .social-media:hover{
@@ -573,34 +572,64 @@ body{
   transition: transform 0.3s ease;
 }
 
-.contact-info, .socials, .newsletter {
-  font-family: 'poppins', sans-serif;
+.contact-info {
   color: black;
+  font-family: 'poppins', sans-serif;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 18px;
 }
 
-.contact-info h2, .socials h2, .newsletter h2 {
-  font-size: 22px;
-  margin-bottom: 15px;
+.contact-info h2{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  font-family: 'poppins', sans-serif;
+  color: black;
+  font-size: 27px;
 }
 
 .contact-info h3{
+  font-family: 'poppins', sans-serif;
+  color: black;
   font-size: 16px;
   color: #533805;
   font-weight: 600;
-  margin: 10px 0 5px 0;
 }
 
-.contact-info p, .socials p, .newsletter p {
-  font-size: 15px;
+.contact-info p{
+  font-family: 'poppins', sans-serif;
+  color: black;
   font-weight: 500;
-  margin-bottom: 10px;
+}
+
+.socials {
+  color: black;
+  font-family: 'poppins', sans-serif;
+  width:20%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 18px;
 }
 
 .email-icon, .phone-icon, .pin-icon {
-  width: 18px;
-  height: 18px;
-  margin-right: 8px;
-  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 20%;
+  font-family: 'poppins', sans-serif;
+  color: black;
+  font-size: 18px;
 }
 
 .newsletter input[type="email"] {
@@ -620,16 +649,17 @@ body{
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  margin-top: 15px;
-  transition: all 0.3s ease;
+  margin-top: 20px;
 }
 
 .newsletter button:hover {
   background-color: rgba(194, 168, 120, 0.8);
+  transition: background-color 0.3s ease;
 } 
 
 .newsletter button:active {
   background-color: rgba(194, 168, 120, 0.6);
+  transition: background-color 0.3s ease;
 }
 
 footer {
@@ -640,6 +670,7 @@ footer {
   font-family: 'poppins', sans-serif;
   font-size: 14px;
 }
+
 
 /* FORM VALIDATION STYLES *****************************************************/
 
@@ -796,32 +827,33 @@ footer {
         padding: 0 10px;
     }
 
-    /* Contact Main Section Mobile */
-    .contact-main-section {
-        padding: 50px 0;
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .contact-info-card,
-    .contact-form-card {
+    .support-section {
+        flex-direction: column;
+        gap: 30px;
         padding: 30px 20px;
-        margin: 0 15px;
     }
-
-    .contact-info-card h2,
-    .contact-form-card h2 {
-        font-size: 26px;
-        margin-bottom: 25px;
+    
+    .support-text, .contact-info, .socials, .newsletter {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .logo-img {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto 20px auto;
+    }
+    
+    .support-text p {
+        padding-right: 0;
         text-align: center;
     }
-
-    .form-description {
+    
+    .contact-info h2 {
+        width: 100%;
         text-align: center;
-        font-size: 15px;
+        align-items: center;
     }
 
     /* Contact Items Mobile */
@@ -911,68 +943,99 @@ footer {
         height: 300px;
     }
 
-    /* Footer Mobile */
     .support-section {
         padding: 30px 20px;
+        flex-direction: column;
+        gap: 30px;
+        align-items: stretch;
     }
     
-    .support-section .row {
-        grid-template-columns: 1fr;
-        gap: 25px;
-        margin: 0;
+ .row {
+        flex-direction: column;
+        margin-left: 20px;
+        margin-right: 20px;
+        gap: 20px;
     }
     
     .support-text,
     .contact-info,
     .socials,
     .newsletter {
-        text-align: center;
+        width: 100% !important;
+        text-align: center !important;
+        align-items: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        margin: 0 !important;
+        padding: 0 10px !important;
     }
     
     .logo-img {
-        width: 150px;
-        height: 150px;
-        margin-bottom: 15px;
+        width: 200px !important;
+        height: 200px !important;
+        margin: 0 auto 20px auto !important;
     }
     
     .support-text p {
-        font-size: 14px;
+        font-size: 16px !important;
+        padding-right: 0 !important;
+        text-align: center !important;
+        margin: 0 auto !important;
+        max-width: 100% !important;
     }
     
     .contact-info h2, .socials h2, .newsletter h2 {
-        font-size: 20px;
-        text-align: center;
+        font-size: 20px !important;
+        text-align: center !important;
+        width: 100% !important;
+        margin: 0 0 15px 0 !important;
     }
     
     .contact-info h3 {
-        font-size: 15px;
+        font-size: 15px !important;
+        text-align: center !important;
+        margin: 10px 0 5px 0 !important;
     }
     
     .contact-info p, .socials p, .newsletter p {
-        font-size: 14px;
+        font-size: 14px !important;
+        text-align: center !important;
+        margin: 0 0 10px 0 !important;
     }
     
     .email-icon, .phone-icon, .pin-icon {
-        width: 16px;
-        height: 16px;
-        margin-right: 6px;
+        width: 16px !important;
+        height: 16px !important;
+        margin-right: 6px !important;
     }
     
     .facebook-img {
-        width: 32px;
-        height: 32px;
-        margin-top: 8px;
+        width: 32px !important;
+        height: 32px !important;
+        margin: 8px auto !important;
+        display: block !important;
     }
     
     .newsletter input[type="email"] {
-        padding: 8px;
-        font-size: 14px;
+        padding: 8px !important;
+        font-size: 14px !important;
+        width: 100% !important;
+        max-width: 300px !important;
+        margin: 8px auto !important;
     }
     
     .newsletter button {
-        padding: 8px 16px;
-        font-size: 14px;
-        margin-top: 12px;
+        padding: 8px 16px !important;
+        font-size: 14px !important;
+        margin: 12px auto !important;
+        display: block !important;
+    }
+    
+    .newsletter form {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
     }
 }
 
@@ -1079,59 +1142,67 @@ footer {
     .map-container {
         margin: 0 15px 30px;
     }
-    
+
     .map-container iframe {
         height: 250px;
     }
     
     .support-section {
         padding: 25px 15px;
+        gap: 25px;
     }
     
     .support-section .row {
-        gap: 20px;
+        gap: 20px !important;
     }
     
     .logo-img {
-        width: 130px;
-        height: 130px;
+        width: 150px !important;
+        height: 150px !important;
+        margin: 0 auto 15px auto !important;
     }
     
     .support-text p {
-        font-size: 13px;
+        font-size: 14px !important;
     }
     
     .contact-info h2, .socials h2, .newsletter h2 {
-        font-size: 18px;
+        font-size: 18px !important;
+        margin: 0 0 12px 0 !important;
     }
     
     .contact-info h3 {
-        font-size: 14px;
+        font-size: 14px !important;
+        margin: 8px 0 4px 0 !important;
     }
     
     .contact-info p, .socials p, .newsletter p {
-        font-size: 13px;
+        font-size: 13px !important;
+        margin: 0 0 8px 0 !important;
     }
     
     .email-icon, .phone-icon, .pin-icon {
-        width: 14px;
-        height: 14px;
-        margin-right: 5px;
+        width: 14px !important;
+        height: 14px !important;
+        margin-right: 5px !important;
     }
     
     .facebook-img {
-        width: 30px;
-        height: 30px;
+        width: 30px !important;
+        height: 30px !important;
+        margin: 6px auto !important;
     }
     
     .newsletter input[type="email"] {
-        padding: 6px;
-        font-size: 13px;
+        padding: 6px !important;
+        font-size: 13px !important;
+        margin: 6px auto !important;
     }
     
     .newsletter button {
-        padding: 6px 12px;
-        font-size: 13px;
+        padding: 6px 12px !important;
+        font-size: 13px !important;
+        margin: 10px auto !important;
     }
 }
 
@@ -1238,52 +1309,56 @@ footer {
     
     .support-section {
         padding: 20px 10px;
-    }
-    
-    .support-section .row {
-        gap: 15px;
+        gap: 20px;
     }
     
     .logo-img {
-        width: 120px;
-        height: 120px;
+        width: 120px !important;
+        height: 120px !important;
+        margin: 0 auto 10px auto !important;
     }
     
     .support-text p {
-        font-size: 12px;
+        font-size: 12px !important;
     }
     
     .contact-info h2, .socials h2, .newsletter h2 {
-        font-size: 16px;
+        font-size: 16px !important;
+        margin: 0 0 10px 0 !important;
     }
     
     .contact-info h3 {
-        font-size: 13px;
+        font-size: 13px !important;
+        margin: 6px 0 3px 0 !important;
     }
     
     .contact-info p, .socials p, .newsletter p {
-        font-size: 12px;
+        font-size: 12px !important;
+        margin: 0 0 6px 0 !important;
     }
     
     .email-icon, .phone-icon, .pin-icon {
-        width: 12px;
-        height: 12px;
-        margin-right: 4px;
+        width: 12px !important;
+        height: 12px !important;
+        margin-right: 4px !important;
     }
     
     .facebook-img {
-        width: 28px;
-        height: 28px;
+        width: 28px !important;
+        height: 28px !important;
+        margin: 4px auto !important;
     }
     
     .newsletter input[type="email"] {
-        padding: 5px;
-        font-size: 12px;
+        padding: 5px !important;
+        font-size: 12px !important;
+        margin: 5px auto !important;
     }
     
     .newsletter button {
-        padding: 5px 10px;
-        font-size: 12px;
+        padding: 5px 10px !important;
+        font-size: 12px !important;
+        margin: 8px auto !important;
     }
 }
 
