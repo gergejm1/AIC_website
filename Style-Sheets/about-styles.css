@@ -695,7 +695,7 @@ footer {
     .navbar ul li {
         width: 100%;
         text-align: center;
-        padding: 15px;
+        
         border-bottom: 1px solid rgba(194, 168, 120, 0.2);
     }
     
@@ -1087,7 +1087,7 @@ footer {
     }
     
     .navbar ul li a {
-        padding: 15px 20px;
+       
         display: block;
         width: 100%;
     }
