@@ -1055,10 +1055,15 @@ footer {
     }
     
     .navbar ul {
+        position: absolute; /* Add this */
+        top: 100%; /* Position below navbar */
+        left: 0;
+        right: 0;
+        z-index: 1000; /* Ensure it appears above other content */
         display: none;
         flex-direction: column;
         width: 100%;
-        margin-top: 15px;
+        margin-top: 0; /* Remove margin since it's positioned absolutely */
         background-color: rgba(255, 255, 255, 0.98);
         border-radius: 10px;
         box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -1273,7 +1278,7 @@ footer {
     }
     
     .navbar ul li a {
-        padding: 15px 20px;
+       
         display: block;
         width: 100%;
     }
