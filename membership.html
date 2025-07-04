@@ -124,70 +124,118 @@
 
         <!-- MEMBERSHIP FORM SECTION -->
         <div class="membership-form-section">
-            <div class="container">
-                <h2>Ready to Join?</h2>
-                <p>Fill out the form below to begin your membership application. We'll contact you within 24 hours to complete the process.</p>
+        <div class="container">
+            <h2>Ready to Join?</h2>
+            <p>Fill out the form below to begin your membership application. We'll contact you within 24 hours to complete the process.</p>
+            
+            <form class="membership-form" id="membershipForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                </div>
                 
-                <form class="membership-form" action="#" method="post">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="firstName">First Name *</label>
-                            <input type="text" id="firstName" name="firstName" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="lastName">Last Name *</label>
-                            <input type="text" id="lastName" name="lastName" required>
-                        </div>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number *</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-                    </div>
-                    
+                <div class="form-row">
                     <div class="form-group">
-                        <label for="address">Address</label>
-                        <input type="text" id="address" name="address" placeholder="Street Address">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
                     </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="city">City</label>
-                            <input type="text" id="city" name="city">
-                        </div>
-                        <div class="form-group">
-                            <label for="state">State</label>
-                            <input type="text" id="state" name="state" value="MI">
-                        </div>
-                        <div class="form-group">
-                            <label for="zip">ZIP Code</label>
-                            <input type="text" id="zip" name="zip">
-                        </div>
-                    </div>
-                    
                     <div class="form-group">
-                        <label for="message">Additional Comments</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Any additional information or questions..."></textarea>
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required>
                     </div>
-                    
-                    <div class="form-group checkbox-group">
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="agree" required>
-                            <span class="checkmark"></span>
-                            I agree to the terms and conditions of membership and understand that membership fees are non-refundable.
-                        </label>
+                </div>
+                
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" placeholder="Street Address">
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city">
                     </div>
-                    
-                    <button type="submit" class="submit-btn">Submit Application</button>
-                </form>
-            </div>
+                    <div class="form-group">
+                        <label for="state">State</label>
+                        <input type="text" id="state" name="state" value="MI">
+                    </div>
+                    <div class="form-group">
+                        <label for="zip">ZIP Code</label>
+                        <input type="text" id="zip" name="zip">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Additional Comments</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Any additional information or questions..."></textarea>
+                </div>
+                
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="agree" required>
+                        I agree to the terms and conditions of membership and understand that membership fees are non-refundable.
+                    </label>
+                </div>
+                
+                <button type="submit" class="submit-btn">Submit Application</button>
+            </form>
         </div>
+    </div>
+
+    <script>
+        document.getElementById('membershipForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = {};
+            for (let [key, value] of formData.entries()) {
+                data[key] = value;
+            }
+            
+            // Create email body
+            const emailBody = `New Membership Application:
+
+Name: ${data.firstName} ${data.lastName}
+Email: ${data.email}
+Phone: ${data.phone}
+Address: ${data.address || 'Not provided'}
+City: ${data.city || 'Not provided'}
+State: ${data.state}
+ZIP: ${data.zip || 'Not provided'}
+
+Additional Comments:
+${data.message || 'None'}
+
+Terms Agreed: ${data.agree ? 'Yes' : 'No'}
+
+Submitted on: ${new Date().toLocaleDateString()} at ${new Date().toLocaleTimeString()}`;
+            
+            // Create mailto link
+            const mailtoLink = `mailto:albislamct@aol.com?subject=New Membership Application - ${data.firstName} ${data.lastName}&body=${encodeURIComponent(emailBody)}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Show success message
+            document.getElementById('successMessage').style.display = 'block';
+            document.getElementById('errorMessage').style.display = 'none';
+            
+            // Reset form after a short delay
+            setTimeout(() => {
+                this.reset();
+            }, 1000);
+            
+            // Scroll to success message
+            document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
 
         <!-- Footer -->
         <div class="support-section">
