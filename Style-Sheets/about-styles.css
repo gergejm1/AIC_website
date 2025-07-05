@@ -376,7 +376,7 @@ body{
 
 .columna1 img {
   width: 100%;
-  height: auto;
+  height: 600px;
   max-width: 900px;
   object-fit: cover;
   border-radius: 15px;
