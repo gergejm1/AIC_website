@@ -6,6 +6,7 @@
         <title>Albanian Islamic Center - What is Islam?</title>
         <link rel="stylesheet" href="Style-Sheets/islam-styles.css">
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        
     </head>
 
     <body>
@@ -13,8 +14,20 @@
         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v22.0"></script>
         
         <div class="contacttop">
-            <p>19775 Harper Avenue, Harper Woods, MI 48225</p>
-            <p>(313)-884-6676&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;albislamct@aol.com</p>
+            <div class="contacttop-text">
+                <p>19775 Harper Avenue, Harper Woods, MI 48225</p>
+                <p>(313)-884-6676&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;albislamct@aol.com</p>
+            </div>
+            <div class="language-toggle">
+                <button class="language-btn active" data-lang="en">
+                    <span class="flag-icon">🇺🇸</span>
+                    <span>EN</span>
+                </button>
+                <button class="language-btn" data-lang="sq">
+                    <span class="flag-icon">🇦🇱</span>
+                    <span>AL</span>
+                </button>
+            </div>
         </div>
 
         <nav class="navbar">
@@ -29,22 +42,22 @@
             </button>
             
             <ul id="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="islam.html">What is Islam?</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="sundayschool.html">Programs & Activities</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="banquethall.html">Banquet Hall</a></li>
-                <li><a href="membership.html">Join Us</a></li>
-                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="index.html" data-translate="nav-home">Home</a></li>
+                <li><a href="about.html" data-translate="nav-about">About Us</a></li>
+                <li><a href="islam.html" data-translate="nav-islam">What is Islam?</a></li>
+                <li><a href="events.html" data-translate="nav-events">Events</a></li>
+                <li><a href="sundayschool.html" data-translate="nav-programs">Programs & Activities</a></li>
+                <li><a href="services.html" data-translate="nav-services">Services</a></li>
+                <li><a href="banquethall.html" data-translate="nav-banquet">Banquet Hall</a></li>
+                <li><a href="membership.html" data-translate="nav-join">Join Us</a></li>
+                <li><a href="contactus.html" data-translate="nav-contact">Contact Us</a></li>
             </ul>
             
             <form action="https://www.paypal.com/donate" method="post" target="_blank" class="donate-form">
                 <input type="hidden" name="hosted_button_id" value="LMWW6JLZ9N57L" />
                 <button type="submit" class="donate-btn" title="PayPal - The safer, easier way to pay online!">
                     <img src="images/donation.png" class="heart-icon" alt="Heart icon">
-                    Donate
+                    <span data-translate="donate">Donate</span>
                 </button>
             </form>
         </nav>
@@ -56,29 +69,19 @@
                 </div>
             </div>
             <div class="text-overlay">
-                <h1 class="banner-text">What is Islam?</h1>
-                <h2 class="banner-subtext">Explore the fundamental beliefs and practices of Islam, a faith of over two billion followers worldwide.</h2>
+                <h1 class="banner-text" data-translate="banner-what-islam">What is Islam?</h1>
+                <h2 class="banner-subtext" data-translate="banner-explore">Explore the fundamental beliefs and practices of Islam, a faith of over two billion followers worldwide.</h2>
             </div>
         </div>
 
         <div class="intro-section">
             <div class="row">
                 <div class="column55" data-aos="fade-right">
-                    <h1>What is Islam?</h1>
-                    <p class="introtext">Islam is a monotheistic faith revealed to the Prophet Muhammad ﷺ over 1,400 years ago.
-                         The word "Islam" means "submission to the will of God," and it emphasizes peace, compassion, and justice.
-                          Today, over 2 billion Muslims across the world follow this path, striving to live lives rooted in moral
-                           clarity, spiritual devotion, and service to others.</p>
-                    <p class="introtext">Muslims believe in one God (Allah), who is merciful, just, and all-powerful. They seek to
-                         develop a close relationship with Him through acts of worship, righteous living, and care for creation. 
-                         At its core, Islam is both a personal journey and a communal way of life, offering guidance for both spiritual 
-                         and everyday matters.</p>
-                    <p class="introtext">The foundation of a Muslim's practice lies in the <b>Five Pillars of Islam</b>—declarations and acts 
-                        that shape the daily rhythm and lifelong commitments of a believer. These include the testimony of faith, 
-                        prayer, charity, fasting, and pilgrimage.</p>
-                    <p class="introtext">Equally essential are the <b>Six Articles of Faith</b>, which form the basis of Islamic belief:
-                         belief in Allah, His angels, His revealed books, His prophets, the Day of Judgment, and divine decree.
-                        Together, these pillars provide a comprehensive spiritual and ethical framework—grounding Muslims in their faith while encouraging compassion, discipline, and purpose in the world.</p>
+                    <h1 data-translate="intro-title">What is Islam?</h1>
+                    <p class="introtext" data-translate="intro-p1">Islam is a monotheistic faith revealed to the Prophet Muhammad ﷺ over 1,400 years ago. The word "Islam" means "submission to the will of God," and it emphasizes peace, compassion, and justice. Today, over 2 billion Muslims across the world follow this path, striving to live lives rooted in moral clarity, spiritual devotion, and service to others.</p>
+                    <p class="introtext" data-translate="intro-p2">Muslims believe in one God (Allah), who is merciful, just, and all-powerful. They seek to develop a close relationship with Him through acts of worship, righteous living, and care for creation. At its core, Islam is both a personal journey and a communal way of life, offering guidance for both spiritual and everyday matters.</p>
+                    <p class="introtext" data-translate="intro-p3">The foundation of a Muslim's practice lies in the <b>Five Pillars of Islam</b>—declarations and acts that shape the daily rhythm and lifelong commitments of a believer. These include the testimony of faith, prayer, charity, fasting, and pilgrimage.</p>
+                    <p class="introtext" data-translate="intro-p4">Equally essential are the <b>Six Articles of Faith</b>, which form the basis of Islamic belief: belief in Allah, His angels, His revealed books, His prophets, the Day of Judgment, and divine decree. Together, these pillars provide a comprehensive spiritual and ethical framework—grounding Muslims in their faith while encouraging compassion, discipline, and purpose in the world.</p>
                 </div>
                 <div class="column66" data-aos="fade-left">
                     <img src="images/Quran.jpg" class="islamfactimg">
@@ -87,126 +90,126 @@
         </div>
 
         <div class="Five-pillars">
-            <h1 data-aos="fade-up">Five Pillars of Islam</h1>
+            <h1 data-aos="fade-up" data-translate="five-pillars-title">Five Pillars of Islam</h1>
             <div class="grid-container">
                 <div class="grid-item1" data-aos="fade-up" data-aos-delay="100">
                     <img src="images/shahada.jpg" class="pillars-img">
-                    <h2>Shahada (Testimony of Faith)</h2>
-                    <p>The declaration that "There is no god but Allah, and Muhammad ﷺ  is His servant and messenger." This testimony is the foundation of Islamic faith and the first step into Islam.</p>
+                    <h2 data-translate="shahada-title">Shahada (Testimony of Faith)</h2>
+                    <p data-translate="shahada-desc">The declaration that "There is no god but Allah, and Muhammad ﷺ is His servant and messenger." This testimony is the foundation of Islamic faith and the first step into Islam.</p>
                 </div>
                 <div class="grid-item2" data-aos="fade-up" data-aos-delay="200">
                     <img src="images/prayer.jpg" class="pillars-img">
-                    <h2>Salah (Prayer)</h2>
-                    <p>Five daily prayers performed at specific times, creating a direct connection between the believer and Allah. Prayer provides spiritual guidance, mindfulness, and community.</p>
+                    <h2 data-translate="salah-title">Salah (Prayer)</h2>
+                    <p data-translate="salah-desc">Five daily prayers performed at specific times, creating a direct connection between the believer and Allah. Prayer provides spiritual guidance, mindfulness, and community.</p>
                 </div>
                 <div class="grid-item3" data-aos="fade-up" data-aos-delay="300">
                     <img src="images/zaakt.jpg" class="pillars-img">
-                    <h2>Zakat (Charity)</h2>
-                    <p>Obligatory giving of a portion of one's wealth to help those in need. Zakat purifies wealth and ensures social justice and community support.</p>
+                    <h2 data-translate="zakat-title">Zakat (Charity)</h2>
+                    <p data-translate="zakat-desc">Obligatory giving of a portion of one's wealth to help those in need. Zakat purifies wealth and ensures social justice and community support.</p>
                 </div>
                 <div class="grid-item4" data-aos="fade-up" data-aos-delay="400">
                     <img src="images/fasting.jpg" class="pillars-img">
-                    <h2>Sawm (Fasting)</h2>
-                    <p>Fasting during the month of Ramadan from dawn to sunset, abstaining from food, drink, and other physical needs. This practice develops self-discipline and empathy.</p>
+                    <h2 data-translate="sawm-title">Sawm (Fasting)</h2>
+                    <p data-translate="sawm-desc">Fasting during the month of Ramadan from dawn to sunset, abstaining from food, drink, and other physical needs. This practice develops self-discipline and empathy.</p>
                 </div>
                 <div class="grid-item5" data-aos="fade-up" data-aos-delay="500">
                     <img src="images/hajj.jpg" class="pillars-img">
-                    <h2>Hajj (Pilgrimage)</h2>
-                    <p>The pilgrimage to Mecca, required once in a lifetime for those who are physically and financially able. Hajj unites Muslims from around the world in worship.</p>
+                    <h2 data-translate="hajj-title">Hajj (Pilgrimage)</h2>
+                    <p data-translate="hajj-desc">The pilgrimage to Mecca, required once in a lifetime for those who are physically and financially able. Hajj unites Muslims from around the world in worship.</p>
                 </div>
             </div>
         </div>
 
         <div class="Six-articles">
-            <h1 data-aos="fade-up">Six Articles of Faith</h1>
+            <h1 data-aos="fade-up" data-translate="six-articles-title">Six Articles of Faith</h1>
              <div class="grid-container2">
                 <div class="grid-item11" data-aos="fade-up" data-aos-delay="100">
                     <div class="faith-icon"></div>
-                    <h2>Belief in Allah</h2>
-                    <p>The belief in the one, unique, all-powerful, and merciful Creator of everything. Allah is the Arabic word for God.</p>
+                    <h2 data-translate="belief-allah-title">Belief in Allah</h2>
+                    <p data-translate="belief-allah-desc">The belief in the one, unique, all-powerful, and merciful Creator of everything. Allah is the Arabic word for God.</p>
                 </div>
                 <div class="grid-item22" data-aos="fade-up" data-aos-delay="200">
                     <div class="faith-icon"></div>
-                    <h2>Belief in Angels</h2>
-                    <p>Belief in unseen beings created by Allah who carry out His commands. Angels serve Allah and deliver His messages.</p>
+                    <h2 data-translate="belief-angels-title">Belief in Angels</h2>
+                    <p data-translate="belief-angels-desc">Belief in unseen beings created by Allah who carry out His commands. Angels serve Allah and deliver His messages.</p>
                 </div>
                 <div class="grid-item33" data-aos="fade-up" data-aos-delay="300">
                     <div class="faith-icon"></div>
-                    <h2>Belief in Divine Books</h2>
-                    <p>Belief in the revealed scriptures such as the Quran, Torah, Psalms, and Gospel, with the Quran being the final revelation.</p>
+                    <h2 data-translate="belief-books-title">Belief in Divine Books</h2>
+                    <p data-translate="belief-books-desc">Belief in the revealed scriptures such as the Quran, Torah, Psalms, and Gospel, with the Quran being the final revelation.</p>
                 </div>
                 <div class="grid-item44" data-aos="fade-up" data-aos-delay="400">
                     <div class="faith-icon"></div>
-                    <h2>Belief in Prophets</h2>
-                    <p>Belief in the messengers chosen by Allah to guide humanity, including Adam, Abraham, Moses, Jesus, and Muhammad ﷺ as the final prophet.</p>
+                    <h2 data-translate="belief-prophets-title">Belief in Prophets</h2>
+                    <p data-translate="belief-prophets-desc">Belief in the messengers chosen by Allah to guide humanity, including Adam, Abraham, Moses, Jesus, and Muhammad ﷺ as the final prophet.</p>
                 </div>
                 <div class="grid-item55" data-aos="fade-up" data-aos-delay="500">
                     <div class="faith-icon"></div>
-                    <h2>Belief in the Last Day</h2>
-                    <p>Belief in a final day when every soul will be held accountable and judged by Allah for their faith and  deeds in this life.</p>
+                    <h2 data-translate="belief-lastday-title">Belief in the Last Day</h2>
+                    <p data-translate="belief-lastday-desc">Belief in a final day when every soul will be held accountable and judged by Allah for their faith and deeds in this life.</p>
                 </div>
                 <div class="grid-item66" data-aos="fade-up" data-aos-delay="600">
                     <div class="faith-icon"></div>
-                    <h2>Belief in Qadr</h2>
-                    <p>Belief that all things occur by the will and knowledge of Allah, who is just and wise. This includes divine predestination.</p>
+                    <h2 data-translate="belief-qadr-title">Belief in Qadr</h2>
+                    <p data-translate="belief-qadr-desc">Belief that all things occur by the will and knowledge of Allah, who is just and wise. This includes divine predestination.</p>
                 </div>
             </div>
         </div>
 
         <div class="Questions" data-aos="fade-up">
-            <h1>Frequently Asked Questions</h1>
+            <h1 data-translate="faq-title">Frequently Asked Questions</h1>
             
-            <button class="accordion">What is the Quran?</button>
+            <button class="accordion" data-translate="faq-quran-q">What is the Quran?</button>
             <div class="panel">
-                <p>The Quran is the holy book of Islam, believed by Muslims to be the direct word of Allah as revealed to Prophet Muhammad ﷺ through the Angel Gabriel. It contains 114 chapters (surahs) and covers guidance for all aspects of life, including worship, morality, guidance for mankind, and law. The Quran has remained unchanged since its revelation over 1,400 years ago. There are millions of people around the world who have memorized the Quran in its entirety. The Quran is recited on a daily basis in the 5 daily prayers.</p>
+                <p data-translate="faq-quran-a">The Quran is the holy book of Islam, believed by Muslims to be the direct word of Allah as revealed to Prophet Muhammad ﷺ through the Angel Gabriel. It contains 114 chapters (surahs) and covers guidance for all aspects of life, including worship, morality, guidance for mankind, and law. The Quran has remained unchanged since its revelation over 1,400 years ago. There are millions of people around the world who have memorized the Quran in its entirety. The Quran is recited on a daily basis in the 5 daily prayers.</p>
             </div>
 
-            <button class="accordion">What do Muslims think of Jesus?</button>
+            <button class="accordion" data-translate="faq-jesus-q">What do Muslims think of Jesus?</button>
             <div class="panel">
-                <p>Muslims hold Jesus (Isa in Arabic) in high regard as one of the most important prophets sent by Allah. They believe he was born of the Virgin Mary through a miracle, performed miracles by Allah's permission, and delivered the Gospel. However, Muslims believe Jesus was a human prophet, not divine, and that he was not crucified but was raised to heaven by Allah. Muslims eagerly await his return before the Day of Judgment.</p>
+                <p data-translate="faq-jesus-a">Muslims hold Jesus (Isa in Arabic) in high regard as one of the most important prophets sent by Allah. They believe he was born of the Virgin Mary through a miracle, performed miracles by Allah's permission, and delivered the Gospel. However, Muslims believe Jesus was a human prophet, not divine, and that he was not crucified but was raised to heaven by Allah. Muslims eagerly await his return before the Day of Judgment.</p>
             </div>
 
-            <button class="accordion">How do Muslims pray?</button>
+            <button class="accordion" data-translate="faq-prayer-q">How do Muslims pray?</button>
             <div class="panel">
-                <p>Muslims pray five times daily: at dawn (Fajr), midday (Dhuhr), afternoon (Asr), sunset (Maghrib), and night (Isha). Before praying, Muslims perform ritual purification (wudu). Prayer involves specific movements including standing, bowing, and prostrating while reciting verses from the Quran and praising Allah. Muslims face the direction of the Kaaba in Mecca during prayer.</p>
+                <p data-translate="faq-prayer-a">Muslims pray five times daily: at dawn (Fajr), midday (Dhuhr), afternoon (Asr), sunset (Maghrib), and night (Isha). Before praying, Muslims perform ritual purification (wudu). Prayer involves specific movements including standing, bowing, and prostrating while reciting verses from the Quran and praising Allah. Muslims face the direction of the Kaaba in Mecca during prayer.</p>
             </div>
 
-            <button class="accordion">What is the difference between Islam and Christianity?</button>
+            <button class="accordion" data-translate="faq-christianity-q">What is the difference between Islam and Christianity?</button>
             <div class="panel">
-                <p>While both religions worship the same God and share many prophets, there are key differences. Muslims believe in the strict oneness of God (Tawhid) without partners or trinity. They believe Muhammad ﷺ is the final prophet, and the Quran is the final revelation. Christians believe in the Trinity and that Jesus is divine. However, both faiths emphasize love, compassion, charity, and moral living.</p>
+                <p data-translate="faq-christianity-a">While both religions worship the same God and share many prophets, there are key differences. Muslims believe in the strict oneness of God (Tawhid) without partners or trinity. They believe Muhammad ﷺ is the final prophet, and the Quran is the final revelation. Christians believe in the Trinity and that Jesus is divine. However, both faiths emphasize love, compassion, charity, and moral living.</p>
             </div>
 
-            <button class="accordion">What does Islam say about other religions?</button>
+            <button class="accordion" data-translate="faq-religions-q">What does Islam say about other religions?</button>
             <div class="panel">
-                <p>Islam recognizes Christianity and Judaism as "People of the Book" (Ahl al-Kitab) and acknowledges their prophets and scriptures. The Quran states "there is no compulsion in religion" and emphasizes religious tolerance. Muslims are encouraged to be respectful and just in their dealings with people of all faiths, while maintaining their own beliefs and practices.</p>
+                <p data-translate="faq-religions-a">Islam recognizes Christianity and Judaism as "People of the Book" (Ahl al-Kitab) and acknowledges their prophets and scriptures. The Quran states "there is no compulsion in religion" and emphasizes religious tolerance. Muslims are encouraged to be respectful and just in their dealings with people of all faiths, while maintaining their own beliefs and practices.</p>
             </div>
 
-            <button class="accordion">What is Jihad?</button>
+            <button class="accordion" data-translate="faq-jihad-q">What is Jihad?</button>
             <div class="panel">
-                <p>Jihad literally means "struggle" or "effort" in Arabic. The primary meaning is the internal spiritual struggle against one's own negative impulses and desires. When referring to physical struggle, Islamic law requires it to be defensive, proportionate, and conducted with strict rules protecting civilians, religious sites, and the environment. The greater jihad is always the internal struggle for spiritual improvement.</p>
+                <p data-translate="faq-jihad-a">Jihad literally means "struggle" or "effort" in Arabic. The primary meaning is the internal spiritual struggle against one's own negative impulses and desires. When referring to physical struggle, Islamic law requires it to be defensive, proportionate, and conducted with strict rules protecting civilians, religious sites, and the environment. The greater jihad is always the internal struggle for spiritual improvement.</p>
             </div>
 
-            <button class="accordion">How can I learn more about Islam?</button>
+            <button class="accordion" data-translate="faq-learn-q">How can I learn more about Islam?</button>
             <div class="panel">
-                <p>You can start by reading the Quran, visiting a local mosque, speaking with Muslims in your community, or taking an introductory course. Many mosques offer guided tours and educational programs. At the Albanian Islamic Center, we welcome visitors and questions. You can also attend our Friday prayers, community events, or speak with our imam for guidance.</p>
+                <p data-translate="faq-learn-a">You can start by reading the Quran, visiting a local mosque, speaking with Muslims in your community, or taking an introductory course. Many mosques offer guided tours and educational programs. At the Albanian Islamic Center, we welcome visitors and questions. You can also attend our Friday prayers, community events, or speak with our imam for guidance.</p>
             </div>
         </div>
 
         <div class="Learn-More" data-aos="fade-up">
-            <h2>Want to learn more about Islam?</h2>
-            <p class="learn-intro">We're happy to welcome guests, answer questions, and connect you with scholars or educational resources.</p>
+            <h2 data-translate="learn-more-title">Want to learn more about Islam?</h2>
+            <p class="learn-intro" data-translate="learn-more-intro">We're happy to welcome guests, answer questions, and connect you with scholars or educational resources.</p>
             
             <div class="learn-options">
                 <div class="learn-option">
-                    <h3>Visit Us</h3>
-                    <p>Join us for Friday prayers, community events, or schedule a personal visit to learn more about our faith and community.</p>
-                    <a href="contactus.html" class="learn-btn">Contact Us</a>
+                    <h3 data-translate="visit-us-title">Visit Us</h3>
+                    <p data-translate="visit-us-desc">Join us for Friday prayers, community events, or schedule a personal visit to learn more about our faith and community.</p>
+                    <a href="contactus.html" class="learn-btn" data-translate="contact-us-btn">Contact Us</a>
                 </div>
                 
                 <div class="learn-option">
-                    <h3>Speak with a Scholar</h3>
-                    <p>Connect with our imam or Islamic scholars who can answer your questions and provide guidance on Islamic teachings.</p>
-                    <a href="mailto:albislamct@aol.com" class="learn-btn">Email Us</a>
+                    <h3 data-translate="speak-scholar-title">Speak with a Scholar</h3>
+                    <p data-translate="speak-scholar-desc">Connect with our imam or Islamic scholars who can answer your questions and provide guidance on Islamic teachings.</p>
+                    <a href="mailto:albislamct@aol.com" class="learn-btn" data-translate="email-us-btn">Email Us</a>
                 </div>
             </div>
         </div>
@@ -216,122 +219,355 @@
             <div class="row">
                 <div class="support-text">
                     <img src="images/Logo.png" alt="Albanian Islamic Center Logo" class="logo-img">
-                    <p>Welcome to the Albanian Islamic Center, a place of worship, learning, and community rooted in 
-                        rich Albanian heritage and Islamic tradition. We strive to foster a welcoming and inclusive 
-                        space for every member of the Muslim community.</p>
+                    <p data-translate="footer-about">Welcome to the Albanian Islamic Center, a place of worship, learning, and community rooted in rich Albanian heritage and Islamic tradition. We strive to foster a welcoming and inclusive space for every member of the Muslim community.</p>
                     <a href="https://www.facebook.com/Albanianislamiccenter/?ref=embed_page#" class="social-media" target="_blank"> 
                         <img src="images/facebook.png" class="facebook-img">
                     </a>
                 </div>
                 <div class="contact-info">
-                    <h2>Contact</h2>
-                    <h3><img src="images/email.png" class="email-icon">Email Address</h3>
+                    <h2 data-translate="contact">Contact</h2>
+                    <h3><img src="images/email.png" class="email-icon"><span data-translate="email-address">Email Address</span></h3>
                     <p>albislamct@aol.com</p>
-                    <h3><img src="images/phone-call.png" class="phone-icon">Phone Number</h3>
+                    <h3><img src="images/phone-call.png" class="phone-icon"><span data-translate="phone-number">Phone Number</span></h3>
                     <p>(313)-884-6676</p>
-                    <h3><img src="images/pin.png" class="pin-icon">Location</h3>
+                    <h3><img src="images/pin.png" class="pin-icon"><span data-translate="location">Location</span></h3>
                     <p>19775 Harper Avenue, Harper Woods, MI 48225</p>
                 </div>
                 <div class="socials">
-                    <h2>Social Media</h2>
-                    <p>Follow us on Facebook for the latest announcements and updates about events and programs at 
-                        the Albanian Islamic Center.</p>
+                    <h2 data-translate="social-media">Social Media</h2>
+                    <p data-translate="social-desc">Follow us on Facebook for the latest announcements and updates about events and programs at the Albanian Islamic Center.</p>
                     <a href="https://www.facebook.com/Albanianislamiccenter/" class="social-media" target="_blank">
                         <img src="images/facebook.png" alt="Facebook" class="facebook-img">
                     </a>
                 </div>
                 <div class="newsletter">
-                    <h2>Newsletter</h2>
-                    <p>Subscribe to our newsletter to receive updates on events, programs, and community news directly 
-                        to your inbox. Stay connected with the Albanian Islamic Center.</p>
+                    <h2 data-translate="newsletter">Newsletter</h2>
+                    <p data-translate="newsletter-desc">Subscribe to our newsletter to receive updates on events, programs, and community news directly to your inbox. Stay connected with the Albanian Islamic Center.</p>
                     <form action="https://aol.us13.list-manage.com/subscribe/post?u=096bcfd7c98cb079bfb26df4f&amp;id=36db6b2f2f" method="post" novalidate>
-                        <input type="email" name="EMAIL" id="email" placeholder="Enter your email" required>
+                        <input type="email" name="EMAIL" id="email" placeholder="Enter your email" data-translate-placeholder="email-placeholder" required>
                         <div style="position: absolute; left: -5000px;" aria-hidden="true">
                             <input type="text" name="b_096bcfd7c98cb079bfb26df4f_36db6b2f2f" tabindex="-1" value="">
                         </div>
-                        <button type="submit">Subscribe</button>
+                        <button type="submit" data-translate="subscribe">Subscribe</button>
                     </form>
                 </div>
             </div>
         </div>
 
         <footer> 
-            <p>© 2025 aicod.org. All Rights Reserved.<br>
-            Icons made from www.flaticon.com</p>
+            <p data-translate="footer-copyright">© 2025 aicod.org. All Rights Reserved.<br>Icons made from www.flaticon.com</p>
         </footer>
 
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script src="webscripts.js"></script>
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
-            // Initialize AOS
-            AOS.init({
-                duration: 1000,
-                once: true,
-            });
+            // Translation data
+            const translations = {
+                en: {
+                    // Navigation
+                    'nav-home': 'Home',
+                    'nav-about': 'About Us',
+                    'nav-islam': 'What is Islam?',
+                    'nav-events': 'Events',
+                    'nav-programs': 'Programs & Activities',
+                    'nav-services': 'Services',
+                    'nav-banquet': 'Banquet Hall',
+                    'nav-join': 'Join Us',
+                    'nav-contact': 'Contact Us',
+                    'donate': 'Donate',
+                    
+                    // Banner
+                    'banner-what-islam': 'What is Islam?',
+                    'banner-explore': 'Explore the fundamental beliefs and practices of Islam, a faith of over two billion followers worldwide.',
+                    
+                    // Introduction
+                    'intro-title': 'What is Islam?',
+                    'intro-p1': 'Islam is a monotheistic faith revealed to the Prophet Muhammad ﷺ over 1,400 years ago. The word "Islam" means "submission to the will of God," and it emphasizes peace, compassion, and justice. Today, over 2 billion Muslims across the world follow this path, striving to live lives rooted in moral clarity, spiritual devotion, and service to others.',
+                    'intro-p2': 'Muslims believe in one God (Allah), who is merciful, just, and all-powerful. They seek to develop a close relationship with Him through acts of worship, righteous living, and care for creation. At its core, Islam is both a personal journey and a communal way of life, offering guidance for both spiritual and everyday matters.',
+                    'intro-p3': 'The foundation of a Muslim\'s practice lies in the <b>Five Pillars of Islam</b>—declarations and acts that shape the daily rhythm and lifelong commitments of a believer. These include the testimony of faith, prayer, charity, fasting, and pilgrimage.',
+                    'intro-p4': 'Equally essential are the <b>Six Articles of Faith</b>, which form the basis of Islamic belief: belief in Allah, His angels, His revealed books, His prophets, the Day of Judgment, and divine decree. Together, these pillars provide a comprehensive spiritual and ethical framework—grounding Muslims in their faith while encouraging compassion, discipline, and purpose in the world.',
+                    
+                    // Five Pillars
+                    'five-pillars-title': 'Five Pillars of Islam',
+                    'shahada-title': 'Shahada (Testimony of Faith)',
+                    'shahada-desc': 'The declaration that "There is no god but Allah, and Muhammad ﷺ is His servant and messenger." This testimony is the foundation of Islamic faith and the first step into Islam.',
+                    'salah-title': 'Salah (Prayer)',
+                    'salah-desc': 'Five daily prayers performed at specific times, creating a direct connection between the believer and Allah. Prayer provides spiritual guidance, mindfulness, and community.',
+                    'zakat-title': 'Zakat (Charity)',
+                    'zakat-desc': 'Obligatory giving of a portion of one\'s wealth to help those in need. Zakat purifies wealth and ensures social justice and community support.',
+                    'sawm-title': 'Sawm (Fasting)',
+                    'sawm-desc': 'Fasting during the month of Ramadan from dawn to sunset, abstaining from food, drink, and other physical needs. This practice develops self-discipline and empathy.',
+                    'hajj-title': 'Hajj (Pilgrimage)',
+                    'hajj-desc': 'The pilgrimage to Mecca, required once in a lifetime for those who are physically and financially able. Hajj unites Muslims from around the world in worship.',
+                    
+                    // Six Articles of Faith
+                    'six-articles-title': 'Six Articles of Faith',
+                    'belief-allah-title': 'Belief in Allah',
+                    'belief-allah-desc': 'The belief in the one, unique, all-powerful, and merciful Creator of everything. Allah is the Arabic word for God.',
+                    'belief-angels-title': 'Belief in Angels',
+                    'belief-angels-desc': 'Belief in unseen beings created by Allah who carry out His commands. Angels serve Allah and deliver His messages.',
+                    'belief-books-title': 'Belief in Divine Books',
+                    'belief-books-desc': 'Belief in the revealed scriptures such as the Quran, Torah, Psalms, and Gospel, with the Quran being the final revelation.',
+                    'belief-prophets-title': 'Belief in Prophets',
+                    'belief-prophets-desc': 'Belief in the messengers chosen by Allah to guide humanity, including Adam, Abraham, Moses, Jesus, and Muhammad ﷺ as the final prophet.',
+                    'belief-lastday-title': 'Belief in the Last Day',
+                    'belief-lastday-desc': 'Belief in a final day when every soul will be held accountable and judged by Allah for their faith and deeds in this life.',
+                    'belief-qadr-title': 'Belief in Qadr',
+                    'belief-qadr-desc': 'Belief that all things occur by the will and knowledge of Allah, who is just and wise. This includes divine predestination.',
+                    
+                    // FAQ
+                    'faq-title': 'Frequently Asked Questions',
+                    'faq-quran-q': 'What is the Quran?',
+                    'faq-quran-a': 'The Quran is the holy book of Islam, believed by Muslims to be the direct word of Allah as revealed to Prophet Muhammad ﷺ through the Angel Gabriel. It contains 114 chapters (surahs) and covers guidance for all aspects of life, including worship, morality, guidance for mankind, and law. The Quran has remained unchanged since its revelation over 1,400 years ago. There are millions of people around the world who have memorized the Quran in its entirety. The Quran is recited on a daily basis in the 5 daily prayers.',
+                    'faq-jesus-q': 'What do Muslims think of Jesus?',
+                    'faq-jesus-a': 'Muslims hold Jesus (Isa in Arabic) in high regard as one of the most important prophets sent by Allah. They believe he was born of the Virgin Mary through a miracle, performed miracles by Allah\'s permission, and delivered the Gospel. However, Muslims believe Jesus was a human prophet, not divine, and that he was not crucified but was raised to heaven by Allah. Muslims eagerly await his return before the Day of Judgment.',
+                    'faq-prayer-q': 'How do Muslims pray?',
+                    'faq-prayer-a': 'Muslims pray five times daily: at dawn (Fajr), midday (Dhuhr), afternoon (Asr), sunset (Maghrib), and night (Isha). Before praying, Muslims perform ritual purification (wudu). Prayer involves specific movements including standing, bowing, and prostrating while reciting verses from the Quran and praising Allah. Muslims face the direction of the Kaaba in Mecca during prayer.',
+                    'faq-christianity-q': 'What is the difference between Islam and Christianity?',
+                    'faq-christianity-a': 'While both religions worship the same God and share many prophets, there are key differences. Muslims believe in the strict oneness of God (Tawhid) without partners or trinity. They believe Muhammad ﷺ is the final prophet, and the Quran is the final revelation. Christians believe in the Trinity and that Jesus is divine. However, both faiths emphasize love, compassion, charity, and moral living.',
+                    'faq-religions-q': 'What does Islam say about other religions?',
+                    'faq-religions-a': 'Islam recognizes Christianity and Judaism as "People of the Book" (Ahl al-Kitab) and acknowledges their prophets and scriptures. The Quran states "there is no compulsion in religion" and emphasizes religious tolerance. Muslims are encouraged to be respectful and just in their dealings with people of all faiths, while maintaining their own beliefs and practices.',
+                    'faq-jihad-q': 'What is Jihad?',
+                    'faq-jihad-a': 'Jihad literally means "struggle" or "effort" in Arabic. The primary meaning is the internal spiritual struggle against one\'s own negative impulses and desires. When referring to physical struggle, Islamic law requires it to be defensive, proportionate, and conducted with strict rules protecting civilians, religious sites, and the environment. The greater jihad is always the internal struggle for spiritual improvement.',
+                    'faq-learn-q': 'How can I learn more about Islam?',
+                    'faq-learn-a': 'You can start by reading the Quran, visiting a local mosque, speaking with Muslims in your community, or taking an introductory course. Many mosques offer guided tours and educational programs. At the Albanian Islamic Center, we welcome visitors and questions. You can also attend our Friday prayers, community events, or speak with our imam for guidance.',
+                    
+                    // Learn More Section
+                    'learn-more-title': 'Want to learn more about Islam?',
+                    'learn-more-intro': 'We\'re happy to welcome guests, answer questions, and connect you with scholars or educational resources.',
+                    'visit-us-title': 'Visit Us',
+                    'visit-us-desc': 'Join us for Friday prayers, community events, or schedule a personal visit to learn more about our faith and community.',
+'contact-us-btn': 'Contact Us',
+'speak-scholar-title': 'Speak with a Scholar',
+'speak-scholar-desc': 'Connect with our imam or Islamic scholars who can answer your questions and provide guidance on Islamic teachings.',
+'email-us-btn': 'Email Us',
 
-            // Mobile menu toggle functionality
-            const menuToggle = document.getElementById('menu-toggle');
-            const navMenu = document.getElementById('nav-menu');
+// Footer (reused from other pages)
+'footer-about': 'Welcome to the Albanian Islamic Center, a place of worship, learning, and community rooted in rich Albanian heritage and Islamic tradition. We strive to foster a welcoming and inclusive space for every member of the Muslim community.',
+'contact': 'Contact',
+'email-address': 'Email Address',
+'phone-number': 'Phone Number',
+'location': 'Location',
+'social-media': 'Social Media',
+'social-desc': 'Follow us on Facebook for the latest announcements and updates about events and programs at the Albanian Islamic Center.',
+'newsletter': 'Newsletter',
+'newsletter-desc': 'Subscribe to our newsletter to receive updates on events, programs, and community news directly to your inbox. Stay connected with the Albanian Islamic Center.',
+'email-placeholder': 'Enter your email',
+'subscribe': 'Subscribe',
+'footer-copyright': '© 2025 aicod.org. All Rights Reserved.<br>Icons made from www.flaticon.com'
+                },
+// Albanian translations (sq):
+sq: {
+    // Navigation
+    'nav-home': 'Ballina',
+    'nav-about': 'Rreth Nesh',
+    'nav-islam': 'Çfarë është Islami?',
+    'nav-events': 'Ngjarjet',
+    'nav-programs': 'Programet & Aktivitetet',
+    'nav-services': 'Shërbimet',
+    'nav-banquet': 'Salla e Dasmave',
+    'nav-join': 'Bashkohuni me Ne',
+    'nav-contact': 'Na Kontaktoni',
+    'donate': 'Dhuroni',
+    
+    // Banner
+    'banner-what-islam': 'Çfarë është Islami?',
+    'banner-explore': 'Eksploroni besimet dhe praktikat themelore të Islamit, një fe me mbi dy miliardë ndjekës në mbarë botën.',
+    
+    // Introduction
+    'intro-title': 'Çfarë është Islami?',
+    'intro-p1': 'Islami është një fe monoteiste e zbuluar Profetit Muhammed ﷺ mbi 1,400 vjet më parë. Fjala "Islam" do të thotë "dorëzim ndaj vullnetit të Zotit" dhe thekson paqen, dhembshurinë dhe drejtësinë. Sot, mbi 2 miliardë myslimanë në mbarë botën ndjekin këtë rrugë, duke u përpjekur të jetojnë jetë të rrënjosura në qartësi morale, devotshmëri shpirtërore dhe shërbim ndaj të tjerëve.',
+    'intro-p2': 'Myslimanët besojnë në një Zot (Allah), i cili është i mëshirshëm, i drejtë dhe i plotfuqishëm. Ata kërkojnë të zhvillojnë një marrëdhënie të ngushtë me Të përmes akteve të adhurimit, jetesës së drejtë dhe kujdesit për krijimin. Në thelbin e saj, Islami është si një udhëtim personal ashtu edhe një mënyrë jetese komunitare, duke ofruar udhëzim si për çështjet shpirtërore ashtu edhe ato të përditshme.',
+    'intro-p3': 'Themeli i praktikës së një myslimani qëndron në <b>Pesë Shtyllat e Islamit</b>—deklarata dhe vepra që formojnë ritmin e përditshëm dhe zotimet e përjetshme të një besimtari. Këto përfshijnë dëshminë e besimit, namazin, zekatin, agjërimin dhe haxhin.',
+    'intro-p4': 'Po aq të rëndësishme janë <b>Gjashtë Artikujt e Besimit</b>, të cilët formojnë bazën e besimit islam: besimi në Allah, engjëjt e Tij, librat e Tij të zbuluar, profetët e Tij, Ditën e Gjykimit dhe dekretit hyjnor. Së bashku, këto shtyllë ofrojnë një kornizë të plotë shpirtërore dhe etike—duke i rrënjosur myslimanët në besimin e tyre duke nxitur dhembshurinë, disiplinën dhe qëllimin në botë.',
+    
+    // Five Pillars
+    'five-pillars-title': 'Pesë Shtyllat e Islamit',
+    'shahada-title': 'Shahada (Dëshmia e Besimit)',
+    'shahada-desc': 'Deklarimi se "Nuk ka zot tjetër përveç Allahut dhe Muhammedi ﷺ është shërbëtori dhe i dërguari i Tij." Kjo dëshmi është themeli i besimit islam dhe hapi i parë në Islam.',
+    'salah-title': 'Salah (Namazi)',
+    'salah-desc': 'Pesë namazet e përditshme të kryera në kohë të caktuara, duke krijuar një lidhje të drejtpërdrejtë midis besimtarit dhe Allahut. Namazi ofron udhëzim shpirtëror, vetëdijshmëri dhe komunitet.',
+    'zakat-title': 'Zakat (Bamirësia)',
+    'zakat-desc': 'Dhënia e detyrueshme e një pjese të pasurisë së dikujt për të ndihmuar ata që kanë nevojë. Zekati pastron pasurinë dhe siguron drejtësinë sociale dhe mbështetjen e komunitetit.',
+    'sawm-title': 'Sawm (Agjërimi)',
+    'sawm-desc': 'Agjërimi gjatë muajit të Ramazanit nga agimi deri në perëndim, duke u abstinuar nga ushqimi, pija dhe nevoja të tjera fizike. Kjo praktikë zhvillon vetëdisiplinën dhe empatinë.',
+    'hajj-title': 'Haxh (Pelegrinazhi)',
+    'hajj-desc': 'Pelegrinazhi në Mekë, i kërkuar një herë në jetë për ata që janë fizikisht dhe financiarisht të aftë. Haxhi bashkon myslimanët nga e gjithë bota në adhurim.',
+    
+    // Six Articles of Faith
+    'six-articles-title': 'Gjashtë Artikujt e Besimit',
+    'belief-allah-title': 'Besimi në Allah',
+    'belief-allah-desc': 'Besimi në një, unik, i plotfuqishëm dhe i mëshirshëm Krijuesi i çdo gjëje. Allah është fjala arabe për Zotin.',
+    'belief-angels-title': 'Besimi në Engjëj',
+    'belief-angels-desc': 'Besimi në qenie të padukshme të krijuara nga Allahu që zbatojnë urdhrat e Tij. Engjëjt i shërbejnë Allahut dhe përcjellin mesazhet e Tij.',
+    'belief-books-title': 'Besimi në Librat Hyjnorë',
+    'belief-books-desc': 'Besimi në shkrimet e zbuluara si Kurani, Teurati, Psalmet dhe Ungjilli, me Kuranin si zbulesën finale.',
+    'belief-prophets-title': 'Besimi në Profetë',
+    'belief-prophets-desc': 'Besimi në të dërguarit e zgjedhur nga Allahu për të udhëzuar njerëzimin, duke përfshirë Adamin, Ibrahimin, Musain, Isain dhe Muhammedin ﷺ si profeti final.',
+    'belief-lastday-title': 'Besimi në Ditën e Fundit',
+    'belief-lastday-desc': 'Besimi në një ditë finale kur çdo shpirt do të mbahet përgjegjës dhe do të gjykohet nga Allahu për besimin dhe veprat e tyre në këtë jetë.',
+    'belief-qadr-title': 'Besimi në Kadr',
+    'belief-qadr-desc': 'Besimi se të gjitha gjërat ndodhin me vullnetin dhe dijen e Allahut, i cili është i drejtë dhe i urtë. Kjo përfshin paracaktimin hyjnor.',
+    
+    // FAQ
+    'faq-title': 'Pyetje të Bëra Shpesh',
+    'faq-quran-q': 'Çfarë është Kurani?',
+    'faq-quran-a': 'Kurani është libri i shenjtë i Islamit, i besuar nga myslimanët se është fjala e drejtpërdrejtë e Allahut siç iu zbulua Profetit Muhammed ﷺ përmes Engjëllit Xhebrail. Ai përmban 114 kapituj (sure) dhe mbulon udhëzime për të gjitha aspektet e jetës, duke përfshirë adhurimin, moralin, udhëzimin për njerëzimin dhe ligjin. Kurani ka mbetur i pandryshuar që nga zbulesa e tij mbi 1,400 vjet më parë. Ka miliona njerëz në mbarë botën që kanë mësuar përmendësh Kuranin në tërësinë e tij. Kurani lexohet çdo ditë në 5 namazet e përditshme.',
+    'faq-jesus-q': 'Çfarë mendojnë myslimanët për Jezusin?',
+    'faq-jesus-a': 'Myslimanët e mbajnë Jezusin (Isa në arabisht) në nderim të lartë si një nga profetët më të rëndësishëm të dërguar nga Allahu. Ata besojnë se ai lindi nga Virgjëresha Mari përmes një mrekullie, bëri mrekulli me lejen e Allahut dhe solli Ungjillin. Megjithatë, myslimanët besojnë se Jezusi ishte një profet njerëzor, jo hyjnor, dhe se ai nuk u kryqëzua por u ngrit në qiell nga Allahu. Myslimanët presin me padurim kthimin e tij para Ditës së Gjykimit.',
+    'faq-prayer-q': 'Si falen myslimanët?',
+    'faq-prayer-a': 'Myslimanët falen pesë herë në ditë: në agim (Fagjr), në mesditë (Dhuhr), pasdite (Asr), perëndim (Maghrib) dhe natë (Isha). Para se të falen, myslimanët kryejnë pastrimin ritual (abdest). Namazi përfshin lëvizje specifike duke përfshirë qëndrimin, përkuljen dhe sexhdenë ndërsa lexojnë vargje nga Kurani dhe lëvdojnë Allahun. Myslimanët e kthejnë fytyrën në drejtim të Qabes në Mekë gjatë namazit.',
+    'faq-christianity-q': 'Cila është dallimi midis Islamit dhe Krishterimit?',
+    'faq-christianity-a': 'Ndërsa të dyja fetë adhurojnë të njëjtin Zot dhe ndajnë shumë profetë, ka dallime kyçe. Myslimanët besojnë në unitetin e rreptë të Zotit (Tevhid) pa partnerë ose trinitet. Ata besojnë se Muhammedi ﷺ është profeti final dhe Kurani është zbulesa finale. Krishterët besojnë në Trinitetin dhe se Jezusi është hyjnor. Megjithatë, të dyja fetë theksojnë dashurinë, dhembshurinë, bamirësinë dhe jetesën morale.',
+    'faq-religions-q': 'Çfarë thotë Islami për fetë e tjera?',
+    'faq-religions-a': 'Islami i njeh Krishterimin dhe Judaizmin si "Njerëzit e Librit" (Ehl el-Kitab) dhe njeh profetët dhe shkrimet e tyre. Kurani thotë "nuk ka detyrim në fe" dhe thekson tolerancën fetare. Myslimanët inkurajohen të jenë të respektueshëm dhe të drejtë në marrëdhëniet e tyre me njerëzit e të gjitha feve, duke mbajtur besimet dhe praktikat e tyre.',
+    'faq-jihad-q': 'Çfarë është Xhihadi?',
+    'faq-jihad-a': 'Xhihadi fjalë për fjalë do të thotë "luftë" ose "përpjekje" në arabisht. Kuptimi kryesor është lufta e brendshme shpirtërore kundër impulseve dhe dëshirave negative të veta. Kur referohet në luftën fizike, ligji islam kërkon që ajo të jetë mbrojtëse, proporcionale dhe e kryer me rregulla të rrepta që mbrojnë civilët, vendet fetare dhe mjedisin. Xhihadi më i madh është gjithmonë lufta e brendshme për përmirësim shpirtëror.',
+    'faq-learn-q': 'Si mund të mësoj më shumë për Islamin?',
+    'faq-learn-a': 'Mund të filloni duke lexuar Kuranin, duke vizituar një xhami lokale, duke folur me myslimanë në komunitetin tuaj, ose duke marrë një kurs hyrës. Shumë xhami ofrojnë ture të udhëzuara dhe programe arsimore. Në Qendrën Islame Shqiptare, ne mirëpresim vizitorët dhe pyetjet. Gjithashtu mund të merrni pjesë në namazet e xhumasë, ngjarjet e komunitetit, ose të flisni me imamin tonë për udhëzim.',
+    
+    // Learn More Section
+    'learn-more-title': 'Dëshironi të mësoni më shumë për Islamin?',
+    'learn-more-intro': 'Ne jemi të lumtur të mirëpresim mysafirë, të përgjigjemi pyetjeve dhe t\'ju lidhim me dijetarë ose burime arsimore.',
+    'visit-us-title': 'Na Vizitoni',
+    'visit-us-desc': 'Bashkohuni me ne për namazet e xhumasë, ngjarjet e komunitetit, ose planifikoni një vizitë personale për të mësuar më shumë për besimin dhe komunitetin tonë.',
+    'contact-us-btn': 'Na Kontaktoni',
+    'speak-scholar-title': 'Flisni me një Dijetar',
+    'speak-scholar-desc': 'Lidhuni me imamin tonë ose dijetarët islamë që mund të përgjigjen pyetjeve tuaja dhe të ofrojnë udhëzim mbi mësimet islame.',
+    'email-us-btn': 'Na Dërgoni Email',
+    
+    // Footer
+    'footer-about': 'Mirësevini në Qendrën Islame Shqiptare, një vend adhurimi, të mësuari dhe komuniteti i rrënjosur në trashëgiminë e pasur shqiptare dhe traditën islame. Ne përpiqemi të krijojmë një hapësirë mikpritëse dhe gjithëpërfshirëse për çdo anëtar të komunitetit mysliman.',
+    'contact': 'Kontakti',
+    'email-address': 'Adresa e Email-it',
+    'phone-number': 'Numri i Telefonit',
+    'location': 'Vendndodhja',
+    'social-media': 'Rrjetet Sociale',
+    'social-desc': 'Na ndiqni në Facebook për njoftimet dhe përditësimet më të fundit rreth ngjarjeve dhe programeve në Qendrën Islame Shqiptare.',
+    'newsletter': 'Buletini',
+    'newsletter-desc': 'Abonohuni në buletinin tonë për të marrë përditësime mbi ngjarjet, programet dhe lajmet e komunitetit direkt në email-in tuaj. Qëndroni të lidhur me Qendrën Islame Shqiptare.',
+    'email-placeholder': 'Vendosni email-in tuaj',
+    'subscribe': 'Abonohu',
+    'footer-copyright': '© 2025 aicod.org. Të gjitha të drejtat e rezervuara.<br>Ikonat janë marrë nga www.flaticon.com'
+}
+}
+            
 
-            menuToggle.addEventListener('click', function() {
-                navMenu.classList.toggle('show');
-                menuToggle.classList.toggle('active');
-            });
+// Merge the translations
+Object.assign(translations.sq);
 
-            // Close menu when clicking on a link (mobile)
-            const navLinks = document.querySelectorAll('#nav-menu a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    navMenu.classList.remove('show');
-                    menuToggle.classList.remove('active');
-                });
-            });
+// Language toggle functionality
+let currentLanguage = localStorage.getItem('language') || 'en';
 
-            // Close menu when clicking outside (mobile)
-            document.addEventListener('click', function(event) {
-                const isClickInsideNav = navMenu.contains(event.target);
-                const isClickOnToggle = menuToggle.contains(event.target);
-                
-                if (!isClickInsideNav && !isClickOnToggle && navMenu.classList.contains('show')) {
-                    navMenu.classList.remove('show');
-                    menuToggle.classList.remove('active');
-                }
-            });
+function setLanguage(lang) {
+    currentLanguage = lang;
+    localStorage.setItem('language', lang);
+    document.documentElement.lang = lang;
+    
+    // Update language buttons
+    document.querySelectorAll('.language-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+    
+    // Translate all elements
+    document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[lang][key]) {
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                element.value = translations[lang][key];
+            } else {
+                element.innerHTML = translations[lang][key];
+            }
+        }
+    });
+    
+    // Translate placeholders
+    document.querySelectorAll('[data-translate-placeholder]').forEach(element => {
+        const key = element.getAttribute('data-translate-placeholder');
+        if (translations[lang][key]) {
+            element.placeholder = translations[lang][key];
+        }
+    });
+}
 
-            // Handle window resize for mobile menu
-            window.addEventListener('resize', function() {
-                if (window.innerWidth > 768) {
-                    navMenu.classList.remove('show');
-                    menuToggle.classList.remove('active');
-                }
-            });
+// Initialize language on page load
+document.addEventListener('DOMContentLoaded', function() {
+    // Set initial language
+    setLanguage(currentLanguage);
+    
+    // Add click event listeners to language buttons
+    document.querySelectorAll('.language-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            setLanguage(this.dataset.lang);
+        });
+    });
+    
+    // Initialize AOS
+    AOS.init({
+        duration: 1000,
+        once: true,
+    });
 
-            // Wait for the DOM to be fully loaded
-            document.addEventListener('DOMContentLoaded', function() {
-                // Add click event listeners to all accordion buttons
-                document.querySelectorAll('.accordion').forEach(button => {
-                    button.addEventListener('click', function() {
-                        const panel = this.nextElementSibling;
-                        const isOpen = this.classList.contains('active');
-                        
-                        // Close all panels first
-                        document.querySelectorAll('.accordion').forEach(acc => {
-                            acc.classList.remove('active');
-                            acc.nextElementSibling.style.maxHeight = null;
-                        });
-                        
-                        // Open clicked panel if it wasn't already open
-                        if (!isOpen) {
-                            this.classList.add('active');
-                            panel.style.maxHeight = panel.scrollHeight + "px";
-                        }
-                    });
-                });
-                
-                // Show the first slide
-                document.querySelector('.mySlides').style.display = 'block';
+    // Mobile menu toggle functionality
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    menuToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('show');
+        menuToggle.classList.toggle('active');
+    });
+
+    // Close menu when clicking on a link (mobile)
+    const navLinks = document.querySelectorAll('#nav-menu a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('show');
+            menuToggle.classList.remove('active');
+        });
+    });
+
+    // Close menu when clicking outside (mobile)
+    document.addEventListener('click', function(event) {
+        const isClickInsideNav = navMenu.contains(event.target);
+        const isClickOnToggle = menuToggle.contains(event.target);
+        
+        if (!isClickInsideNav && !isClickOnToggle && navMenu.classList.contains('show')) {
+            navMenu.classList.remove('show');
+            menuToggle.classList.remove('active');
+        }
+    });
+
+    // Handle window resize for mobile menu
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            navMenu.classList.remove('show');
+            menuToggle.classList.remove('active');
+        }
+    });
+
+    // Add click event listeners to all accordion buttons
+    document.querySelectorAll('.accordion').forEach(button => {
+        button.addEventListener('click', function() {
+            const panel = this.nextElementSibling;
+            const isOpen = this.classList.contains('active');
+            
+            // Close all panels first
+            document.querySelectorAll('.accordion').forEach(acc => {
+                acc.classList.remove('active');
+                acc.nextElementSibling.style.maxHeight = null;
             });
+            
+            // Open clicked panel if it wasn't already open
+            if (!isOpen) {
+                this.classList.add('active');
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    });
+    
+    // Show the first slide
+    document.querySelector('.mySlides').style.display = 'block';
+});
+
         </script>
-    </body>
-</html>
+    

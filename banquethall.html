@@ -5,10 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Albanian Islamic Center - Banquet Hall</title>
         <link rel="stylesheet" href="Style-Sheets/banquet-styles.css">
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-        />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        
     </head>
 
     <body>
@@ -16,8 +14,20 @@
         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v22.0"></script>
         
         <div class="contacttop">
-            <p>19775 Harper Avenue, Harper Woods, MI 48225</p>
-            <p>(313)-884-6676&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;albislamct@aol.com</p>
+            <div class="contacttop-text">
+                <p>19775 Harper Avenue, Harper Woods, MI 48225</p>
+                <p>(313)-884-6676&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;albislamct@aol.com</p>
+            </div>
+            <div class="language-toggle">
+                <button class="language-btn active" data-lang="en">
+                    <span class="flag-icon">🇺🇸</span>
+                    <span>EN</span>
+                </button>
+                <button class="language-btn" data-lang="sq">
+                    <span class="flag-icon">🇦🇱</span>
+                    <span>AL</span>
+                </button>
+            </div>
         </div>
 
         <nav class="navbar">
@@ -32,22 +42,22 @@
             </button>
             
             <ul id="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="islam.html">What is Islam?</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="sundayschool.html">Programs & Activities</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="banquethall.html">Banquet Hall</a></li>
-                <li><a href="membership.html">Join Us</a></li>
-                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="index.html" data-translate="nav-home">Home</a></li>
+                <li><a href="about.html" data-translate="nav-about">About Us</a></li>
+                <li><a href="islam.html" data-translate="nav-islam">What is Islam?</a></li>
+                <li><a href="events.html" data-translate="nav-events">Events</a></li>
+                <li><a href="sundayschool.html" data-translate="nav-programs">Programs & Activities</a></li>
+                <li><a href="services.html" data-translate="nav-services">Services</a></li>
+                <li><a href="banquethall.html" data-translate="nav-banquet">Banquet Hall</a></li>
+                <li><a href="membership.html" data-translate="nav-join">Join Us</a></li>
+                <li><a href="contactus.html" data-translate="nav-contact">Contact Us</a></li>
             </ul>
             
             <form action="https://www.paypal.com/donate" method="post" target="_blank" class="donate-form">
                 <input type="hidden" name="hosted_button_id" value="LMWW6JLZ9N57L" />
                 <button type="submit" class="donate-btn" title="PayPal - The safer, easier way to pay online!">
                     <img src="images/donation.png" class="heart-icon" alt="Heart icon">
-                    Donate
+                    <span data-translate="donate">Donate</span>
                 </button>
             </form>
         </nav>
@@ -59,15 +69,15 @@
                 </div>
             </div>
             <div class="text-overlay">
-                <h1 class="banner-text">Banquet Hall</h1>
-                <h2 class="banner-subtext">Elegant Venue for Your Special Occasions</h2>
+                <h1 class="banner-text" data-translate="banner-banquet">Banquet Hall</h1>
+                <h2 class="banner-subtext" data-translate="banner-elegant">Elegant Venue for Your Special Occasions</h2>
             </div>
         </div>
 
         <!-- Banquet Hall Introduction -->
         <section class="banquet-intro">
-            <h2>Welcome to Our Beautiful Banquet Hall</h2>
-            <p>
+            <h2 data-translate="welcome-banquet">Welcome to Our Beautiful Banquet Hall</h2>
+            <p data-translate="banquet-intro-desc">
                 The Albanian Islamic Center's banquet hall provides an elegant and spacious venue for your most cherished celebrations. 
                 Whether you're planning a wedding reception, engagement party, anniversary celebration, corporate event, or community gathering, 
                 our hall offers the perfect setting with traditional hospitality and modern amenities. Our team is dedicated 
@@ -77,48 +87,48 @@
 
         <!-- Important Notice about Services -->
         <section class="disclaimer-section">
-            <h2>Important Notice - Venue Rental Only</h2>
+            <h2 data-translate="important-notice">Important Notice - Venue Rental Only</h2>
             <div class="disclaimer-content">
                 <div class="disclaimer-main">
-                    <p><strong>Please Note:</strong> The Albanian Islamic Center provides venue rental services only. We do not provide catering, decorations, event planning, or beverage services.</p>
+                    <p><strong data-translate="please-note">Please Note:</strong> <span data-translate="venue-rental-only">The Albanian Islamic Center provides venue rental services only. We do not provide catering, decorations, event planning, or beverage services.</span></p>
                     
                     <div class="services-grid">
                         <div class="we-provide">
-                            <h3>✓ What We Provide:</h3>
+                            <h3 data-translate="what-we-provide">✓ What We Provide:</h3>
                             <ul>
-                                <li>Beautiful banquet hall space</li>
-                                <li>Tables and chairs</li>
-                                <li>Sound system </li>
-                                <li>Climate control (AC/heating)</li>
-                                <li>Free WiFi access</li>
-                                <li>Kitchen facilities for caterer use</li>
-                                <li>Prayer area access</li>
-                                <li>Parking facilities</li>
-                                <li>Setup & Cleaning services</li>
+                                <li data-translate="beautiful-hall">Beautiful banquet hall space</li>
+                                <li data-translate="tables-chairs">Tables and chairs</li>
+                                <li data-translate="sound-system">Sound system</li>
+                                <li data-translate="climate-control">Climate control (AC/heating)</li>
+                                <li data-translate="free-wifi">Free WiFi access</li>
+                                <li data-translate="kitchen-facilities">Kitchen facilities for caterer use</li>
+                                <li data-translate="prayer-area">Prayer area access</li>
+                                <li data-translate="parking-facilities">Parking facilities</li>
+                                <li data-translate="setup-cleaning">Setup & Cleaning services</li>
                             </ul>
                         </div>
                         
                         <div class="you-arrange">
-                            <h3>✗ What You Need to Arrange:</h3>
+                            <h3 data-translate="what-you-arrange">✗ What You Need to Arrange:</h3>
                             <ul>
-                                <li>Food and catering services</li>
-                                <li>Event decorations and setup</li>
-                                <li>Beverages and service staff</li>
-                                <li>Event planning and coordination</li>
-                                <li>Entertainment and DJ services</li>
-                                <li>Photography/videography</li>
-                                <li>Floral arrangements</li>
+                                <li data-translate="food-catering">Food and catering services</li>
+                                <li data-translate="decorations">Event decorations and setup</li>
+                                <li data-translate="beverages-staff">Beverages and service staff</li>
+                                <li data-translate="event-planning">Event planning and coordination</li>
+                                <li data-translate="entertainment">Entertainment and DJ services</li>
+                                <li data-translate="photography">Photography/videography</li>
+                                <li data-translate="floral">Floral arrangements</li>
                             </ul>
                         </div>
                     </div>
                     
                     <div class="recommended-planner">
-                        <h3>🌟 Recommended Event Planner</h3>
-                        <p>For professional event planning and catering services that specialize in Muslim events, we recommend:</p>
+                        <h3 data-translate="recommended-planner">🌟 Recommended Event Planner</h3>
+                        <p data-translate="planner-desc">For professional event planning and catering services that specialize in Muslim events, we recommend:</p>
                         <a href="https://www.instagram.com/crystaleventss?igsh=b3B1bGk4M2ZtdGJ3" target="_blank" class="planner-link">
                             <strong>Crystal Events</strong> - @crystaleventss
                         </a>
-                        <p class="planner-note">A trusted event planner experienced with Islamic traditions and halal requirements.</p>
+                        <p class="planner-note" data-translate="planner-note">A trusted event planner experienced with Islamic traditions and halal requirements.</p>
                     </div>
                 </div>
             </div>
@@ -126,51 +136,51 @@
 
         <!-- Hall Features -->
         <section class="features-section">
-            <h2>Hall Features & Amenities</h2>
+            <h2 data-translate="hall-features">Hall Features & Amenities</h2>
             <div class="features-grid">
                 <div class="feature-item">
-                    <h3>Spacious Interior</h3>
-                    <p>Accommodates up to 650 guests with flexible seating arrangements. 530 on the first floor, 120 on the second floor.</p>
+                    <h3 data-translate="spacious-interior">Spacious Interior</h3>
+                    <p data-translate="interior-desc">Accommodates up to 650 guests with flexible seating arrangements. 530 on the first floor, 120 on the second floor.</p>
                 </div>
                 <div class="feature-item">
-                    <h3>Kitchen Facilities</h3>
-                    <p>Decent sized kitchen for catering preparation and service.</p>
+                    <h3 data-translate="kitchen-title">Kitchen Facilities</h3>
+                    <p data-translate="kitchen-desc">Decent sized kitchen for catering preparation and service.</p>
                 </div>
                 <div class="feature-item">
-                    <h3>Audio Equipment</h3>
-                    <p>Sound system for audio requirements.</p>
+                    <h3 data-translate="audio-equipment">Audio Equipment</h3>
+                    <p data-translate="audio-desc">Sound system for audio requirements.</p>
                 </div>
                 <div class="feature-item">
-                    <h3>Prayer Area Access</h3>
-                    <p>Adjacent prayer facilities for religious ceremonies</p>
+                    <h3 data-translate="prayer-access">Prayer Area Access</h3>
+                    <p data-translate="prayer-access-desc">Adjacent prayer facilities for religious ceremonies</p>
                 </div>
                 <div class="feature-item">
-                    <h3>Parking</h3>
-                    <p>On-site parking for your guests' convenience </p>
+                    <h3 data-translate="parking-title">Parking</h3>
+                    <p data-translate="parking-desc">On-site parking for your guests' convenience</p>
                 </div>
                 <div class="feature-item">
-                    <h3>Climate Control</h3>
-                    <p>Comfortable year-round temperature control</p>
+                    <h3 data-translate="climate-title">Climate Control</h3>
+                    <p data-translate="climate-desc">Comfortable year-round temperature control</p>
                 </div>
                 <div class="feature-item">
-                    <h3>Dividers</h3>
-                    <p>Dividers for privacy and separation of the genders if necessary</p>
+                    <h3 data-translate="dividers-title">Dividers</h3>
+                    <p data-translate="dividers-desc">Dividers for privacy and separation of the genders if necessary</p>
                 </div>
                 <div class="feature-item">
-                    <h3>Gym Rental</h3>
-                    <p>With an added fee of $200, the gym can be utilized for children's activities</p>
+                    <h3 data-translate="gym-rental-title">Gym Rental</h3>
+                    <p data-translate="gym-rental-desc">With an added fee of $200, the gym can be utilized for children's activities</p>
                 </div>
                 <div class="feature-item">
-                    <h3>WiFi</h3>
-                    <p>Free WiFi access for your convenience</p>
+                    <h3 data-translate="wifi-title">WiFi</h3>
+                    <p data-translate="wifi-desc">Free WiFi access for your convenience</p>
                 </div>
             </div>
         </section>
 
         <!-- Image Gallery -->
         <div class="gallery-section">
-            <h2>Hall Gallery</h2>
-            <p>Take a virtual tour of our beautiful banquet hall.</p>
+            <h2 data-translate="hall-gallery">Hall Gallery</h2>
+            <p data-translate="virtual-tour">Take a virtual tour of our beautiful banquet hall.</p>
             <div class="column111">
                 <div class="container">
                     <div class="swiper">
@@ -195,99 +205,99 @@
 
         <!-- Pricing & Packages -->
         <section class="pricing-section">
-            <h2>Rental Information</h2>
+            <h2 data-translate="rental-information">Rental Information</h2>
             <div class="pricing-grid">
                 <div class="pricing-card featured">
-                    <h3>Full Day Rental</h3>
-                    <div class="price">Contact for Pricing</div>
+                    <h3 data-translate="full-day-rental">Full Day Rental</h3>
+                    <div class="price" data-translate="contact-pricing">Contact for Pricing</div>
                     <ul>
-                        <li>8-hour venue access</li>
-                        <li>All tables and chairs</li>
-                        <li>Full Audio equipment</li>
-                        <li>Complete kitchen access</li>
-                        <li>Setup assistance</li>
+                        <li data-translate="eight-hour-access">8-hour venue access</li>
+                        <li data-translate="all-tables-chairs">All tables and chairs</li>
+                        <li data-translate="full-audio">Full Audio equipment</li>
+                        <li data-translate="complete-kitchen">Complete kitchen access</li>
+                        <li data-translate="setup-assistance">Setup assistance</li>
                     </ul>
                 </div>
                 <div class="pricing-card">
-                    <h3>Extended Event</h3>
-                    <div class="price">Contact for Pricing</div>
+                    <h3 data-translate="extended-event">Extended Event</h3>
+                    <div class="price" data-translate="contact-pricing">Contact for Pricing</div>
                     <ul>
-                        <li>Multi-day access available</li>
-                        <li>Flexible arrangements</li>
-                        <li>Custom packages</li>
-                        <li>Dedicated support</li>
+                        <li data-translate="multiday-access">Multi-day access available</li>
+                        <li data-translate="flexible-arrangements">Flexible arrangements</li>
+                        <li data-translate="custom-packages">Custom packages</li>
+                        <li data-translate="dedicated-support">Dedicated support</li>
                     </ul>
                 </div>
             </div>
             <p class="pricing-note">
-                <strong>Special rates available for community members and religious events. 
+                <strong data-translate="special-rates">Special rates available for community members and religious events. 
                 Contact us for detailed pricing and availability.</strong>
             </p>
         </section>
 
         <!-- Booking Guidelines -->
         <section class="guidelines-section">
-            <h2>Booking Guidelines</h2>
+            <h2 data-translate="booking-guidelines">Booking Guidelines</h2>
             <div class="guidelines-content">
                 <div class="guideline-item">
-                    <h3>Advance Booking</h3>
-                    <p>Reserve your date at least 30 days in advance for optimal availability</p>
+                    <h3 data-translate="advance-booking">Advance Booking</h3>
+                    <p data-translate="advance-booking-desc">Reserve your date at least 30 days in advance for optimal availability</p>
                 </div>
                 <div class="guideline-item">
-                    <h3>Deposit Required</h3>
-                    <p>A  non-refundable deposit is required to secure your booking date</p>
+                    <h3 data-translate="deposit-required">Deposit Required</h3>
+                    <p data-translate="deposit-desc">A non-refundable deposit is required to secure your booking date</p>
                 </div>
                 <div class="guideline-item">
-                    <h3>Halal Requirements</h3>
-                    <p>All food and beverages must comply with Islamic dietary guidelines</p>
+                    <h3 data-translate="halal-requirements">Halal Requirements</h3>
+                    <p data-translate="halal-desc">All food and beverages must comply with Islamic dietary guidelines</p>
                 </div>
             </div>
         </section>
 
         <!-- Contact Form -->
         <section class="rental-form-section">
-            <h2>Request Information or Book Your Event</h2>
-            <p>Fill out the form below and we'll get back to you within 24 hours</p>
-            <form action="https://getform.io/f/adrglyxa" method="POST" >
+            <h2 data-translate="request-information">Request Information or Book Your Event</h2>
+            <p data-translate="form-response">Fill out the form below and we'll get back to you within 24 hours</p>
+            <form action="https://getform.io/f/adrglyxa" method="POST">
                 <div class="form-row">
-                    <input type="text" name="name" placeholder="Your Full Name" required>
-                    <input type="email" name="email" placeholder="Your Email Address" required>
+                    <input type="text" name="name" data-translate-placeholder="full-name" placeholder="Your Full Name" required>
+                    <input type="email" name="email" data-translate-placeholder="email-address" placeholder="Your Email Address" required>
                 </div>
                 <div class="form-row">
-                    <input type="tel" name="phone" placeholder="Phone Number" required>
+                    <input type="tel" name="phone" data-translate-placeholder="phone-number" placeholder="Phone Number" required>
                     <select name="event_type" required>
-                        <option value="">Select Event Type</option>
-                        <option value="wedding">Wedding Reception</option>
-                        <option value="engagement">Engagement Party</option>
-                        <option value="anniversary">Anniversary Celebration</option>
-                        <option value="birthday">Birthday Party</option>
-                        <option value="corporate">Corporate Event</option>
-                        <option value="community">Community Gathering</option>
-                        <option value="religious">Religious Event</option>
-                        <option value="other">Other</option>
+                        <option value="" data-translate="select-event-type">Select Event Type</option>
+                        <option value="wedding" data-translate="wedding-reception">Wedding Reception</option>
+                        <option value="engagement" data-translate="engagement-party">Engagement Party</option>
+                        <option value="anniversary" data-translate="anniversary-celebration">Anniversary Celebration</option>
+                        <option value="birthday" data-translate="birthday-party">Birthday Party</option>
+                        <option value="corporate" data-translate="corporate-event">Corporate Event</option>
+                        <option value="community" data-translate="community-gathering">Community Gathering</option>
+                        <option value="religious" data-translate="religious-event">Religious Event</option>
+                        <option value="other" data-translate="other">Other</option>
                     </select>
                 </div>
                 <div class="form-row">
                     <input type="date" name="preferred_date" required>
-                    <input type="number" name="guest_count" placeholder="Expected Number of Guests" min="1" max="650" required>
+                    <input type="number" name="guest_count" data-translate-placeholder="guest-count" placeholder="Expected Number of Guests" min="1" max="650" required>
                 </div>
                 <div class="form-row">
                     <select name="rental_duration">
-                        <option value="">Select Rental Duration</option>
-                        <option value="full_day">Full Day (8 hours)</option>
-                        <option value="extended">Extended/Custom</option>
+                        <option value="" data-translate="select-duration">Select Rental Duration</option>
+                        <option value="full_day" data-translate="full-day-8hours">Full Day (8 hours)</option>
+                        <option value="extended" data-translate="extended-custom">Extended/Custom</option>
                     </select>
-                    <input type="time" name="start_time" placeholder="Preferred Start Time">
+                    <input type="time" name="start_time" data-translate-placeholder="start-time" placeholder="Preferred Start Time">
                 </div>
-                <textarea name="additional_info" rows="5" placeholder="Additional information about your event, special requirements, or questions..."></textarea>
+                <textarea name="additional_info" rows="5" data-translate-placeholder="additional-info" placeholder="Additional information about your event, special requirements, or questions..."></textarea>
                 <div class="checkbox-section">
                     <input type="hidden" name="community_member" value="no">
                     <label>
                         <input type="checkbox" name="community_member" value="yes">
-                        I am a member of the Albanian Islamic Center community
+                        <span data-translate="community-member">I am a member of the Albanian Islamic Center community</span>
                     </label>
                 </div>
-                <button type="submit">Send Inquiry</button>
+                <button type="submit" data-translate="send-inquiry">Send Inquiry</button>
             </form>
         </section>
 
@@ -296,97 +306,434 @@
             <div class="row">
                 <div class="support-text">
                     <img src="images/Logo.png" alt="Albanian Islamic Center Logo" class="logo-img">
-                    <p>Welcome to the Albanian Islamic Center, a place of worship, learning, and community rooted in 
-                        rich Albanian heritage and Islamic tradition. We strive to foster a welcoming and inclusive 
-                        space for every member of the Muslim community.</p>
+                    <p data-translate="footer-about">Welcome to the Albanian Islamic Center, a place of worship, learning, and community rooted in rich Albanian heritage and Islamic tradition. We strive to foster a welcoming and inclusive space for every member of the Muslim community.</p>
                     <a href="https://www.facebook.com/Albanianislamiccenter/?ref=embed_page#" class="social-media" target="_blank"> 
                         <img src="images/facebook.png" class="facebook-img">
                     </a>
                 </div>
                 <div class="contact-info">
-                    <h2>Contact</h2>
-                    <h3><img src="images/email.png" class="email-icon">Email Address</h3>
+                    <h2 data-translate="contact">Contact</h2>
+                    <h3><img src="images/email.png" class="email-icon"><span data-translate="email-address">Email Address</span></h3>
                     <p>albislamct@aol.com</p>
-                    <h3><img src="images/phone-call.png" class="phone-icon">Phone Number</h3>
+                    <h3><img src="images/phone-call.png" class="phone-icon"><span data-translate="phone-number">Phone Number</span></h3>
                     <p>(313)-884-6676</p>
-                    <h3><img src="images/pin.png" class="pin-icon">Location</h3>
+                    <h3><img src="images/pin.png" class="pin-icon"><span data-translate="location">Location</span></h3>
                     <p>19775 Harper Avenue, Harper Woods, MI 48225</p>
                 </div>
                 <div class="socials">
-                    <h2>Social Media</h2>
-                    <p>Follow us on Facebook for the latest announcements and updates about events and programs at 
-                        the Albanian Islamic Center.</p>
+                    <h2 data-translate="social-media">Social Media</h2>
+                    <p data-translate="social-desc">Follow us on Facebook for the latest announcements and updates about events and programs at the Albanian Islamic Center.</p>
                     <a href="https://www.facebook.com/Albanianislamiccenter/" class="social-media" target="_blank">
                         <img src="images/facebook.png" alt="Facebook" class="facebook-img">
                     </a>
                 </div>
                 <div class="newsletter">
-                    <h2>Newsletter</h2>
-                    <p>Subscribe to our newsletter to receive updates on events, programs, and community news directly 
-                        to your inbox. Stay connected with the Albanian Islamic Center.</p>
+                    <h2 data-translate="newsletter">Newsletter</h2>
+                    <p data-translate="newsletter-desc">Subscribe to our newsletter to receive updates on events, programs, and community news directly to your inbox. Stay connected with the Albanian Islamic Center.</p>
                     <form action="https://aol.us13.list-manage.com/subscribe/post?u=096bcfd7c98cb079bfb26df4f&amp;id=36db6b2f2f" method="post" novalidate>
-                        <input type="email" name="EMAIL" id="email" placeholder="Enter your email" required>
+                        <input type="email" name="EMAIL" id="email" placeholder="Enter your email" data-translate-placeholder="email-placeholder" required>
                         <div style="position: absolute; left: -5000px;" aria-hidden="true">
                             <input type="text" name="b_096bcfd7c98cb079bfb26df4f_36db6b2f2f" tabindex="-1" value="">
                         </div>
-                        <button type="submit">Subscribe</button>
+                        <button type="submit" data-translate="subscribe">Subscribe</button>
                     </form>
                 </div>
             </div>
         </div>
 
         <footer> 
-            <p>© 2025 aicod.org. All Rights Reserved.<br>
-            Icons made from www.flaticon.com</p>
+            <p data-translate="footer-copyright">© 2025 aicod.org. All Rights Reserved.<br>Icons made from www.flaticon.com</p>
         </footer>
 
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script src="webscripts.js"></script>
         <script>
-            // Mobile menu toggle functionality
-            const menuToggle = document.getElementById('menu-toggle');
-            const navMenu = document.getElementById('nav-menu');
+            // Translation data
+            const translations = {
+                en: {
+                    // Navigation
+                    'nav-home': 'Home',
+                    'nav-about': 'About Us',
+                    'nav-islam': 'What is Islam?',
+                    'nav-events': 'Events',
+                    'nav-programs': 'Programs & Activities',
+                    'nav-services': 'Services',
+                    'nav-banquet': 'Banquet Hall',
+                    'nav-join': 'Join Us',
+                    'nav-contact': 'Contact Us',
+                    'donate': 'Donate',
+                    
+                    // Banner
+                    'banner-banquet': 'Banquet Hall',
+                    'banner-elegant': 'Elegant Venue for Your Special Occasions',
+                    
+                    // Introduction
+                    'welcome-banquet': 'Welcome to Our Beautiful Banquet Hall',
+                    'banquet-intro-desc': 'The Albanian Islamic Center\'s banquet hall provides an elegant and spacious venue for your most cherished celebrations. Whether you\'re planning a wedding reception, engagement party, anniversary celebration, corporate event, or community gathering, our hall offers the perfect setting with traditional hospitality and modern amenities. Our team is dedicated to making your event memorable and seamless.',
+                    
+                    // Important Notice
+                    'important-notice': 'Important Notice - Venue Rental Only',
+                    'please-note': 'Please Note:',
+                    'venue-rental-only': 'The Albanian Islamic Center provides venue rental services only. We do not provide catering, decorations, event planning, or beverage services.',
+                    'what-we-provide': '✓ What We Provide:',
+                    'beautiful-hall': 'Beautiful banquet hall space',
+                    'tables-chairs': 'Tables and chairs',
+                    'sound-system': 'Sound system',
+                    'climate-control': 'Climate control (AC/heating)',
+                    'free-wifi': 'Free WiFi access',
+                    'kitchen-facilities': 'Kitchen facilities for caterer use',
+                    'prayer-area': 'Prayer area access',
+                    'parking-facilities': 'Parking facilities',
+                    'setup-cleaning': 'Setup & Cleaning services',
+                    'what-you-arrange': '✗ What You Need to Arrange:',
+                    'food-catering': 'Food and catering services',
+                    'decorations': 'Event decorations and setup',
+                    'beverages-staff': 'Beverages and service staff',
+                    'event-planning': 'Event planning and coordination',
+                    'entertainment': 'Entertainment and DJ services',
+                    'photography': 'Photography/videography',
+                    'floral': 'Floral arrangements',
+                    'recommended-planner': '🌟 Recommended Event Planner',
+                    'planner-desc': 'For professional event planning and catering services that specialize in Muslim events, we recommend:',
+                    'planner-note': 'A trusted event planner experienced with Islamic traditions and halal requirements.',
+                    
+                    // Hall Features
+                    'hall-features': 'Hall Features & Amenities',
+                    'spacious-interior': 'Spacious Interior',
+                    'interior-desc': 'Accommodates up to 650 guests with flexible seating arrangements. 530 on the first floor, 120 on the second floor.',
+                    'kitchen-title': 'Kitchen Facilities',
+                    'kitchen-desc': 'Decent sized kitchen for catering preparation and service.',
+                    'audio-equipment': 'Audio Equipment',
+                    'audio-desc': 'Sound system for audio requirements.',
+                    'prayer-access': 'Prayer Area Access',
+                    'prayer-access-desc': 'Adjacent prayer facilities for religious ceremonies',
+                    'parking-title': 'Parking',
+                    'parking-desc': 'On-site parking for your guests\' convenience',
+                    'climate-title': 'Climate Control',
+                    'climate-desc': 'Comfortable year-round temperature control',
+                    'dividers-title': 'Dividers',
+                    'dividers-desc': 'Dividers for privacy and separation of the genders if necessary',
+                    'gym-rental-title': 'Gym Rental',
+                    'gym-rental-desc': 'With an added fee of $200, the gym can be utilized for children\'s activities',
+                    'wifi-title': 'WiFi',
+                    'wifi-desc': 'Free WiFi access for your convenience',
+                    
+                    // Gallery
+                    'hall-gallery': 'Hall Gallery',
+                    'virtual-tour': 'Take a virtual tour of our beautiful banquet hall.',
+                    
+                    // Pricing
+                    'rental-information': 'Rental Information',
+                    'full-day-rental': 'Full Day Rental',
+                    'contact-pricing': 'Contact for Pricing',
+                    'eight-hour-access': '8-hour venue access',
+                    'all-tables-chairs': 'All tables and chairs',
+                    'full-audio': 'Full Audio equipment',
+                    'complete-kitchen': 'Complete kitchen access',
+                    'setup-assistance': 'Setup assistance',
+                    'extended-event': 'Extended Event',
+                    'multiday-access': 'Multi-day access available',
+                    'flexible-arrangements': 'Flexible arrangements',
+                    'custom-packages': 'Custom packages',
+                    'dedicated-support': 'Dedicated support',
+                    'special-rates': 'Special rates available for community members and religious events. Contact us for detailed pricing and availability.',
+                    
+                    // Guidelines
+                    'booking-guidelines': 'Booking Guidelines',
+                    'advance-booking': 'Advance Booking',
+                    'advance-booking-desc': 'Reserve your date at least 30 days in advance for optimal availability',
+                    'deposit-required': 'Deposit Required',
+                    'deposit-desc': 'A non-refundable deposit is required to secure your booking date',
+                    'halal-requirements': 'Halal Requirements',
+                    'halal-desc': 'All food and beverages must comply with Islamic dietary guidelines',
+                    
+                    // Form
+                    'request-information': 'Request Information or Book Your Event',
+                    'form-response': 'Fill out the form below and we\'ll get back to you within 24 hours',
+                    'full-name': 'Your Full Name',
+                    'email-address': 'Your Email Address',
+                    'phone-number': 'Phone Number',
+                    'select-event-type': 'Select Event Type',
+                    'wedding-reception': 'Wedding Reception',
+                    'engagement-party': 'Engagement Party',
+                    'anniversary-celebration': 'Anniversary Celebration',
+                    'birthday-party': 'Birthday Party',
+                    'corporate-event': 'Corporate Event',
+                    'community-gathering': 'Community Gathering',
+                    'religious-event': 'Religious Event',
+                    'other': 'Other',
+                    'guest-count': 'Expected Number of Guests',
+                    'select-duration': 'Select Rental Duration',
+                    'full-day-8hours': 'Full Day (8 hours)',
+                    'extended-custom': 'Extended/Custom',
+                    'start-time': 'Preferred Start Time',
+                    'additional-info': 'Additional information about your event, special requirements, or questions...',
+                    'community-member': 'I am a member of the Albanian Islamic Center community',
+                    'send-inquiry': 'Send Inquiry',
+                    
+                    // Footer
+                    'footer-about': 'Welcome to the Albanian Islamic Center, a place of worship, learning, and community rooted in rich Albanian heritage and Islamic tradition. We strive to foster a welcoming and inclusive space for every member of the Muslim community.',
+                    'contact': 'Contact',
+                    'location': 'Location',
+                    'social-media': 'Social Media',
+                    'social-desc': 'Follow us on Facebook for the latest announcements and updates about events and programs at the Albanian Islamic Center.',
+                    'newsletter': 'Newsletter',
+                    'newsletter-desc': 'Subscribe to our newsletter to receive updates on events, programs, and community news directly to your inbox. Stay connected with the Albanian Islamic Center.',
+                    'email-placeholder': 'Enter your email',
+                    'subscribe': 'Subscribe',
+                    'footer-copyright': '© 2025 aicod.org. All Rights Reserved.<br>Icons made from www.flaticon.com'
+                },
+sq: {
+    // Navigation
+    'nav-home': 'Ballina',
+    'nav-about': 'Rreth Nesh',
+    'nav-islam': 'Çfarë është Islami?',
+    'nav-events': 'Ngjarjet',
+    'nav-programs': 'Programet & Aktivitetet',
+    'nav-services': 'Shërbimet',
+    'nav-banquet': 'Salla e Dasmave',
+    'nav-join': 'Bashkohuni me Ne',
+    'nav-contact': 'Na Kontaktoni',
+    'donate': 'Dhuroni',
+    
+    // Banner
+    'banner-banquet': 'Salla e Dasmave',
+    'banner-elegant': 'Vend Elegant për Rastet Tuaja të Veçanta',
+    
+    // Introduction
+    'welcome-banquet': 'Mirësevini në Sallën Tonë të Bukur të Dasmave',
+    'banquet-intro-desc': 'Salla e dasmave e Qendrës Islame Shqiptare ofron një vend elegant dhe të gjerë për festimet tuaja më të dashura. Qoftë që po planifikoni një pritje dasme, festë fejese, festim përvjetori, ngjarje korporative ose tubim komunitare, salla jonë ofron ambientin e përsosur me mikpritje tradicionale dhe komoditet moderne. Ekipi ynë është i përkushtuar për ta bërë ngjarjen tuaj të paharrueshme dhe pa probleme.',
+    
+    // Important Notice
+    'important-notice': 'Njoftim i Rëndësishëm - Vetëm Qiraja e Vendit',
+    'please-note': 'Ju Lutemi Vini Re:',
+    'venue-rental-only': 'Qendra Islame Shqiptare ofron vetëm shërbime qiraje vendi. Ne nuk ofrojmë katering, dekorime, planifikim ngjarjesh ose shërbime pijesh.',
+    'what-we-provide': '✓ Çfarë Ne Ofrojmë:',
+    'beautiful-hall': 'Hapësirë të bukur salle dasmash',
+    'tables-chairs': 'Tavolina dhe karrige',
+    'sound-system': 'Sistem audio',
+    'climate-control': 'Kontroll klimatik (AC/ngrohje)',
+    'free-wifi': 'Akses falas WiFi',
+    'kitchen-facilities': 'Objektet e kuzhinës për përdorim nga kateringu',
+    'prayer-area': 'Akses në zonën e namazit',
+    'parking-facilities': 'Objektet e parkimit',
+    'setup-cleaning': 'Shërbimet e rregullimit dhe pastrimit',
+    'what-you-arrange': '✗ Çfarë Duhet të Rregulloni:',
+    'food-catering': 'Ushqimi dhe shërbimet e kateringut',
+    'decorations': 'Dekorime dhe rregullime të ngjarjes',
+    'beverages-staff': 'Pijet dhe stafi i shërbimit',
+    'event-planning': 'Planifikimi dhe koordinimi i ngjarjes',
+    'entertainment': 'Argëtimi dhe shërbimet DJ',
+    'photography': 'Fotografia/videografia',
+    'floral': 'Rregullimet me lule',
+    'recommended-planner': '🌟 Planifikuesi i Rekomanduar i Ngjarjeve',
+    'planner-desc': 'Për planifikim profesional ngjarjesh dhe shërbime kateringu që specializohen në ngjarje myslimane, ne rekomandojmë:',
+    'planner-note': 'Një planifikues ngjarjesh i besuar me përvojë me traditat islame dhe kërkesat halal.',
+    
+    // Hall Features
+    'hall-features': 'Karakteristikat dhe Komoditet e Sallës',
+    'spacious-interior': 'Brendësi e Gjerë',
+    'interior-desc': 'Akomodojon deri në 650 mysafirë me rregullime fleksibël vendesh. 530 në katin e parë, 120 në katin e dytë.',
+    'kitchen-title': 'Objektet e Kuzhinës',
+    'kitchen-desc': 'Kuzhinë me madhësi të përshtatshme për përgatitje dhe shërbim kateringu.',
+    'audio-equipment': 'Pajisje Audio',
+    'audio-desc': 'Sistem audio për kërkesat e zërit.',
+    'prayer-access': 'Akses në Zonën e Namazit',
+    'prayer-access-desc': 'Objektet e namazit ngjitur për ceremoni fetare',
+    'parking-title': 'Parkim',
+    'parking-desc': 'Parkim në vend për komoditetin e mysafirëve tuaj',
+    'climate-title': 'Kontrolli i Klimës',
+    'climate-desc': 'Kontroll i rehatshëm i temperaturës gjatë gjithë vitit',
+    'dividers-title': 'Ndarës',
+    'dividers-desc': 'Ndarës për privatësi dhe ndarje të gjinive nëse është e nevojshme',
+    'gym-rental-title': 'Qiraja e Palestrës',
+    'gym-rental-desc': 'Me një tarifë shtesë prej $200, palestra mund të përdoret për aktivitete fëmijësh',
+    'wifi-title': 'WiFi',
+    'wifi-desc': 'Akses falas WiFi për komoditetin tuaj',
+    
+    // Gallery
+    'hall-gallery': 'Galeria e Sallës',
+    'virtual-tour': 'Bëni një tur virtual të sallës sonë të bukur të dasmave.',
+    
+    // Pricing
+    'rental-information': 'Informacion Qiraje',
+    'full-day-rental': 'Qiraja e Ditës së Plotë',
+    'contact-pricing': 'Kontaktoni për Çmimet',
+    'eight-hour-access': 'Akses 8-orësh në vend',
+    'all-tables-chairs': 'Të gjitha tavolinat dhe karriget',
+    'full-audio': 'Pajisje audio të plota',
+    'complete-kitchen': 'Akses i plotë në kuzhinë',
+    'setup-assistance': 'Ndihmë për rregullim',
+    'extended-event': 'Ngjarje e Zgjeruar',
+    'multiday-access': 'Akses shumë-ditor i disponueshëm',
+    'flexible-arrangements': 'Rregullime fleksibël',
+    'custom-packages': 'Paketa të personalizuara',
+    'dedicated-support': 'Mbështetje e dedikuar',
+    'special-rates': 'Tarifa të veçanta të disponueshme për anëtarët e komunitetit dhe ngjarjet fetare. Na kontaktoni për çmime të detajuara dhe disponueshmëri.',
+    
+    // Guidelines
+    'booking-guidelines': 'Udhëzimet e Rezervimit',
+    'advance-booking': 'Rezervimi Paraprak',
+    'advance-booking-desc': 'Rezervoni datën tuaj të paktën 30 ditë përpara për disponueshmëri optimale',
+    'deposit-required': 'Kërkohet Depozita',
+    'deposit-desc': 'Kërkohet një depozitë e pakthyeshme për të siguruar datën e rezervimit tuaj',
+    'halal-requirements': 'Kërkesat Halal',
+    'halal-desc': 'Të gjitha ushqimet dhe pijet duhet të përputhen me udhëzimet ushqimore islame',
+    
+    // Form
+    'request-information': 'Kërkoni Informacion ose Rezervoni Ngjarjen Tuaj',
+    'form-response': 'Plotësoni formularin më poshtë dhe ne do t\'ju përgjigjemi brenda 24 orësh',
+    'full-name': 'Emri Juaj i Plotë',
+    'email-address': 'Adresa Juaj e Email-it',
+    'phone-number': 'Numri i Telefonit',
+    'select-event-type': 'Zgjidhni Llojin e Ngjarjes',
+    'wedding-reception': 'Pritje Dasme',
+    'engagement-party': 'Festë Fejese',
+    'anniversary-celebration': 'Festim Përvjetori',
+    'birthday-party': 'Festë Ditëlindeje',
+    'corporate-event': 'Ngjarje Korporative',
+    'community-gathering': 'Tubim Komunitare',
+    'religious-event': 'Ngjarje Fetare',
+    'other': 'Tjetër',
+    'guest-count': 'Numri i Pritur i Mysafirëve',
+    'select-duration': 'Zgjidhni Kohëzgjatjen e Qirasë',
+    'full-day-8hours': 'Dita e Plotë (8 orë)',
+    'extended-custom': 'E Zgjeruar/E Personalizuar',
+    'start-time': 'Ora e Preferuar e Fillimit',
+    'additional-info': 'Informacion shtesë për ngjarjen tuaj, kërkesa të veçanta ose pyetje...',
+    'community-member': 'Unë jam anëtar i komunitetit të Qendrës Islame Shqiptare',
+    'send-inquiry': 'Dërgo Kërkesën',
+    
+    // Footer
+    'footer-about': 'Mirësevini në Qendrën Islame Shqiptare, një vend adhurimi, të mësuari dhe komuniteti i rrënjosur në trashëgiminë e pasur shqiptare dhe traditën islame. Ne përpiqemi të krijojmë një hapësirë mikpritëse dhe gjithëpërfshirëse për çdo anëtar të komunitetit mysliman.',
+    'contact': 'Kontakti',
+    'location': 'Vendndodhja',
+    'social-media': 'Rrjetet Sociale',
+    'social-desc': 'Na ndiqni në Facebook për njoftimet dhe përditësimet më të fundit rreth ngjarjeve dhe programeve në Qendrën Islame Shqiptare.',
+    'newsletter': 'Buletini',
+    'newsletter-desc': 'Abonohuni në buletinin tonë për të marrë përditësime mbi ngjarjet, programet dhe lajmet e komunitetit direkt në email-in tuaj. Qëndroni të lidhur me Qendrën Islame Shqiptare.',
+    'email-placeholder': 'Vendosni email-in tuaj',
+    'subscribe': 'Abonohu',
+    'footer-copyright': '© 2025 aicod.org. Të gjitha të drejtat e rezervuara.<br>Ikonat janë marrë nga www.flaticon.com'
+}
+            };
 
-            menuToggle.addEventListener('click', function() {
-                navMenu.classList.toggle('show');
-                menuToggle.classList.toggle('active');
-            });
+// Merge the translations
+Object.assign(translations.sq);
 
-            // Close menu when clicking on a link (mobile)
-            const navLinks = document.querySelectorAll('#nav-menu a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    navMenu.classList.remove('show');
-                    menuToggle.classList.remove('active');
-                });
-            });
 
-            // Close menu when clicking outside (mobile)
-            document.addEventListener('click', function(event) {
-                const isClickInsideNav = navMenu.contains(event.target);
-                const isClickOnToggle = menuToggle.contains(event.target);
-                
-                if (!isClickInsideNav && !isClickOnToggle && navMenu.classList.contains('show')) {
-                    navMenu.classList.remove('show');
-                    menuToggle.classList.remove('active');
-                }
-            });
+// Language toggle functionality
+let currentLanguage = localStorage.getItem('language') || 'en';
 
-            // Show the first slide
-            document.addEventListener('DOMContentLoaded', function() {
-                const slide = document.querySelector('.mySlides');
-                if (slide) {
-                    slide.style.display = 'block';
-                }
-            });
+function setLanguage(lang) {
+    currentLanguage = lang;
+    localStorage.setItem('language', lang);
+    document.documentElement.lang = lang;
+    
+    // Update language buttons
+    document.querySelectorAll('.language-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+    
+    // Translate all elements
+    document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[lang][key]) {
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                element.value = translations[lang][key];
+            } else {
+                element.innerHTML = translations[lang][key];
+            }
+        }
+    });
+    
+    // Translate placeholders
+    document.querySelectorAll('[data-translate-placeholder]').forEach(element => {
+        const key = element.getAttribute('data-translate-placeholder');
+        if (translations[lang][key]) {
+            element.placeholder = translations[lang][key];
+        }
+    });
+    
+    // Translate select options
+    document.querySelectorAll('select option[data-translate]').forEach(option => {
+        const key = option.getAttribute('data-translate');
+        if (translations[lang][key]) {
+            option.textContent = translations[lang][key];
+        }
+    });
+}
 
-            // Handle window resize for mobile menu
-            window.addEventListener('resize', function() {
-                if (window.innerWidth > 768) {
-                    navMenu.classList.remove('show');
-                    menuToggle.classList.remove('active');
-                }
-            });
+// Initialize language on page load
+document.addEventListener('DOMContentLoaded', function() {
+    // Set initial language
+    setLanguage(currentLanguage);
+    
+    // Add click event listeners to language buttons
+    document.querySelectorAll('.language-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            setLanguage(this.dataset.lang);
+        });
+    });
+    
+    // Show the first slide
+    const slide = document.querySelector('.mySlides');
+    if (slide) {
+        slide.style.display = 'block';
+    }
+    
+    // Initialize Swiper
+    const swiper = new Swiper('.swiper', {
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+    });
+});
+
+// Mobile menu toggle functionality
+const menuToggle = document.getElementById('menu-toggle');
+const navMenu = document.getElementById('nav-menu');
+
+menuToggle.addEventListener('click', function() {
+    navMenu.classList.toggle('show');
+    menuToggle.classList.toggle('active');
+});
+
+// Close menu when clicking on a link (mobile)
+const navLinks = document.querySelectorAll('#nav-menu a');
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('show');
+        menuToggle.classList.remove('active');
+    });
+});
+
+// Close menu when clicking outside (mobile)
+document.addEventListener('click', function(event) {
+    const isClickInsideNav = navMenu.contains(event.target);
+    const isClickOnToggle = menuToggle.contains(event.target);
+    
+    if (!isClickInsideNav && !isClickOnToggle && navMenu.classList.contains('show')) {
+        navMenu.classList.remove('show');
+        menuToggle.classList.remove('active');
+    }
+});
+
+// Handle window resize for mobile menu
+window.addEventListener('resize', function() {
+    if (window.innerWidth > 768) {
+        navMenu.classList.remove('show');
+        menuToggle.classList.remove('active');
+    }
+});
         </script>
-    </body>
-</html>
+   

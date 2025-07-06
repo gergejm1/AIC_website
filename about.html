@@ -13,8 +13,20 @@
         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v22.0"></script>
         
         <div class="contacttop">
-            <p>19775 Harper Avenue, Harper Woods, MI 48225</p>
-            <p>(313)-884-6676&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;albislamct@aol.com</p>
+            <div class="contacttop-text">
+                <p>19775 Harper Avenue, Harper Woods, MI 48225</p>
+                <p>(313)-884-6676&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;albislamct@aol.com</p>
+            </div>
+            <div class="language-toggle">
+                <button class="language-btn active" data-lang="en">
+                    <span class="flag-icon">🇺🇸</span>
+                    <span>EN</span>
+                </button>
+                <button class="language-btn" data-lang="sq">
+                    <span class="flag-icon">🇦🇱</span>
+                    <span>AL</span>
+                </button>
+            </div>
         </div>
 
         <nav class="navbar">
@@ -29,22 +41,22 @@
             </button>
             
             <ul id="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="islam.html">What is Islam?</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="sundayschool.html">Programs & Activities</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="banquethall.html">Banquet Hall</a></li>
-                <li><a href="membership.html">Join Us</a></li>
-                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="index.html" data-translate="nav-home">Home</a></li>
+                <li><a href="about.html" data-translate="nav-about">About Us</a></li>
+                <li><a href="islam.html" data-translate="nav-islam">What is Islam?</a></li>
+                <li><a href="events.html" data-translate="nav-events">Events</a></li>
+                <li><a href="sundayschool.html" data-translate="nav-programs">Programs & Activities</a></li>
+                <li><a href="services.html" data-translate="nav-services">Services</a></li>
+                <li><a href="banquethall.html" data-translate="nav-banquet">Banquet Hall</a></li>
+                <li><a href="membership.html" data-translate="nav-join">Join Us</a></li>
+                <li><a href="contactus.html" data-translate="nav-contact">Contact Us</a></li>
             </ul>
             
             <form action="https://www.paypal.com/donate" method="post" target="_blank" class="donate-form">
                 <input type="hidden" name="hosted_button_id" value="LMWW6JLZ9N57L" />
                 <button type="submit" class="donate-btn" title="PayPal - The safer, easier way to pay online!">
                     <img src="images/donation.png" class="heart-icon" alt="Heart icon">
-                    Donate
+                    <span data-translate="donate">Donate</span>
                 </button>
             </form>
         </nav>
@@ -56,14 +68,14 @@
                 </div>
             </div>
             <div class="text-overlay">
-                <h1 class="banner-text">Our Journey</h1>
-                <h2 class="banner-subtext">From humble beginnings to a thriving spiritual center, discover our story.</h2>
+                <h1 class="banner-text" data-translate="banner-journey">Our Journey</h1>
+                <h2 class="banner-subtext" data-translate="banner-story">From humble beginnings to a thriving spiritual center, discover our story.</h2>
             </div>
         </div>
 
         <div class="timeline-header">
-            <h1>Timeline of the Albanian Islamic Center</h1>
-            <p>Explore the rich history and milestones of the Albanian Islamic Center, from its founding to its current role in the community.</p>
+            <h1 data-translate="timeline-title">Timeline of the Albanian Islamic Center</h1>
+            <p data-translate="timeline-description">Explore the rich history and milestones of the Albanian Islamic Center, from its founding to its current role in the community.</p>
         </div>    
 
         <div class="timeline-container">
@@ -72,43 +84,43 @@
             <div class="timeline-event" data-aos="fade-up" data-aos-delay="200">
                 <div class="top-text">1945</div>
                 <div class="circle"></div>
-                <div class="bottom-text">Albanian American Moslem Society founded in Detroit</div>
+                <div class="bottom-text" data-translate="timeline-1945">Albanian American Moslem Society founded in Detroit</div>
             </div>
 
             <div class="timeline-event" data-aos="fade-up" data-aos-delay="400">
                 <div class="top-text">1949</div>
                 <div class="circle"></div>
-                <div class="bottom-text">Imam Vehbi Ismail joins the community</div>
+                <div class="bottom-text" data-translate="timeline-1949">Imam Vehbi Ismail joins the community</div>
             </div>
 
             <div class="timeline-event" data-aos="fade-up" data-aos-delay="600">
                 <div class="top-text">1963</div>
                 <div class="circle"></div>
-                <div class="bottom-text">Center officially opens in Harper Woods</div>
+                <div class="bottom-text" data-translate="timeline-1963">Center officially opens in Harper Woods</div>
             </div>
 
             <div class="timeline-event" data-aos="fade-up" data-aos-delay="800">
                 <div class="top-text">1980s</div>
                 <div class="circle"></div>
-                <div class="bottom-text">Community expansion and cultural programs</div>
+                <div class="bottom-text" data-translate="timeline-1980s">Community expansion and cultural programs</div>
             </div>
 
             <div class="timeline-event" data-aos="fade-up" data-aos-delay="1000">   
                 <div class="top-text">1996</div>
                 <div class="circle"></div>
-                <div class="bottom-text">Imam Shuajb Gerguri becomes Imam</div>
+                <div class="bottom-text" data-translate="timeline-1996">Imam Shuajb Gerguri becomes Imam</div>
             </div>
 
             <div class="timeline-event" data-aos="fade-up" data-aos-delay="1200">
                 <div class="top-text">2020</div>
                 <div class="circle"></div>
-                <div class="bottom-text">Facility expansion and modernization</div>
+                <div class="bottom-text" data-translate="timeline-2020">Facility expansion and modernization</div>
             </div>
 
             <div class="timeline-event" data-aos="fade-up" data-aos-delay="1600">
-                <div class="top-text">Today</div>
+                <div class="top-text" data-translate="timeline-today-year">Today</div>
                 <div class="circle"></div>
-                <div class="bottom-text">Serving our growing Muslim community</div>
+                <div class="bottom-text" data-translate="timeline-today">Serving our growing Muslim community</div>
             </div>
         </div>
 
@@ -118,27 +130,14 @@
                     <img src="images/masjid.jpg" alt="Albanian Islamic Center" class="masjid-img">
                 </div>
                 <div class="columna2" data-aos="fade-left">
-                    <h1>About the Albanian American Moslem Society of Detroit</h1>
-                    <p>Founded in 1945 by a group of Albanian immigrants, the first location for the Albanian American Moslem Society was a recently converted Armenian Church in Highland Park, Michigan,
-                        They utilized that location up until 1963, when the Albanian Islamic Center in Harper Woods was established. 
-                       The Albanian Islamic Center stands as a testament to the enduring faith and unity of the Albanian-American 
-                        Muslim community. The Center officially opened its doors on November 3, 1963, becoming the 
-                         the first permanent home for Albanian American Muslims in the United States.</p>
+                    <h1 data-translate="about-society-title">About the Albanian American Moslem Society of Detroit</h1>
+                    <p data-translate="about-society-p1">Founded in 1945 by a group of Albanian immigrants, the first location for the Albanian American Moslem Society was a recently converted Armenian Church in Highland Park, Michigan, They utilized that location up until 1963, when the Albanian Islamic Center in Harper Woods was established. The Albanian Islamic Center stands as a testament to the enduring faith and unity of the Albanian-American Muslim community. The Center officially opened its doors on November 3, 1963, becoming the the first permanent home for Albanian American Muslims in the United States.</p>
                         
-                    <p>Designed by American architect Frank Beymer, the mosque features a distinctive Balkan 
-                        Ottoman-style minaret and a copper-colored dome, reflecting the cultural heritage of its 
-                        founders. </p>
+                    <p data-translate="about-society-p2">Designed by American architect Frank Beymer, the mosque features a distinctive Balkan Ottoman-style minaret and a copper-colored dome, reflecting the cultural heritage of its founders.</p>
                     
-                    <p>Imam Vehbi Ismail was a visionary leader  
-                        Under his leadership, the Center became a unifying space for worship, cultural preservation, and 
-                        political advocacy—especially for religious freedom during Albania's communist era.</p>
+                    <p data-translate="about-society-p3">Imam Vehbi Ismail was a visionary leader Under his leadership, the Center became a unifying space for worship, cultural preservation, and political advocacy—especially for religious freedom during Albania's communist era.</p>
                     
-                    <p>Today, the Albanian Islamic Center is led by Imam Shuajb Gerguri and continues to thrive as a center 
-                        of Islamic learning, spiritual development, and cultural unity. Under his leadership, the Center has undergone a significant expansion nearly tripling its size to enhance accessibility, update interior spaces, 
-                        and expand programming for youth and families.  The building now includes a large prayer hall, a fully equipped banquet facility, 
-                        classrooms, a kitchen, a gymnasium, and administrative offices—serving both religious and cultural  community needs. </p>
-                    
-
+                    <p data-translate="about-society-p4">Today, the Albanian Islamic Center is led by Imam Shuajb Gerguri and continues to thrive as a center of Islamic learning, spiritual development, and cultural unity. Under his leadership, the Center has undergone a significant expansion nearly tripling its size to enhance accessibility, update interior spaces, and expand programming for youth and families. The building now includes a large prayer hall, a fully equipped banquet facility, classrooms, a kitchen, a gymnasium, and administrative offices—serving both religious and cultural community needs.</p>
                 </div>
             </div>
         </div>
@@ -146,22 +145,11 @@
         <div class="Heritage">
             <div class="row">
                 <div class="columna11" data-aos="fade-right">
-                    <h1>Imam Vehbi Ismail</h1>
-                    <p>Imam Vehbi Ismail (1919–2008) was a renowned Islamic scholar, author, and the long-serving 
-                        spiritual leader of the Albanian Muslim community in North America. Born in Shkoder, 
-                        Albania, he was the son of the Grand Mufti, Haji Ismail Alkovaj, and began his religious
-                         education in Tirana before continuing at Al-Azhar University in Egypt, one of the most 
-                         prestigious centers of Islamic learning in the world.</p>
-                    <p>After World War II, due to the rise of Communism in Albania and the suppression of religion, 
-                        Imam Ismail remained in exile and ultimately made his way to the United States. In 1949, 
-                        he was invited by the Albanian Muslim community to lead and serve in their new home. 
-                        For over 60 years he served the community faithfully.
-                         With the Albanian
-                        Islamic Center being founded in 1963, he became its first imam. </p>
-                    <p>Imam Ismail authored/translated over 35 Islamic books.  His most famous work, <em>Muhammad, 
-                        The Last Prophet</em>, has been translated into multiple languages. </p>
-                    <p>Imam Ismail's legacy lives on in the Detroit community and beyond, as a symbol of faith, 
-                        scholarship, and service to Albanian Muslims in America.</p>
+                    <h1 data-translate="imam-vehbi-title">Imam Vehbi Ismail</h1>
+                    <p data-translate="imam-vehbi-p1">Imam Vehbi Ismail (1919–2008) was a renowned Islamic scholar, author, and the long-serving spiritual leader of the Albanian Muslim community in North America. Born in Shkoder, Albania, he was the son of the Grand Mufti, Haji Ismail Alkovaj, and began his religious education in Tirana before continuing at Al-Azhar University in Egypt, one of the most prestigious centers of Islamic learning in the world.</p>
+                    <p data-translate="imam-vehbi-p2">After World War II, due to the rise of Communism in Albania and the suppression of religion, Imam Ismail remained in exile and ultimately made his way to the United States. In 1949, he was invited by the Albanian Muslim community to lead and serve in their new home. For over 60 years he served the community faithfully. With the Albanian Islamic Center being founded in 1963, he became its first imam.</p>
+                    <p data-translate="imam-vehbi-p3">Imam Ismail authored/translated over 35 Islamic books. His most famous work, <em>Muhammad, The Last Prophet</em>, has been translated into multiple languages.</p>
+                    <p data-translate="imam-vehbi-p4">Imam Ismail's legacy lives on in the Detroit community and beyond, as a symbol of faith, scholarship, and service to Albanian Muslims in America.</p>
                 </div>
                 <div class="columna22" data-aos="fade-left">
                     <img src="images/ImamVehbi.jpg" alt="Imam Vehbi Ismail" class="column-img">
@@ -175,17 +163,10 @@
                      <img src="images/sheikj.jpg" alt="Imam Shuajb Gerguri" class="columnb-img">
                 </div>
                 <div class="columna2" data-aos="fade-left">
-                    <h1>Imam Shuajb Gerguri</h1>
-                    <p>Imam Shuajb Gerguri is the current imam of the Albanian Islamic Center in Harper Woods, Michigan. 
-                        He completed his religious education at the Religious highschool in Prishtine, Kosova and later 
-                        pursued further studies at The Islamic University of Medina in Saudia Arabia. He then continued his postgraduate at the Marygrove college, obtaining
-                    a Masters degree. </p>
-                    <p>In 1996, Imam Gerguri became an Imam  of the Albanian Islamic Center. 
-                        Under his leadership, the Center has improved in its capacity to serve the Albanian Muslim community and beyond. </p>
-                    <p>He has played a key role in promoting religious tolerance and understanding within the broader 
-                        American society while maintaining strong ties to the Albanian Muslim community. Imam Gerguri continues 
-                        to lead the Center with compassion and commitment to serving both spiritual and community needs.</p>
-                    <p></p>
+                    <h1 data-translate="imam-shuajb-title">Imam Shuajb Gerguri</h1>
+                    <p data-translate="imam-shuajb-p1">Imam Shuajb Gerguri is the current imam of the Albanian Islamic Center in Harper Woods, Michigan. He completed his religious education at the Religious highschool in Prishtine, Kosova and later pursued further studies at The Islamic University of Medina in Saudia Arabia. He then continued his postgraduate at the Marygrove college, obtaining a Masters degree.</p>
+                    <p data-translate="imam-shuajb-p2">In 1996, Imam Gerguri became an Imam of the Albanian Islamic Center. Under his leadership, the Center has improved in its capacity to serve the Albanian Muslim community and beyond.</p>
+                    <p data-translate="imam-shuajb-p3">He has played a key role in promoting religious tolerance and understanding within the broader American society while maintaining strong ties to the Albanian Muslim community. Imam Gerguri continues to lead the Center with compassion and commitment to serving both spiritual and community needs.</p>
                 </div>
             </div>
         </div>
@@ -193,19 +174,10 @@
         <div class="Leadership">
             <div class="row">
                 <div class="columna11" data-aos="fade-right"> 
-                    <h1>Community Leadership</h1>
-                    <p>The Albanian Islamic Center operates under the guidance of a dedicated board of directors who work 
-                        alongside Imam Gerguri to serve the community's spiritual and practical needs. The board consists 
-                        of committed community members who volunteer their time and expertise to ensure the Center's 
-                        continued growth and success.</p>
-                    <p>Our leadership team focuses on maintaining the mosque's operations, organizing community events, 
-                        overseeing educational programs, and fostering connections with the broader Muslim community in 
-                        Michigan and beyond. The Albanian Islamic Center has strong relationships with Albanian Muslim communities in the Balkans, even hosting many
-                        prominent leaders from Albania and Kosova. They work diligently to preserve Albanian cultural traditions while welcoming Muslims 
-                        from all backgrounds.</p>
-                    <p>The Center's approach to leadership emphasizes consultation (shura), transparency, and service to 
-                        Allah and the community. Regular board meetings ensure that decisions reflect the needs and values 
-                        of our diverse congregation while staying true to Islamic principles and Albanian heritage.</p>
+                    <h1 data-translate="leadership-title">Community Leadership</h1>
+                    <p data-translate="leadership-p1">The Albanian Islamic Center operates under the guidance of a dedicated board of directors who work alongside Imam Gerguri to serve the community's spiritual and practical needs. The board consists of committed community members who volunteer their time and expertise to ensure the Center's continued growth and success.</p>
+                    <p data-translate="leadership-p2">Our leadership team focuses on maintaining the mosque's operations, organizing community events, overseeing educational programs, and fostering connections with the broader Muslim community in Michigan and beyond. The Albanian Islamic Center has strong relationships with Albanian Muslim communities in the Balkans, even hosting many prominent leaders from Albania and Kosova. They work diligently to preserve Albanian cultural traditions while welcoming Muslims from all backgrounds.</p>
+                    <p data-translate="leadership-p3">The Center's approach to leadership emphasizes consultation (shura), transparency, and service to Allah and the community. Regular board meetings ensure that decisions reflect the needs and values of our diverse congregation while staying true to Islamic principles and Albanian heritage.</p>
                 </div>
             </div>
         </div>
@@ -215,99 +187,286 @@
             <div class="row">
                 <div class="support-text">
                     <img src="images/Logo.png" alt="Albanian Islamic Center Logo" class="logo-img">
-                    <p>Welcome to the Albanian Islamic Center, a place of worship, learning, and community rooted in 
-                        rich Albanian heritage and Islamic tradition. We strive to foster a welcoming and inclusive 
-                        space for every member of the Muslim community.</p>
+                    <p data-translate="footer-about">Welcome to the Albanian Islamic Center, a place of worship, learning, and community rooted in rich Albanian heritage and Islamic tradition. We strive to foster a welcoming and inclusive space for every member of the Muslim community.</p>
                     <a href="https://www.facebook.com/Albanianislamiccenter/?ref=embed_page#" class="social-media" target="_blank"> 
                         <img src="images/facebook.png" class="facebook-img">
                     </a>
                 </div>
                 <div class="contact-info">
-                    <h2>Contact</h2>
-                    <h3><img src="images/email.png" class="email-icon">Email Address</h3>
+                    <h2 data-translate="contact">Contact</h2>
+                    <h3><img src="images/email.png" class="email-icon"><span data-translate="email-address">Email Address</span></h3>
                     <p>albislamct@aol.com</p>
-                    <h3><img src="images/phone-call.png" class="phone-icon">Phone Number</h3>
+                    <h3><img src="images/phone-call.png" class="phone-icon"><span data-translate="phone-number">Phone Number</span></h3>
                     <p>(313)-884-6676</p>
-                    <h3><img src="images/pin.png" class="pin-icon">Location</h3>
+                    <h3><img src="images/pin.png" class="pin-icon"><span data-translate="location">Location</span></h3>
                     <p>19775 Harper Avenue, Harper Woods, MI 48225</p>
                 </div>
                 <div class="socials">
-                    <h2>Social Media</h2>
-                    <p>Follow us on Facebook for the latest announcements and updates about events and programs at 
-                        the Albanian Islamic Center.</p>
+                    <h2 data-translate="social-media">Social Media</h2>
+                    <p data-translate="social-desc">Follow us on Facebook for the latest announcements and updates about events and programs at the Albanian Islamic Center.</p>
                     <a href="https://www.facebook.com/Albanianislamiccenter/" class="social-media" target="_blank">
                         <img src="images/facebook.png" alt="Facebook" class="facebook-img">
                     </a>
                 </div>
                 <div class="newsletter">
-                    <h2>Newsletter</h2>
-                    <p>Subscribe to our newsletter to receive updates on events, programs, and community news directly 
-                        to your inbox. Stay connected with the Albanian Islamic Center.</p>
+                    <h2 data-translate="newsletter">Newsletter</h2>
+                    <p data-translate="newsletter-desc">Subscribe to our newsletter to receive updates on events, programs, and community news directly to your inbox. Stay connected with the Albanian Islamic Center.</p>
                     <form action="https://aol.us13.list-manage.com/subscribe/post?u=096bcfd7c98cb079bfb26df4f&amp;id=36db6b2f2f" method="post" novalidate>
-                        <input type="email" name="EMAIL" id="email" placeholder="Enter your email" required>
+                        <input type="email" name="EMAIL" id="email" placeholder="Enter your email" data-translate-placeholder="email-placeholder" required>
                         <div style="position: absolute; left: -5000px;" aria-hidden="true">
                             <input type="text" name="b_096bcfd7c98cb079bfb26df4f_36db6b2f2f" tabindex="-1" value="">
                         </div>
-                        <button type="submit">Subscribe</button>
+                        <button type="submit" data-translate="subscribe">Subscribe</button>
                     </form>
                 </div>
             </div>
         </div>
 
         <footer> 
-            <p>© 2025 aicod.org. All Rights Reserved.<br>
-            Icons made from www.flaticon.com</p>
+            <p data-translate="footer-copyright">© 2025 aicod.org. All Rights Reserved.<br>Icons made from www.flaticon.com</p>
         </footer>
 
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script src="webscripts.js"></script>
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
-            // Initialize AOS
-            AOS.init({
-                duration: 1000,
-                once: true,
-            });
+            // Translation data
+            const translations = {
+                en: {
+                    // Navigation (reused from index)
+                    'nav-home': 'Home',
+                    'nav-about': 'About Us',
+                    'nav-islam': 'What is Islam?',
+                    'nav-events': 'Events',
+                    'nav-programs': 'Programs & Activities',
+                    'nav-services': 'Services',
+                    'nav-banquet': 'Banquet Hall',
+                    'nav-join': 'Join Us',
+                    'nav-contact': 'Contact Us',
+                    'donate': 'Donate',
+                    
+                    // Banner
+                    'banner-journey': 'Our Journey',
+                    'banner-story': 'From humble beginnings to a thriving spiritual center, discover our story.',
+                    
+                    // Timeline
+                    'timeline-title': 'Timeline of the Albanian Islamic Center',
+                    'timeline-description': 'Explore the rich history and milestones of the Albanian Islamic Center, from its founding to its current role in the community.',
+                    'timeline-1945': 'Albanian American Moslem Society founded in Detroit',
+                    'timeline-1949': 'Imam Vehbi Ismail joins the community',
+                    'timeline-1963': 'Center officially opens in Harper Woods',
+                    'timeline-1980s': 'Community expansion and cultural programs',
+                    'timeline-1996': 'Imam Shuajb Gerguri becomes Imam',
+                    'timeline-2020': 'Facility expansion and modernization',
+                    'timeline-today-year': 'Today',
+                    'timeline-today': 'Serving our growing Muslim community',
+                    
+                    // About Society
+                    'about-society-title': 'About the Albanian American Moslem Society of Detroit',
+                    'about-society-p1': 'Founded in 1945 by a group of Albanian immigrants, the first location for the Albanian American Moslem Society was a recently converted Armenian Church in Highland Park, Michigan, They utilized that location up until 1963, when the Albanian Islamic Center in Harper Woods was established. The Albanian Islamic Center stands as a testament to the enduring faith and unity of the Albanian-American Muslim community. The Center officially opened its doors on November 3, 1963, becoming the the first permanent home for Albanian American Muslims in the United States.',
+                    'about-society-p2': 'Designed by American architect Frank Beymer, the mosque features a distinctive Balkan Ottoman-style minaret and a copper-colored dome, reflecting the cultural heritage of its founders.',
+                    'about-society-p3': 'Imam Vehbi Ismail was a visionary leader Under his leadership, the Center became a unifying space for worship, cultural preservation, and political advocacy—especially for religious freedom during Albania\'s communist era.',
+                    'about-society-p4': 'Today, the Albanian Islamic Center is led by Imam Shuajb Gerguri and continues to thrive as a center of Islamic learning, spiritual development, and cultural unity. Under his leadership, the Center has undergone a significant expansion nearly tripling its size to enhance accessibility, update interior spaces, and expand programming for youth and families. The building now includes a large prayer hall, a fully equipped banquet facility, classrooms, a kitchen, a gymnasium, and administrative offices—serving both religious and cultural community needs.',
+                    
+                    // Imam Vehbi
+                    'imam-vehbi-title': 'Imam Vehbi Ismail',
+                    'imam-vehbi-p1': 'Imam Vehbi Ismail (1919–2008) was a renowned Islamic scholar, author, and the long-serving spiritual leader of the Albanian Muslim community in North America. Born in Shkoder, Albania, he was the son of the Grand Mufti, Haji Ismail Alkovaj, and began his religious education in Tirana before continuing at Al-Azhar University in Egypt, one of the most prestigious centers of Islamic learning in the world.',
+                    'imam-vehbi-p2': 'After World War II, due to the rise of Communism in Albania and the suppression of religion, Imam Ismail remained in exile and ultimately made his way to the United States. In 1949, he was invited by the Albanian Muslim community to lead and serve in their new home. For over 60 years he served the community faithfully. With the Albanian Islamic Center being founded in 1963, he became its first imam.',
+                    'imam-vehbi-p3': 'Imam Ismail authored/translated over 35 Islamic books. His most famous work, <em>Muhammad, The Last Prophet</em>, has been translated into multiple languages.',
+                    'imam-vehbi-p4': 'Imam Ismail\'s legacy lives on in the Detroit community and beyond, as a symbol of faith, scholarship, and service to Albanian Muslims in America.',
+                    
+                    // Imam Shuajb
+                    'imam-shuajb-title': 'Imam Shuajb Gerguri',
+                    'imam-shuajb-p1': 'Imam Shuajb Gerguri is the current imam of the Albanian Islamic Center in Harper Woods, Michigan. He completed his religious education at the Religious highschool in Prishtine, Kosova and later pursued further studies at The Islamic University of Medina in Saudia Arabia. He then continued his postgraduate at the Marygrove college, obtaining a Masters degree.',
+                    'imam-shuajb-p2': 'In 1996, Imam Gerguri became an Imam of the Albanian Islamic Center. Under his leadership, the Center has improved in its capacity to serve the Albanian Muslim community and beyond.',
+                    'imam-shuajb-p3': 'He has played a key role in promoting religious tolerance and understanding within the broader American society while maintaining strong ties to the Albanian Muslim community. Imam Gerguri continues to lead the Center with compassion and commitment to serving both spiritual and community needs.',
+                    
+                    // Leadership
+                    'leadership-title': 'Community Leadership',
+                    'leadership-p1': 'The Albanian Islamic Center operates under the guidance of a dedicated board of directors who work alongside Imam Gerguri to serve the community\'s spiritual and practical needs. The board consists of committed community members who volunteer their time and expertise to ensure the Center\'s continued growth and success.',
+                    'leadership-p2': 'Our leadership team focuses on maintaining the mosque\'s operations, organizing community events, overseeing educational programs, and fostering connections with the broader Muslim community in Michigan and beyond. The Albanian Islamic Center has strong relationships with Albanian Muslim communities in the Balkans, even hosting many prominent leaders from Albania and Kosova. They work diligently to preserve Albanian cultural traditions while welcoming Muslims from all backgrounds.',
+                    'leadership-p3': 'The Center\'s approach to leadership emphasizes consultation (shura), transparency, and service to Allah and the community. Regular board meetings ensure that decisions reflect the needs and values of our diverse congregation while staying true to Islamic principles and Albanian heritage.',
+                    
+                    // Footer (reused from index)
+                    'footer-about': 'Welcome to the Albanian Islamic Center, a place of worship, learning, and community rooted in rich Albanian heritage and Islamic tradition. We strive to foster a welcoming and inclusive space for every member of the Muslim community.',
+                    'contact': 'Contact',
+                    'email-address': 'Email Address',
+                    'phone-number': 'Phone Number',
+                    'location': 'Location',
+                    'social-media': 'Social Media',
+                    'social-desc': 'Follow us on Facebook for the latest announcements and updates about events and programs at the Albanian Islamic Center.',
+                    'newsletter': 'Newsletter',
+                    'newsletter-desc': 'Subscribe to our newsletter to receive updates on events, programs, and community news directly to your inbox. Stay connected with the Albanian Islamic Center.',
+                    'email-placeholder': 'Enter your email',
+                    'subscribe': 'Subscribe',
+                    'footer-copyright': '© 2025 aicod.org. All Rights Reserved.<br>Icons made from www.flaticon.com'
+                },
+               sq: {
+    // Navigation
+    'nav-home': 'Ballina',
+    'nav-about': 'Rreth Nesh',
+    'nav-islam': 'Çfarë është Islami?',
+    'nav-events': 'Ngjarjet',
+    'nav-programs': 'Programet & Aktivitetet',
+    'nav-services': 'Shërbimet',
+    'nav-banquet': 'Salla e Dasmave',
+    'nav-join': 'Bashkohuni me Ne',
+    'nav-contact': 'Na Kontaktoni',
+    'donate': 'Dhuroni',
+    
+    // Banner
+    'banner-journey': 'Udhëtimi Ynë',
+    'banner-story': 'Nga fillime të përulura në një qendër shpirtërore që lulëzon, zbuloni historinë tonë.',
+    
+    // Timeline
+    'timeline-title': 'Kronologjia e Qendrës Islame Shqiptare',
+    'timeline-description': 'Eksploroni historinë e pasur dhe pikat kulmove të Qendrës Islame Shqiptare, nga themelimi i saj deri në rolin aktual në komunitet.',
+    'timeline-1945': 'Shoqëria Myslimane Shqiptaro-Amerikane themeluar në Detroit',
+    'timeline-1949': 'Imam Vehbi Ismail bashkohet me komunitetin',
+    'timeline-1963': 'Qendra hapet zyrtarisht në Harper Woods',
+    'timeline-1980s': 'Zgjerimi i komunitetit dhe programet kulturore',
+    'timeline-1996': 'Imam Shuajb Gerguri bëhet Imam',
+    'timeline-2020': 'Zgjerimi dhe modernizimi i ndërtesës',
+    'timeline-today-year': 'Sot',
+    'timeline-today': 'Duke shërbyer komunitetin tonë mysliman në rritje',
+    
+    // About Society
+    'about-society-title': 'Rreth Shoqërisë Myslimane Shqiptaro-Amerikane të Detroitit',
+    'about-society-p1': 'E themeluar në vitin 1945 nga një grup emigrantësh shqiptarë, vendodhja e parë e Shoqërisë Myslimane Shqiptaro-Amerikane ishte një Kishë Armene e konvertuar kohët e fundit në Highland Park, Michigan. Ata e përdorën atë vendodhje deri në vitin 1963, kur u themelua Qendra Islame Shqiptare në Harper Woods. Qendra Islame Shqiptare qëndron si një dëshmi e besimit të qëndrueshëm dhe unitetit të komunitetit mysliman shqiptaro-amerikan. Qendra hapi zyrtarisht dyert e saj më 3 nëntor 1963, duke u bërë shtëpia e parë e përhershme për myslimanët shqiptaro-amerikanë në Shtetet e Bashkuara.',
+    'about-society-p2': 'E dizajnuar nga arkitekti amerikan Frank Beymer, xhamia ka një minare të dallueshme në stilin balkanik osman dhe një kupolë me ngjyrë bakri, duke pasqyruar trashëgiminë kulturore të themeluesve të saj.',
+    'about-society-p3': 'Imam Vehbi Ismail ishte një lider vizionar. Nën udhëheqjen e tij, Qendra u bë një hapësirë bashkuese për adhurimin, ruajtjen kulturore dhe avokimin politik—veçanërisht për lirinë fetare gjatë epokës komuniste të Shqipërisë.',
+    'about-society-p4': 'Sot, Qendra Islame Shqiptare drejtohet nga Imam Shuajb Gerguri dhe vazhdon të lulëzojë si qendër e të mësuarit islam, zhvillimit shpirtëror dhe unitetit kulturor. Nën udhëheqjen e tij, Qendra ka pësuar një zgjerim të konsiderueshëm duke thuajse trefishuar madhësinë e saj për të përmirësuar aksesin, për të përditësuar hapësirat e brendshme dhe për të zgjeruar programimin për të rinjtë dhe familjet. Ndërtesa tani përfshin një sallë të madhe lutjeje, një objekt banketesh të pajisur plotësisht, klasa, një kuzhinë, një palestër dhe zyra administrative—duke shërbyer si nevojat fetare ashtu edhe ato kulturore të komunitetit.',
+    
+    // Imam Vehbi
+    'imam-vehbi-title': 'Imam Vehbi Ismail',
+    'imam-vehbi-p1': 'Imam Vehbi Ismail (1919–2008) ishte një dijetar i njohur islam, autor dhe udhëheqës shpirtëror shumëvjeçar i komunitetit mysliman shqiptar në Amerikën e Veriut. I lindur në Shkodër, Shqipëri, ai ishte djali i Kryemuftit, Haxhi Ismail Alkovaj, dhe filloi arsimin e tij fetar në Tiranë para se të vazhdonte në Universitetin Al-Azhar në Egjipt, njërin nga qendrat më prestigjioze të të mësuarit islam në botë.',
+    'imam-vehbi-p2': 'Pas Luftës së Dytë Botërore, për shkak të ngritjes së Komunizmit në Shqipëri dhe shtypjes së fesë, Imam Ismail mbeti në mërgim dhe përfundimisht arriti në Shtetet e Bashkuara. Në vitin 1949, ai u ftua nga komuniteti mysliman shqiptar për të udhëhequr dhe shërbyer në shtëpinë e tyre të re. Për më shumë se 60 vjet ai i shërbeu komunitetit me besnikëri. Me themelimin e Qendrës Islame Shqiptare në vitin 1963, ai u bë imami i parë i saj.',
+    'imam-vehbi-p3': 'Imam Ismail shkroi/përktheu mbi 35 libra islamë. Vepra e tij më e famshme, <em>Muhammedi, Profeti i Fundit</em>, është përkthyer në shumë gjuhë.',
+    'imam-vehbi-p4': 'Trashëgimia e Imam Ismail vazhdon të jetojë në komunitetin e Detroitit dhe më gjerë, si simbol i besimit, dijes dhe shërbimit ndaj myslimanëve shqiptarë në Amerikë.',
+    
+    // Imam Shuajb
+    'imam-shuajb-title': 'Imam Shuajb Gerguri',
+    'imam-shuajb-p1': 'Imam Shuajb Gerguri është imami aktual i Qendrës Islame Shqiptare në Harper Woods, Michigan. Ai e përfundoi arsimin e tij fetar në shkollën e mesme fetare në Prishtinë, Kosovë dhe më vonë ndjek studime të mëtejshme në Universitetin Islam të Medinës në Arabinë Saudite. Më pas ai vazhdoi studimet e tij pasuniversitare në kolegjin Marygrove, duke marrë një diplomë Master.',
+    'imam-shuajb-p2': 'Në vitin 1996, Imam Gerguri u bë Imam i Qendrës Islame Shqiptare. Nën udhëheqjen e tij, Qendra ka përmirësuar kapacitetin e saj për të shërbyer komunitetin mysliman shqiptar dhe më gjerë.',
+    'imam-shuajb-p3': 'Ai ka luajtur një rol kyç në promovimin e tolerancës fetare dhe mirëkuptimit brenda shoqërisë amerikane më të gjerë duke mbajtur lidhje të forta me komunitetin mysliman shqiptar. Imam Gerguri vazhdon të udhëheqë Qendrën me dhembshuri dhe përkushtim ndaj shërbimit të nevojave si shpirtërore ashtu edhe komunitare.',
+    
+    // Leadership
+    'leadership-title': 'Udhëheqja e Komunitetit',
+    'leadership-p1': 'Qendra Islame Shqiptare funksionon nën udhëzimin e një bordi të dedikuar drejtorësh që punojnë së bashku me Imam Gerguri për të shërbyer nevojat shpirtërore dhe praktike të komunitetit. Bordi përbëhet nga anëtarë të përkushtuar të komunitetit që vënë në dispozicion kohën dhe ekspertizën e tyre për të siguruar rritjen dhe suksesin e vazhdueshëm të Qendrës.',
+    'leadership-p2': 'Ekipi ynë i udhëheqjes fokusohet në mirëmbajtjen e operacioneve të xhamisë, organizimin e ngjarjeve komunitare, mbikëqyrjen e programeve arsimore dhe nxitjen e lidhjeve me komunitetin mysliman më të gjerë në Michigan dhe më gjerë. Qendra Islame Shqiptare ka marrëdhënie të forta me komunitetet myslimane shqiptare në Ballkan, madje pritjen e shumë liderëve të shquar nga Shqipëria dhe Kosova. Ata punojnë me zell për të ruajtur traditat kulturore shqiptare duke mirëpritur myslimanët nga të gjitha sfondet.',
+    'leadership-p3': 'Qasja e Qendrës ndaj udhëheqjes thekson konsultimin (shura), transparencën dhe shërbimin ndaj Allahut dhe komunitetit. Takimet e rregullta të bordit sigurojnë që vendimet të pasqyrojnë nevojat dhe vlerat e kongregacionit tonë të larmishëm duke mbetur besnik ndaj parimeve islame dhe trashëgimisë shqiptare.',
+    
+    // Footer
+    'footer-about': 'Mirësevini në Qendrën Islame Shqiptare, një vend adhurimi, të mësuari dhe komuniteti i rrënjosur në trashëgiminë e pasur shqiptare dhe traditën islame. Ne përpiqemi të krijojmë një hapësirë mikpritëse dhe gjithëpërfshirëse për çdo anëtar të komunitetit mysliman.',
+    'contact': 'Kontakti',
+    'email-address': 'Adresa e Email-it',
+    'phone-number': 'Numri i Telefonit',
+    'location': 'Vendndodhja',
+    'social-media': 'Rrjetet Sociale',
+    'social-desc': 'Na ndiqni në Facebook për njoftimet dhe përditësimet më të fundit rreth ngjarjeve dhe programeve në Qendrën Islame Shqiptare.',
+    'newsletter': 'Buletini',
+    'newsletter-desc': 'Abonohuni në buletinin tonë për të marrë përditësime mbi ngjarjet, programet dhe lajmet e komunitetit direkt në email-in tuaj. Qëndroni të lidhur me Qendrën Islame Shqiptare.',
+    'email-placeholder': 'Vendosni email-in tuaj',
+    'subscribe': 'Abonohu',
+    'footer-copyright': '© 2025 aicod.org. Të gjitha të drejtat e rezervuara.<br>Ikonat janë marrë nga www.flaticon.com'
+}
 
-            // Mobile menu toggle functionality
-            const menuToggle = document.getElementById('menu-toggle');
-            const navMenu = document.getElementById('nav-menu');
+            };
+// Merge the translations
+Object.assign(translations.sq);
 
-            menuToggle.addEventListener('click', function() {
-                navMenu.classList.toggle('show');
-                menuToggle.classList.toggle('active');
-            });
 
-            // Close menu when clicking on a link (mobile)
-            const navLinks = document.querySelectorAll('#nav-menu a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    navMenu.classList.remove('show');
-                    menuToggle.classList.remove('active');
-                });
-            });
 
-            // Close menu when clicking outside (mobile)
-            document.addEventListener('click', function(event) {
-                const isClickInsideNav = navMenu.contains(event.target);
-                const isClickOnToggle = menuToggle.contains(event.target);
-                
-                if (!isClickInsideNav && !isClickOnToggle && navMenu.classList.contains('show')) {
-                    navMenu.classList.remove('show');
-                    menuToggle.classList.remove('active');
-                }
-            });
+// Language toggle functionality
+let currentLanguage = localStorage.getItem('language') || 'en';
 
-            // Handle window resize for mobile menu
-            window.addEventListener('resize', function() {
-                if (window.innerWidth > 768) {
-                    navMenu.classList.remove('show');
-                    menuToggle.classList.remove('active');
-                }
-            });
+function setLanguage(lang) {
+    currentLanguage = lang;
+    localStorage.setItem('language', lang);
+    document.documentElement.lang = lang;
+    
+    // Update language buttons
+    document.querySelectorAll('.language-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+    
+    // Translate all elements
+    document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[lang][key]) {
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                element.value = translations[lang][key];
+            } else {
+                element.innerHTML = translations[lang][key];
+            }
+        }
+    });
+    
+    // Translate placeholders
+    document.querySelectorAll('[data-translate-placeholder]').forEach(element => {
+        const key = element.getAttribute('data-translate-placeholder');
+        if (translations[lang][key]) {
+            element.placeholder = translations[lang][key];
+        }
+    });
+}
 
-            // Show the first slide
-            document.querySelector('.mySlides').style.display = 'block';
+// Initialize language on page load
+document.addEventListener('DOMContentLoaded', function() {
+    // Set initial language
+    setLanguage(currentLanguage);
+    
+    // Add click event listeners to language buttons
+    document.querySelectorAll('.language-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            setLanguage(this.dataset.lang);
+        });
+    });
+    
+    // Initialize AOS
+    AOS.init({
+        duration: 1000,
+        once: true,
+    });
+
+    // Mobile menu toggle functionality
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    menuToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('show');
+        menuToggle.classList.toggle('active');
+    });
+
+    // Close menu when clicking on a link (mobile)
+    const navLinks = document.querySelectorAll('#nav-menu a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('show');
+            menuToggle.classList.remove('active');
+        });
+    });
+
+    // Close menu when clicking outside (mobile)
+    document.addEventListener('click', function(event) {
+        const isClickInsideNav = navMenu.contains(event.target);
+        const isClickOnToggle = menuToggle.contains(event.target);
+        
+        if (!isClickInsideNav && !isClickOnToggle && navMenu.classList.contains('show')) {
+            navMenu.classList.remove('show');
+            menuToggle.classList.remove('active');
+        }
+    });
+
+    // Handle window resize for mobile menu
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            navMenu.classList.remove('show');
+            menuToggle.classList.remove('active');
+        }
+    });
+
+    // Show the first slide
+    document.querySelector('.mySlides').style.display = 'block';
+});
         </script>
-    </body>
-</html>
+ 

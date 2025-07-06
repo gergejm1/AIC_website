@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Albanian Islamic Center - Events</title>
         <link rel="stylesheet" href="Style-Sheets/events-styles.css">
+       
     </head>
 
     <body>
@@ -12,8 +13,20 @@
         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v22.0"></script>
         
         <div class="contacttop">
-            <p>19775 Harper Avenue, Harper Woods, MI 48225</p>
-            <p>(313)-884-6676&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;albislamct@aol.com</p>
+            <div class="contacttop-text">
+                <p>19775 Harper Avenue, Harper Woods, MI 48225</p>
+                <p>(313)-884-6676&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;albislamct@aol.com</p>
+            </div>
+            <div class="language-toggle">
+                <button class="language-btn active" data-lang="en">
+                    <span class="flag-icon">🇺🇸</span>
+                    <span>EN</span>
+                </button>
+                <button class="language-btn" data-lang="sq">
+                    <span class="flag-icon">🇦🇱</span>
+                    <span>AL</span>
+                </button>
+            </div>
         </div>
 
         <nav class="navbar">
@@ -28,22 +41,22 @@
             </button>
             
             <ul id="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="islam.html">What is Islam?</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="sundayschool.html">Programs & Activities</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="banquethall.html">Banquet Hall</a></li>
-                <li><a href="membership.html">Join Us</a></li>
-                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="index.html" data-translate="nav-home">Home</a></li>
+                <li><a href="about.html" data-translate="nav-about">About Us</a></li>
+                <li><a href="islam.html" data-translate="nav-islam">What is Islam?</a></li>
+                <li><a href="events.html" data-translate="nav-events">Events</a></li>
+                <li><a href="sundayschool.html" data-translate="nav-programs">Programs & Activities</a></li>
+                <li><a href="services.html" data-translate="nav-services">Services</a></li>
+                <li><a href="banquethall.html" data-translate="nav-banquet">Banquet Hall</a></li>
+                <li><a href="membership.html" data-translate="nav-join">Join Us</a></li>
+                <li><a href="contactus.html" data-translate="nav-contact">Contact Us</a></li>
             </ul>
             
             <form action="https://www.paypal.com/donate" method="post" target="_blank" class="donate-form">
                 <input type="hidden" name="hosted_button_id" value="LMWW6JLZ9N57L" />
                 <button type="submit" class="donate-btn" title="PayPal - The safer, easier way to pay online!">
                     <img src="images/donation.png" class="heart-icon" alt="Heart icon">
-                    Donate
+                    <span data-translate="donate">Donate</span>
                 </button>
             </form>
         </nav>
@@ -55,20 +68,20 @@
                 </div>
             </div>
             <div class="text-overlay">
-                <h1 class="banner-text">Events</h1>
-                <h2 class="banner-subtext">Explore our celebrations, community dinners, national events, and more.</h2>
+                <h1 class="banner-text" data-translate="banner-events">Events</h1>
+                <h2 class="banner-subtext" data-translate="banner-explore-events">Explore our celebrations, community dinners, national events, and more.</h2>
             </div>
         </div>
 
         
         <div class="events-container">
-            <h1 class="section-title">Our Community Events</h1>
-            <p class="section-subtitle">Join us for prayer, celebration, and community gatherings throughout the year</p>
+            <h1 class="section-title" data-translate="events-title">Our Community Events</h1>
+            <p class="section-subtitle" data-translate="events-subtitle">Join us for prayer, celebration, and community gatherings throughout the year</p>
 
             <!-- Tab Navigation -->
             <div class="event-tabs">
-                <button class="tab-button active" onclick="showTab('prayers')">Prayer Events</button>
-                <button class="tab-button" onclick="showTab('dinners')">Community Events</button>
+                <button class="tab-button active" onclick="showTab('prayers')" data-translate="tab-prayers">Prayer Events</button>
+                <button class="tab-button" onclick="showTab('dinners')" data-translate="tab-dinners">Community Events</button>
             </div>
 
             <!-- Prayer Events Tab -->
@@ -78,16 +91,16 @@
                     <div class="event-card">
                         <img src="images/juumah.jpeg" class="event-image">
                         <div class="event-content">
-                            <h3 class="event-title">Jumu'ah Prayer</h3>
+                            <h3 class="event-title" data-translate="jumuah-title">Jumu'ah Prayer</h3>
                             <div class="event-time">
-                                <span>Every Friday at 12:45/1:45 PM depending on time changes</span>
+                                <span data-translate="jumuah-time">Every Friday at 12:45/1:45 PM depending on time changes</span>
                             </div>
-                            <div class="event-details">
+                            <div class="event-details" data-translate="jumuah-details">
                                 Join us for weekly congregational prayer at 19775 Harper Ave, Harper Woods, MI 48225.
                             </div>
                             <div class="event-highlight">
-                                <strong>Khutba:</strong> First half in Albanian, second half in English<br>
-                                <strong>Note:</strong> Please arrive early. Parking available on-site.
+                                <strong data-translate="khutba-label">Khutba:</strong> <span data-translate="khutba-desc">First half in Albanian, second half in English</span><br>
+                                <strong data-translate="note-label">Note:</strong> <span data-translate="jumuah-note">Please arrive early. Parking available on-site.</span>
                             </div>
                         </div>
                     </div>
@@ -96,16 +109,16 @@
                     <div class="event-card">
                         <img src="images/prayer-eid.jpg" class="event-image">
                         <div class="event-content">
-                            <h3 class="event-title">Eid Prayers</h3>
+                            <h3 class="event-title" data-translate="eid-prayers-title">Eid Prayers</h3>
                             <div class="event-time">
-                                <span>Eid Days at 9:00 AM</span>
+                                <span data-translate="eid-prayers-time">Eid Days at 9:00 AM</span>
                             </div>
-                            <div class="event-details">
+                            <div class="event-details" data-translate="eid-prayers-details">
                                 Celebrate Eid Al-Fitr & Eid Al-Adha with our community. Prayer followed by a khutba.
                             </div>
                             <div class="event-highlight">
-                                <strong>Program:</strong> Prayer → Khutba (Albanian/English) → Community Fellowship<br>
-                                <strong>Bring:</strong> Your family for this blessed celebration!
+                                <strong data-translate="program-label">Program:</strong> <span data-translate="eid-program">Prayer → Khutba (Albanian/English) → Community Fellowship</span><br>
+                                <strong data-translate="bring-label">Bring:</strong> <span data-translate="eid-bring">Your family for this blessed celebration!</span>
                             </div>
                         </div>
                     </div>
@@ -114,16 +127,16 @@
                     <div class="event-card">
                         <img src="images/taraweeh.jpg" class="event-image">
                         <div class="event-content">
-                            <h3 class="event-title">Taraweeh Prayer</h3>
+                            <h3 class="event-title" data-translate="taraweeh-title">Taraweeh Prayer</h3>
                             <div class="event-time">
-                                <span>Nightly during Ramadan</span>
+                                <span data-translate="taraweeh-time">Nightly during Ramadan</span>
                             </div>
-                            <div class="event-details">
+                            <div class="event-details" data-translate="taraweeh-details">
                                 Special night prayers throughout the blessed month of Ramadan. 
                             </div>
                             <div class="event-highlight">
-                                <strong>Time:</strong> After Isha prayer<br>
-                                <strong>Note:</strong> Check our prayer calendar for exact Isha times
+                                <strong data-translate="time-label">Time:</strong> <span data-translate="taraweeh-time-desc">After Isha prayer</span><br>
+                                <strong data-translate="note-label">Note:</strong> <span data-translate="taraweeh-note">Check our prayer calendar for exact Isha times</span>
                             </div>
                         </div>
                     </div>
@@ -133,27 +146,24 @@
             <!-- Dinner Events Tab -->
             <div id="dinners" class="tab-content">
                 <div class="events-grid">
-
-
-                                        <!-- Eid Al-Fitr Dinner -->
+                    <!-- Eid Al-Fitr Dinner -->
                     <div class="event-card">
                         <img src="images/Eid-Al-Fitr.jpg" class="event-image">
                         <div class="event-content">
-                            <h3 class="event-title">Eid Al-Fitr Dinner</h3>
+                            <h3 class="event-title" data-translate="eid-fitr-dinner-title">Eid Al-Fitr Dinner</h3>
                             <div class="event-time dinner-time">
-                                <span>Doors: 5PM | Program: 6PM</span>
+                                <span data-translate="dinner-time-doors">Doors: 5PM | Program: 6PM</span>
                             </div>
-                            <div class="event-details">
+                            <div class="event-details" data-translate="eid-fitr-dinner-details">
                                 Join us for our annual Eid Al-Fitr celebration dinner with inspiring speeches, potential guest speakers, beautiful nasheed performances, Quran recitations by our students, and community fellowship.
                             </div>
                             <div class="event-highlight">
-                                <strong>Tickets:</strong> Purchase online or by phone<br>
-                                <strong>Call:</strong> 313-884-6676 for reservations<br>
-                                
+                                <strong data-translate="tickets-label">Tickets:</strong> <span data-translate="tickets-info">Purchase online or by phone</span><br>
+                                <strong data-translate="call-label">Call:</strong> <span>313-884-6676</span> <span data-translate="reservations">for reservations</span><br>
                             </div>
                             <!-- Eventbrite Widget for Eid Al-Fitr Dinner -->
                             <noscript><a href="https://www.eventbrite.com/e/eid-al-fitr-dinner-tickets-1445349532359" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a></noscript>
-                            <button id="eventbrite-widget-modal-trigger-1445349532359" type="button">Buy Tickets</button>
+                            <button id="eventbrite-widget-modal-trigger-1445349532359" type="button" data-translate="buy-tickets">Buy Tickets</button>
                         </div>
                     </div>
 
@@ -161,43 +171,41 @@
                     <div class="event-card">
                         <img src="images/eid image.png" class="event-image">
                         <div class="event-content">
-                            <h3 class="event-title">Eid Al-Adha Dinner</h3>
+                            <h3 class="event-title" data-translate="eid-adha-dinner-title">Eid Al-Adha Dinner</h3>
                             <div class="event-time dinner-time">
-                                <span>Doors: 5PM | Program: 6PM</span>
+                                <span data-translate="dinner-time-doors">Doors: 5PM | Program: 6PM</span>
                             </div>
-                            <div class="event-details">
+                            <div class="event-details" data-translate="eid-adha-dinner-details">
                                 Celebrate Eid Al-Adha with a special community dinner featuring speeches, guest speakers, nasheed performances by Sunday school children, Quran recitations, and delicious dinner.
                             </div>
                             <div class="event-highlight">
-                                <strong>Tickets:</strong> Purchase online or by phone<br>
-                                <strong>Call:</strong> 313-884-6676 for reservations<br>
+                                <strong data-translate="tickets-label">Tickets:</strong> <span data-translate="tickets-info">Purchase online or by phone</span><br>
+                                <strong data-translate="call-label">Call:</strong> <span>313-884-6676</span> <span data-translate="reservations">for reservations</span><br>
                             </div>
                             <!-- Eventbrite Widget for Eid Al-Adha Dinner -->
                             <noscript><a href="https://www.eventbrite.com/e/eid-al-adha-dinner-tickets-1445349422029" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a></noscript>
-                            <button id="eventbrite-widget-modal-trigger-1445349422029" type="button">Buy Tickets</button>
+                            <button id="eventbrite-widget-modal-trigger-1445349422029" type="button" data-translate="buy-tickets">Buy Tickets</button>
                         </div>
                     </div>
-
-
 
                     <!-- Albania Independence Day -->
                     <div class="event-card">
                         <img src="images/Abania-Independence.jpg" class="event-image">
                         <div class="event-content">
-                            <h3 class="event-title">Albania Independence Day</h3>
+                            <h3 class="event-title" data-translate="albania-independence-title">Albania Independence Day</h3>
                             <div class="event-time dinner-time">
-                                <span>Doors: 5PM | Program: 6PM</span>
+                                <span data-translate="dinner-time-doors">Doors: 5PM | Program: 6PM</span>
                             </div>
-                            <div class="event-details">
+                            <div class="event-details" data-translate="albania-independence-details">
                                 Celebrate Albanian heritage and independence with traditional dinner, cultural programs, and community gathering.
                             </div>
                             <div class="event-highlight">
-                                <strong>Tickets:</strong> Purchase online or by phone<br>
-                                <strong>Call:</strong> 313-884-6676 for reservations<br>
+                                <strong data-translate="tickets-label">Tickets:</strong> <span data-translate="tickets-info">Purchase online or by phone</span><br>
+                                <strong data-translate="call-label">Call:</strong> <span>313-884-6676</span> <span data-translate="reservations">for reservations</span><br>
                             </div>
                             <!-- Eventbrite Widget for Albania Independence Day -->
                             <noscript><a href="https://www.eventbrite.com/e/albania-independence-day-tickets-1425429099809" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a></noscript>
-                            <button id="eventbrite-widget-modal-trigger-1425429099809" type="button">Buy Tickets</button>
+                            <button id="eventbrite-widget-modal-trigger-1425429099809" type="button" data-translate="buy-tickets">Buy Tickets</button>
                         </div>
                     </div>
 
@@ -205,20 +213,20 @@
                     <div class="event-card">
                         <img src="images/Kosovo-Independence.jpg" class="event-image">
                         <div class="event-content">
-                            <h3 class="event-title">Kosovo Independence Day</h3>
+                            <h3 class="event-title" data-translate="kosovo-independence-title">Kosovo Independence Day</h3>
                             <div class="event-time dinner-time">
-                                <span>Doors: 6PM | Program: 7PM</span>
+                                <span data-translate="kosovo-dinner-time">Doors: 6PM | Program: 7PM</span>
                             </div>
-                            <div class="event-details">
+                            <div class="event-details" data-translate="kosovo-independence-details">
                                 Honor Kosovo's independence with an evening of culture, community, and traditional cuisine.
                             </div>
                             <div class="event-highlight">
-                                <strong>Tickets:</strong> Purchase online or by phone<br>
-                                <strong>Call:</strong> 313-884-6676 for reservations<br>
+                                <strong data-translate="tickets-label">Tickets:</strong> <span data-translate="tickets-info">Purchase online or by phone</span><br>
+                                <strong data-translate="call-label">Call:</strong> <span>313-884-6676</span> <span data-translate="reservations">for reservations</span><br>
                             </div>
                             <!-- Eventbrite Widget for Kosovo Independence Day -->
                             <noscript><a href="https://www.eventbrite.com/e/kosovo-independence-day-tickets-1439726032319" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a></noscript>
-                            <button id="eventbrite-widget-modal-trigger-1439726032319" type="button">Buy Tickets</button>
+                            <button id="eventbrite-widget-modal-trigger-1439726032319" type="button" data-translate="buy-tickets">Buy Tickets</button>
                         </div>
                     </div>
 
@@ -226,17 +234,17 @@
                     <div class="event-card">
                         <img src="images/Iftar.jpg" class="event-image">
                         <div class="event-content">
-                            <h3 class="event-title">Weekly Ramadan Iftars</h3>
+                            <h3 class="event-title" data-translate="iftar-title">Weekly Ramadan Iftars</h3>
                             <div class="event-time dinner-time">
-                                <span>Every Sunday in Ramadan</span>
+                                <span data-translate="iftar-time">Every Sunday in Ramadan</span>
                             </div>
-                            <div class="event-details">
+                            <div class="event-details" data-translate="iftar-details">
                                 Free community iftars every Sunday during Ramadan. Open to all - no tickets required!
                             </div>
                             <div class="event-highlight">
-                                <strong>Program:</strong> Iftar at Maghrib → Lecture → Taraweeh<br>
-                                <strong>Sponsorship:</strong> Call 313-884-6676<br>
-                                <strong>Cost:</strong> FREE - All welcome!
+                                <strong data-translate="program-label">Program:</strong> <span data-translate="iftar-program">Iftar at Maghrib → Lecture → Taraweeh</span><br>
+                                <strong data-translate="sponsorship-label">Sponsorship:</strong> <span data-translate="sponsorship-call">Call 313-884-6676</span><br>
+                                <strong data-translate="cost-label">Cost:</strong> <span data-translate="iftar-cost">FREE - All welcome!</span>
                             </div>
                         </div>
                     </div>
@@ -245,17 +253,17 @@
                     <div class="event-card">
                         <img src="images/important.jpg" class="event-image">
                         <div class="event-content">
-                            <h3 class="event-title">Special Guests & Speakers</h3>
+                            <h3 class="event-title" data-translate="speakers-title">Special Guests & Speakers</h3>
                             <div class="event-time dinner-time">
-                                <span>Throughout the Year</span>
+                                <span data-translate="speakers-time">Throughout the Year</span>
                             </div>
-                            <div class="event-details">
+                            <div class="event-details" data-translate="speakers-details">
                                 We host distinguished scholars, imams, and prominent figures from the Albanian and Muslim world, including presidents, prime ministers, and religious leaders.
                             </div>
                             <div class="event-highlight">
-                                <strong>Past Guests:</strong> Leaders from Albania & Kosovo<br>
-                                <strong>Stay Updated:</strong> Follow our Facebook page<br>
-                                <strong>Info:</strong> Join our mailing list
+                                <strong data-translate="past-guests-label">Past Guests:</strong> <span data-translate="past-guests">Leaders from Albania & Kosovo</span><br>
+                                <strong data-translate="stay-updated-label">Stay Updated:</strong> <span data-translate="follow-facebook">Follow our Facebook page</span><br>
+                                <strong data-translate="info-label">Info:</strong> <span data-translate="join-mailing">Join our mailing list</span>
                             </div>
                         </div>
                     </div>
@@ -268,161 +276,414 @@
             <div class="row">
                 <div class="support-text">
                     <img src="images/Logo.png" alt="Albanian Islamic Center Logo" class="logo-img">
-                    <p>Welcome to the Albanian Islamic Center, a place of worship, learning, and community rooted in 
-                        rich Albanian heritage and Islamic tradition. We strive to foster a welcoming and inclusive 
-                        space for every member of the Muslim community.</p>
+                    <p data-translate="footer-about">Welcome to the Albanian Islamic Center, a place of worship, learning, and community rooted in rich Albanian heritage and Islamic tradition. We strive to foster a welcoming and inclusive space for every member of the Muslim community.</p>
                     <a href="https://www.facebook.com/Albanianislamiccenter/?ref=embed_page#" class="social-media" target="_blank"> 
                         <img src="images/facebook.png" class="facebook-img">
                     </a>
                 </div>
                 <div class="contact-info">
-                    <h2>Contact</h2>
-                    <h3><img src="images/email.png" class="email-icon">Email Address</h3>
+                    <h2 data-translate="contact">Contact</h2>
+                    <h3><img src="images/email.png" class="email-icon"><span data-translate="email-address">Email Address</span></h3>
                     <p>albislamct@aol.com</p>
-                    <h3><img src="images/phone-call.png" class="phone-icon">Phone Number</h3>
+                    <h3><img src="images/phone-call.png" class="phone-icon"><span data-translate="phone-number">Phone Number</span></h3>
                     <p>(313)-884-6676</p>
-                    <h3><img src="images/pin.png" class="pin-icon">Location</h3>
+                    <h3><img src="images/pin.png" class="pin-icon"><span data-translate="location">Location</span></h3>
                     <p>19775 Harper Avenue, Harper Woods, MI 48225</p>
                 </div>
                 <div class="socials">
-                    <h2>Social Media</h2>
-                    <p>Follow us on Facebook for the latest announcements and updates about events and programs at 
-                        the Albanian Islamic Center.</p>
+                    <h2 data-translate="social-media">Social Media</h2>
+                    <p data-translate="social-desc">Follow us on Facebook for the latest announcements and updates about events and programs at the Albanian Islamic Center.</p>
                     <a href="https://www.facebook.com/Albanianislamiccenter/" class="social-media" target="_blank">
                         <img src="images/facebook.png" alt="Facebook" class="facebook-img">
                     </a>
                 </div>
                 <div class="newsletter">
-                    <h2>Newsletter</h2>
-                    <p>Subscribe to our newsletter to receive updates on events, programs, and community news directly 
-                        to your inbox. Stay connected with the Albanian Islamic Center.</p>
+                    <h2 data-translate="newsletter">Newsletter</h2>
+                    <p data-translate="newsletter-desc">Subscribe to our newsletter to receive updates on events, programs, and community news directly to your inbox. Stay connected with the Albanian Islamic Center.</p>
                     <form action="https://aol.us13.list-manage.com/subscribe/post?u=096bcfd7c98cb079bfb26df4f&amp;id=36db6b2f2f" method="post" novalidate>
-                        <input type="email" name="EMAIL" id="email" placeholder="Enter your email" required>
+                        <input type="email" name="EMAIL" id="email" placeholder="Enter your email" data-translate-placeholder="email-placeholder" required>
                         <div style="position: absolute; left: -5000px;" aria-hidden="true">
                             <input type="text" name="b_096bcfd7c98cb079bfb26df4f_36db6b2f2f" tabindex="-1" value="">
                         </div>
-                        <button type="submit">Subscribe</button>
+                        <button type="submit" data-translate="subscribe">Subscribe</button>
                     </form>
                 </div>
             </div>
         </div>
 
         <footer> 
-            <p>© 2025 aicod.org. All Rights Reserved.<br>
-            Icons made from www.flaticon.com</p>
+            <p data-translate="footer-copyright">© 2025 aicod.org. All Rights Reserved.<br>Icons made from www.flaticon.com</p>
         </footer>
 
         <!-- Eventbrite Scripts -->
         <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
         <script type="text/javascript">
-            // Mobile menu toggle functionality
-            const menuToggle = document.getElementById('menu-toggle');
-            const navMenu = document.getElementById('nav-menu');
+            // Translation data
+            const translations = {
+                en: {
+                    // Navigation
+                    'nav-home': 'Home',
+                    'nav-about': 'About Us',
+                    'nav-islam': 'What is Islam?',
+                    'nav-events': 'Events',
+                    'nav-programs': 'Programs & Activities',
+                    'nav-services': 'Services',
+                    'nav-banquet': 'Banquet Hall',
+                    'nav-join': 'Join Us',
+                    'nav-contact': 'Contact Us',
+                    'donate': 'Donate',
+                    
+                    // Banner
+                    'banner-events': 'Events',
+                    'banner-explore-events': 'Explore our celebrations, community dinners, national events, and more.',
+                    
+                    // Events Section
+                    'events-title': 'Our Community Events',
+                    'events-subtitle': 'Join us for prayer, celebration, and community gatherings throughout the year',
+                    
+                    // Tabs
+                    'tab-prayers': 'Prayer Events',
+                    'tab-dinners': 'Community Events',
+                    
+                    // Prayer Events
+                    'jumuah-title': 'Jumu\'ah Prayer',
+                    'jumuah-time': 'Every Friday at 12:45/1:45 PM depending on time changes',
+                    'jumuah-details': 'Join us for weekly congregational prayer at 19775 Harper Ave, Harper Woods, MI 48225.',
+                    'khutba-label': 'Khutba:',
+                    'khutba-desc': 'First half in Albanian, second half in English',
+                    'note-label': 'Note:',
+                    'jumuah-note': 'Please arrive early. Parking available on-site.',
+                    
+                    'eid-prayers-title': 'Eid Prayers',
+                    'eid-prayers-time': 'Eid Days at 9:00 AM',
+                    'eid-prayers-details': 'Celebrate Eid Al-Fitr & Eid Al-Adha with our community. Prayer followed by a khutba.',
+                    'program-label': 'Program:',
+                    'eid-program': 'Prayer → Khutba (Albanian/English) → Community Fellowship',
+                    'bring-label': 'Bring:',
+                    'eid-bring': 'Your family for this blessed celebration!',
+                    
+                    'taraweeh-title': 'Taraweeh Prayer',
+                    'taraweeh-time': 'Nightly during Ramadan',
+                    'taraweeh-details': 'Special night prayers throughout the blessed month of Ramadan.',
+                    'time-label': 'Time:',
+                    'taraweeh-time-desc': 'After Isha prayer',
+                    'taraweeh-note': 'Check our prayer calendar for exact Isha times',
+                    
+                    // Dinner Events
+                    'eid-fitr-dinner-title': 'Eid Al-Fitr Dinner',
+                    'dinner-time-doors': 'Doors: 5PM | Program: 6PM',
+                    'eid-fitr-dinner-details': 'Join us for our annual Eid Al-Fitr celebration dinner with inspiring speeches, potential guest speakers, beautiful nasheed performances, Quran recitations by our students, and community fellowship.',
+                    'tickets-label': 'Tickets:',
+                    'tickets-info': 'Purchase online or by phone',
+                    'call-label': 'Call:',
+                    'reservations': 'for reservations',
+                    'buy-tickets': 'Buy Tickets',
+                    
+                    'eid-adha-dinner-title': 'Eid Al-Adha Dinner',
+                    'eid-adha-dinner-details': 'Celebrate Eid Al-Adha with a special community dinner featuring speeches, guest speakers, nasheed performances by Sunday school children, Quran recitations, and delicious dinner.',
+                    
+                    'albania-independence-title': 'Albania Independence Day',
+                    'albania-independence-details': 'Celebrate Albanian heritage and independence with traditional dinner, cultural programs, and community gathering.',
+                    
+                    'kosovo-independence-title': 'Kosovo Independence Day',
+                    'kosovo-dinner-time': 'Doors: 6PM | Program: 7PM',
+                    'kosovo-independence-details': 'Honor Kosovo\'s independence with an evening of culture, community, and traditional cuisine.',
+                    
+                    'iftar-title': 'Weekly Ramadan Iftars',
+                    'iftar-time': 'Every Sunday in Ramadan',
+                    'iftar-details': 'Free community iftars every Sunday during Ramadan. Open to all - no tickets required!',
+                    'iftar-program': 'Iftar at Maghrib → Lecture → Taraweeh',
+                    'sponsorship-label': 'Sponsorship:',
+                    'sponsorship-call': 'Call 313-884-6676',
+                    'cost-label': 'Cost:',
+                    'iftar-cost': 'FREE - All welcome!',
+                    
+                    'speakers-title': 'Special Guests & Speakers',
+                    'speakers-time': 'Throughout the Year',
+                    'speakers-details': 'We host distinguished scholars, imams, and prominent figures from the Albanian and Muslim world, including presidents, prime ministers, and religious leaders.',
+                    'past-guests-label': 'Past Guests:',
+                    'past-guests': 'Leaders from Albania & Kosovo',
+                    'stay-updated-label': 'Stay Updated:',
+                    'follow-facebook': 'Follow our Facebook page',
+                    'info-label': 'Info:',
+                    'join-mailing': 'Join our mailing list',
+                    
+                    // Footer
+                    'footer-about': 'Welcome to the Albanian Islamic Center, a place of worship, learning, and community rooted in rich Albanian heritage and Islamic tradition. We strive to foster a welcoming and inclusive space for every member of the Muslim community.',
+                    'contact': 'Contact',
+                    'email-address': 'Email Address',
+                    'phone-number': 'Phone Number',
+                    'location': 'Location',
+                    'social-media': 'Social Media',
+                    'social-desc': 'Follow us on Facebook for the latest announcements and updates about events and programs at the Albanian Islamic Center.',
+                    'newsletter': 'Newsletter',
+                    'newsletter-desc': 'Subscribe to our newsletter to receive updates on events, programs, and community news directly to your inbox. Stay connected with the Albanian Islamic Center.',
+                    'email-placeholder': 'Enter your email',
+                    'subscribe': 'Subscribe',
+                    'footer-copyright': '© 2025 aicod.org. All Rights Reserved.<br>Icons made from www.flaticon.com'
+                },
+                sq: {
+                    // Navigation
+                    'nav-home': 'Ballina',
+                    'nav-about': 'Rreth Nesh',
+                    'nav-islam': 'Çfarë është Islami?',
+                    'nav-events': 'Ngjarjet',
+                    'nav-programs': 'Programet & Aktivitetet',
+                    'nav-services': 'Shërbimet',
+                    'nav-banquet': 'Salla e Dasmave',
+                    'nav-join': 'Bashkohuni me Ne',
+                    'nav-contact': 'Na Kontaktoni',
+                    'donate': 'Dhuroni',
+                    
+                    // Banner
+                    'banner-events': 'Ngjarjet',
+                    'banner-explore-events': 'Eksploroni festimet, darkat komunitare, ngjarjet kombëtare dhe më shumë.',
+                    
+                    // Events Section
+                    'events-title': 'Ngjarjet e Komunitetit Tonë',
+                    'events-subtitle': 'Bashkohuni me ne për namaz, festime dhe tubime komunitare gjatë gjithë vitit',
+                    
+                    // Tabs
+                    'tab-prayers': 'Ngjarjet e Namazit',
+                    'tab-dinners': 'Ngjarjet e Komunitetit',
+                    
+                    // Prayer Events
+                    'jumuah-title': 'Namazi i Xhumasë',
+                   'jumuah-time': 'Çdo të premte në 12:45/1:45 PM varësisht nga ndryshimet e kohës',
+    'jumuah-details': 'Bashkohuni me ne për namazin javor të xhematit në 19775 Harper Ave, Harper Woods, MI 48225.',
+    'khutba-label': 'Hutbeja:',
+    'khutba-desc': 'Gjysma e parë në shqip, gjysma e dytë në anglisht',
+    'note-label': 'Shënim:',
+    'jumuah-note': 'Ju lutemi mbërrini herët. Parkim i disponueshëm në vend.',
+    
+    'eid-prayers-title': 'Namazet e Bajramit',
+    'eid-prayers-time': 'Ditët e Bajramit në 9:00 AM',
+    'eid-prayers-details': 'Festoni Bajramin e Fitrit dhe Bajramin e Kurbanit me komunitetin tonë. Namazi pasuar nga një hutbe.',
+    'program-label': 'Programi:',
+    'eid-program': 'Namazi → Hutbeja (Shqip/Anglisht) → Bashkësia Komunitare',
+    'bring-label': 'Sillni:',
+    'eid-bring': 'Familjen tuaj për këtë festim të bekuar!',
+    
+    'taraweeh-title': 'Namazi Teravie',
+    'taraweeh-time': 'Çdo natë gjatë Ramazanit',
+    'taraweeh-details': 'Namazet e veçanta të natës gjatë muajit të bekuar të Ramazanit.',
+    'time-label': 'Koha:',
+    'taraweeh-time-desc': 'Pas namazit të Ishasë',
+    'taraweeh-note': 'Kontrolloni kalendarin tonë të namazit për kohët e sakta të Ishasë',
+    
+    // Dinner Events
+    'eid-fitr-dinner-title': 'Darka e Bajramit të Fitrit',
+    'dinner-time-doors': 'Dyert: 5PM | Programi: 6PM',
+    'eid-fitr-dinner-details': 'Bashkohuni me ne për darkën tonë vjetore të festimit të Bajramit të Fitrit me fjalime frymëzuese, folës të mundshëm të ftuar, performanca të bukura nasheed, recitim Kurani nga nxënësit tanë dhe bashkësi komunitare.',
+    'tickets-label': 'Biletat:',
+    'tickets-info': 'Blini online ose me telefon',
+    'call-label': 'Telefononi:',
+    'reservations': 'për rezervime',
+    'buy-tickets': 'Blini Biletat',
+    
+    'eid-adha-dinner-title': 'Darka e Bajramit të Kurbanit',
+    'eid-adha-dinner-details': 'Festoni Bajramin e Kurbanit me një darkë të veçantë komunitare që përfshin fjalime, folës të ftuar, performanca nasheed nga fëmijët e shkollës së dielës, recitim Kurani dhe darkë të shijshme.',
+    
+    'albania-independence-title': 'Dita e Pavarësisë së Shqipërisë',
+    'albania-independence-details': 'Festoni trashëgiminë dhe pavarësinë shqiptare me darkë tradicionale, programe kulturore dhe tubim komunitare.',
+    
+    'kosovo-independence-title': 'Dita e Pavarësisë së Kosovës',
+    'kosovo-dinner-time': 'Dyert: 6PM | Programi: 7PM',
+    'kosovo-independence-details': 'Nderoni pavarësinë e Kosovës me një mbrëmje kulture, komuniteti dhe kuzhinë tradicionale.',
+    
+    'iftar-title': 'Iftaret Javore të Ramazanit',
+    'iftar-time': 'Çdo të diel në Ramazan',
+    'iftar-details': 'Iftare falas komunitare çdo të diel gjatë Ramazanit. Të hapur për të gjithë - nuk kërkohen bileta!',
+    'iftar-program': 'Iftari në Maghrib → Leksioni → Teravie',
+    'sponsorship-label': 'Sponsorizimi:',
+    'sponsorship-call': 'Telefononi 313-884-6676',
+    'cost-label': 'Kosto:',
+    'iftar-cost': 'FALAS - Të gjithë të mirëpritur!',
+    
+    'speakers-title': 'Mysafirë të Veçantë dhe Folës',
+    'speakers-time': 'Gjatë Gjithë Vitit',
+    'speakers-details': 'Ne presim dijetarë të shquar, imamë dhe figura të shquara nga bota shqiptare dhe myslimane, duke përfshirë presidentë, kryeministra dhe liderë fetarë.',
+    'past-guests-label': 'Mysafirë të Mëparshëm:',
+    'past-guests': 'Liderë nga Shqipëria dhe Kosova',
+    'stay-updated-label': 'Qëndroni të Përditësuar:',
+    'follow-facebook': 'Ndiqni faqen tonë të Facebook-ut',
+    'info-label': 'Informacion:',
+    'join-mailing': 'Bashkohuni me listën tonë të postës',
+    
+    // Footer
+    'footer-about': 'Mirësevini në Qendrën Islame Shqiptare, një vend adhurimi, të mësuari dhe komuniteti i rrënjosur në trashëgiminë e pasur shqiptare dhe traditën islame. Ne përpiqemi të krijojmë një hapësirë mikpritëse dhe gjithëpërfshirëse për çdo anëtar të komunitetit mysliman.',
+    'contact': 'Kontakti',
+    'email-address': 'Adresa e Email-it',
+    'phone-number': 'Numri i Telefonit',
+    'location': 'Vendndodhja',
+    'social-media': 'Rrjetet Sociale',
+    'social-desc': 'Na ndiqni në Facebook për njoftimet dhe përditësimet më të fundit rreth ngjarjeve dhe programeve në Qendrën Islame Shqiptare.',
+    'newsletter': 'Buletini',
+    'newsletter-desc': 'Abonohuni në buletinin tonë për të marrë përditësime mbi ngjarjet, programet dhe lajmet e komunitetit direkt në email-in tuaj. Qëndroni të lidhur me Qendrën Islame Shqiptare.',
+    'email-placeholder': 'Vendosni email-in tuaj',
+    'subscribe': 'Abonohu',
+    'footer-copyright': '© 2025 aicod.org. Të gjitha të drejtat e rezervuara.<br>Ikonat janë marrë nga www.flaticon.com'
+}
 
-            menuToggle.addEventListener('click', function() {
-                navMenu.classList.toggle('show');
-                menuToggle.classList.toggle('active');
-            });
+};
+// Merge the translations
+Object.assign(translations.sq);
 
-            // Close menu when clicking on a link (mobile)
-            const navLinks = document.querySelectorAll('#nav-menu a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    navMenu.classList.remove('show');
-                    menuToggle.classList.remove('active');
-                });
-            });
 
-            // Close menu when clicking outside (mobile)
-            document.addEventListener('click', function(event) {
-                const isClickInsideNav = navMenu.contains(event.target);
-                const isClickOnToggle = menuToggle.contains(event.target);
-                
-                if (!isClickInsideNav && !isClickOnToggle && navMenu.classList.contains('show')) {
-                    navMenu.classList.remove('show');
-                    menuToggle.classList.remove('active');
-                }
-            });
+// Language toggle functionality
+let currentLanguage = localStorage.getItem('language') || 'en';
 
-            // Handle window resize for mobile menu
-            window.addEventListener('resize', function() {
-                if (window.innerWidth > 768) {
-                    navMenu.classList.remove('show');
-                    menuToggle.classList.remove('active');
-                }
-            });
-
-            // Show the first slide
-            document.querySelector('.mySlides').style.display = 'block';
-
-            // Tab functionality
-            function showTab(tabName) {
-                // Hide all tab contents
-                const tabContents = document.querySelectorAll('.tab-content');
-                tabContents.forEach(tab => {
-                    tab.classList.remove('active');
-                });
-
-                // Remove active class from all buttons
-                const tabButtons = document.querySelectorAll('.tab-button');
-                tabButtons.forEach(button => {
-                    button.classList.remove('active');
-                });
-
-                // Show selected tab
-                document.getElementById(tabName).classList.add('active');
-
-                // Add active class to clicked button
-                event.target.classList.add('active');
+function setLanguage(lang) {
+    currentLanguage = lang;
+    localStorage.setItem('language', lang);
+    document.documentElement.lang = lang;
+    
+    // Update language buttons
+    document.querySelectorAll('.language-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+    
+    // Translate all elements
+    document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[lang][key]) {
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                element.value = translations[lang][key];
+            } else {
+                element.innerHTML = translations[lang][key];
             }
+        }
+    });
+    
+    // Translate placeholders
+    document.querySelectorAll('[data-translate-placeholder]').forEach(element => {
+        const key = element.getAttribute('data-translate-placeholder');
+        if (translations[lang][key]) {
+            element.placeholder = translations[lang][key];
+        }
+    });
+}
 
-            // Eid Al-Adha Dinner Eventbrite Widget
-            var eidAdhaCallback = function() {
-                console.log('Eid Al-Adha Dinner ticket order complete!');
-            };
-            window.EBWidgets.createWidget({
-                widgetType: 'checkout',
-                eventId: '1445349422029',
-                modal: true,
-                modalTriggerElementId: 'eventbrite-widget-modal-trigger-1445349422029',
-                onOrderComplete: eidAdhaCallback
-            });
+// Initialize language on page load
+document.addEventListener('DOMContentLoaded', function() {
+    // Set initial language
+    setLanguage(currentLanguage);
+    
+    // Add click event listeners to language buttons
+    document.querySelectorAll('.language-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            setLanguage(this.dataset.lang);
+        });
+    });
+});
 
-            // Eid Al-Fitr Dinner Eventbrite Widget
-            var eidFitrCallback = function() {
-                console.log('Eid Al-Fitr Dinner ticket order complete!');
-            };
-            window.EBWidgets.createWidget({
-                widgetType: 'checkout',
-                eventId: '1445349532359',
-                modal: true,
-                modalTriggerElementId: 'eventbrite-widget-modal-trigger-1445349532359',
-                onOrderComplete: eidFitrCallback
-            });
+// Mobile menu toggle functionality
+const menuToggle = document.getElementById('menu-toggle');
+const navMenu = document.getElementById('nav-menu');
 
-            // Albania Independence Day Eventbrite Widget
-            var albaniaCallback = function() {
-                console.log('Albania Independence Day ticket order complete!');
-            };
-            window.EBWidgets.createWidget({
-                widgetType: 'checkout',
-                eventId: '1425429099809',
-                modal: true,
-                modalTriggerElementId: 'eventbrite-widget-modal-trigger-1425429099809',
-                onOrderComplete: albaniaCallback
-            });
+menuToggle.addEventListener('click', function() {
+    navMenu.classList.toggle('show');
+    menuToggle.classList.toggle('active');
+});
 
-            // Kosovo Independence Day Eventbrite Widget
-            var kosovoCallback = function() {
-                console.log('Kosovo Independence Day ticket order complete!');
-            };
-            window.EBWidgets.createWidget({
-                widgetType: 'checkout',
-                eventId: '1439726032319',
-                modal: true,
-                modalTriggerElementId: 'eventbrite-widget-modal-trigger-1439726032319',
-                onOrderComplete: kosovoCallback
-            });
-        </script>
-    </body>
-</html>
+// Close menu when clicking on a link (mobile)
+const navLinks = document.querySelectorAll('#nav-menu a');
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('show');
+        menuToggle.classList.remove('active');
+    });
+});
+
+// Close menu when clicking outside (mobile)
+document.addEventListener('click', function(event) {
+    const isClickInsideNav = navMenu.contains(event.target);
+    const isClickOnToggle = menuToggle.contains(event.target);
+    
+    if (!isClickInsideNav && !isClickOnToggle && navMenu.classList.contains('show')) {
+        navMenu.classList.remove('show');
+        menuToggle.classList.remove('active');
+    }
+});
+
+// Handle window resize for mobile menu
+window.addEventListener('resize', function() {
+    if (window.innerWidth > 768) {
+        navMenu.classList.remove('show');
+        menuToggle.classList.remove('active');
+    }
+});
+
+// Show the first slide
+document.querySelector('.mySlides').style.display = 'block';
+
+// Tab functionality
+function showTab(tabName) {
+    // Hide all tab contents
+    const tabContents = document.querySelectorAll('.tab-content');
+    tabContents.forEach(tab => {
+        tab.classList.remove('active');
+    });
+
+    // Remove active class from all buttons
+    const tabButtons = document.querySelectorAll('.tab-button');
+    tabButtons.forEach(button => {
+        button.classList.remove('active');
+    });
+
+    // Show selected tab
+    document.getElementById(tabName).classList.add('active');
+
+    // Add active class to clicked button
+    event.target.classList.add('active');
+}
+
+// Eid Al-Adha Dinner Eventbrite Widget
+var eidAdhaCallback = function() {
+    console.log('Eid Al-Adha Dinner ticket order complete!');
+};
+window.EBWidgets.createWidget({
+    widgetType: 'checkout',
+    eventId: '1445349422029',
+    modal: true,
+    modalTriggerElementId: 'eventbrite-widget-modal-trigger-1445349422029',
+    onOrderComplete: eidAdhaCallback
+});
+
+// Eid Al-Fitr Dinner Eventbrite Widget
+var eidFitrCallback = function() {
+    console.log('Eid Al-Fitr Dinner ticket order complete!');
+};
+window.EBWidgets.createWidget({
+    widgetType: 'checkout',
+    eventId: '1445349532359',
+    modal: true,
+    modalTriggerElementId: 'eventbrite-widget-modal-trigger-1445349532359',
+    onOrderComplete: eidFitrCallback
+});
+
+// Albania Independence Day Eventbrite Widget
+var albaniaCallback = function() {
+    console.log('Albania Independence Day ticket order complete!');
+};
+window.EBWidgets.createWidget({
+    widgetType: 'checkout',
+    eventId: '1425429099809',
+    modal: true,
+    modalTriggerElementId: 'eventbrite-widget-modal-trigger-1425429099809',
+    onOrderComplete: albaniaCallback
+});
+
+// Kosovo Independence Day Eventbrite Widget
+var kosovoCallback = function() {
+    console.log('Kosovo Independence Day ticket order complete!');
+};
+window.EBWidgets.createWidget({
+    widgetType: 'checkout',
+    eventId: '1439726032319',
+    modal: true,
+    modalTriggerElementId: 'eventbrite-widget-modal-trigger-1439726032319',
+    onOrderComplete: kosovoCallback
+});
+ 
+</script>

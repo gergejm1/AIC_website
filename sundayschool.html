@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="Style-Sheets/ss-styles.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+      
     </head>
 
     <body>
@@ -14,8 +15,20 @@
         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v22.0"></script>
         
         <div class="contacttop">
-            <p>19775 Harper Avenue, Harper Woods, MI 48225</p>
-            <p>(313)-884-6676&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;albislamct@aol.com</p>
+            <div class="contacttop-text">
+                <p>19775 Harper Avenue, Harper Woods, MI 48225</p>
+                <p>(313)-884-6676&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;albislamct@aol.com</p>
+            </div>
+            <div class="language-toggle">
+                <button class="language-btn active" data-lang="en">
+                    <span class="flag-icon">🇺🇸</span>
+                    <span>EN</span>
+                </button>
+                <button class="language-btn" data-lang="sq">
+                    <span class="flag-icon">🇦🇱</span>
+                    <span>AL</span>
+                </button>
+            </div>
         </div>
 
         <nav class="navbar">
@@ -30,22 +43,22 @@
             </button>
             
             <ul id="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="islam.html">What is Islam?</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="sundayschool.html">Programs & Activities</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="banquethall.html">Banquet Hall</a></li>
-                <li><a href="membership.html">Join Us</a></li>
-                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="index.html" data-translate="nav-home">Home</a></li>
+                <li><a href="about.html" data-translate="nav-about">About Us</a></li>
+                <li><a href="islam.html" data-translate="nav-islam">What is Islam?</a></li>
+                <li><a href="events.html" data-translate="nav-events">Events</a></li>
+                <li><a href="sundayschool.html" data-translate="nav-programs">Programs & Activities</a></li>
+                <li><a href="services.html" data-translate="nav-services">Services</a></li>
+                <li><a href="banquethall.html" data-translate="nav-banquet">Banquet Hall</a></li>
+                <li><a href="membership.html" data-translate="nav-join">Join Us</a></li>
+                <li><a href="contactus.html" data-translate="nav-contact">Contact Us</a></li>
             </ul>
             
             <form action="https://www.paypal.com/donate" method="post" target="_blank" class="donate-form">
                 <input type="hidden" name="hosted_button_id" value="LMWW6JLZ9N57L" />
                 <button type="submit" class="donate-btn" title="PayPal - The safer, easier way to pay online!">
                     <img src="images/donation.png" class="heart-icon" alt="Heart icon">
-                    Donate
+                    <span data-translate="donate">Donate</span>
                 </button>
             </form>
         </nav>
@@ -57,18 +70,16 @@
                 </div>
             </div>
             <div class="text-overlay">
-                <h1 class="banner-text">Programs & Activities</h1>
-                <h2 class="banner-subtext">Learn about our ongoing events, educational programs, and community initiatives.</h2>
+                <h1 class="banner-text" data-translate="banner-programs">Programs & Activities</h1>
+                <h2 class="banner-subtext" data-translate="banner-learn">Learn about our ongoing events, educational programs, and community initiatives.</h2>
             </div>
         </div>
 
         <div class="gym-section" data-aos="fade-up">
-            <h1>Sunday School Programs</h1>
+            <h1 data-translate="sunday-school-title">Sunday School Programs</h1>
             <div class="gym-description">
                 <div class="description-text">
-                    <p>Our Sunday School is dedicated to providing a comprehensive Islamic education for children and youth. 
-                        We offer classes that cover Quranic studies, Islamic teachings, and Albanian cultural heritage, fostering a 
-                        strong foundation in faith and community values. Classes are held every Sunday from 10:00 AM to Dhuhr time.</p>
+                    <p data-translate="sunday-school-desc">Our Sunday School is dedicated to providing a comprehensive Islamic education for children and youth. We offer classes that cover Quranic studies, Islamic teachings, and Albanian cultural heritage, fostering a strong foundation in faith and community values. Classes are held every Sunday from 10:00 AM to Dhuhr time.</p>
                 </div>
             </div>
         </div>
@@ -77,15 +88,13 @@
             <div class="program-card quran-class" data-aos="fade-right">
                 <div class="circle-accent"></div>
                 <div class="program-content">
-                    <h2>Quranic Studies & Tajweed</h2>
+                    <h2 data-translate="quran-studies-title">Quranic Studies & Tajweed</h2>
                     <div class="program-details">
                         <div class="program-text">
-                            <p>Our Quranic studies program is designed to introduce children to the holy Quran and its teachings. 
-                                Students learn proper recitation with Tajweed rules, memorization techniques, and understanding of 
-                                Quranic Arabic. Classes are taught by the Imam who provides individual attention to each student.
+                            <p data-translate="quran-studies-desc">Our Quranic studies program is designed to introduce children to the holy Quran and its teachings. Students learn proper recitation with Tajweed rules, memorization techniques, and understanding of Quranic Arabic. Classes are taught by the Imam who provides individual attention to each student.
                                 <br><br>
-                                <strong>Age Groups:</strong> 6-16 years<br>
-                                <strong>Instructor:</strong> Sheikh Shuajb Gerguri
+                                <strong data-translate="age-groups-label">Age Groups:</strong> <span data-translate="age-range">6-16 years</span><br>
+                                <strong data-translate="instructor-label">Instructor:</strong> <span data-translate="sheikh-name">Sheikh Shuajb Gerguri</span>
                             </p>
                         </div>
                         <img src="images/Quran-teacher.jpg" class="teacher-img">
@@ -96,15 +105,13 @@
             <div class="program-card fiqh-class right-align" data-aos="fade-left">
                 <div class="circle-accent2"></div>
                 <div class="program-content">
-                    <h2>Fiqh & Aqeedah Classes</h2>
+                    <h2 data-translate="fiqh-aqeedah-title">Fiqh & Aqeedah Classes</h2>
                     <div class="program-details">
                         <div class="program-text">
-                            <p>Fiqh classes provide in-depth knowledge of Islamic jurisprudence, helping students understand the 
-                                practical applications of Islamic law in daily life. Aqeedah classes focus on Islamic beliefs and 
-                                theology, strengthening students' understanding of fundamental Islamic concepts and faith.
+                            <p data-translate="fiqh-aqeedah-desc">Fiqh classes provide in-depth knowledge of Islamic jurisprudence, helping students understand the practical applications of Islamic law in daily life. Aqeedah classes focus on Islamic beliefs and theology, strengthening students' understanding of fundamental Islamic concepts and faith.
                                 <br><br>
-                                <strong>Age Groups:</strong> 6-16 years<br>
-                                <strong>Instructor:</strong> Sheikh Shuajb Gerguri
+                                <strong data-translate="age-groups-label">Age Groups:</strong> <span data-translate="age-range">6-16 years</span><br>
+                                <strong data-translate="instructor-label">Instructor:</strong> <span data-translate="sheikh-name">Sheikh Shuajb Gerguri</span>
                             </p>
                         </div>
                         <img src="images/Aqeedah image.jpg" class="aqeedah-img">
@@ -115,16 +122,13 @@
             <div class="program-card albanian-class" data-aos="fade-right">
                 <div class="circle-accent"></div>
                 <div class="program-content">
-                    <h2>Albanian Language & Heritage</h2>
+                    <h2 data-translate="albanian-language-title">Albanian Language & Heritage</h2>
                     <div class="program-details">
                         <div class="program-text">
-                            <p>The Albanian language class is a valuable opportunity for children to learn the Albanian language, 
-                                fostering a deep understanding of Albanian culture and heritage. Students learn reading, writing, 
-                                speaking, and cultural traditions that connect them to their roots.
+                            <p data-translate="albanian-language-desc">The Albanian language class is a valuable opportunity for children to learn the Albanian language, fostering a deep understanding of Albanian culture and heritage. Students learn reading, writing, speaking, and cultural traditions that connect them to their roots.
                                 <br><br>
-                                <strong>Age Groups:</strong> 6-16 years<br>
-                           
-                                <strong>Instructor:</strong> Qualified Teachers
+                                <strong data-translate="age-groups-label">Age Groups:</strong> <span data-translate="age-range">6-16 years</span><br>
+                                <strong data-translate="instructor-label">Instructor:</strong> <span data-translate="qualified-teachers">Qualified Teachers</span>
                             </p>
                         </div>
                         <img src="images/albanian-language.jpg" class="alb-img">
@@ -135,16 +139,12 @@
             <div class="program-card culture-class right-align" data-aos="fade-left">
                 <div class="circle-accent2"></div>
                 <div class="program-content">
-                    <h2>Albanian Cultural Activities</h2>
+                    <h2 data-translate="cultural-activities-title">Albanian Cultural Activities</h2>
                     <div class="program-details">
                         <div class="program-text">
-                            <p>Our cultural program introduces children to traditional Albanian customs. 
-                                Students participate in performances during special events and holidays, learning about their 
-                                heritage through engaging activities and cultural celebrations.
+                            <p data-translate="cultural-activities-desc">Our cultural program introduces children to traditional Albanian customs. Students participate in performances during special events and holidays, learning about their heritage through engaging activities and cultural celebrations.
                                 <br><br>
-                                <strong>Age Groups:</strong> 6-16 years<br>
-                               
-                                
+                                <strong data-translate="age-groups-label">Age Groups:</strong> <span data-translate="age-range">6-16 years</span><br>
                             </p>
                         </div>
                         <img src="images/community.jpg" class="culture-img">
@@ -154,13 +154,12 @@
         </div>
 
         <div class="gym-section" data-aos="fade-up">
-            <h1>Recreational Facilities</h1>
+            <h1 data-translate="recreational-facilities-title">Recreational Facilities</h1>
             <div class="gym-description">
                 <div class="gym-content">
                     <div class="gym-text">
-                        <h2>Basketball & Volleyball Court</h2>
-                        <p>Our basketball and volleyball court is a vibrant space where children and youth can play, exercise, 
-                            and learn together. The facility promotes physical fitness, teamwork, and healthy competition.</p>
+                        <h2 data-translate="basketball-volleyball-title">Basketball & Volleyball Court</h2>
+                        <p data-translate="basketball-volleyball-desc">Our basketball and volleyball court is a vibrant space where children and youth can play, exercise, and learn together. The facility promotes physical fitness, teamwork, and healthy competition.</p>
                     </div>
                     <img src="images/gymflick.jpg" class="gym-img">
                 </div>
@@ -169,30 +168,26 @@
 
         <div class="registration-section" data-aos="fade-up">
             <div class="registration-content">
-                <h2>Registration Information</h2>
+                <h2 data-translate="registration-info-title">Registration Information</h2>
                 <div class="registration-details">
                     <div class="registration-info">
-                        <h3>How to Register</h3>
-                        <p>Registration for our Sunday School programs begins in September. We welcome families to bring their children and youth 
-                             to join our educational programs and activities.</p>
+                        <h3 data-translate="how-to-register">How to Register</h3>
+                        <p data-translate="registration-desc">Registration for our Sunday School programs begins in September. We welcome families to bring their children and youth to join our educational programs and activities.</p>
                         <ul>
-                            <li>Contact the mosque office at (313) 884-6676</li>
-                            <li>Email us at albislamct@aol.com</li>
-                            <li>Visit us on Sundays during program hours</li>
-                            
+                            <li data-translate="contact-mosque">Contact the mosque office at (313) 884-6676</li>
+                            <li data-translate="email-us">Email us at albislamct@aol.com</li>
+                            <li data-translate="visit-sundays">Visit us on Sundays during program hours</li>
                         </ul>
                     </div>
                     <div class="registration-requirements">
-                        <h3>Requirements & Information</h3>
+                        <h3 data-translate="requirements-info">Requirements & Information</h3>
                         <ul>
-                            <li><strong>Age:</strong> Programs available for ages 6-16</li>
-                            <li><strong>Schedule:</strong> Sundays 10:00 AM - Dhuhr time</li>
-                            <li><strong>Cost:</strong> Free Tuition, families pay for their children's meals</li>
-                            
-                            
+                            <li><strong data-translate="age-label">Age:</strong> <span data-translate="programs-available">Programs available for ages 6-16</span></li>
+                            <li><strong data-translate="schedule-label">Schedule:</strong> <span data-translate="sundays-schedule">Sundays 10:00 AM - Dhuhr time</span></li>
+                            <li><strong data-translate="cost-label">Cost:</strong> <span data-translate="free-tuition">Free Tuition, families pay for their children's meals</span></li>
                         </ul>
                         <div class="contact-btn-container">
-                            <a href="contactus.html" class="contact-btn">Contact Us for Registration</a>
+                            <a href="contactus.html" class="contact-btn" data-translate="contact-registration">Contact Us for Registration</a>
                         </div>
                     </div>
                 </div>
@@ -204,103 +199,300 @@
             <div class="row">
                 <div class="support-text">
                     <img src="images/Logo.png" alt="Albanian Islamic Center Logo" class="logo-img">
-                    <p>Welcome to the Albanian Islamic Center, a place of worship, learning, and community rooted in 
-                        rich Albanian heritage and Islamic tradition. We strive to foster a welcoming and inclusive 
-                        space for every member of the Muslim community.</p>
+                    <p data-translate="footer-about">Welcome to the Albanian Islamic Center, a place of worship, learning, and community rooted in rich Albanian heritage and Islamic tradition. We strive to foster a welcoming and inclusive space for every member of the Muslim community.</p>
                     <a href="https://www.facebook.com/Albanianislamiccenter/?ref=embed_page#" class="social-media" target="_blank"> 
                         <img src="images/facebook.png" class="facebook-img">
                     </a>
                 </div>
                 <div class="contact-info">
-                    <h2>Contact</h2>
-                    <h3><img src="images/email.png" class="email-icon">Email Address</h3>
+                    <h2 data-translate="contact">Contact</h2>
+                    <h3><img src="images/email.png" class="email-icon"><span data-translate="email-address">Email Address</span></h3>
                     <p>albislamct@aol.com</p>
-                    <h3><img src="images/phone-call.png" class="phone-icon">Phone Number</h3>
+                    <h3><img src="images/phone-call.png" class="phone-icon"><span data-translate="phone-number">Phone Number</span></h3>
                     <p>(313)-884-6676</p>
-                    <h3><img src="images/pin.png" class="pin-icon">Location</h3>
+                    <h3><img src="images/pin.png" class="pin-icon"><span data-translate="location">Location</span></h3>
                     <p>19775 Harper Avenue, Harper Woods, MI 48225</p>
                 </div>
                 <div class="socials">
-                    <h2>Social Media</h2>
-                    <p>Follow us on Facebook for the latest announcements and updates about events and programs at 
-                        the Albanian Islamic Center.</p>
+                    <h2 data-translate="social-media">Social Media</h2>
+                    <p data-translate="social-desc">Follow us on Facebook for the latest announcements and updates about events and programs at the Albanian Islamic Center.</p>
                     <a href="https://www.facebook.com/Albanianislamiccenter/" class="social-media" target="_blank">
                         <img src="images/facebook.png" alt="Facebook" class="facebook-img">
                     </a>
                 </div>
                 <div class="newsletter">
-                    <h2>Newsletter</h2>
-                    <p>Subscribe to our newsletter to receive updates on events, programs, and community news directly 
-                        to your inbox. Stay connected with the Albanian Islamic Center.</p>
+                    <h2 data-translate="newsletter">Newsletter</h2>
+                    <p data-translate="newsletter-desc">Subscribe to our newsletter to receive updates on events, programs, and community news directly to your inbox. Stay connected with the Albanian Islamic Center.</p>
                     <form action="https://aol.us13.list-manage.com/subscribe/post?u=096bcfd7c98cb079bfb26df4f&amp;id=36db6b2f2f" method="post" novalidate>
-                        <input type="email" name="EMAIL" id="email" placeholder="Enter your email" required>
+                        <input type="email" name="EMAIL" id="email" placeholder="Enter your email" data-translate-placeholder="email-placeholder" required>
                         <div style="position: absolute; left: -5000px;" aria-hidden="true">
                             <input type="text" name="b_096bcfd7c98cb079bfb26df4f_36db6b2f2f" tabindex="-1" value="">
                         </div>
-                        <button type="submit">Subscribe</button>
+                        <button type="submit" data-translate="subscribe">Subscribe</button>
                     </form>
                 </div>
             </div>
         </div>
 
         <footer> 
-            <p>© 2025 aicod.org. All Rights Reserved.<br>
-            Icons made from www.flaticon.com</p>
+            <p data-translate="footer-copyright">© 2025 aicod.org. All Rights Reserved.<br>Icons made from www.flaticon.com</p>
         </footer>
 
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
-            // Initialize AOS
-            AOS.init({
-                duration: 1000,
-                once: true,
-            });
-
-            // Mobile menu toggle functionality
-            const menuToggle = document.getElementById('menu-toggle');
-            const navMenu = document.getElementById('nav-menu');
-
-            menuToggle.addEventListener('click', function() {
-                navMenu.classList.toggle('show');
-                menuToggle.classList.toggle('active');
-            });
-
-            // Close menu when clicking on a link (mobile)
-            const navLinks = document.querySelectorAll('#nav-menu a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    navMenu.classList.remove('show');
-                    menuToggle.classList.remove('active');
-                });
-            });
-
-            // Close menu when clicking outside (mobile)
-            document.addEventListener('click', function(event) {
-                const isClickInsideNav = navMenu.contains(event.target);
-                const isClickOnToggle = menuToggle.contains(event.target);
-                
-                if (!isClickInsideNav && !isClickOnToggle && navMenu.classList.contains('show')) {
-                    navMenu.classList.remove('show');
-                    menuToggle.classList.remove('active');
+            // Translation data
+            const translations = {
+                en: {
+                    // Navigation
+                    'nav-home': 'Home',
+                    'nav-about': 'About Us',
+                    'nav-islam': 'What is Islam?',
+                    'nav-events': 'Events',
+                    'nav-programs': 'Programs & Activities',
+                    'nav-services': 'Services',
+                    'nav-banquet': 'Banquet Hall',
+                    'nav-join': 'Join Us',
+                    'nav-contact': 'Contact Us',
+                    'donate': 'Donate',
+                    
+                    // Banner
+                    'banner-programs': 'Programs & Activities',
+                    'banner-learn': 'Learn about our ongoing events, educational programs, and community initiatives.',
+                    
+                    // Sunday School
+                    'sunday-school-title': 'Sunday School Programs',
+                    'sunday-school-desc': 'Our Sunday School is dedicated to providing a comprehensive Islamic education for children and youth. We offer classes that cover Quranic studies, Islamic teachings, and Albanian cultural heritage, fostering a strong foundation in faith and community values. Classes are held every Sunday from 10:00 AM to Dhuhr time.',
+                    
+                    // Program Cards
+                    'quran-studies-title': 'Quranic Studies & Tajweed',
+                    'quran-studies-desc': 'Our Quranic studies program is designed to introduce children to the holy Quran and its teachings. Students learn proper recitation with Tajweed rules, memorization techniques, and understanding of Quranic Arabic. Classes are taught by the Imam who provides individual attention to each student.',
+                    'age-groups-label': 'Age Groups:',
+                    'age-range': '6-16 years',
+                    'instructor-label': 'Instructor:',
+                    'sheikh-name': 'Sheikh Shuajb Gerguri',
+                    
+                    'fiqh-aqeedah-title': 'Fiqh & Aqeedah Classes',
+                    'fiqh-aqeedah-desc': 'Fiqh classes provide in-depth knowledge of Islamic jurisprudence, helping students understand the practical applications of Islamic law in daily life. Aqeedah classes focus on Islamic beliefs and theology, strengthening students\' understanding of fundamental Islamic concepts and faith.',
+                    
+                    'albanian-language-title': 'Albanian Language & Heritage',
+                    'albanian-language-desc': 'The Albanian language class is a valuable opportunity for children to learn the Albanian language, fostering a deep understanding of Albanian culture and heritage. Students learn reading, writing, speaking, and cultural traditions that connect them to their roots.',
+                    'qualified-teachers': 'Qualified Teachers',
+                    
+                    'cultural-activities-title': 'Albanian Cultural Activities',
+                    'cultural-activities-desc': 'Our cultural program introduces children to traditional Albanian customs. Students participate in performances during special events and holidays, learning about their heritage through engaging activities and cultural celebrations.',
+                    
+                    // Recreational Facilities
+                    'recreational-facilities-title': 'Recreational Facilities',
+                    'basketball-volleyball-title': 'Basketball & Volleyball Court',
+                    'basketball-volleyball-desc': 'Our basketball and volleyball court is a vibrant space where children and youth can play, exercise, and learn together. The facility promotes physical fitness, teamwork, and healthy competition.',
+                    
+                    // Registration
+                    'registration-info-title': 'Registration Information',
+                    'how-to-register': 'How to Register',
+                    'registration-desc': 'Registration for our Sunday School programs begins in September. We welcome families to bring their children and youth to join our educational programs and activities.',
+                    'contact-mosque': 'Contact the mosque office at (313) 884-6676',
+                    'email-us': 'Email us at albislamct@aol.com',
+                    'visit-sundays': 'Visit us on Sundays during program hours',
+                    'requirements-info': 'Requirements & Information',
+                    'age-label': 'Age:',
+                    'programs-available': 'Programs available for ages 6-16',
+                    'schedule-label': 'Schedule:',
+                    'sundays-schedule': 'Sundays 10:00 AM - Dhuhr time',
+                    'cost-label': 'Cost:',
+                    'free-tuition': 'Free Tuition, families pay for their children\'s meals',
+                    'contact-registration': 'Contact Us for Registration',
+                    
+                    // Footer
+                    'footer-about': 'Welcome to the Albanian Islamic Center, a place of worship, learning, and community rooted in rich Albanian heritage and Islamic tradition. We strive to foster a welcoming and inclusive space for every member of the Muslim community.',
+                    'contact': 'Contact',
+                    'email-address': 'Email Address',
+                    'phone-number': 'Phone Number',
+                    'location': 'Location',
+                    'social-media': 'Social Media',
+                    'social-desc': 'Follow us on Facebook for the latest announcements and updates about events and programs at the Albanian Islamic Center.',
+                    'newsletter': 'Newsletter',
+                    'newsletter-desc': 'Subscribe to our newsletter to receive updates on events, programs, and community news directly to your inbox. Stay connected with the Albanian Islamic Center.',
+                    'email-placeholder': 'Enter your email',
+                    'subscribe': 'Subscribe',
+                    'footer-copyright': '© 2025 aicod.org. All Rights Reserved.<br>Icons made from www.flaticon.com'
+                },
+                sq: {
+                    // Navigation
+                    'nav-home': 'Ballina',
+                    'nav-about': 'Rreth Nesh',
+                    'nav-islam': 'Çfarë është Islami?',
+                    'nav-events': 'Ngjarjet',
+                    'nav-programs': 'Programet & Aktivitetet',
+                    'nav-services': 'Shërbimet',
+                    'nav-banquet': 'Salla e Dasmave',
+                    'nav-join': 'Bashkohuni me Ne',
+                    'nav-contact': 'Na Kontaktoni',
+                    'donate': 'Dhuroni',
+                    
+                    // Banner
+                    'banner-programs': 'Programet & Aktivitetet',
+                    'banner-learn': 'Mësoni rreth ngjarjeve tona të vazhdueshme, programeve arsimore dhe iniciativave komunitare.',
+                    
+                    // Sunday School
+                    'sunday-school-title': 'Programet e Shkollës së Dielës',
+                    'sunday-school-desc': 'Shkolla jonë e Dielës është e përkushtuar për të ofruar një arsim islam të plotë për fëmijët dhe të rinjtë. Ne ofrojmë klasa që mbulojnë studimet kuranore, mësimet islame dhe trashëgiminë kulturore shqiptare, duke nxitur një themel të fortë në besim dhe vlerat e komunitetit. Klasat mbahen çdo të diel nga ora 10:00 AM deri në kohën e Duhrit.',
+                    
+                    // Program Cards
+                    'quran-studies-title': 'Studimet Kuranore & Texhvidi',
+                    'quran-studies-desc': 'Programi ynë i studimeve kuranore është i dizajnuar për t\'i prezantojë fëmijët me Kuranin e shenjtë dhe mësimet e tij. Nxënësit mësojnë recitimin e duhur me rregullat e Texhvidit, teknikat e memorizimit dhe kuptimin e arabishtes kuranore. Klasat jepen nga Imami i cili ofron vëmendje individuale për çdo nxënës.',
+                    'age-groups-label': 'Grupet e Moshës:',
+                    'age-range': '6-16 vjeç',
+                    'instructor-label': 'Instruktori:',
+                    'sheikh-name': 'Sheikh Shuajb Gerguri',
+                    
+                    'fiqh-aqeedah-title': 'Klasat e Fikhut & Akides',
+                    'fiqh-aqeedah-desc': 'Klasat e fikhut ofrojnë njohuri të thella të jurisprudencës islame, duke i ndihmuar nxënësit të kuptojnë zbatimet praktike të ligjit islam në jetën e përditshme. Klasat e akides fokusohen në besimet dhe teologjinë islame, duke forcuar kuptimin e nxënësve për konceptet themelore islame dhe besimin.',
+                    
+                    'albanian-language-title': 'Gjuha dhe Trashëgimia Shqiptare',
+                    'albanian-language-desc': 'Klasa e gjuhës shqipe është një mundësi e çmuar për fëmijët të mësojnë gjuhën shqipe, duke nxitur një kuptim të thellë të kulturës dhe trashëgimisë shqiptare. Nxënësit mësojnë leximin, shkrimin, të folurit dhe traditat kulturore që i lidhin me rrënjët e tyre.',
+                    'qualified-teachers': 'Mësues të Kualifikuar',
+                    
+                    'cultural-activities-title': 'Aktivitetet Kulturore Shqiptare',
+                    'cultural-activities-desc': 'Programi ynë kulturor i prezanton fëmijët me zakonet tradicionale shqiptare. Nxënësit marrin pjesë në performanca gjatë ngjarjeve të veçanta dhe festave, duke mësuar për trashëgiminë e tyre përmes aktiviteteve tërheqëse dhe festimeve kulturore.',
+                    
+                    // Recreational Facilities
+                    'recreational-facilities-title': 'Objektet Rekreative',
+                    'basketball-volleyball-title': 'Fusha e Basketbollit dhe Volejbollit',
+                    'basketball-volleyball-desc': 'Fusha jonë e basketbollit dhe volejbollit është një hapësirë e gjallë ku fëmijët dhe të rinjtë mund të luajnë, të ushtrojnë dhe të mësojnë së bashku. Objekti promovon kondicionin fizik, punën në grup dhe konkurrencën e shëndetshme.',
+                    
+                    // Registration
+                    'registration-info-title': 'Informacion Regjistrimi',
+                    'how-to-register': 'Si të Regjistroheni',
+                    'registration-desc': 'Regjistrimi për programet tona të Shkollës së Dielës fillon në shtator. Ne mirëpresim familjet të sjellin fëmijët dhe të rinjtë e tyre për t\'u bashkuar me programet dhe aktivitetet tona arsimore.',
+                    'contact-mosque': 'Kontaktoni zyrën e xhamisë në (313) 884-6676',
+                    'email-us': 'Na dërgoni email në albislamct@aol.com',
+                    'visit-sundays': 'Na vizitoni të dielat gjatë orëve të programit',
+                    'requirements-info': 'Kërkesat dhe Informacioni',
+                    'age-label': 'Mosha:',
+                    'programs-available': 'Programet janë të disponueshme për moshat 6-16',
+                    'schedule-label': 'Orari:',
+                    'sundays-schedule': 'Të dielat 10:00 AM - koha e Duhrit',
+                    'cost-label': 'Kostoja:',
+                    'free-tuition': 'Mësimi falas, familjet paguajnë për ushqimin e fëmijëve të tyre',
+                    'contact-registration': 'Na Kontaktoni për Regjistrim',
+                    
+                    // Footer
+                    'footer-about': 'Mirësevini në Qendrën Islame Shqiptare, një vend adhurimi, të mësuari dhe komuniteti i rrënjosur në trashëgiminë e pasur shqiptare dhe traditën islame. Ne përpiqemi të krijojmë një hapësirë mikpritëse dhe gjithëpërfshirëse për çdo anëtar të komunitetit mysliman.',
+                    'contact': 'Kontakti',
+                    'email-address': 'Adresa e Email-it',
+                    'phone-number': 'Numri i Telefonit',
+                    'location': 'Vendndodhja',
+                    'social-media': 'Rrjetet Sociale',
+                    'social-desc': 'Na ndiqni në Facebook për njoftimet dhe përditësimet më të fundit rreth ngjarjeve dhe programeve në Qendrën Islame Shqiptare.',
+                    'newsletter': 'Buletini',
+                    'newsletter-desc': 'Abonohuni në buletinin tonë për të marrë përditësime mbi ngjarjet, programet dhe lajmet e komunitetit direkt në email-in tuaj. Qëndroni të lidhur me Qendrën Islame Shqiptare.',
+                    'email-placeholder': 'Vendosni email-in tuaj',
+                    'subscribe': 'Abonohu',
+                    'footer-copyright': '© 2025 aicod.org. Të gjitha të drejtat e rezervuara.<br>Ikonat janë marrë nga www.flaticon.com'
                 }
-            });
+            };
 
-            // Show the main slide
-            document.addEventListener('DOMContentLoaded', function() {
-                const slide = document.querySelector('.mySlides');
-                if (slide) {
-                    slide.style.display = 'block';
-                }
-            });
+            // Merge the translations
+Object.assign(translations.sq);
 
-            // Handle window resize for mobile menu
-            window.addEventListener('resize', function() {
-                if (window.innerWidth > 768) {
-                    navMenu.classList.remove('show');
-                    menuToggle.classList.remove('active');
-                }
-            });
+            // Language toggle functionality
+            let currentLanguage = localStorage.getItem('language') || 'en';
+
+            // Continuation of the JavaScript for Programs & Activities page
+// Complete language toggle functionality and event handlers
+
+function setLanguage(lang) {
+    currentLanguage = lang;
+    localStorage.setItem('language', lang);
+    document.documentElement.lang = lang;
+    
+    // Update language buttons
+    document.querySelectorAll('.language-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+    
+    // Translate all elements
+    document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[lang][key]) {
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                element.value = translations[lang][key];
+            } else {
+                element.innerHTML = translations[lang][key];
+            }
+        }
+    });
+    
+    // Translate placeholders
+    document.querySelectorAll('[data-translate-placeholder]').forEach(element => {
+        const key = element.getAttribute('data-translate-placeholder');
+        if (translations[lang][key]) {
+            element.placeholder = translations[lang][key];
+        }
+    });
+}
+
+// Initialize language on page load
+document.addEventListener('DOMContentLoaded', function() {
+    // Set initial language
+    setLanguage(currentLanguage);
+    
+    // Add click event listeners to language buttons
+    document.querySelectorAll('.language-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            setLanguage(this.dataset.lang);
+        });
+    });
+    
+    // Initialize AOS
+    AOS.init({
+        duration: 1000,
+        once: true,
+    });
+
+    // Show the main slide
+    const slide = document.querySelector('.mySlides');
+    if (slide) {
+        slide.style.display = 'block';
+    }
+});
+
+// Mobile menu toggle functionality
+const menuToggle = document.getElementById('menu-toggle');
+const navMenu = document.getElementById('nav-menu');
+
+menuToggle.addEventListener('click', function() {
+    navMenu.classList.toggle('show');
+    menuToggle.classList.toggle('active');
+});
+
+// Close menu when clicking on a link (mobile)
+const navLinks = document.querySelectorAll('#nav-menu a');
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('show');
+        menuToggle.classList.remove('active');
+    });
+});
+
+// Close menu when clicking outside (mobile)
+document.addEventListener('click', function(event) {
+    const isClickInsideNav = navMenu.contains(event.target);
+    const isClickOnToggle = menuToggle.contains(event.target);
+    
+    if (!isClickInsideNav && !isClickOnToggle && navMenu.classList.contains('show')) {
+        navMenu.classList.remove('show');
+        menuToggle.classList.remove('active');
+    }
+});
+
+// Handle window resize for mobile menu
+window.addEventListener('resize', function() {
+    if (window.innerWidth > 768) {
+        navMenu.classList.remove('show');
+        menuToggle.classList.remove('active');
+    }
+});
         </script>
-    </body>
-</html>
+    

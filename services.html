@@ -6,6 +6,7 @@
         <title>Albanian Islamic Center - Services</title>
         <link rel="stylesheet" href="Style-Sheets/service-styles.css">
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+       
     </head>
 
     <body>
@@ -13,8 +14,20 @@
         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v22.0"></script>
         
         <div class="contacttop">
-            <p>19775 Harper Avenue, Harper Woods, MI 48225</p>
-            <p>(313)-884-6676&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;albislamct@aol.com</p>
+            <div class="contacttop-text">
+                <p>19775 Harper Avenue, Harper Woods, MI 48225</p>
+                <p>(313)-884-6676&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;albislamct@aol.com</p>
+            </div>
+            <div class="language-toggle">
+                <button class="language-btn active" data-lang="en">
+                    <span class="flag-icon">🇺🇸</span>
+                    <span>EN</span>
+                </button>
+                <button class="language-btn" data-lang="sq">
+                    <span class="flag-icon">🇦🇱</span>
+                    <span>AL</span>
+                </button>
+            </div>
         </div>
 
         <nav class="navbar">
@@ -29,22 +42,22 @@
             </button>
             
             <ul id="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="islam.html">What is Islam?</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="sundayschool.html">Programs & Activities</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="banquethall.html">Banquet Hall</a></li>
-                <li><a href="membership.html">Join Us</a></li>
-                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="index.html" data-translate="nav-home">Home</a></li>
+                <li><a href="about.html" data-translate="nav-about">About Us</a></li>
+                <li><a href="islam.html" data-translate="nav-islam">What is Islam?</a></li>
+                <li><a href="events.html" data-translate="nav-events">Events</a></li>
+                <li><a href="sundayschool.html" data-translate="nav-programs">Programs & Activities</a></li>
+                <li><a href="services.html" data-translate="nav-services">Services</a></li>
+                <li><a href="banquethall.html" data-translate="nav-banquet">Banquet Hall</a></li>
+                <li><a href="membership.html" data-translate="nav-join">Join Us</a></li>
+                <li><a href="contactus.html" data-translate="nav-contact">Contact Us</a></li>
             </ul>
             
             <form action="https://www.paypal.com/donate" method="post" target="_blank" class="donate-form">
                 <input type="hidden" name="hosted_button_id" value="LMWW6JLZ9N57L" />
                 <button type="submit" class="donate-btn" title="PayPal - The safer, easier way to pay online!">
                     <img src="images/donation.png" class="heart-icon" alt="Heart icon">
-                    Donate
+                    <span data-translate="donate">Donate</span>
                 </button>
             </form>
         </nav>
@@ -56,183 +69,171 @@
                 </div>
             </div>
             <div class="text-overlay">
-                <h1 class="banner-text">Services</h1>
-                <h2 class="banner-subtext">Explore our essential services designed to support you in life's most important moments.</h2>
+                <h1 class="banner-text" data-translate="banner-services">Services</h1>
+                <h2 class="banner-subtext" data-translate="banner-explore-services">Explore our essential services designed to support you in life's most important moments.</h2>
             </div>
         </div>
 
         <div class="services-section">
             <div class="container">
                 <div class="services-intro" data-aos="fade-up">
-                    <h1>Our Services</h1>
-                    <p>The Albanian Islamic Center provides a comprehensive range of religious and community services to support our members through all stages of life. Our experienced staff and volunteers are here to assist you with compassion and dedication.</p>
+                    <h1 data-translate="services-title">Our Services</h1>
+                    <p data-translate="services-intro">The Albanian Islamic Center provides a comprehensive range of religious and community services to support our members through all stages of life. Our experienced staff and volunteers are here to assist you with compassion and dedication.</p>
                 </div>
 
                 <div class="services-grid">
                     <!-- Marriage Services -->
                     <div class="service-card" data-aos="fade-up" data-aos-delay="100">
                         <div class="service-content">
-                            <h2>Marriage Services (Nikkah)</h2>
-                            <p>We provide complete Islamic marriage services including pre-marital counseling, Nikkah ceremonies, and Islamic marriage documentation. Our qualified imam conducts ceremonies in accordance with Islamic principles and Michigan state requirements.</p>
+                            <h2 data-translate="marriage-services-title">Marriage Services (Nikkah)</h2>
+                            <p data-translate="marriage-services-desc">We provide complete Islamic marriage services including pre-marital counseling, Nikkah ceremonies, and Islamic marriage documentation. Our qualified imam conducts ceremonies in accordance with Islamic principles and Michigan state requirements.</p>
                             
                             <div class="service-details">
-                                <h3>What's Included:</h3>
+                                <h3 data-translate="whats-included">What's Included:</h3>
                                 <ul>
-                                    <li>Pre-marital counseling sessions</li>
-                                    <li>Nikkah ceremony with qualified imam</li>
-                                    <li>Marriage certificate preparation</li>
-                                    
-                                    <li>Islamic guidance and consultation</li>
+                                    <li data-translate="premarital-counseling">Pre-marital counseling sessions</li>
+                                    <li data-translate="nikkah-ceremony">Nikkah ceremony with qualified imam</li>
+                                    <li data-translate="marriage-certificate">Marriage certificate preparation</li>
+                                    <li data-translate="islamic-guidance">Islamic guidance and consultation</li>
                                 </ul>
                                 
-                                <h3>Requirements:</h3>
+                                <h3 data-translate="requirements">Requirements:</h3>
                                 <ul>
-                                    <li>Valid Michigan marriage license</li>
-                                    <li>Two adult  witnesses</li>
-                                    <li>Advance appointment scheduling</li>
-                                    <li>Pre-marital counseling session </li>
+                                    <li data-translate="marriage-license">Valid Michigan marriage license</li>
+                                    <li data-translate="witnesses">Two adult witnesses</li>
+                                    <li data-translate="advance-appointment">Advance appointment scheduling</li>
+                                    <li data-translate="counseling-session">Pre-marital counseling session</li>
                                 </ul>
                                 
                                 <div class="service-info">
-                                    <span class="info-label">Duration:</span>
-                                    <span class="info-value">30-60 minutes</span>
+                                    <span class="info-label" data-translate="duration-label">Duration:</span>
+                                    <span class="info-value" data-translate="duration-value">30-60 minutes</span>
                                 </div>
                                 <div class="service-info">
-                                    <span class="info-label">Fee:</span>
-                                    <span class="info-value">Donation-based</span>
+                                    <span class="info-label" data-translate="fee-label">Fee:</span>
+                                    <span class="info-value" data-translate="fee-value">Donation-based</span>
                                 </div>
                             </div>
                             
-                            <a href="contactus.html" class="service-button">Request This Service</a>
+                            <a href="contactus.html" class="service-button" data-translate="request-service">Request This Service</a>
                         </div>
                     </div>
 
                     <!-- Funeral Services -->
                     <div class="service-card" data-aos="fade-up" data-aos-delay="200">
                         <div class="service-content">
-                            <h2>Funeral Services</h2>
-                            <p>Our community provides comprehensive funeral services including Janazah prayers, burial arrangements, and family support during difficult times. We guide families through Islamic funeral rites with compassion and care.</p>
+                            <h2 data-translate="funeral-services-title">Funeral Services</h2>
+                            <p data-translate="funeral-services-desc">Our community provides comprehensive funeral services including Janazah prayers, burial arrangements, and family support during difficult times. We guide families through Islamic funeral rites with compassion and care.</p>
                             
-
-                            </div>
-                            
-                            <a href="tel:313-884-6676" class="service-button emergency">Contact Us: 313-884-6676</a>
+                            <a href="tel:313-884-6676" class="service-button emergency" data-translate="contact-funeral">Contact Us: 313-884-6676</a>
                         </div>
                     </div>
-
-
 
                     <!-- Gym Rental Services -->
                     <div class="service-card" data-aos="fade-up" data-aos-delay="400">
                         <div class="service-content">
-                            <h2>Gym & Facility Rental</h2>
-                            <p>Rent our basketball/volleyball court and other facility spaces for sports events, community gatherings, and private functions. Our modern gym provides an excellent venue for various activities.</p>
+                            <h2 data-translate="gym-rental-title">Gym & Facility Rental</h2>
+                            <p data-translate="gym-rental-desc">Rent our basketball/volleyball court and other facility spaces for sports events, community gatherings, and private functions. Our modern gym provides an excellent venue for various activities.</p>
                             
                             <div class="service-details">
-                                <h3>Available Facilities:</h3>
+                                <h3 data-translate="available-facilities">Available Facilities:</h3>
                                 <ul>
-                                    <li>Basketball court</li>
-                                    <li>Volleyball court setup</li>
-                                  
-                                    <li>Restroom facilities</li>
-                                    <li>Parking availability</li>
-                                    <li>Equipment storage</li>
+                                    <li data-translate="basketball-court">Basketball court</li>
+                                    <li data-translate="volleyball-court">Volleyball court setup</li>
+                                    <li data-translate="restroom-facilities">Restroom facilities</li>
+                                    <li data-translate="parking-availability">Parking availability</li>
+                                    <li data-translate="equipment-storage">Equipment storage</li>
                                 </ul>
                                 
-                                <h3>Rental Options:</h3>
+                                <h3 data-translate="rental-options">Rental Options:</h3>
                                 <ul>
-                                    <li>Hourly gym rental</li>
-                                    <li>Half-day packages</li>
-                                    <li>Full-day events</li>
-                                    <li>Weekly recurring bookings</li>
-
+                                    <li data-translate="hourly-rental">Hourly gym rental</li>
+                                    <li data-translate="halfday-packages">Half-day packages</li>
+                                    <li data-translate="fullday-events">Full-day events</li>
+                                    <li data-translate="weekly-bookings">Weekly recurring bookings</li>
                                 </ul>
                                 
                                 <div class="service-info">
-                                    <span class="info-label">Capacity:</span>
-                                    <span class="info-value">Up to 50 people</span>
+                                    <span class="info-label" data-translate="capacity-label">Capacity:</span>
+                                    <span class="info-value" data-translate="capacity-value">Up to 50 people</span>
                                 </div>
                                 <div class="service-info">
-                                    <span class="info-label">Hourly Rate:</span>
-                                    <span class="info-value">Contact for pricing</span>
+                                    <span class="info-label" data-translate="hourly-rate-label">Hourly Rate:</span>
+                                    <span class="info-value" data-translate="contact-pricing">Contact for pricing</span>
                                 </div>
                             </div>
                             
-                            <a href="contactus.html" class="service-button">Check Availability</a>
+                            <a href="contactus.html" class="service-button" data-translate="check-availability">Check Availability</a>
                         </div>
                     </div>
 
                     <!-- Religious Counseling -->
                     <div class="service-card" data-aos="fade-up" data-aos-delay="500">
                         <div class="service-content">
-                            <h2>Religious Counseling</h2>
-                            <p>Our experienced imam provides spiritual guidance, religious consultation, and counseling services for individuals and families facing various life challenges from an Islamic perspective.</p>
+                            <h2 data-translate="religious-counseling-title">Religious Counseling</h2>
+                            <p data-translate="religious-counseling-desc">Our experienced imam provides spiritual guidance, religious consultation, and counseling services for individuals and families facing various life challenges from an Islamic perspective.</p>
                             
                             <div class="service-details">
-                                <h3>Counseling Services:</h3>
+                                <h3 data-translate="counseling-services">Counseling Services:</h3>
                                 <ul>
-                                    <li>Marriage and family counseling</li>
-                                    <li>Youth guidance and mentoring</li>
-                                    <li>Grief and loss support</li>
-                                    <li>Islamic jurisprudence consultation</li>
-                                    <li>Convert support and guidance</li>
-                                    <li>Personal spiritual development</li>
+                                    <li data-translate="marriage-family-counseling">Marriage and family counseling</li>
+                                    <li data-translate="youth-guidance">Youth guidance and mentoring</li>
+                                    <li data-translate="grief-support">Grief and loss support</li>
+                                    <li data-translate="jurisprudence-consultation">Islamic jurisprudence consultation</li>
+                                    <li data-translate="convert-support">Convert support and guidance</li>
+                                    <li data-translate="spiritual-development">Personal spiritual development</li>
                                 </ul>
                                 
-                                <h3>Consultation Topics:</h3>
+                                <h3 data-translate="consultation-topics">Consultation Topics:</h3>
                                 <ul>
-                                    <li>Religious questions and clarifications</li>
-                                    <li>Islamic lifestyle guidance</li>
-                                    <li>Prayer and worship practices</li>
-                                    <li>Halal/Haram determinations</li>
-                                    <li>Family relationship issues</li>
+                                    <li data-translate="religious-questions">Religious questions and clarifications</li>
+                                    <li data-translate="lifestyle-guidance">Islamic lifestyle guidance</li>
+                                    <li data-translate="prayer-practices">Prayer and worship practices</li>
+                                    <li data-translate="halal-haram">Halal/Haram determinations</li>
+                                    <li data-translate="family-relationships">Family relationship issues</li>
                                 </ul>
                                 
                                 <div class="service-info">
-                                    <span class="info-label">Sessions:</span>
-                                    <span class="info-value">By appointment</span>
+                                    <span class="info-label" data-translate="sessions-label">Sessions:</span>
+                                    <span class="info-value" data-translate="by-appointment">By appointment</span>
                                 </div>
                                 <div class="service-info">
-                                    <span class="info-label">Language:</span>
-                                    <span class="info-value">English, Albanian, or Arabic</span>
+                                    <span class="info-label" data-translate="language-label">Language:</span>
+                                    <span class="info-value" data-translate="languages-offered">English, Albanian, or Arabic</span>
                                 </div>
                             </div>
                             
-                            <a href="contactus.html" class="service-button">Schedule Consultation</a>
+                            <a href="contactus.html" class="service-button" data-translate="schedule-consultation">Schedule Consultation</a>
                         </div>
                     </div>
-
-                   
                 </div>
 
                 <!-- Service Request Information -->
                 <div class="service-request-info" data-aos="fade-up">
-                    <h2>How to Request Services</h2>
-                  <div class="request-steps">
+                    <h2 data-translate="how-to-request">How to Request Services</h2>
+                    <div class="request-steps">
                         <div class="step">
                             <div class="step-number">1</div>
                             <div class="step-content">
-                                <h3>Contact Us</h3>
-                                <p>Call us at (313) 884-6676 or email albislamct@aol.com to discuss your service needs.</p>
+                                <h3 data-translate="contact-us-step">Contact Us</h3>
+                                <p data-translate="contact-us-desc">Call us at (313) 884-6676 or email albislamct@aol.com to discuss your service needs.</p>
                             </div>
                         </div>
                         <div class="step">
                             <div class="step-number">2</div>
                             <div class="step-content">
-                                <h3>Schedule Consultation</h3>
-                                <p>Meet with our imam or staff to discuss details and requirements for your specific service.</p>
+                                <h3 data-translate="schedule-consultation-step">Schedule Consultation</h3>
+                                <p data-translate="consultation-desc">Meet with our imam or staff to discuss details and requirements for your specific service.</p>
                             </div>
                         </div>
                         <div class="step">
                             <div class="step-number">3</div>
                             <div class="step-content">
-                                <h3>Confirm Arrangements</h3>
-                                <p>Finalize dates, times, and any special requirements to ensure everything is prepared properly.</p>
+                                <h3 data-translate="confirm-arrangements">Confirm Arrangements</h3>
+                                <p data-translate="arrangements-desc">Finalize dates, times, and any special requirements to ensure everything is prepared properly.</p>
                             </div>
                         </div>
                     </div>
-                    
-
                 </div>
             </div>
         </div>
@@ -242,102 +243,372 @@
             <div class="row">
                 <div class="support-text">
                     <img src="images/Logo.png" alt="Albanian Islamic Center Logo" class="logo-img">
-                    <p>Welcome to the Albanian Islamic Center, a place of worship, learning, and community rooted in 
-                        rich Albanian heritage and Islamic tradition. We strive to foster a welcoming and inclusive 
-                        space for every member of the Muslim community.</p>
+                    <p data-translate="footer-about">Welcome to the Albanian Islamic Center, a place of worship, learning, and community rooted in rich Albanian heritage and Islamic tradition. We strive to foster a welcoming and inclusive space for every member of the Muslim community.</p>
                     <a href="https://www.facebook.com/Albanianislamiccenter/?ref=embed_page#" class="social-media" target="_blank"> 
                         <img src="images/facebook.png" class="facebook-img">
                     </a>
                 </div>
                 <div class="contact-info">
-                    <h2>Contact</h2>
-                    <h3><img src="images/email.png" class="email-icon">Email Address</h3>
+                    <h2 data-translate="contact">Contact</h2>
+                    <h3><img src="images/email.png" class="email-icon"><span data-translate="email-address">Email Address</span></h3>
                     <p>albislamct@aol.com</p>
-                    <h3><img src="images/phone-call.png" class="phone-icon">Phone Number</h3>
+                    <h3><img src="images/phone-call.png" class="phone-icon"><span data-translate="phone-number">Phone Number</span></h3>
                     <p>(313)-884-6676</p>
-                    <h3><img src="images/pin.png" class="pin-icon">Location</h3>
+                    <h3><img src="images/pin.png" class="pin-icon"><span data-translate="location">Location</span></h3>
                     <p>19775 Harper Avenue, Harper Woods, MI 48225</p>
                 </div>
                 <div class="socials">
-                    <h2>Social Media</h2>
-                    <p>Follow us on Facebook for the latest announcements and updates about events and programs at 
-                        the Albanian Islamic Center.</p>
+                    <h2 data-translate="social-media">Social Media</h2>
+                    <p data-translate="social-desc">Follow us on Facebook for the latest announcements and updates about events and programs at the Albanian Islamic Center.</p>
                     <a href="https://www.facebook.com/Albanianislamiccenter/" class="social-media" target="_blank">
                         <img src="images/facebook.png" alt="Facebook" class="facebook-img">
                     </a>
                 </div>
                 <div class="newsletter">
-                    <h2>Newsletter</h2>
-                    <p>Subscribe to our newsletter to receive updates on events, programs, and community news directly 
-                        to your inbox. Stay connected with the Albanian Islamic Center.</p>
+                    <h2 data-translate="newsletter">Newsletter</h2>
+                    <p data-translate="newsletter-desc">Subscribe to our newsletter to receive updates on events, programs, and community news directly to your inbox. Stay connected with the Albanian Islamic Center.</p>
                     <form action="https://aol.us13.list-manage.com/subscribe/post?u=096bcfd7c98cb079bfb26df4f&amp;id=36db6b2f2f" method="post" novalidate>
-                        <input type="email" name="EMAIL" id="email" placeholder="Enter your email" required>
+                        <input type="email" name="EMAIL" id="email" placeholder="Enter your email" data-translate-placeholder="email-placeholder" required>
                         <div style="position: absolute; left: -5000px;" aria-hidden="true">
                             <input type="text" name="b_096bcfd7c98cb079bfb26df4f_36db6b2f2f" tabindex="-1" value="">
                         </div>
-                        <button type="submit">Subscribe</button>
+                        <button type="submit" data-translate="subscribe">Subscribe</button>
                     </form>
                 </div>
             </div>
         </div>
 
         <footer> 
-            <p>© 2025 aicod.org. All Rights Reserved.<br>
-            Icons made from www.flaticon.com</p>
+            <p data-translate="footer-copyright">© 2025 aicod.org. All Rights Reserved.<br>Icons made from www.flaticon.com</p>
         </footer>
 
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
-            // Initialize AOS
-            AOS.init({
-                duration: 1000,
-                once: true,
-            });
+            // Translation data
+            const translations = {
+                en: {
+                    // Navigation
+                    'nav-home': 'Home',
+                    'nav-about': 'About Us',
+                    'nav-islam': 'What is Islam?',
+                    'nav-events': 'Events',
+                    'nav-programs': 'Programs & Activities',
+                    'nav-services': 'Services',
+                    'nav-banquet': 'Banquet Hall',
+                    'nav-join': 'Join Us',
+                    'nav-contact': 'Contact Us',
+                    'donate': 'Donate',
+                    
+                    // Banner
+                    'banner-services': 'Services',
+                    'banner-explore-services': 'Explore our essential services designed to support you in life\'s most important moments.',
+                    
+                    // Services Section
+                    'services-title': 'Our Services',
+                    'services-intro': 'The Albanian Islamic Center provides a comprehensive range of religious and community services to support our members through all stages of life. Our experienced staff and volunteers are here to assist you with compassion and dedication.',
+                    
+                    // Marriage Services
+                    'marriage-services-title': 'Marriage Services (Nikkah)',
+                    'marriage-services-desc': 'We provide complete Islamic marriage services including pre-marital counseling, Nikkah ceremonies, and Islamic marriage documentation. Our qualified imam conducts ceremonies in accordance with Islamic principles and Michigan state requirements.',
+                    'whats-included': 'What\'s Included:',
+                    'premarital-counseling': 'Pre-marital counseling sessions',
+                    'nikkah-ceremony': 'Nikkah ceremony with qualified imam',
+                    'marriage-certificate': 'Marriage certificate preparation',
+                    'islamic-guidance': 'Islamic guidance and consultation',
+                    'requirements': 'Requirements:',
+                    'marriage-license': 'Valid Michigan marriage license',
+                    'witnesses': 'Two adult witnesses',
+                    'advance-appointment': 'Advance appointment scheduling',
+                    'counseling-session': 'Pre-marital counseling session',
+                    'duration-label': 'Duration:',
+                    'duration-value': '30-60 minutes',
+                    'fee-label': 'Fee:',
+                    'fee-value': 'Donation-based',
+                    'request-service': 'Request This Service',
+                    
+                    // Funeral Services
+                    'funeral-services-title': 'Funeral Services',
+                    'funeral-services-desc': 'Our community provides comprehensive funeral services including Janazah prayers, burial arrangements, and family support during difficult times. We guide families through Islamic funeral rites with compassion and care.',
+                    'contact-funeral': 'Contact Us: 313-884-6676',
+                    
+                    // Gym Rental
+                    'gym-rental-title': 'Gym & Facility Rental',
+                    'gym-rental-desc': 'Rent our basketball/volleyball court and other facility spaces for sports events, community gatherings, and private functions. Our modern gym provides an excellent venue for various activities.',
+                    'available-facilities': 'Available Facilities:',
+                    'basketball-court': 'Basketball court',
+                    'volleyball-court': 'Volleyball court setup',
+                    'restroom-facilities': 'Restroom facilities',
+                    'parking-availability': 'Parking availability',
+                    'equipment-storage': 'Equipment storage',
+                    'rental-options': 'Rental Options:',
+                    'hourly-rental': 'Hourly gym rental',
+                    'halfday-packages': 'Half-day packages',
+                    'fullday-events': 'Full-day events',
+                    'weekly-bookings': 'Weekly recurring bookings',
+                    'capacity-label': 'Capacity:',
+                    'capacity-value': 'Up to 50 people',
+                    'hourly-rate-label': 'Hourly Rate:',
+                    'contact-pricing': 'Contact for pricing',
+                    'check-availability': 'Check Availability',
+                    
+                    // Religious Counseling
+                    'religious-counseling-title': 'Religious Counseling',
+                    'religious-counseling-desc': 'Our experienced imam provides spiritual guidance, religious consultation, and counseling services for individuals and families facing various life challenges from an Islamic perspective.',
+                    'counseling-services': 'Counseling Services:',
+                    'marriage-family-counseling': 'Marriage and family counseling',
+                    'youth-guidance': 'Youth guidance and mentoring',
+                    'grief-support': 'Grief and loss support',
+                    'jurisprudence-consultation': 'Islamic jurisprudence consultation',
+                    'convert-support': 'Convert support and guidance',
+                    'spiritual-development': 'Personal spiritual development',
+                    'consultation-topics': 'Consultation Topics:',
+                    'religious-questions': 'Religious questions and clarifications',
+                    'lifestyle-guidance': 'Islamic lifestyle guidance',
+                    'prayer-practices': 'Prayer and worship practices',
+                    'halal-haram': 'Halal/Haram determinations',
+                    'family-relationships': 'Family relationship issues',
+                    'sessions-label': 'Sessions:',
+                    'by-appointment': 'By appointment',
+                    'language-label': 'Language:',
+                    'languages-offered': 'English, Albanian, or Arabic',
+                    'schedule-consultation': 'Schedule Consultation',
+                    
+                    // How to Request Services
+                    'how-to-request': 'How to Request Services',
+                    'contact-us-step': 'Contact Us',
+                    'contact-us-desc': 'Call us at (313) 884-6676 or email albislamct@aol.com to discuss your service needs.',
+                    'schedule-consultation-step': 'Schedule Consultation',
+                    'consultation-desc': 'Meet with our imam or staff to discuss details and requirements for your specific service.',
+                    'confirm-arrangements': 'Confirm Arrangements',
+                    'arrangements-desc': 'Finalize dates, times, and any special requirements to ensure everything is prepared properly.',
+                    
+                    // Footer
+                    'footer-about': 'Welcome to the Albanian Islamic Center, a place of worship, learning, and community rooted in rich Albanian heritage and Islamic tradition. We strive to foster a welcoming and inclusive space for every member of the Muslim community.',
+                    'contact': 'Contact',
+                    'email-address': 'Email Address',
+                    'phone-number': 'Phone Number',
+                    'location': 'Location',
+                    'social-media': 'Social Media',
+                    'social-desc': 'Follow us on Facebook for the latest announcements and updates about events and programs at the Albanian Islamic Center.',
+                    'newsletter': 'Newsletter',
+                    'newsletter-desc': 'Subscribe to our newsletter to receive updates on events, programs, and community news directly to your inbox. Stay connected with the Albanian Islamic Center.',
+                    'email-placeholder': 'Enter your email',
+                    'subscribe': 'Subscribe',
+                    'footer-copyright': '© 2025 aicod.org. All Rights Reserved.<br>Icons made from www.flaticon.com'
+                },
+                sq: {
+                    // Navigation
+                    'nav-home': 'Ballina',
+                    'nav-about': 'Rreth Nesh',
+                    'nav-islam': 'Çfarë është Islami?',
+                    'nav-events': 'Ngjarjet',
+                    'nav-programs': 'Programet & Aktivitetet',
+                    'nav-services': 'Shërbimet',
+                    'nav-banquet': 'Salla e Dasmave',
+                    'nav-join': 'Bashkohuni me Ne',
+                    'nav-contact': 'Na Kontaktoni',
+                    'donate': 'Dhuroni',
+                    
+                    // Banner
+                    'banner-services': 'Shërbimet',
+                    'banner-explore-services': 'Eksploroni shërbimet tona thelbësore të dizajnuara për t\'ju mbështetur në momentet më të rëndësishme të jetës.',
+                    
+                    // Services Section
+                    'services-title': 'Shërbimet Tona',
+                    'services-intro': 'Qendra Islame Shqiptare ofron një gamë të gjërë shërbimesh fetare dhe komunitare për të mbështetur anëtarët tanë përmes të gjitha fazave të jetës. Stafi ynë me përvojë dhe vullnetarët janë këtu për t\'ju ndihmuar me dhembshuri dhe përkushtim.',
+                    
+                    // Marriage Services
+                    'marriage-services-title': 'Shërbimet e Martesës (Nikah)',
+                    'marriage-services-desc': 'Ne ofrojmë shërbime të plota islame martese duke përfshirë këshillimin para-martesor, ceremonitë e Nikahut dhe dokumentimin e martesës islame. Imami ynë i kualifikuar kryen ceremoni në përputhje me parimet islame dhe kërkesat e shtetit të Michigan-it.',
+                    'whats-included': 'Çfarë Përfshihet:',
+                    'premarital-counseling': 'Seanca këshillimi para-martesor',
+                    'nikkah-ceremony': 'Ceremonia e Nikahut me imam të kualifikuar',
+                    'marriage-certificate': 'Përgatitja e certifikatës së martesës',
+                    'islamic-guidance': 'Udhëzim dhe konsultim islam',
+                    'requirements': 'Kërkesat:',
+                    'marriage-license': 'Licencë e vlefshme martese e Michigan-it',
+                    'witnesses': 'Dy dëshmitarë të rritur',
+                    'advance-appointment': 'Planifikimi i takimit paraprak',
+                    'counseling-session': 'Seanca e këshillimit para-martesor',
+                    'duration-label': 'Kohëzgjatja:',
+                    'duration-value': '30-60 minuta',
+                    'fee-label': 'Tarifa:',
+                    'fee-value': 'Bazuar në dhurime',
+                    'request-service': 'Kërkoni Këtë Shërbim',
+                    
+                    // Funeral Services
+                    'funeral-services-title': 'Shërbimet e Varrimit',
+                    'funeral-services-desc': 'Komuniteti ynë ofron shërbime të plota varrimi duke përfshirë namazin e Xhenaze, rregullimet e varrimit dhe mbështetjen e familjes gjatë kohëve të vështira. Ne e udhëzojmë familjet përmes riteve islame të varrimit me dhembshuri dhe kujdes.',
+                    'contact-funeral': 'Na Kontaktoni: 313-884-6676',
+                    
+                    // Gym Rental
+                    'gym-rental-title': 'Qiraja e Palestrës dhe Objekteve',
+                    'gym-rental-desc': 'Merrni me qira fushën tonë të basketbollit/volejbollit dhe hapësirat e tjera të objektit për ngjarje sportive, tubime komunitare dhe funksione private. Palestra jonë moderne ofron një vend të shkëlqyer për aktivitete të ndryshme.',
+                    'available-facilities': 'Objektet e Disponueshme:',
+                    'basketball-court': 'Fusha e basketbollit',
+                    'volleyball-court': 'Rregullimi i fushës së volejbollit',
+                    'restroom-facilities': 'Objektet e tuvaleteve',
+                    'parking-availability': 'Disponueshmëria e parkimit',
+                    'equipment-storage': 'Ruajtja e pajisjeve',
+                    'rental-options': 'Opsionet e Qirasë:',
+                    'hourly-rental': 'Qiraja orare e palestrës',
+                    'halfday-packages': 'Paketat gjysmë-ditore',
+                    'fullday-events': 'Ngjarjet e ditës së plotë',
+                    'weekly-bookings': 'Rezervimet javore të përsëritura',
+                    'capacity-label': 'Kapaciteti:',
+                    'capacity-value': 'Deri në 50 persona',
+                    'hourly-rate-label': 'Tarifa Orare:',
+                    'contact-pricing': 'Kontaktoni për çmime',
+                   // Continuation of Albanian translations for the Services page
+// Completing the sq (Albanian) translations object:
 
-            // Mobile menu toggle functionality
-            const menuToggle = document.getElementById('menu-toggle');
-            const navMenu = document.getElementById('nav-menu');
+'check-availability': 'Kontrolloni Disponueshmërinë',
 
-            menuToggle.addEventListener('click', function() {
-                navMenu.classList.toggle('show');
-                menuToggle.classList.toggle('active');
-            });
+// Religious Counseling
+'religious-counseling-title': 'Këshillimi Fetar',
+'religious-counseling-desc': 'Imami ynë me përvojë ofron udhëzim shpirtëror, konsultim fetar dhe shërbime këshillimi për individë dhe familje që përballen me sfida të ndryshme të jetës nga një perspektivë islame.',
+'counseling-services': 'Shërbimet e Këshillimit:',
+'marriage-family-counseling': 'Këshillimi i martesës dhe familjes',
+'youth-guidance': 'Udhëzimi dhe mentorimi i të rinjve',
+'grief-support': 'Mbështetja për zi dhe humbje',
+'jurisprudence-consultation': 'Konsultimi i jurisprudencës islame',
+'convert-support': 'Mbështetja dhe udhëzimi i konvertitëve',
+'spiritual-development': 'Zhvillimi personal shpirtëror',
+'consultation-topics': 'Temat e Konsultimit:',
+'religious-questions': 'Pyetje fetare dhe sqarime',
+'lifestyle-guidance': 'Udhëzimi i stilit të jetës islam',
+'prayer-practices': 'Praktikat e namazit dhe adhurimit',
+'halal-haram': 'Përcaktimet Halal/Haram',
+'family-relationships': 'Çështjet e marrëdhënieve familjare',
+'sessions-label': 'Seancat:',
+'by-appointment': 'Me takim',
+'language-label': 'Gjuha:',
+'languages-offered': 'Anglisht, Shqip ose Arabisht',
+'schedule-consultation': 'Planifikoni Konsultim',
 
-            // Close menu when clicking on a link (mobile)
-            const navLinks = document.querySelectorAll('#nav-menu a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    navMenu.classList.remove('show');
-                    menuToggle.classList.remove('active');
-                });
-            });
+// How to Request Services
+'how-to-request': 'Si të Kërkoni Shërbime',
+'contact-us-step': 'Na Kontaktoni',
+'contact-us-desc': 'Na telefononi në (313) 884-6676 ose na dërgoni email në albislamct@aol.com për të diskutuar nevojat tuaja për shërbime.',
+'schedule-consultation-step': 'Planifikoni Konsultim',
+'consultation-desc': 'Takohuni me imamin tonë ose stafin për të diskutuar detajet dhe kërkesat për shërbimin tuaj specifik.',
+'confirm-arrangements': 'Konfirmoni Rregullimet',
+'arrangements-desc': 'Finalizoni datat, orët dhe çdo kërkesë të veçantë për të siguruar që gjithçka është përgatitur siç duhet.',
 
-            // Close menu when clicking outside (mobile)
-            document.addEventListener('click', function(event) {
-                const isClickInsideNav = navMenu.contains(event.target);
-                const isClickOnToggle = menuToggle.contains(event.target);
-                
-                if (!isClickInsideNav && !isClickOnToggle && navMenu.classList.contains('show')) {
-                    navMenu.classList.remove('show');
-                    menuToggle.classList.remove('active');
+// Footer
+'footer-about': 'Mirësevini në Qendrën Islame Shqiptare, një vend adhurimi, të mësuari dhe komuniteti i rrënjosur në trashëgiminë e pasur shqiptare dhe traditën islame. Ne përpiqemi të krijojmë një hapësirë mikpritëse dhe gjithëpërfshirëse për çdo anëtar të komunitetit mysliman.',
+'contact': 'Kontakti',
+'email-address': 'Adresa e Email-it',
+'phone-number': 'Numri i Telefonit',
+'location': 'Vendndodhja',
+'social-media': 'Rrjetet Sociale',
+'social-desc': 'Na ndiqni në Facebook për njoftimet dhe përditësimet më të fundit rreth ngjarjeve dhe programeve në Qendrën Islame Shqiptare.',
+'newsletter': 'Buletini',
+'newsletter-desc': 'Abonohuni në buletinin tonë për të marrë përditësime mbi ngjarjet, programet dhe lajmet e komunitetit direkt në email-in tuaj. Qëndroni të lidhur me Qendrën Islame Shqiptare.',
+'email-placeholder': 'Vendosni email-in tuaj',
+'subscribe': 'Abonohu',
+'footer-copyright': '© 2025 aicod.org. Të gjitha të drejtat e rezervuara.<br>Ikonat janë marrë nga www.flaticon.com'
+
                 }
-            });
+            };
+// Merge the translations
+Object.assign(translations.sq);
 
-            // Show the main slide
-            document.addEventListener('DOMContentLoaded', function() {
-                const slide = document.querySelector('.mySlides');
-                if (slide) {
-                    slide.style.display = 'block';
-                }
-            });
 
-            // Handle window resize for mobile menu
-            window.addEventListener('resize', function() {
-                if (window.innerWidth > 768) {
-                    navMenu.classList.remove('show');
-                    menuToggle.classList.remove('active');
-                }
-            });
+// Language toggle functionality
+let currentLanguage = localStorage.getItem('language') || 'en';
+
+function setLanguage(lang) {
+    currentLanguage = lang;
+    localStorage.setItem('language', lang);
+    document.documentElement.lang = lang;
+    
+    // Update language buttons
+    document.querySelectorAll('.language-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+    
+    // Translate all elements
+    document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[lang][key]) {
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                element.value = translations[lang][key];
+            } else {
+                element.innerHTML = translations[lang][key];
+            }
+        }
+    });
+    
+    // Translate placeholders
+    document.querySelectorAll('[data-translate-placeholder]').forEach(element => {
+        const key = element.getAttribute('data-translate-placeholder');
+        if (translations[lang][key]) {
+            element.placeholder = translations[lang][key];
+        }
+    });
+}
+
+// Initialize language on page load
+document.addEventListener('DOMContentLoaded', function() {
+    // Set initial language
+    setLanguage(currentLanguage);
+    
+    // Add click event listeners to language buttons
+    document.querySelectorAll('.language-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            setLanguage(this.dataset.lang);
+        });
+    });
+    
+    // Initialize AOS
+    AOS.init({
+        duration: 1000,
+        once: true,
+    });
+
+    // Show the main slide
+    const slide = document.querySelector('.mySlides');
+    if (slide) {
+        slide.style.display = 'block';
+    }
+});
+
+// Mobile menu toggle functionality
+const menuToggle = document.getElementById('menu-toggle');
+const navMenu = document.getElementById('nav-menu');
+
+menuToggle.addEventListener('click', function() {
+    navMenu.classList.toggle('show');
+    menuToggle.classList.toggle('active');
+});
+
+// Close menu when clicking on a link (mobile)
+const navLinks = document.querySelectorAll('#nav-menu a');
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('show');
+        menuToggle.classList.remove('active');
+    });
+});
+
+// Close menu when clicking outside (mobile)
+document.addEventListener('click', function(event) {
+    const isClickInsideNav = navMenu.contains(event.target);
+    const isClickOnToggle = menuToggle.contains(event.target);
+    
+    if (!isClickInsideNav && !isClickOnToggle && navMenu.classList.contains('show')) {
+        navMenu.classList.remove('show');
+        menuToggle.classList.remove('active');
+    }
+});
+
+// Handle window resize for mobile menu
+window.addEventListener('resize', function() {
+    if (window.innerWidth > 768) {
+        navMenu.classList.remove('show');
+        menuToggle.classList.remove('active');
+    }
+});
         </script>
-    </body>
-</html>
+  

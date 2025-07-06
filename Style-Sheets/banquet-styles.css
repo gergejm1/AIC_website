@@ -1,3 +1,115 @@
+
+/***************************************************** LANGUAGE TOGGLE STYLES *************************************************/
+
+.language-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    margin-left: auto;
+}
+
+.language-btn {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 5px 15px;
+    font-size: 14px;
+    font-family: 'poppins', sans-serif;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.language-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.language-btn.active {
+    background-color: white;
+    color: black;
+}
+
+.flag-icon {
+    width: 20px;
+    height: 15px;
+}
+
+/* Update contacttop to accommodate language toggle */
+.contacttop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    background-color: black;
+    font-size: 15px;
+    color: white;
+    padding-left: 260px;
+    padding-right: 250px;
+    font-family: 'open sans', sans-serif;
+    z-index: 2;
+    position: relative;
+}
+
+/* Mobile responsive adjustments for language toggle */
+@media screen and (max-width: 768px) {
+    .contacttop {
+        padding: 10px 20px;
+        font-size: 12px;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .language-toggle {
+        margin: 0;
+        order: 3;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .language-btn {
+        font-size: 12px;
+        padding: 4px 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .language-btn {
+        font-size: 11px;
+        padding: 3px 10px;
+    }
+    
+    .flag-icon {
+        width: 16px;
+        height: 12px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* GENERAL STYLES ****************************************************/
 
 html, body {

@@ -5,10 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Albanian Islamic Center - Join Our Community</title>
         <link rel="stylesheet" href="Style-Sheets/JoinUs-styles.css">
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-        />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+     
     </head>
 
     <body>
@@ -16,8 +14,20 @@
         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v22.0"></script>
         
         <div class="contacttop">
-            <p>19775 Harper Avenue, Harper Woods, MI 48225</p>
-            <p>(313)-884-6676&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;albislamct@aol.com</p>
+            <div class="contacttop-text">
+                <p>19775 Harper Avenue, Harper Woods, MI 48225</p>
+                <p>(313)-884-6676&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;albislamct@aol.com</p>
+            </div>
+            <div class="language-toggle">
+                <button class="language-btn active" data-lang="en">
+                    <span class="flag-icon">🇺🇸</span>
+                    <span>EN</span>
+                </button>
+                <button class="language-btn" data-lang="sq">
+                    <span class="flag-icon">🇦🇱</span>
+                    <span>AL</span>
+                </button>
+            </div>
         </div>
 
         <nav class="navbar">
@@ -32,22 +42,22 @@
             </button>
             
             <ul id="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="islam.html">What is Islam?</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="sundayschool.html">Programs & Activities</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="banquethall.html">Banquet Hall</a></li>
-                <li><a href="membership.html">Join Us</a></li>
-                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="index.html" data-translate="nav-home">Home</a></li>
+                <li><a href="about.html" data-translate="nav-about">About Us</a></li>
+                <li><a href="islam.html" data-translate="nav-islam">What is Islam?</a></li>
+                <li><a href="events.html" data-translate="nav-events">Events</a></li>
+                <li><a href="sundayschool.html" data-translate="nav-programs">Programs & Activities</a></li>
+                <li><a href="services.html" data-translate="nav-services">Services</a></li>
+                <li><a href="banquethall.html" data-translate="nav-banquet">Banquet Hall</a></li>
+                <li><a href="membership.html" data-translate="nav-join">Join Us</a></li>
+                <li><a href="contactus.html" data-translate="nav-contact">Contact Us</a></li>
             </ul>
             
             <form action="https://www.paypal.com/donate" method="post" target="_blank" class="donate-form">
                 <input type="hidden" name="hosted_button_id" value="LMWW6JLZ9N57L" />
                 <button type="submit" class="donate-btn" title="PayPal - The safer, easier way to pay online!">
                     <img src="images/donation.png" class="heart-icon" alt="Heart icon">
-                    Donate
+                    <span data-translate="donate">Donate</span>
                 </button>
             </form>
         </nav>
@@ -59,29 +69,24 @@
                 </div>
             </div>
             <div class="text-overlay">
-                <h1 class="banner-text">Join Our Community</h1>
-                <h2 class="banner-subtext">Become a member of the Albanian Islamic Center and be part of our growing family.</h2>
+                <h1 class="banner-text" data-translate="banner-join">Join Our Community</h1>
+                <h2 class="banner-subtext" data-translate="banner-member">Become a member of the Albanian Islamic Center and be part of our growing family.</h2>
             </div>
         </div>
 
         <!-- MEMBERSHIP OVERVIEW SECTION -->
         <div class="membership-overview">
             <div class="container">
-                <h2>Why Join the Albanian Islamic Center?</h2>
-                <p>By becoming a member of our community, you're not just 
-                    joining a mosque – you're becoming part of a family that 
-                    values faith, tradition, and community service. 
-                    Our membership program helps support our ongoing 
-                    programs and ensures the sustainability of
-                     our center for future generations.</p>
+                <h2 data-translate="why-join">Why Join the Albanian Islamic Center?</h2>
+                <p data-translate="membership-overview-desc">By becoming a member of our community, you're not just joining a mosque – you're becoming part of a family that values faith, tradition, and community service. Our membership program helps support our ongoing programs and ensures the sustainability of our center for future generations.</p>
             </div>
         </div>
 
         <!-- MEMBERSHIP SECTION -->
         <div class="membership-section">
             <div class="container">
-                <h2 class="section-title">Membership Benefits</h2>
-                <p class="section-subtitle">$250 per family per year</p>
+                <h2 class="section-title" data-translate="membership-benefits">Membership Benefits</h2>
+                <p class="section-subtitle" data-translate="membership-fee">$250 per family per year</p>
                 
                 <div class="membership-content">
                     <!-- Benefits Cards -->
@@ -90,32 +95,32 @@
                             <div class="benefit-icon">
                                 <img src="images/email.png" alt="Letters">
                             </div>
-                            <h3>Event Notifications</h3>
-                            <p>Personal letters and early notifications about all events</p>
+                            <h3 data-translate="event-notifications">Event Notifications</h3>
+                            <p data-translate="notifications-desc">Personal letters and early notifications about all events</p>
                         </div>
                         
                         <div class="benefit-item">
                             <div class="benefit-icon">
                                 <img src="images/pin.png" alt="Calendar">
                             </div>
-                            <h3>Annual Calendar</h3>
-                            <p>Beautiful printed calendar with Islamic dates and prayer times</p>
+                            <h3 data-translate="annual-calendar">Annual Calendar</h3>
+                            <p data-translate="calendar-desc">Beautiful printed calendar with Islamic dates and prayer times</p>
                         </div>
                         
                         <div class="benefit-item">
                             <div class="benefit-icon">
                                 <img src="images/donation.png" alt="Discounts">
                             </div>
-                            <h3>Event Discounts</h3>
-                            <p>Special member discounts on renting the facilities</p>
+                            <h3 data-translate="event-discounts">Event Discounts</h3>
+                            <p data-translate="discounts-desc">Special member discounts on renting the facilities</p>
                         </div>
                         
                         <div class="benefit-item">
                             <div class="benefit-icon">
                                 <img src="images/donation.png" alt="Community Support">
                             </div>
-                            <h3>Support Our Growth</h3>
-                            <p>Your membership helps fund community expansions and future mosque improvements</p>
+                            <h3 data-translate="support-growth">Support Our Growth</h3>
+                            <p data-translate="growth-desc">Your membership helps fund community expansions and future mosque improvements</p>
                         </div>
                     </div>
                 </div>
@@ -124,83 +129,317 @@
 
         <!-- MEMBERSHIP FORM SECTION -->
         <div class="membership-form-section">
-        <div class="container">
-            <h2>Ready to Join?</h2>
-            <p>Fill out the form below to begin your membership application. We'll contact you within 24 hours to complete the process.</p>
-            
-            <form class="membership-form" id="membershipForm">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="firstName">First Name *</label>
-                        <input type="text" id="firstName" name="firstName" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="lastName">Last Name *</label>
-                        <input type="text" id="lastName" name="lastName" required>
-                    </div>
-                </div>
+            <div class="container">
+                <h2 data-translate="ready-join">Ready to Join?</h2>
+                <p data-translate="form-instructions">Fill out the form below to begin your membership application. We'll contact you within 24 hours to complete the process.</p>
                 
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" required>
+                <form class="membership-form" id="membershipForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName" data-translate="first-name-label">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName" data-translate="last-name-label">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number *</label>
-                        <input type="tel" id="phone" name="phone" required>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email" data-translate="email-label">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" data-translate="phone-label">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="address">Address</label>
-                    <input type="text" id="address" name="address" placeholder="Street Address">
-                </div>
-                
-                <div class="form-row">
+                    
                     <div class="form-group">
-                        <label for="city">City</label>
-                        <input type="text" id="city" name="city">
+                        <label for="address" data-translate="address-label">Address</label>
+                        <input type="text" id="address" name="address" data-translate-placeholder="street-address" placeholder="Street Address">
                     </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city" data-translate="city-label">City</label>
+                            <input type="text" id="city" name="city">
+                        </div>
+                        <div class="form-group">
+                            <label for="state" data-translate="state-label">State</label>
+                            <input type="text" id="state" name="state" value="MI">
+                        </div>
+                        <div class="form-group">
+                            <label for="zip" data-translate="zip-label">ZIP Code</label>
+                            <input type="text" id="zip" name="zip">
+                        </div>
+                    </div>
+                    
                     <div class="form-group">
-                        <label for="state">State</label>
-                        <input type="text" id="state" name="state" value="MI">
+                        <label for="message" data-translate="comments-label">Additional Comments</label>
+                        <textarea id="message" name="message" rows="4" data-translate-placeholder="additional-info" placeholder="Any additional information or questions..."></textarea>
                     </div>
-                    <div class="form-group">
-                        <label for="zip">ZIP Code</label>
-                        <input type="text" id="zip" name="zip">
+                    
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="agree" required>
+                            <span data-translate="terms-agreement">I agree to the terms and conditions of membership and understand that membership fees are non-refundable.</span>
+                        </label>
                     </div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Additional Comments</label>
-                    <textarea id="message" name="message" rows="4" placeholder="Any additional information or questions..."></textarea>
-                </div>
-                
-                <div class="form-group checkbox-group">
-                    <label class="checkbox-label">
-                        <input type="checkbox" name="agree" required>
-                        I agree to the terms and conditions of membership and understand that membership fees are non-refundable.
-                    </label>
-                </div>
-                
-                <button type="submit" class="submit-btn">Submit Application</button>
-            </form>
+                    
+                    <button type="submit" class="submit-btn" data-translate="submit-application">Submit Application</button>
+                </form>
+            </div>
         </div>
-    </div>
 
-    <script>
-        document.getElementById('membershipForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const data = {};
-            for (let [key, value] of formData.entries()) {
-                data[key] = value;
+        <!-- Footer -->
+        <div class="support-section">
+            <div class="row">
+                <div class="support-text">
+                    <img src="images/Logo.png" alt="Albanian Islamic Center Logo" class="logo-img">
+                    <p data-translate="footer-about">Welcome to the Albanian Islamic Center, a place of worship, learning, and community rooted in rich Albanian heritage and Islamic tradition. We strive to foster a welcoming and inclusive space for every member of the Muslim community.</p>
+                    <a href="https://www.facebook.com/Albanianislamiccenter/?ref=embed_page#" class="social-media" target="_blank"> 
+                        <img src="images/facebook.png" class="facebook-img">
+                    </a>
+                </div>
+                <div class="contact-info">
+                    <h2 data-translate="contact">Contact</h2>
+                    <h3><img src="images/email.png" class="email-icon"><span data-translate="email-address">Email Address</span></h3>
+                    <p>albislamct@aol.com</p>
+                    <h3><img src="images/phone-call.png" class="phone-icon"><span data-translate="phone-number">Phone Number</span></h3>
+                    <p>(313)-884-6676</p>
+                    <h3><img src="images/pin.png" class="pin-icon"><span data-translate="location">Location</span></h3>
+                    <p>19775 Harper Avenue, Harper Woods, MI 48225</p>
+                </div>
+                <div class="socials">
+                    <h2 data-translate="social-media">Social Media</h2>
+                    <p data-translate="social-desc">Follow us on Facebook for the latest announcements and updates about events and programs at the Albanian Islamic Center.</p>
+                    <a href="https://www.facebook.com/Albanianislamiccenter/" class="social-media" target="_blank">
+                        <img src="images/facebook.png" alt="Facebook" class="facebook-img">
+                    </a>
+                </div>
+                <div class="newsletter">
+                    <h2 data-translate="newsletter">Newsletter</h2>
+                    <p data-translate="newsletter-desc">Subscribe to our newsletter to receive updates on events, programs, and community news directly to your inbox. Stay connected with the Albanian Islamic Center.</p>
+                    <form action="https://aol.us13.list-manage.com/subscribe/post?u=096bcfd7c98cb079bfb26df4f&amp;id=36db6b2f2f" method="post" novalidate>
+                        <input type="email" name="EMAIL" id="emailNewsletter" placeholder="Enter your email" data-translate-placeholder="email-placeholder" required>
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                            <input type="text" name="b_096bcfd7c98cb079bfb26df4f_36db6b2f2f" tabindex="-1" value="">
+                        </div>
+                        <button type="submit" data-translate="subscribe">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <footer> 
+            <p data-translate="footer-copyright">© 2025 aicod.org. All Rights Reserved.<br>Icons made from www.flaticon.com</p>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+            // Translation data
+            const translations = {
+                en: {
+                    // Navigation
+                    'nav-home': 'Home',
+                    'nav-about': 'About Us',
+                    'nav-islam': 'What is Islam?',
+                    'nav-events': 'Events',
+                    'nav-programs': 'Programs & Activities',
+                    'nav-services': 'Services',
+                    'nav-banquet': 'Banquet Hall',
+                    'nav-join': 'Join Us',
+                    'nav-contact': 'Contact Us',
+                    'donate': 'Donate',
+                    
+                    // Banner
+                    'banner-join': 'Join Our Community',
+                    'banner-member': 'Become a member of the Albanian Islamic Center and be part of our growing family.',
+                    
+                    // Membership Overview
+                    'why-join': 'Why Join the Albanian Islamic Center?',
+                    'membership-overview-desc': 'By becoming a member of our community, you\'re not just joining a mosque – you\'re becoming part of a family that values faith, tradition, and community service. Our membership program helps support our ongoing programs and ensures the sustainability of our center for future generations.',
+                    
+                    // Membership Benefits
+                    'membership-benefits': 'Membership Benefits',
+                    'membership-fee': '$250 per family per year',
+                    'event-notifications': 'Event Notifications',
+                    'notifications-desc': 'Personal letters and early notifications about all events',
+                    'annual-calendar': 'Annual Calendar',
+                    'calendar-desc': 'Beautiful printed calendar with Islamic dates and prayer times',
+                    'event-discounts': 'Event Discounts',
+                    'discounts-desc': 'Special member discounts on renting the facilities',
+                    'support-growth': 'Support Our Growth',
+                    'growth-desc': 'Your membership helps fund community expansions and future mosque improvements',
+                    
+                    // Form Section
+                    'ready-join': 'Ready to Join?',
+                    'form-instructions': 'Fill out the form below to begin your membership application. We\'ll contact you within 24 hours to complete the process.',
+                    'first-name-label': 'First Name *',
+                    'last-name-label': 'Last Name *',
+                    'email-label': 'Email Address *',
+                    'phone-label': 'Phone Number *',
+                    'address-label': 'Address',
+                    'street-address': 'Street Address',
+                    'city-label': 'City',
+                    'state-label': 'State',
+                    'zip-label': 'ZIP Code',
+                    'comments-label': 'Additional Comments',
+                    'additional-info': 'Any additional information or questions...',
+                    'terms-agreement': 'I agree to the terms and conditions of membership and understand that membership fees are non-refundable.',
+                    'submit-application': 'Submit Application',
+                    
+                    // Footer
+                    'footer-about': 'Welcome to the Albanian Islamic Center, a place of worship, learning, and community rooted in rich Albanian heritage and Islamic tradition. We strive to foster a welcoming and inclusive space for every member of the Muslim community.',
+                    'contact': 'Contact',
+                    'email-address': 'Email Address',
+                    'phone-number': 'Phone Number',
+                    'location': 'Location',
+                    'social-media': 'Social Media',
+                    'social-desc': 'Follow us on Facebook for the latest announcements and updates about events and programs at the Albanian Islamic Center.',
+                    'newsletter': 'Newsletter',
+                    'newsletter-desc': 'Subscribe to our newsletter to receive updates on events, programs, and community news directly to your inbox. Stay connected with the Albanian Islamic Center.',
+                    'email-placeholder': 'Enter your email',
+                    'subscribe': 'Subscribe',
+                    'footer-copyright': '© 2025 aicod.org. All Rights Reserved.<br>Icons made from www.flaticon.com'
+                },
+                sq: {
+                    // Navigation
+                    'nav-home': 'Ballina',
+                    'nav-about': 'Rreth Nesh',
+                    'nav-islam': 'Çfarë është Islami?',
+                    'nav-events': 'Ngjarjet',
+                    'nav-programs': 'Programet & Aktivitetet',
+                    'nav-services': 'Shërbimet',
+                    'nav-banquet': 'Salla e Dasmave',
+                    'nav-join': 'Bashkohuni me Ne',
+                    'nav-contact': 'Na Kontaktoni',
+                    'donate': 'Dhuroni',
+                    
+                    // Banner
+                    'banner-join': 'Bashkohuni me Komunitetin Tonë',
+                    'banner-member': 'Bëhuni anëtar i Qendrës Islame Shqiptare dhe bëhuni pjesë e familjes sonë në rritje.',
+                    
+                    // Membership Overview
+                    'why-join': 'Pse të Bashkoheni me Qendrën Islame Shqiptare?',
+                    'membership-overview-desc': 'Duke u bërë anëtar i komunitetit tonë, ju nuk po bashkoheni thjesht me një xhami – po bëheni pjesë e një familje që vlerëson besimin, traditën dhe shërbimin komunitare. Programi ynë i anëtarësisë ndihmon në mbështetjen e programeve tona të vazhdueshme dhe siguron qëndrueshmërinë e qendrës sonë për brezat e ardhshëm.',
+                    
+                    // Membership Benefits
+                    'membership-benefits': 'Përfitimet e Anëtarësisë',
+                    'membership-fee': '$250 për familje në vit',
+                    'event-notifications': 'Njoftimet e Ngjarjeve',
+                    'notifications-desc': 'Letra personale dhe njoftimet e hershme për të gjitha ngjarjet',
+                    'annual-calendar': 'Kalendari Vjetor',
+                    'calendar-desc': 'Kalendar i bukur i printuar me data islame dhe kohët e namazit',
+                    'event-discounts': 'Zbritje Ngjarjesh',
+                    'discounts-desc': 'Zbritje të veçanta për anëtarët në qirajan e objekteve',
+                    'support-growth': 'Mbështetni Rritjen Tonë',
+                    'growth-desc': 'Anëtarësia juaj ndihmon në financimin e zgjerimeve komunitare dhe përmirësimeve të ardhshme të xhamisë',
+                    
+                    // Form Section
+                    'ready-join': 'Gati për t\'u Bashkuar?',
+                    'form-instructions': 'Plotësoni formularin më poshtë për të filluar aplikimin tuaj për anëtarësi. Ne do t\'ju kontaktojmë brenda 24 orësh për të përfunduar procesin.',
+                    'first-name-label': 'Emri *',
+                    'last-name-label': 'Mbiemri *',
+                    'email-label': 'Adresa e Email-it *',
+                    'phone-label': 'Numri i Telefonit *',
+                    'address-label': 'Adresa',
+                    'street-address': 'Adresa e Rrugës',
+                    'city-label': 'Qyteti',
+                    'state-label': 'Shteti',
+                    'zip-label': 'Kodi Postar',
+                    'comments-label': 'Komente Shtesë',
+                    'additional-info': 'Çdo informacion shtesë ose pyetje...',
+                    'terms-agreement': 'Unë pajtohem me kushtet dhe afatet e anëtarësisë dhe kuptoj se tarifat e anëtarësisë nuk janë të kthyeshme.',
+                    'submit-application': 'Dërgoni Aplikimin',
+                    
+                    // Footer
+                    'footer-about': 'Mirësevini në Qendrën Islame Shqiptare, një vend adhurimi, të mësuari dhe komuniteti i rrënjosur në trashëgiminë e pasur shqiptare dhe traditën islame. Ne përpiqemi të krijojmë një hapësirë mikpritëse dhe gjithëpërfshirëse për çdo anëtar të komunitetit mysliman.',
+                    'contact': 'Kontakti',
+                    'email-address': 'Adresa e Email-it',
+                    'phone-number': 'Numri i Telefonit',
+                    'location': 'Vendndodhja',
+                    'social-media': 'Rrjetet Sociale',
+                    'social-desc': 'Na ndiqni në Facebook për njoftimet dhe përditësimet më të fundit rreth ngjarjeve dhe programeve në Qendrën Islame Shqiptare.',
+                    'newsletter': 'Buletini',
+                    'newsletter-desc': 'Abonohuni në buletinin tonë për të marrë përditësime mbi ngjarjet, programet dhe lajmet e komunitetit direkt në email-in tuaj. Qëndroni të lidhur me Qendrën Islame Shqiptare.',
+                    'email-placeholder': 'Vendosni email-in tuaj',
+                    'subscribe': 'Abonohu',
+                    'footer-copyright': '© 2025 aicod.org. Të gjitha të drejtat e rezervuara.<br>Ikonat janë marrë nga www.flaticon.com'
+                }
+            };
+
+            // Merge the translations
+Object.assign(translations.sq);
+
+            // Language toggle functionality
+            let currentLanguage = localStorage.getItem('language') || 'en';
+
+            function setLanguage(lang) {
+                currentLanguage = lang;
+                localStorage.setItem('language', lang);
+                document.documentElement.lang = lang;
+                
+                // Update language buttons
+                document.querySelectorAll('.language-btn').forEach(btn => {
+                    btn.classList.toggle('active', btn.dataset.lang === lang);
+                });
+                
+                // Translate all elements
+                document.querySelectorAll('[data-translate]').forEach(element => {
+                    const key = element.getAttribute('data-translate');
+                    if (translations[lang][key]) {
+                        if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                            element.value = translations[lang][key];
+                        } else {
+                            element.innerHTML = translations[lang][key];
+                        }
+                    }
+                });
+                
+                // Translate placeholders
+                document.querySelectorAll('[data-translate-placeholder]').forEach(element => {
+                    const key = element.getAttribute('data-translate-placeholder');
+                    if (translations[lang][key]) {
+                        element.placeholder = translations[lang][key];
+                    }
+                });
             }
-            
-            // Create email body
-            const emailBody = `New Membership Application:
+
+            // Initialize language on page load
+            document.addEventListener('DOMContentLoaded', function() {
+                // Set initial language
+                setLanguage(currentLanguage);
+                
+                // Add click event listeners to language buttons
+                document.querySelectorAll('.language-btn').forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        setLanguage(this.dataset.lang);
+                    });
+                });
+                
+                // Show the first slide
+                const slide = document.querySelector('.mySlides');
+                if (slide) {
+                    slide.style.display = 'block';
+                }
+            });
+
+            // Form submission functionality
+            document.getElementById('membershipForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = new FormData(this);
+                const data = {};
+                for (let [key, value] of formData.entries()) {
+                    data[key] = value;
+                }
+                
+                // Create email body
+                const emailBody = `New Membership Application:
 
 Name: ${data.firstName} ${data.lastName}
 Email: ${data.email}
@@ -216,80 +455,20 @@ ${data.message || 'None'}
 Terms Agreed: ${data.agree ? 'Yes' : 'No'}
 
 Submitted on: ${new Date().toLocaleDateString()} at ${new Date().toLocaleTimeString()}`;
-            
-            // Create mailto link
-            const mailtoLink = `mailto:albislamct@aol.com?subject=New Membership Application - ${data.firstName} ${data.lastName}&body=${encodeURIComponent(emailBody)}`;
-            
-            // Open email client
-            window.location.href = mailtoLink;
-            
-            // Show success message
-            document.getElementById('successMessage').style.display = 'block';
-            document.getElementById('errorMessage').style.display = 'none';
-            
-            // Reset form after a short delay
-            setTimeout(() => {
-                this.reset();
-            }, 1000);
-            
-            // Scroll to success message
-            document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth' });
-        });
-    </script>
+                
+                // Create mailto link
+                const mailtoLink = `mailto:albislamct@aol.com?subject=New Membership Application - ${data.firstName} ${data.lastName}&body=${encodeURIComponent(emailBody)}`;
+                
+                // Open email client
+                window.location.href = mailtoLink;
+                
+                // Reset form after a short delay
+                setTimeout(() => {
+                    this.reset();
+                    alert(currentLanguage === 'sq' ? 'Faleminderit! Aplikimi juaj është dërguar.' : 'Thank you! Your application has been submitted.');
+                }, 1000);
+            });
 
-        <!-- Footer -->
-        <div class="support-section">
-            <div class="row">
-                <div class="support-text">
-                    <img src="images/Logo.png" alt="Albanian Islamic Center Logo" class="logo-img">
-                    <p>Welcome to the Albanian Islamic Center, a place of worship, learning, and community rooted in 
-                        rich Albanian heritage and Islamic tradition. We strive to foster a welcoming and inclusive 
-                        space for every member of the Muslim community.</p>
-                    <a href="https://www.facebook.com/Albanianislamiccenter/?ref=embed_page#" class="social-media" target="_blank"> 
-                        <img src="images/facebook.png" class="facebook-img">
-                    </a>
-                </div>
-                <div class="contact-info">
-                    <h2>Contact</h2>
-                    <h3><img src="images/email.png" class="email-icon">Email Address</h3>
-                    <p>albislamct@aol.com</p>
-                    <h3><img src="images/phone-call.png" class="phone-icon">Phone Number</h3>
-                    <p>(313)-884-6676</p>
-                    <h3><img src="images/pin.png" class="pin-icon">Location</h3>
-                    <p>19775 Harper Avenue, Harper Woods, MI 48225</p>
-                </div>
-                <div class="socials">
-                    <h2>Social Media</h2>
-                    <p>Follow us on Facebook for the latest announcements and updates about events and programs at 
-                        the Albanian Islamic Center.  
-                    </p>
-                    <a href="https://www.facebook.com/Albanianislamiccenter/" class="social-media" target="_blank">
-                        <img src="images/facebook.png" alt="Facebook" class="facebook-img">
-                    </a>
-                </div>
-                <div class="newsletter">
-                    <h2>Newsletter</h2>
-                    <p>Subscribe to our newsletter to receive updates on events, programs, and community news directly 
-                        to your inbox. Stay connected with the Albanian Islamic Center.</p>
-                    <form action="https://aol.us13.list-manage.com/subscribe/post?u=096bcfd7c98cb079bfb26df4f&amp;id=36db6b2f2f" method="post" novalidate>
-                        <input type="email" name="EMAIL" id="email" placeholder="Enter your email" required>
-                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                            <input type="text" name="b_096bcfd7c98cb079bfb26df4f_36db6b2f2f" tabindex="-1" value="">
-                        </div>
-                        <button type="submit">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-        <footer> 
-            <p>© 2025 aicod.org. All Rights Reserved.<br>
-            Icons made from www.flaticon.com</p>
-        </footer>
-
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script src="webscripts.js"></script>
-        <script>
             // Mobile menu toggle functionality
             const menuToggle = document.getElementById('menu-toggle');
             const navMenu = document.getElementById('nav-menu');
@@ -319,14 +498,6 @@ Submitted on: ${new Date().toLocaleDateString()} at ${new Date().toLocaleTimeStr
                 }
             });
 
-            // Show the first slide
-            document.addEventListener('DOMContentLoaded', function() {
-                const slide = document.querySelector('.mySlides');
-                if (slide) {
-                    slide.style.display = 'block';
-                }
-            });
-
             // Handle window resize for mobile menu
             window.addEventListener('resize', function() {
                 if (window.innerWidth > 768) {
@@ -335,5 +506,4 @@ Submitted on: ${new Date().toLocaleDateString()} at ${new Date().toLocaleTimeStr
                 }
             });
         </script>
-    </body>
-</html>
+     
