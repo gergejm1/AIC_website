@@ -14,8 +14,22 @@
         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v22.0"></script>
         
         <div class="contacttop">
+            <div class="contacttop-text">
+                
+            
             <p>19775 Harper Avenue, Harper Woods, MI 48225</p>
             <p>(313)-884-6676&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;albislamct@aol.com</p>
+            </div>
+            <div class="language-toggle">
+                <button class="language-btn active" data-lang="en">
+                    <span class="flag-icon">🇺🇸</span>
+                    <span>EN</span>
+                </button>
+                <button class="language-btn" data-lang="sq">
+                    <span class="flag-icon">🇦🇱</span>
+                    <span>SQ</span>
+                </button>
+            </div>
         </div>
 
         <nav class="navbar">
@@ -30,22 +44,22 @@
             </button>
             
             <ul id="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="islam.html">What is Islam?</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="sundayschool.html">Programs & Activities</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="banquethall.html">Banquet Hall</a></li>
-                <li><a href="membership.html">Join Us</a></li>
-                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="index.html" data-translate="nav-home">Home</a></li>
+                <li><a href="about.html" data-translate="nav-about">About Us</a></li>
+                <li><a href="islam.html" data-translate="nav-islam">What is Islam?</a></li>
+                <li><a href="events.html" data-translate="nav-events">Events</a></li>
+                <li><a href="sundayschool.html" data-translate="nav-programs">Programs & Activities</a></li>
+                <li><a href="services.html" data-translate="nav-services">Services</a></li>
+                <li><a href="banquethall.html" data-translate="nav-banquet">Banquet Hall</a></li>
+                <li><a href="membership.html" data-translate="nav-join">Join Us</a></li>
+                <li><a href="contactus.html" data-translate="nav-contact">Contact Us</a></li>
             </ul>
             
             <form action="https://www.paypal.com/donate" method="post" target="_blank" class="donate-form">
                 <input type="hidden" name="hosted_button_id" value="LMWW6JLZ9N57L" />
                 <button type="submit" class="donate-btn" title="PayPal - The safer, easier way to pay online!">
                     <img src="images/donation.png" class="heart-icon" alt="Heart icon">
-                    Donate
+                    <span data-translate="donate">Donate</span>
                 </button>
             </form>
         </nav>
@@ -75,68 +89,68 @@
                 </div>
             </div>
             <div class="text-overlay">
-                <h1 class="banner-text">Welcome to the Albanian Islamic Center</h1>
-                <h2 class="banner-text">A place of worship, community, and service.</h2>
-                <button onclick="location.href='membership.html'" class="membership-btn">Become a Member</button>
+                <h1 class="banner-text" data-translate="banner-welcome">Welcome to the Albanian Islamic Center</h1>
+                <h2 class="banner-text" data-translate="banner-subtitle">A place of worship, community, and service.</h2>
+                <button onclick="location.href='membership.html'" class="membership-btn" data-translate="become-member">Become a Member</button>
             </div>
         </div>
         
         <div class="welcome-section">
             <div class="row">
                 <div class="column1" data-aos="fade-right">
-                    <h1>Daily Prayer Times</h1>
+                    <h1 data-translate="prayer-times-title">Daily Prayer Times</h1>
                     <div class="prayer-times-container">
                         <iframe src="https://timing.athanplus.com/masjid/widgets/embed?theme=1&masjid_id=PAPwW0LJ&color=C2A878" type="text/html" width="60%" height="560" frameborder="0" allowtransparency="true"></iframe>
                     </div>
                 </div>
                 <div class="column2" data-aos="fade-left">
-                    <h1>Welcome to the Albanian Islamic Center</h1>
+                    <h1 data-translate="welcome-title">Welcome to the Albanian Islamic Center</h1>
                     <p>
                         <img src="images/bullet-pt.png" class="bullet-img">
-                        A place of worship, learning, and community rooted in rich Albanian heritage and Islamic tradition. 
+                        <span data-translate="welcome-p1">A place of worship, learning, and community rooted in rich Albanian heritage and Islamic tradition. 
                         Since the Albanian American Moslem Society's founding in 1945 the Albanian community has been a cornerstone for generations of Albanian American Muslims 
-                        and new immigrants alike, with this center being built in 1963 providing spiritual guidance and fostering a deep sense of unity. 
+                        and new immigrants alike, with this center being built in 1963 providing spiritual guidance and fostering a deep sense of unity.</span>
                     </p>
                     
                     <p>
                         <img src="images/bullet-pt.png" class="bullet-img">
-                        Located in Harper Woods, Michigan, our Islamic Center is more than just a prayer space—it's a community hub. 
+                        <span data-translate="welcome-p2">Located in Harper Woods, Michigan, our Islamic Center is more than just a prayer space—it's a community hub. 
                         Our center houses a large prayer hall, classrooms, a social hall, offices, and more. 
                         From educational programs and language studies to community gatherings and youth activities, 
-                        we strive to serve the evolving needs of our diverse congregation.
+                        we strive to serve the evolving needs of our diverse congregation.</span>
                     </p>
                     
                     <p>
                         <img src="images/bullet-pt.png" class="bullet-img">
-                        Our mission is to preserve our Islamic and Albanian cultural values while promoting a spirit of openness and service. 
+                        <span data-translate="welcome-p3">Our mission is to preserve our Islamic and Albanian cultural values while promoting a spirit of openness and service. 
                         While we are proud of our Albanian roots, the Center warmly welcomes Muslims from all backgrounds
-                        as well as anyone interested in learning about Islam as well as our culture.
+                        as well as anyone interested in learning about Islam as well as our culture.</span>
                     </p>
                     
                     <p>
                         <img src="images/bullet-pt.png" class="bullet-img">
-                        Whether you're a lifelong member or new to the community, we welcome you with open arms. 
-                        Thank you for visiting our website—we invite you to learn more, get involved, and join us.
+                        <span data-translate="welcome-p4">Whether you're a lifelong member or new to the community, we welcome you with open arms. 
+                        Thank you for visiting our website—we invite you to learn more, get involved, and join us.</span>
                     </p>
-                    <a href="about.html" class="learn-more-btn">Learn More About Us</a>
+                    <a href="about.html" class="learn-more-btn" data-translate="learn-more">Learn More About Us</a>
                 </div>
             </div>
         </div>
 
         <div class="events-section" data-aos="fade-up">
-            <h1>Events and Announcements</h1>
+            <h1 data-translate="events-title">Events and Announcements</h1>
             <div class="row">
                 <div class="column11">     
-                    <h2>Upcoming Events</h2>
+                    <h2 data-translate="upcoming-events">Upcoming Events</h2>
                     <div class="calendar-container">
                         <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&showPrint=0&mode=AGENDA&src=Z2VyZ2VqbUBnbWFpbC5jb20&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%237986CB&color=%23795548" style="border:solid 1px #777" width="99%" height="600" frameborder="0" scrolling="no"></iframe>
                     </div>
                     <div class="footer-btn">
-                        <a href="events.html" class="events-btn">View All Events</a>
+                        <a href="events.html" class="events-btn" data-translate="view-all-events">View All Events</a>
                     </div>
                 </div>
                 <div class="column22">
-                    <h2>Announcements</h2>
+                    <h2 data-translate="announcements">Announcements</h2>
                     <div class="fb-page-container">
                         <div class="fb-page" data-href="https://www.facebook.com/Albanianislamiccenter/" data-tabs="timeline" data-width="500" data-height="600" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
                             <blockquote cite="https://www.facebook.com/Albanianislamiccenter/" class="fb-xfbml-parse-ignore">
@@ -149,86 +163,81 @@
         </div>
 
         <div class="programs-section" data-aos="fade-up">
-            <h1>Programs & Activities</h1>
+            <h1 data-translate="programs-title">Programs & Activities</h1>
             <div class="programs-intro">
-                <h2>Check out our Youth Sunday School program. We offer many classes for children to be able to learn more about Islam as well as their heritage.</h2>
+                <h2 data-translate="programs-intro">Check out our Youth Sunday School program. We offer many classes for children to be able to learn more about Islam as well as their heritage.</h2>
             </div>
             
             <div class="programs-grid">
                 <div class="program-card" data-aos="fade-up" data-aos-delay="100">
-                    <h3>Quran Class with Tajweed</h3>
+                    <h3 data-translate="quran-class">Quran Class with Tajweed</h3>
                     <img src="images/quran.png" class="program-icon">
                     <div class="card-text">
-                        <p>Learn to recite the Quran with proper Tajweed rules in a supportive environment taught by the Sheikh.</p>
-                        <a href="sundayschool.html" class="program-link">Learn More</a>
+                        <p data-translate="quran-desc">Learn to recite the Quran with proper Tajweed rules in a supportive environment taught by the Sheikh.</p>
+                        <a href="sundayschool.html" class="program-link" data-translate="learn-more-short">Learn More</a>
                     </div>
                 </div>
 
                 <div class="program-card" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Aqeedah & Fiqh Class</h3>
+                    <h3 data-translate="aqeedah-class">Aqeedah & Fiqh Class</h3>
                     <img src="images/islam.png" class="program-icon">
                     <div class="card-text">
-                        <p>Explore the foundations of Islamic belief and jurisprudence in a supportive environment taught by the Sheikh.</p>
-                        <a href="sundayschool.html" class="program-link">Learn More</a>
+                        <p data-translate="aqeedah-desc">Explore the foundations of Islamic belief and jurisprudence in a supportive environment taught by the Sheikh.</p>
+                        <a href="sundayschool.html" class="program-link" data-translate="learn-more-short">Learn More</a>
                     </div>
                 </div>
 
                 <div class="program-card" data-aos="fade-up" data-aos-delay="300">
-                    <h3>Albanian Language Class</h3>
+                    <h3 data-translate="albanian-class">Albanian Language Class</h3>
                     <img src="images/reading-book.png" class="program-icon">
                     <div class="card-text">
-                        <p>Learn the Albanian language and culture in a friendly environment taught by Albanian teachers.</p>
-                        <a href="sundayschool.html" class="program-link">Learn More</a>
+                        <p data-translate="albanian-desc">Learn the Albanian language and culture in a friendly environment taught by Albanian teachers.</p>
+                        <a href="sundayschool.html" class="program-link" data-translate="learn-more-short">Learn More</a>
                     </div>
                 </div>
 
                 <div class="program-card" data-aos="fade-up" data-aos-delay="400">
-                    <h3>Basketball/Volleyball Court</h3>
+                    <h3 data-translate="sports-court">Basketball/Volleyball Court</h3>
                     <img src="images/ball-of-basketball.png" class="program-icon">
                     <div class="card-text">
-                        <p>Join us for basketball and volleyball games and practice sessions in our fully equipped gym.</p>
-                        <a href="sundayschool.html" class="program-link">Learn More</a>
+                        <p data-translate="sports-desc">Join us for basketball and volleyball games and practice sessions in our fully equipped gym.</p>
+                        <a href="sundayschool.html" class="program-link" data-translate="learn-more-short">Learn More</a>
                     </div>
                 </div>
-
-
             </div>
         </div>
 
         <div class="services-section" data-aos="fade-up">
-            <h1>Services</h1>
+            <h1 data-translate="services-title">Services</h1>
             <div class="services-grid">
                 <div class="service-card" data-aos="fade-up" data-aos-delay="100">
                     <img src="images/customer-review.png" class="service-icon">
-                    <h2>Marriage Services</h2>
-                    <p>Nikkah ceremony for Muslim couples.</p>
-                    <a href="services.html" class="service-link">Learn More</a>
+                    <h2 data-translate="marriage-services">Marriage Services</h2>
+                    <p data-translate="marriage-desc">Nikkah ceremony for Muslim couples.</p>
+                    <a href="services.html" class="service-link" data-translate="learn-more-short">Learn More</a>
                 </div>
                 <div class="service-card" data-aos="fade-up" data-aos-delay="200">
                     <img src="images/customer-review.png" class="service-icon">
-                    <h2>Funeral Services</h2>
-                    <p>Religious services, support and guidance for families.</p>
-                    <a href="services.html" class="service-link">Learn More</a>
+                    <h2 data-translate="funeral-services">Funeral Services</h2>
+                    <p data-translate="funeral-desc">Religious services, support and guidance for families.</p>
+                    <a href="services.html" class="service-link" data-translate="learn-more-short">Learn More</a>
                 </div>
                 <div class="service-card" data-aos="fade-up" data-aos-delay="400">
                     <img src="images/customer-review.png" class="service-icon">
-                    <h2>Gym Rental Services</h2>
-                    <p>Rent the gym for your events.</p>
-                    <a href="services.html" class="service-link">Learn More</a>
+                    <h2 data-translate="gym-rental">Gym Rental Services</h2>
+                    <p data-translate="gym-desc">Rent the gym for your events.</p>
+                    <a href="services.html" class="service-link" data-translate="learn-more-short">Learn More</a>
                 </div>
             </div>
         </div>
 
         <div class="banquet-section" data-aos="fade-up">
-            <h1>Banquet Hall</h1>
+            <h1 data-translate="banquet-title">Banquet Hall</h1>
             <div class="row">
                 <div class="column111" data-aos="fade-right">
                     <div class="banquet-gallery">
-                        <!-- Slider main container -->
                         <div class="swiper banquet-swiper">
-                            <!-- Additional required wrapper -->
                             <div class="swiper-wrapper">
-                                <!-- Slides -->
                                 <div class="swiper-slide"><img src="images/banquet1.jpg"></div>
                                 <div class="swiper-slide"><img src="images/banquet2.jpg"></div>
                                 <div class="swiper-slide"><img src="images/banquet3.jpg"></div>
@@ -236,26 +245,23 @@
                                 <div class="swiper-slide"><img src="images/banquet5.jpg"></div>
                                 <div class="swiper-slide"><img src="images/banquet6.jpg"></div>
                             </div>
-                            <!-- If we need pagination -->
                             <div class="swiper-pagination"></div>
-                            <!-- If we need navigation buttons -->
                             <div class="swiper-button-prev"></div>
                             <div class="swiper-button-next"></div>
                         </div>
                     </div>
                 </div>
                 <div class="column222" data-aos="fade-left">
-                    <h2>Banquet Hall Rental</h2>
-                    <p>Our banquet hall is available for Islamic events such as weddings, aqeeqahs, engagements, graduation celebrations, 
+                    <h2 data-translate="banquet-rental">Banquet Hall Rental</h2>
+                    <p data-translate="banquet-p1">Our banquet hall is available for Islamic events such as weddings, aqeeqahs, engagements, graduation celebrations, 
                         and other community gatherings. The hall can accommodate up to 650 guests and features flexible seating arrangements
                         that can be customized to suit your event's size and format—whether round tables for dinner or rows for a presentation.</p>
                     
-                    <p>It is equipped with a large dining space, a kitchen, high-end sound system, and privacy dividers. 
+                    <p data-translate="banquet-p2">It is equipped with a large dining space, a kitchen, high-end sound system, and privacy dividers. 
                         We aim to provide a warm, welcoming space that reflects Islamic values and meets your event needs with 
                         professionalism and care.</p>
-
                     
-                    <a href="banquethall.html" class="banquethall-btn">Learn More</a>
+                    <a href="banquethall.html" class="banquethall-btn" data-translate="learn-more-short">Learn More</a>
                 </div>
             </div> 
         </div>
@@ -265,7 +271,7 @@
             <div class="row">
                 <div class="support-text">
                     <img src="images/Logo.png" alt="Albanian Islamic Center Logo" class="logo-img">
-                    <p>Welcome to the Albanian Islamic Center, a place of worship, learning, and community rooted in 
+                    <p data-translate="footer-about">Welcome to the Albanian Islamic Center, a place of worship, learning, and community rooted in 
                         rich Albanian heritage and Islamic tradition. We strive to foster a welcoming and inclusive 
                         space for every member of the Muslim community.</p>
                     <a href="https://www.facebook.com/Albanianislamiccenter/?ref=embed_page#" class="social-media" target="_blank"> 
@@ -273,123 +279,328 @@
                     </a>
                 </div>
                 <div class="contact-info">
-                    <h2>Contact</h2>
-                    <h3><img src="images/email.png" class="email-icon">Email Address</h3>
+                    <h2 data-translate="contact">Contact</h2>
+                    <h3><img src="images/email.png" class="email-icon"><span data-translate="email-address">Email Address</span></h3>
                     <p>albislamct@aol.com</p>
-                    <h3><img src="images/phone-call.png" class="phone-icon">Phone Number</h3>
+                    <h3><img src="images/phone-call.png" class="phone-icon"><span data-translate="phone-number">Phone Number</span></h3>
                     <p>(313)-884-6676</p>
-                    <h3><img src="images/pin.png" class="pin-icon">Location</h3>
+                    <h3><img src="images/pin.png" class="pin-icon"><span data-translate="location">Location</span></h3>
                     <p>19775 Harper Avenue, Harper Woods, MI 48225</p>
                 </div>
                 <div class="socials">
-                    <h2>Social Media</h2>
-                    <p>Follow us on Facebook for the latest announcements and updates about events and programs at 
+                    <h2 data-translate="social-media">Social Media</h2>
+                    <p data-translate="social-desc">Follow us on Facebook for the latest announcements and updates about events and programs at 
                         the Albanian Islamic Center.</p>
                     <a href="https://www.facebook.com/Albanianislamiccenter/" class="social-media" target="_blank">
                         <img src="images/facebook.png" alt="Facebook" class="facebook-img">
                     </a>
                 </div>
                 <div class="newsletter">
-                    <h2>Newsletter</h2>
-                    <p>Subscribe to our newsletter to receive updates on events, programs, and community news directly 
+                    <h2 data-translate="newsletter">Newsletter</h2>
+                    <p data-translate="newsletter-desc">Subscribe to our newsletter to receive updates on events, programs, and community news directly 
                         to your inbox. Stay connected with the Albanian Islamic Center.</p>
                     <form action="https://aol.us13.list-manage.com/subscribe/post?u=096bcfd7c98cb079bfb26df4f&amp;id=36db6b2f2f" method="post" novalidate>
-                        <input type="email" name="EMAIL" id="email" placeholder="Enter your email" required>
+                        <input type="email" name="EMAIL" id="email" placeholder="Enter your email" data-translate-placeholder="email-placeholder" required>
                         <div style="position: absolute; left: -5000px;" aria-hidden="true">
                             <input type="text" name="b_096bcfd7c98cb079bfb26df4f_36db6b2f2f" tabindex="-1" value="">
                         </div>
-                        <button type="submit">Subscribe</button>
+                        <button type="submit" data-translate="subscribe">Subscribe</button>
                     </form>
                 </div>
             </div>
         </div>
 
         <footer> 
-            <p>© 2025 aicod.org. All Rights Reserved.<br>
+            <p data-translate="footer-copyright">© 2025 aicod.org. All Rights Reserved.<br>
             Icons made from www.flaticon.com</p>
         </footer>
 
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
-            // Initialize AOS
-            AOS.init({
-                duration: 1000,
-                once: true,
-            });
+            // Translation data
+            const translations = {
+                en: {
+                    // Navigation
+                    'nav-home': 'Home',
+                    'nav-about': 'About Us',
+                    'nav-islam': 'What is Islam?',
+                    'nav-events': 'Events',
+                    'nav-programs': 'Programs & Activities',
+                    'nav-services': 'Services',
+                    'nav-banquet': 'Banquet Hall',
+                    'nav-join': 'Join Us',
+                    'nav-contact': 'Contact Us',
+                    'donate': 'Donate',
+                    
+                    // Banner
+                    'banner-welcome': 'Welcome to the Albanian Islamic Center',
+                    'banner-subtitle': 'A place of worship, community, and service.',
+                    'become-member': 'Become a Member',
+                    
+                    // Welcome Section
+                    'prayer-times-title': 'Daily Prayer Times',
+                    'welcome-title': 'Welcome to the Albanian Islamic Center',
+                    'welcome-p1': 'A place of worship, learning, and community rooted in rich Albanian heritage and Islamic tradition. Since the Albanian American Moslem Society\'s founding in 1945 the Albanian community has been a cornerstone for generations of Albanian American Muslims and new immigrants alike, with this center being built in 1963 providing spiritual guidance and fostering a deep sense of unity.',
+                    'welcome-p2': 'Located in Harper Woods, Michigan, our Islamic Center is more than just a prayer space—it\'s a community hub. Our center houses a large prayer hall, classrooms, a social hall, offices, and more. From educational programs and language studies to community gatherings and youth activities, we strive to serve the evolving needs of our diverse congregation.',
+                    'welcome-p3': 'Our mission is to preserve our Islamic and Albanian cultural values while promoting a spirit of openness and service. While we are proud of our Albanian roots, the Center warmly welcomes Muslims from all backgrounds as well as anyone interested in learning about Islam as well as our culture.',
+                    'welcome-p4': 'Whether you\'re a lifelong member or new to the community, we welcome you with open arms. Thank you for visiting our website—we invite you to learn more, get involved, and join us.',
+                    'learn-more': 'Learn More About Us',
+                    'learn-more-short': 'Learn More',
+                    
+                    // Events Section
+                    'events-title': 'Events and Announcements',
+                    'upcoming-events': 'Upcoming Events',
+                    'announcements': 'Announcements',
+                    'view-all-events': 'View All Events',
+                    
+                    // Programs Section
+                    'programs-title': 'Programs & Activities',
+                    'programs-intro': 'Check out our Youth Sunday School program. We offer many classes for children to be able to learn more about Islam as well as their heritage.',
+                    'quran-class': 'Quran Class with Tajweed',
+                    'quran-desc': 'Learn to recite the Quran with proper Tajweed rules in a supportive environment taught by the Sheikh.',
+                    'aqeedah-class': 'Aqeedah & Fiqh Class',
+                    'aqeedah-desc': 'Explore the foundations of Islamic belief and jurisprudence in a supportive environment taught by the Sheikh.',
+                    'albanian-class': 'Albanian Language Class',
+                    'albanian-desc': 'Learn the Albanian language and culture in a friendly environment taught by Albanian teachers.',
+                    'sports-court': 'Basketball/Volleyball Court',
+                    'sports-desc': 'Join us for basketball and volleyball games and practice sessions in our fully equipped gym.',
+                    
+                    // Services Section
+                    'services-title': 'Services',
+                    'marriage-services': 'Marriage Services',
+                    'marriage-desc': 'Nikkah ceremony for Muslim couples.',
+                    'funeral-services': 'Funeral Services',
+                    'funeral-desc': 'Religious services, support and guidance for families.',
+                    'gym-rental': 'Gym Rental Services',
+                    'gym-desc': 'Rent the gym for your events.',
+                    
+                    // Banquet Section
+                    'banquet-title': 'Banquet Hall',
+                    'banquet-rental': 'Banquet Hall Rental',
+                    'banquet-p1': 'Our banquet hall is available for Islamic events such as weddings, aqeeqahs, engagements, graduation celebrations, and other community gatherings. The hall can accommodate up to 650 guests and features flexible seating arrangements that can be customized to suit your event\'s size and format—whether round tables for dinner or rows for a presentation.',
+                    'banquet-p2': 'It is equipped with a large dining space, a kitchen, high-end sound system, and privacy dividers. We aim to provide a warm, welcoming space that reflects Islamic values and meets your event needs with professionalism and care.',
+                    
+                    // Footer
+                    'footer-about': 'Welcome to the Albanian Islamic Center, a place of worship, learning, and community rooted in rich Albanian heritage and Islamic tradition. We strive to foster a welcoming and inclusive space for every member of the Muslim community.',
+                    'contact': 'Contact',
+                    'email-address': 'Email Address',
+                    'phone-number': 'Phone Number',
+                    'location': 'Location',
+                    'social-media': 'Social Media',
+                    'social-desc': 'Follow us on Facebook for the latest announcements and updates about events and programs at the Albanian Islamic Center.',
+                    'newsletter': 'Newsletter',
+                    'newsletter-desc': 'Subscribe to our newsletter to receive updates on events, programs, and community news directly to your inbox. Stay connected with the Albanian Islamic Center.',
+                    'email-placeholder': 'Enter your email',
+                    'subscribe': 'Subscribe',
+                    'footer-copyright': '© 2025 aicod.org. All Rights Reserved.<br>Icons made from www.flaticon.com'
+                },
+                sq: {
+                    // Navigation
+                    'nav-home': 'Ballina',
+                    'nav-about': 'Rreth Nesh',
+                    'nav-islam': 'Çfarë është Islami?',
+                    'nav-events': 'Ngjarjet',
+                    'nav-programs': 'Programet & Aktivitetet',
+                    'nav-services': 'Shërbimet',
+                    'nav-banquet': 'Salla e Dasmave',
+                    'nav-join': 'Bashkohuni me Ne',
+                    'nav-contact': 'Na Kontaktoni',
+                    'donate': 'Dhuroni',
+                    
+                    // Banner
+                    'banner-welcome': 'Mirësevini në Qendrën Islame Shqiptare',
+                    'banner-subtitle': 'Një vend adhurimi, komuniteti dhe shërbimi.',
+                    'become-member': 'Bëhuni Anëtar',
+                    
+                    // Welcome Section
+                    'prayer-times-title': 'Kohët e Namazit Ditor',
+                    'welcome-title': 'Mirësevini në Qendrën Islame Shqiptare',
+                    'welcome-p1': 'Një vend adhurimi, të mësuari dhe komuniteti i rrënjosur në trashëgiminë e pasur shqiptare dhe traditën islame. Që nga themelimi i Shoqërisë Myslimane Shqiptaro-Amerikane në vitin 1945, komuniteti shqiptar ka qenë një gur themeli për breza të tërë myslimanësh shqiptaro-amerikanë dhe emigrantëve të rinj, me këtë qendër të ndërtuar në vitin 1963 duke ofruar udhëzim shpirtëror dhe duke nxitur një ndjenjë të thellë uniteti.',
+                    'welcome-p2': 'E vendosur në Harper Woods, Michigan, Qendra jonë Islame është më shumë se thjesht një hapësirë lutjeje—është një qendër komunitare. Qendra jonë strehon një sallë të madhe lutjeje, klasa, një sallë sociale, zyra dhe më shumë. Nga programet arsimore dhe studimet gjuhësore deri te tubime komunitare dhe aktivitete rinore, ne përpiqemi të shërbejmë nevojat në zhvillim të kongregacionit tonë të larmishëm.',
+                    'welcome-p3': 'Misioni ynë është të ruajmë vlerat tona islame dhe kulturore shqiptare duke promovuar një frymë hapjeje dhe shërbimi. Ndërsa jemi krenarë për rrënjët tona shqiptare, Qendra mirëpret ngrohtësisht myslimanët nga të gjitha sfondet si dhe këdo që është i interesuar të mësojë rreth Islamit dhe kulturës sonë.',
+                    'welcome-p4': 'Nëse jeni anëtar i përjetshëm apo i ri në komunitet, ne ju mirëpresim me krahë hapur. Faleminderit që vizituat faqen tonë të internetit—ju ftojmë të mësoni më shumë, të përfshiheni dhe të bashkoheni me ne.',
+                    'learn-more': 'Mësoni Më Shumë Rreth Nesh',
+                    'learn-more-short': 'Mëso Më Shumë',
+                    
+                    // Events Section
+                    'events-title': 'Ngjarjet dhe Njoftimet',
+                    'upcoming-events': 'Ngjarjet e Ardhshme',
+                    'announcements': 'Njoftimet',
+                    'view-all-events': 'Shiko të Gjitha Ngjarjet',
+                    
+                    // Programs Section
+                    'programs-title': 'Programet & Aktivitetet',
+                    'programs-intro': 'Shikoni programin tonë të Shkollës së Dielës për të Rinjtë. Ne ofrojmë shumë klasa për fëmijët për të mësuar më shumë rreth Islamit si dhe trashëgimisë së tyre.',
+                    'quran-class': 'Klasa e Kuranit me Texhvid',
 
-            // Mobile menu toggle functionality
-            const menuToggle = document.getElementById('menu-toggle');
-            const navMenu = document.getElementById('nav-menu');
+        'quran-desc': 'Mësoni të recitoni Kuranin me rregullat e duhura të Texhvidit në një mjedis mbështetës të mësuar nga Sheiku.',
+        'aqeedah-class': 'Klasa e Akides & Fikhut',
+        'aqeedah-desc': 'Eksploroni themelet e besimit islam dhe jurisprudencës në një mjedis mbështetës të mësuar nga Sheiku.',
+        'albanian-class': 'Klasa e Gjuhës Shqipe',
+        'albanian-desc': 'Mësoni gjuhën dhe kulturën shqipe në një mjedis miqësor të mësuar nga mësues shqiptarë.',
+        'sports-court': 'Fusha e Basketbollit/Volejbollit',
+        'sports-desc': 'Bashkohuni me ne për lojëra basketbolli dhe volejbolli dhe seanca stërvitjeje në palestën tonë të pajisur plotësisht.',
+        
+        // Services Section
+        'services-title': 'Shërbimet',
+        'marriage-services': 'Shërbimet e Martesës',
+        'marriage-desc': 'Ceremonia e Nikahut për çiftet myslimane.',
+        'funeral-services': 'Shërbimet e Varrimit',
+        'funeral-desc': 'Shërbime fetare, mbështetje dhe udhëzim për familjet.',
+        'gym-rental': 'Shërbimet e Qirasë së Palestrës',
+        'gym-desc': 'Merrni me qira palestën për ngjarjet tuaja.',
+        
+        // Banquet Section
+        'banquet-title': 'Salla e Dasmave',
+        'banquet-rental': 'Qiraja e Sallës së Dasmave',
+        'banquet-p1': 'Salla jonë e dasmave është në dispozicion për ngjarje islame si dasma, akika, fejesa, festime diplomimi dhe tubime të tjera komunitare. Salla mund të akomodojë deri në 650 mysafirë dhe ka rregullime fleksibël vendesh që mund të personalizohen për të përshtatur madhësinë dhe formatin e ngjarjes suaj—qoftë tavolina të rrumbullakëta për darkë apo radhë për një prezantim.',
+        'banquet-p2': 'Është e pajisur me një hapësirë të madhe ngrënieje, një kuzhinë, sistem audio të nivelit të lartë dhe ndarës privatësie. Ne synojmë të ofrojmë një hapësirë të ngrohtë dhe mikpritëse që pasqyron vlerat islame dhe plotëson nevojat e ngjarjes suaj me profesionalizëm dhe kujdes.',
+        
+        // Footer
+        'footer-about': 'Mirësevini në Qendrën Islame Shqiptare, një vend adhurimi, të mësuari dhe komuniteti i rrënjosur në trashëgiminë e pasur shqiptare dhe traditën islame. Ne përpiqemi të krijojmë një hapësirë mikpritëse dhe gjithëpërfshirëse për çdo anëtar të komunitetit mysliman.',
+        'contact': 'Kontakti',
+        'email-address': 'Adresa e Email-it',
+        'phone-number': 'Numri i Telefonit',
+        'location': 'Vendndodhja',
+        'social-media': 'Rrjetet Sociale',
+        'social-desc': 'Na ndiqni në Facebook për njoftimet dhe përditësimet më të fundit rreth ngjarjeve dhe programeve në Qendrën Islame Shqiptare.',
+        'newsletter': 'Buletini',
+        'newsletter-desc': 'Abonohuni në buletinin tonë për të marrë përditësime mbi ngjarjet, programet dhe lajmet e komunitetit direkt në email-in tuaj. Qëndroni të lidhur me Qendrën Islame Shqiptare.',
+        'email-placeholder': 'Vendosni email-in tuaj',
+        'subscribe': 'Abonohu',
+        'footer-copyright': '© 2025 aicod.org. Të gjitha të drejtat e rezervuara.<br>Ikonat janë marrë nga www.flaticon.com'
+    }
+};
 
-            menuToggle.addEventListener('click', function() {
-                navMenu.classList.toggle('show');
-                menuToggle.classList.toggle('active');
-            });
+// Merge the translations
+Object.assign(translations.sq);
 
-            // Close menu when clicking on a link (mobile)
-            const navLinks = document.querySelectorAll('#nav-menu a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    navMenu.classList.remove('show');
-                    menuToggle.classList.remove('active');
-                });
-            });
+// Language toggle functionality
+let currentLanguage = localStorage.getItem('language') || 'en';
 
-            // Close menu when clicking outside (mobile)
-            document.addEventListener('click', function(event) {
-                const isClickInsideNav = navMenu.contains(event.target);
-                const isClickOnToggle = menuToggle.contains(event.target);
-                
-                if (!isClickInsideNav && !isClickOnToggle && navMenu.classList.contains('show')) {
-                    navMenu.classList.remove('show');
-                    menuToggle.classList.remove('active');
-                }
-            });
-
-            // Slideshow functionality
-            let slideIndex = 0;
-            const slides = document.querySelectorAll('.mySlides');
-            
-            function showSlides() {
-                slides.forEach(slide => slide.style.display = 'none');
-                slideIndex = (slideIndex + 1) % slides.length;
-                if (slides[slideIndex]) {
-                    slides[slideIndex].style.display = 'block';
-                }
-                setTimeout(showSlides, 4000);
+function setLanguage(lang) {
+    currentLanguage = lang;
+    localStorage.setItem('language', lang);
+    document.documentElement.lang = lang;
+    
+    // Update language buttons
+    document.querySelectorAll('.language-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+    
+    // Translate all elements
+    document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[lang][key]) {
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                element.value = translations[lang][key];
+            } else {
+                element.innerHTML = translations[lang][key];
             }
-            
-            // Start slideshow when page loads
-            document.addEventListener('DOMContentLoaded', function() {
-                if (slides.length > 0) {
-                    slides[0].style.display = 'block';
-                    showSlides();
-                }
-                
-                // Initialize Swiper for banquet section
-                const banquetSwiper = new Swiper('.banquet-swiper', {
-                    loop: true,
-                    pagination: {
-                        el: '.swiper-pagination',
-                    },
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                    },
-                    autoplay: {
-                        delay: 3000,
-                    },
-                });
-            });
+        }
+    });
+    
+    // Translate placeholders
+    document.querySelectorAll('[data-translate-placeholder]').forEach(element => {
+        const key = element.getAttribute('data-translate-placeholder');
+        if (translations[lang][key]) {
+            element.placeholder = translations[lang][key];
+        }
+    });
+}
 
-            // Handle window resize for mobile menu
-            window.addEventListener('resize', function() {
-                if (window.innerWidth > 768) {
-                    navMenu.classList.remove('show');
-                    menuToggle.classList.remove('active');
-                }
-            });
-        </script>
-    </body>
-</html>
+// Initialize language on page load
+document.addEventListener('DOMContentLoaded', function() {
+    // Set initial language
+    setLanguage(currentLanguage);
+    
+    // Add click event listeners to language buttons
+    document.querySelectorAll('.language-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            setLanguage(this.dataset.lang);
+        });
+    });
+});
+
+// Continue with the rest of your existing JavaScript...
+
+// Initialize AOS
+AOS.init({
+    duration: 1000,
+    once: true,
+});
+
+// Mobile menu toggle functionality
+const menuToggle = document.getElementById('menu-toggle');
+const navMenu = document.getElementById('nav-menu');
+
+menuToggle.addEventListener('click', function() {
+    navMenu.classList.toggle('show');
+    menuToggle.classList.toggle('active');
+});
+
+// Close menu when clicking on a link (mobile)
+const navLinks = document.querySelectorAll('#nav-menu a');
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('show');
+        menuToggle.classList.remove('active');
+    });
+});
+
+// Close menu when clicking outside (mobile)
+document.addEventListener('click', function(event) {
+    const isClickInsideNav = navMenu.contains(event.target);
+    const isClickOnToggle = menuToggle.contains(event.target);
+    
+    if (!isClickInsideNav && !isClickOnToggle && navMenu.classList.contains('show')) {
+        navMenu.classList.remove('show');
+        menuToggle.classList.remove('active');
+    }
+});
+
+// Slideshow functionality
+let slideIndex = 0;
+const slides = document.querySelectorAll('.mySlides');
+
+function showSlides() {
+    slides.forEach(slide => slide.style.display = 'none');
+    slideIndex = (slideIndex + 1) % slides.length;
+    if (slides[slideIndex]) {
+        slides[slideIndex].style.display = 'block';
+    }
+    setTimeout(showSlides, 4000);
+}
+
+// Start slideshow when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    if (slides.length > 0) {
+        slides[0].style.display = 'block';
+        showSlides();
+    }
+    
+    // Initialize Swiper for banquet section
+    const banquetSwiper = new Swiper('.banquet-swiper', {
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+            delay: 3000,
+        },
+    });
+});
+
+// Handle window resize for mobile menu
+window.addEventListener('resize', function() {
+    if (window.innerWidth > 768) {
+        navMenu.classList.remove('show');
+        menuToggle.classList.remove('active');
+    }
+});
+</script>
