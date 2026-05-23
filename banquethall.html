@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Albanian Islamic Center - Banquet Hall</title>
         <link rel="stylesheet" href="Style-Sheets/banquet-styles.css">
+        <link rel="stylesheet" href="Style-Sheets/responsive-fixes.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         
     </head>
@@ -258,7 +259,10 @@
         <section class="rental-form-section">
             <h2 data-translate="request-information">Request Information or Book Your Event</h2>
             <p data-translate="form-response">Fill out the form below and we'll get back to you within 24 hours</p>
-            <form action="https://getform.io/f/adrglyxa" method="POST">
+            <form id="banquetForm" action="https://formspree.io/f/xgoqzpoy" method="POST">
+                <!-- Anti-spam honeypot (must stay empty) -->
+                <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+                <input type="hidden" name="_subject" value="New Banquet Hall Inquiry - Albanian Islamic Center">
                 <div class="form-row">
                     <input type="text" name="name" data-translate-placeholder="full-name" placeholder="Your Full Name" required>
                     <input type="email" name="email" data-translate-placeholder="email-address" placeholder="Your Email Address" required>
@@ -298,6 +302,7 @@
                     </label>
                 </div>
                 <button type="submit" data-translate="send-inquiry">Send Inquiry</button>
+                <div id="banquetFormStatus" class="form-status" role="status" aria-live="polite"></div>
             </form>
         </section>
 
@@ -733,6 +738,43 @@ window.addEventListener('resize', function() {
     if (window.innerWidth > 768) {
         navMenu.classList.remove('show');
         menuToggle.classList.remove('active');
+    }
+});
+
+// Banquet rental form -> Formspree (AJAX so the visitor stays on the page)
+document.getElementById('banquetForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const form = this;
+    const statusEl = document.getElementById('banquetFormStatus');
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const isSq = currentLanguage === 'sq';
+    const msg = {
+        sending: isSq ? "Duke dërguar…" : "Sending…",
+        success: isSq ? "Faleminderit! Kërkesa juaj u dërgua. Do t'ju kontaktojmë brenda 24 orëve." : "Thank you! Your request was sent. We'll get back to you within 24 hours.",
+        error: isSq ? "Na vjen keq, diçka shkoi keq. Provoni përsëri ose na telefononi në (313) 884-6676." : "Sorry, something went wrong. Please try again or call us at (313) 884-6676."
+    };
+    submitBtn.disabled = true;
+    statusEl.textContent = msg.sending;
+    statusEl.className = 'form-status sending';
+    try {
+        const res = await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+            statusEl.textContent = msg.success;
+            statusEl.className = 'form-status success';
+            form.reset();
+        } else {
+            statusEl.textContent = msg.error;
+            statusEl.className = 'form-status error';
+        }
+    } catch (err) {
+        statusEl.textContent = msg.error;
+        statusEl.className = 'form-status error';
+    } finally {
+        submitBtn.disabled = false;
     }
 });
         </script>

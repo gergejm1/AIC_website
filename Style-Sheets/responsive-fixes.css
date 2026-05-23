@@ -1,0 +1,105 @@
+/* ============================================================
+   responsive-fixes.css
+   Shared mobile/responsive overrides for every page.
+   Linked AFTER each page's own stylesheet so these rules win
+   (same specificity, later source order).
+   ============================================================ */
+
+@media screen and (max-width: 768px) {
+
+  /* ---- Compact single-row sticky navbar -------------------------------
+     Previously the navbar became a tall stacked column with a full-width
+     "Donate" button underneath the logo. Because the navbar is sticky,
+     that button stayed pinned over the page content while scrolling and
+     ate ~25% of the screen. Keep it to one compact 60px row instead:
+     [ logo .......... Donate ☰ ]
+  --------------------------------------------------------------------- */
+  .navbar {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    height: 60px;
+    padding: 5px 15px;
+  }
+
+  .logo {
+    order: 1;
+    display: flex;
+    align-items: center;
+  }
+  .logo img {
+    width: 90px;
+    margin-right: 0;
+  }
+
+  /* Push Donate (and the hamburger after it) to the right, keep it small */
+  .donate-form {
+    order: 2;
+    width: auto;
+    margin: 0 0 0 auto;
+  }
+  .donate-btn {
+    padding: 7px 12px;
+    font-size: 14px;
+    border-radius: 18px;
+  }
+  .heart-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .menu-toggle {
+    order: 3;
+    position: static;
+    right: auto;
+    top: auto;
+    margin-left: 12px;
+    padding: 6px;
+  }
+
+  /* Clean up the leftover 8px list-item font size on the dropdown */
+  .navbar ul li {
+    font-size: 16px;
+  }
+
+  /* ---- Home-page program cards: reveal text on touch ------------------
+     On desktop the description + "Learn More" link are hidden and shown
+     on hover. Touch devices can't hover, so the cards looked empty
+     (just an icon + title). Reveal the text permanently on small screens.
+  --------------------------------------------------------------------- */
+  .program-card {
+    min-height: 0;
+    justify-content: flex-start;
+  }
+  .program-card .card-text {
+    opacity: 1;
+    position: static;
+    transform: none;
+    width: 100%;
+    padding-top: 10px;
+  }
+  .program-card h3,
+  .program-card .program-icon,
+  .program-card:hover h3,
+  .program-card:hover .program-icon {
+    opacity: 1 !important;
+  }
+  .program-icon {
+    margin: 10px auto 0;
+  }
+}
+
+/* ---- Shared form status message (contact & membership forms) ---------- */
+.form-status {
+  margin-top: 14px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-family: 'poppins', sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  display: none;
+}
+.form-status.sending { display: block; background: #f4efe4; color: #533805; }
+.form-status.success { display: block; background: #e6f4ea; color: #1e7e34; border: 1px solid #b7dfc1; }
+.form-status.error   { display: block; background: #fbeaea; color: #b02a37; border: 1px solid #f0c2c7; }

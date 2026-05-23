@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Albanian Islamic Center - Join Our Community</title>
         <link rel="stylesheet" href="Style-Sheets/JoinUs-styles.css">
+        <link rel="stylesheet" href="Style-Sheets/responsive-fixes.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
      
     </head>
@@ -133,7 +134,10 @@
                 <h2 data-translate="ready-join">Ready to Join?</h2>
                 <p data-translate="form-instructions">Fill out the form below to begin your membership application. We'll contact you within 24 hours to complete the process.</p>
                 
-                <form class="membership-form" id="membershipForm">
+                <form class="membership-form" id="membershipForm" action="https://formspree.io/f/mojblpjd" method="POST">
+                    <!-- Anti-spam honeypot (must stay empty) -->
+                    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+                    <input type="hidden" name="_subject" value="New Membership Application - Albanian Islamic Center">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="firstName" data-translate="first-name-label">First Name *</label>
@@ -189,6 +193,7 @@
                     </div>
                     
                     <button type="submit" class="submit-btn" data-translate="submit-application">Submit Application</button>
+                    <div id="membershipFormStatus" class="form-status" role="status" aria-live="polite"></div>
                 </form>
             </div>
         </div>
@@ -427,46 +432,42 @@ Object.assign(translations.sq);
                 }
             });
 
-            // Form submission functionality
-            document.getElementById('membershipForm').addEventListener('submit', function(e) {
+            // Form submission -> Formspree (AJAX so the visitor stays on the page).
+            // Set the form action to your Formspree endpoint (see the form tag above).
+            document.getElementById('membershipForm').addEventListener('submit', async function(e) {
                 e.preventDefault();
-                
-                // Get form data
-                const formData = new FormData(this);
-                const data = {};
-                for (let [key, value] of formData.entries()) {
-                    data[key] = value;
+                const form = this;
+                const statusEl = document.getElementById('membershipFormStatus');
+                const submitBtn = form.querySelector('button[type="submit"]');
+                const isSq = currentLanguage === 'sq';
+                const msg = {
+                    sending: isSq ? "Duke dërguar…" : "Sending…",
+                    success: isSq ? "Faleminderit! Aplikimi juaj u dërgua. Do t'ju kontaktojmë së shpejti." : "Thank you! Your application was sent. We'll be in touch soon.",
+                    error: isSq ? "Na vjen keq, diçka shkoi keq. Provoni përsëri ose na telefononi në (313) 884-6676." : "Sorry, something went wrong. Please try again or call us at (313) 884-6676."
+                };
+                submitBtn.disabled = true;
+                statusEl.textContent = msg.sending;
+                statusEl.className = 'form-status sending';
+                try {
+                    const res = await fetch(form.action, {
+                        method: 'POST',
+                        body: new FormData(form),
+                        headers: { 'Accept': 'application/json' }
+                    });
+                    if (res.ok) {
+                        statusEl.textContent = msg.success;
+                        statusEl.className = 'form-status success';
+                        form.reset();
+                    } else {
+                        statusEl.textContent = msg.error;
+                        statusEl.className = 'form-status error';
+                    }
+                } catch (err) {
+                    statusEl.textContent = msg.error;
+                    statusEl.className = 'form-status error';
+                } finally {
+                    submitBtn.disabled = false;
                 }
-                
-                // Create email body
-                const emailBody = `New Membership Application:
-
-Name: ${data.firstName} ${data.lastName}
-Email: ${data.email}
-Phone: ${data.phone}
-Address: ${data.address || 'Not provided'}
-City: ${data.city || 'Not provided'}
-State: ${data.state}
-ZIP: ${data.zip || 'Not provided'}
-
-Additional Comments:
-${data.message || 'None'}
-
-Terms Agreed: ${data.agree ? 'Yes' : 'No'}
-
-Submitted on: ${new Date().toLocaleDateString()} at ${new Date().toLocaleTimeString()}`;
-                
-                // Create mailto link
-                const mailtoLink = `mailto:albislamct@aol.com?subject=New Membership Application - ${data.firstName} ${data.lastName}&body=${encodeURIComponent(emailBody)}`;
-                
-                // Open email client
-                window.location.href = mailtoLink;
-                
-                // Reset form after a short delay
-                setTimeout(() => {
-                    this.reset();
-                    alert(currentLanguage === 'sq' ? 'Faleminderit! Aplikimi juaj është dërguar.' : 'Thank you! Your application has been submitted.');
-                }, 1000);
             });
 
             // Mobile menu toggle functionality
