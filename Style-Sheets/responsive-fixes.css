@@ -172,3 +172,50 @@ iframe {
 .emailoctopus-form .form-control {
   border-radius: 5px;
 }
+
+/* ---- Banquet "What we provide / What you need to arrange": keep the checkmark
+   and X icons from overlapping the text on mobile. The page's mobile rules reset
+   the list padding with a shorthand (padding: 6px 0), which dropped the left gap
+   the absolutely-positioned icons sit in. Restore that gap. ---- */
+.disclaimer-content li {
+  padding-left: 20px;
+}
+
+/* ---- Click-to-enlarge lightbox for the banquet gallery images ---- */
+.swiper-slide img {
+  cursor: zoom-in;
+}
+.img-lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  cursor: zoom-out;
+}
+.img-lightbox.open {
+  display: flex;
+}
+.img-lightbox-img {
+  max-width: 92vw;
+  max-height: 88vh;
+  border-radius: 6px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  cursor: default;
+}
+.img-lightbox-close {
+  position: absolute;
+  top: 14px;
+  right: 22px;
+  color: #ffffff;
+  font-size: 42px;
+  line-height: 1;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+}
