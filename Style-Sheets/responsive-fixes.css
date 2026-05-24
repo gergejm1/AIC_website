@@ -150,3 +150,10 @@ img,
 iframe {
   max-width: 100%;
 }
+
+/* "Special Guests & Speakers" event photo: the people are in the upper half,
+   so bias the cover-crop to the top instead of the center, which was cutting
+   off their heads (slightly on desktop, more on mobile's shorter image box). */
+.event-image[src$="important.jpg"] {
+  object-position: center top;
+}
