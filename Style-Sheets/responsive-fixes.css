@@ -103,3 +103,31 @@
 .form-status.sending { display: block; background: #f4efe4; color: #533805; }
 .form-status.success { display: block; background: #e6f4ea; color: #1e7e34; border: 1px solid #b7dfc1; }
 .form-status.error   { display: block; background: #fbeaea; color: #b02a37; border: 1px solid #f0c2c7; }
+
+/* ---- Hero banner image: always fill its box ----
+   Some pages shifted the image with transform: translateY(-30%) (or used
+   fixed pixel heights), which left a gray gap at the bottom of the banner,
+   especially on mobile. Force the image to cover the banner cleanly. */
+.mainpage .slideshow-container,
+.mainpage .mySlides {
+  height: 100%;
+}
+.mainpage .slideimg {
+  height: 100%;
+  transform: none;
+  object-fit: cover;
+  object-position: center;
+}
+/* ---- Service cards: anchor the CTA button to the bottom so cards with less
+   content (e.g. Funeral Services) line up cleanly on desktop equal-height rows ---- */
+.service-card {
+  display: flex;
+}
+.service-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.service-content .service-button {
+  margin-top: auto;
+}
