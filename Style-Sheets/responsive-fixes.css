@@ -157,3 +157,18 @@ iframe {
 .event-image[src$="important.jpg"] {
   object-position: center top;
 }
+
+/* ---- EmailOctopus newsletter form (footer): match the site's gold theme ---- */
+.emailoctopus-form .btn-primary {
+  background-color: #C2A878 !important;
+  border-color: #C2A878 !important;
+  color: #ffffff !important;
+  font-family: 'poppins', sans-serif;
+}
+.emailoctopus-form .btn-primary:hover {
+  background-color: rgba(194, 168, 120, 0.85) !important;
+  border-color: rgba(194, 168, 120, 0.85) !important;
+}
+.emailoctopus-form .form-control {
+  border-radius: 5px;
+}
