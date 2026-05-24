@@ -131,3 +131,22 @@
 .service-content .service-button {
   margin-top: auto;
 }
+
+/* ---- Prevent sideways drag/scroll on mobile ----
+   body already had overflow-x:hidden, but the page could still be dragged
+   horizontally on phones. Clamp the root element too. overflow-x:clip stops
+   the horizontal scroll WITHOUT creating a scroll container, so the sticky
+   navbar keeps working (older browsers fall back to overflow-x:hidden). */
+html,
+body {
+  overflow-x: hidden;
+  overflow-x: clip;
+  max-width: 100%;
+}
+
+/* Keep images and embeds (Facebook feed, calendar, maps) from forcing the
+   page wider than the screen. */
+img,
+iframe {
+  max-width: 100%;
+}
